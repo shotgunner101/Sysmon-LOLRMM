@@ -31,228 +31,278 @@
 			<Rule name="Remote Admin Software - Potential 247ithelp.com (ConnectWise) use detected" groupRelation="or">
 					<Image condition="image">Remote Workforce Client.exe</Image>
 					<ParentImage condition="image">Remote Workforce Client.exe</ParentImage>
-					<OriginalFileName condition="contains">Remote Workforce Client.exe</OriginalFileName>
+					<OriginalFileName condition="is">Remote Workforce Client.exe</OriginalFileName>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
-					<Image condition="contains any">rpcnet.exe;ctes.exe;ctespersitence.exe;cteshostsvc.exe;rpcld.exe</Image>
-					<ParentImage condition="contains any">rpcnet.exe;ctes.exe;ctespersitence.exe;cteshostsvc.exe;rpcld.exe</ParentImage>
-					<OriginalFileName condition="contains any">rpcnet;ctes;ctespersitence;cteshostsvc.exe;rpcld.exe</OriginalFileName>
-					<Description condition="contains any">CTES Manager;CtesHostSvc;rpcld.exe</Description>
-					<Product condition="contains any">CTES;Absolute Software SVC Component;rpcld.exe</Product>
-					<Company condition="contains any">Absolute Software Corp.;Absolute Software Corporation</Company>
+					<Image condition="is any">rpcnet.exe;ctes.exe;ctespersitence.exe;cteshostsvc.exe;rpcld.exe</Image>
+					<ParentImage condition="is any">rpcnet.exe;ctes.exe;ctespersitence.exe;cteshostsvc.exe;rpcld.exe</ParentImage>
+					<OriginalFileName condition="is any">rpcnet;ctes;ctespersitence;cteshostsvc.exe;rpcld.exe</OriginalFileName>
+					<Description condition="is any">CTES Manager;CtesHostSvc;rpcld.exe</Description>
+					<Product condition="is any">CTES;Absolute Software SVC Component;rpcld.exe</Product>
+					<Company condition="is any">Absolute Software Corp.;Absolute Software Corporation</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Access Remote PC/RemotePC use detected" groupRelation="or">
-					<Image condition="contains any">\RemotePC\;RemotePCUIU.exe;RemotePC.exe;RPDUILaunch.exe;RemotePCLauncher.exe;RemotePCService.exe;RemotePCPerformance.exe;Idrive.File-Transfer;remotepchost.exe;idrive.RemotePCAgent;rpcsuite.exe</Image>
-					<ParentImage condition="contains any">\RemotePC\;RemotePCUIU.exe;RemotePC.exe;RPDUILaunch.exe;RemotePCLauncher.exe;RemotePCService.exe;RemotePCPerformance.exe;Idrive.File-Transfer;remotepchost.exe;idrive.RemotePCAgent;rpcsuite.exe</ParentImage>
-					<OriginalFileName condition="contains any">RemotePCUIU.exe;RemotePC.exe;RPDUILaunch.exe;RemotePCLauncher.exe;RemotePCService.exe;RemotePCPerformance.exe;Idrive.File-Transfer;remotepchost.exe;idrive.RemotePCAgent;rpcsuite.exe</OriginalFileName>
+					<Image condition="is any">RemotePCUIU.exe;RemotePC.exe;RPDUILaunch.exe;RemotePCLauncher.exe;RemotePCService.exe;RemotePCPerformance.exe;remotepchost.exe;rpcsuite.exe</Image>
+					<Image condition="contains any">\RemotePC\;Idrive.File-Transfer;idrive.RemotePCAgent</Image>
+					<ParentImage condition="is any">RemotePCUIU.exe;RemotePC.exe;RPDUILaunch.exe;RemotePCLauncher.exe;RemotePCService.exe;RemotePCPerformance.exe;remotepchost.exe;rpcsuite.exe</ParentImage>
+					<ParentImage condition="contains any">\RemotePC\;Idrive.File-Transfer;idrive.RemotePCAgent</ParentImage>
+					<OriginalFileName condition="is any">RemotePCUIU.exe;RemotePC.exe;RPDUILaunch.exe;RemotePCLauncher.exe;RemotePCService.exe;RemotePCPerformance.exe;remotepchost.exe;rpcsuite.exe</OriginalFileName>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Acronis Cyber Protect (Remotix) use detected" groupRelation="or">
-					<Image condition="contains any">AcronisCyberProtectConnectAgent.exe;AcronisCyberProtectConnectQuickAssist</Image>
-					<ParentImage condition="contains any">AcronisCyberProtectConnectAgent.exe;AcronisCyberProtectConnectQuickAssist</ParentImage>
-					<OriginalFileName condition="contains any">AcronisCyberProtectConnectAgent.exe;AcronisCyberProtectConnectQuickAssist</OriginalFileName>
+					<Image condition="is">AcronisCyberProtectConnectAgent.exe</Image>
+					<Image condition="contains">AcronisCyberProtectConnectQuickAssist</Image>
+					<ParentImage condition="is">AcronisCyberProtectConnectAgent.exe</ParentImage>
+					<ParentImage condition="contains">AcronisCyberProtectConnectQuickAssist</ParentImage>
+					<OriginalFileName condition="is">AcronisCyberProtectConnectAgent.exe;AcronisCyberProtectConnectQuickAssist</OriginalFileName>
+					<OriginalFileName condition="contains">AcronisCyberProtectConnectQuickAssist</OriginalFileName>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Action1 use detected" groupRelation="or">
-					<Image condition="contains any">action1_agent.exe;\action1\</Image>
-					<ParentImage condition="contains any">action1_agent.exe;\action1\</ParentImage>
-					<OriginalFileName condition="contains any">action1_agent.exe</OriginalFileName>
+					<Image condition="image">action1_agent.exe</Image>
+					<Image condition="contains">\action1\</Image>
+					<ParentImage condition="image">action1_agent.exe</ParentImage>
+					<ParentImage condition="contains">\action1\</ParentImage>
+					<OriginalFileName condition="is">action1_agent.exe</OriginalFileName>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Adobe Connect use detected" groupRelation="or">
-					<Image condition="contains any">ConnectAppSetup;ConnectShellSetup;Connect.exe;ConnectDetector.exe</Image>
-					<ParentImage condition="contains any">ConnectAppSetup;ConnectShellSetup;Connect.exe;ConnectDetector.exe</ParentImage>
-					<OriginalFileName condition="contains any">ConnectAppSetup;ConnectShellSetup;Connect.exe;ConnectDetector.exe</OriginalFileName>
-					<Description condition="contains any">Detector Application for Adobe Connect;Connect App Setup</Description>
-					<Product condition="contains">Adobe Connect</Product>
+					<Image condition="is any">Connect.exe;ConnectDetector.exe</Image>
+					<Image condition="contains any">ConnectAppSetup;ConnectShellSetup</Image>
+					<ParentImage condition="is any">Connect.exe;ConnectDetector.exe</ParentImage>
+					<ParentImage condition="contains any">ConnectAppSetup;ConnectShellSetup</ParentImage>
+					<OriginalFileName condition="is any">Connect.exe;ConnectDetector.exe</OriginalFileName>
+					<OriginalFileName condition="contains any">ConnectAppSetup;ConnectShellSetup</OriginalFileName>
+					<Description condition="is any">Detector Application for Adobe Connect;Connect App Setup</Description>
+					<Product condition="is">Adobe Connect</Product>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential AeroAdmin use detected" groupRelation="or">
-					<Image condition="contains">aeroadmin.exe</Image>
-					<ParentImage condition="contains">aeroadmin.exe</ParentImage>
-					<OriginalFileName condition="contains">aeroadmin.exe</OriginalFileName>
-					<Description condition="contains">AeroAdmin</Description>
-					<Product condition="contains">AeroAdmin</Product>
-					<Company condition="contains">AeroAdmin</Company>
+					<Image condition="image">aeroadmin.exe</Image>
+					<ParentImage condition="image">aeroadmin.exe</ParentImage>
+					<OriginalFileName condition="is">aeroadmin.exe</OriginalFileName>
+					<Description condition="is">AeroAdmin</Description>
+					<Product condition="is">AeroAdmin</Product>
+					<Company condition="is">AeroAdmin</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential AliWangWang-remote-control use detected" groupRelation="or">
-					<Image condition="contains">alitask.exe</Image>
-					<ParentImage condition="contains">alitask.exe</ParentImage>
-					<OriginalFileName condition="contains">alitask.exe</OriginalFileName>
-					<Description condition="contains">AliWangWang</Description>
-					<Product condition="contains">AliWangWang</Product>
+					<Image condition="image">alitask.exe</Image>
+					<ParentImage condition="image">alitask.exe</ParentImage>
+					<OriginalFileName condition="is">alitask.exe</OriginalFileName>
+					<Description condition="is">AliWangWang</Description>
+					<Product condition="is">AliWangWang</Product>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Alpemix use detected" groupRelation="or">
-					<Image condition="contains any">AlpemixService.exe;\AlpemixSrvc\;\Alpemix\</Image>
-					<ParentImage condition="contains any">AlpemixService.exe;\AlpemixSrvc\;\Alpemix\</ParentImage>
-					<OriginalFileName condition="contains any">AlpemixService.exe;AlpemixSrvc;Alpemix</OriginalFileName>
+					<Image condition="image">AlpemixService.exe</Image>
+					<Image condition="contains any">\AlpemixSrvc\;\Alpemix\</Image>
+					<ParentImage condition="image">AlpemixService.exe</ParentImage>
+					<ParentImage condition="contains any">\AlpemixSrvc\;\Alpemix\</ParentImage>
+					<OriginalFileName condition="is">AlpemixService.exe</OriginalFileName>
+					<OriginalFileName condition="contains any">AlpemixSrvc;Alpemix</OriginalFileName>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Ammyy Admin use detected" groupRelation="or">
-					<Image condition="contains any">\AMMYY\;AMMYY_Admin.exe;AA_v3.exe;AA_v2.exe;AA_v1.exe</Image>
-					<ParentImage condition="contains any">\AMMYY\;AMMYY_Admin.exe;AA_v3.exe;AA_v2.exe;AA_v1.exe</ParentImage>
-					<OriginalFileName condition="contains any">AMMYY_Admin.exe;AA_v3.exe;AA_v2.exe;AA_v1.exe</OriginalFileName>
-					<Description condition="contains">Ammyy Admin</Description>
-					<Product condition="contains">Ammyy Admin</Product>
-					<Company condition="contains">Ammyy LLC</Company>
+					<Image condition="is any">AMMYY_Admin.exe;AA_v3.exe;AA_v2.exe;AA_v1.exe</Image>
+					<Image condition="contains">\AMMYY\</Image>
+					<ParentImage condition="is any">AMMYY_Admin.exe;AA_v3.exe;AA_v2.exe;AA_v1.exe</ParentImage>
+					<ParentImage condition="contains">\AMMYY\</ParentImage>
+					<OriginalFileName condition="is any">AMMYY_Admin.exe;AA_v3.exe;AA_v2.exe;AA_v1.exe</OriginalFileName>
+					<Description condition="is">Ammyy Admin</Description>
+					<Product condition="is">Ammyy Admin</Product>
+					<Company condition="is">Ammyy LLC</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Any Support use detected" groupRelation="or">
-					<Image condition="contains any">ManualLauncher.exe;AnySupport</Image>
-					<ParentImage condition="contains any">ManualLauncher.exe;AnySupport</ParentImage>
-					<OriginalFileName condition="contains any">ManualLauncher.exe;AnySupport</OriginalFileName>
-					<Description condition="contains">AnySupport</Description>
-					<Product condition="contains">AnySupport</Product>
+					<Image condition="is any">ManualLauncher.exe;AnySupport</Image>
+					<ParentImage condition="is any">ManualLauncher.exe;AnySupport</ParentImage>
+					<OriginalFileName condition="is any">ManualLauncher.exe;AnySupport</OriginalFileName>
+					<Description condition="is">AnySupport</Description>
+					<Product condition="is">AnySupport</Product>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential AnyDesk use detected" groupRelation="or">
-					<Image condition="contains any">AnyDesk.exe;\AnyDesk\</Image>
-					<ParentImage condition="contains any">AnyDesk.exe;\AnyDesk\</ParentImage>
+					<Image condition="image">AnyDesk.exe</Image>
+					<Image condition="contains">\AnyDesk\</Image>
+					<ParentImage condition="image">AnyDesk.exe</ParentImage>
+					<ParentImage condition="contains">\AnyDesk\</ParentImage>
 					<OriginalFileName condition="is">AnyDesk.exe</OriginalFileName>
-					<Description condition="contains">AnyDesk</Description>
-					<Product condition="contains">AnyDesk</Product>
-					<Company condition="contains">philandro Software</Company>
+					<Description condition="is">AnyDesk</Description>
+					<Product condition="is">AnyDesk</Product>
+					<Company condition="is">philandro Software</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Anyplace Control use detected" groupRelation="or">
-					<Image condition="contains any">apc_host.exe;apc_admin.exe;APC_HostConfig.exe</Image>
-					<ParentImage condition="contains any">apc_host.exe;apc_admin.exe;APC_HostConfig.exe</ParentImage>
-					<OriginalFileName condition="contains any">apc_host.exe;apc_admin.exe;APC_HostConfig.exe</OriginalFileName>
-					<Description condition="contains">Anyplace Control</Description>
-					<Product condition="contains">Anyplace Control</Product>
-					<Company condition="contains">Anyplace Control</Company>
+					<Image condition="is any">apc_host.exe;apc_admin.exe;APC_HostConfig.exe</Image>
+					<ParentImage condition="is any">apc_host.exe;apc_admin.exe;APC_HostConfig.exe</ParentImage>
+					<OriginalFileName condition="is any">apc_host.exe;apc_admin.exe;APC_HostConfig.exe</OriginalFileName>
+					<Description condition="is">Anyplace Control</Description>
+					<Product condition="is">Anyplace Control</Product>
+					<Company condition="is">Anyplace Control</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential AnyViewer use detected" groupRelation="or">
-					<Image condition="contains any">\AnyViewer\;RCClient.exe</Image>
-					<ParentImage condition="contains any">\AnyViewer\;RCClient.exe</ParentImage>
-					<OriginalFileName condition="contains any">AnyViewer;RCClient.exe</OriginalFileName>
-					<Description condition="contains">RCClient</Description>
-					<Product condition="contains">AnyViewer</Product>
-					<Company condition="contains">AOMEI International Network Limited</Company>
+					<Image condition="image">RCClient.exe</Image>
+					<Image condition="contains">\AnyViewer\</Image>
+					<ParentImage condition="image">RCClient.exe</ParentImage>
+					<ParentImage condition="contains">\AnyViewer\</ParentImage>
+					<OriginalFileName condition="is">RCClient.exe</OriginalFileName>
+					<OriginalFileName condition="contains">AnyViewer</OriginalFileName>
+					<Description condition="is">RCClient</Description>
+					<Product condition="is">AnyViewer</Product>
+					<Company condition="is">AOMEI International Network Limited</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Aspia use detected" groupRelation="or">
-					<Image condition="contains any">aspia_client.exe;aspia_console.exe;aspia_desktop_agent.exe;aspia_host.exe;aspia_host_config.exe;aspia_host_service.exe;aspia_host_session.exe;aspia_relay.exe;r4wscreen_agent.exe;r4wscreen_host.exe;r4wscreen_hostservice.exe</Image>
-					<ParentImage condition="contains any">aspia_client.exe;aspia_console.exe;aspia_desktop_agent.exe;aspia_host.exe;aspia_host_config.exe;aspia_host_service.exe;aspia_host_session.exe;aspia_relay.exe;r4wscreen_agent.exe;r4wscreen_host.exe;r4wscreen_hostservice.exe</ParentImage>
-					<OriginalFileName condition="contains any">aspia_client.exe;aspia_console.exe;aspia_desktop_agent.exe;aspia_host.exe;aspia_host_config.exe;aspia_host_service.exe;aspia_host_session.exe;aspia_relay.exe;r4wscreen_agent.exe;r4wscreen_host.exe;r4wscreen_hostservice.exe</OriginalFileName>
+					<Image condition="is any">aspia_client.exe;aspia_console.exe;aspia_desktop_agent.exe;aspia_host.exe;aspia_host_config.exe;aspia_host_service.exe;aspia_host_session.exe;aspia_relay.exe;r4wscreen_agent.exe;r4wscreen_host.exe;r4wscreen_hostservice.exe</Image>
+					<ParentImage condition="is any">aspia_client.exe;aspia_console.exe;aspia_desktop_agent.exe;aspia_host.exe;aspia_host_config.exe;aspia_host_service.exe;aspia_host_session.exe;aspia_relay.exe;r4wscreen_agent.exe;r4wscreen_host.exe;r4wscreen_hostservice.exe</ParentImage>
+					<OriginalFileName condition="is any">aspia_client.exe;aspia_console.exe;aspia_desktop_agent.exe;aspia_host.exe;aspia_host_config.exe;aspia_host_service.exe;aspia_host_session.exe;aspia_relay.exe;r4wscreen_agent.exe;r4wscreen_host.exe;r4wscreen_hostservice.exe</OriginalFileName>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Atera use detected" groupRelation="or">
-					<Image condition="contains any">AteraAgent.exe;AgentPackageNetworkDiscovery.exe;AgentPackageTaskScheduler.exe;\ATERA Networks\;\AteraAgent\;atera_agent.exe;syncrosetup.exe;AlphaAgent.exe;AgentPackageSTRemote.exe;AgentPackageMonitoring.exe;AgentPackageHeartbeat.exe;AgentPackageFileExplorer.exe;AgentPackageRunCommandInteractive.exe</Image>
-					<ParentImage condition="contains any">AteraAgent.exe;AgentPackageNetworkDiscovery.exe;AgentPackageTaskScheduler.exe;\ATERA Networks\;\AteraAgent\;atera_agent.exe;syncrosetup.exe;AlphaAgent.exe;AgentPackageSTRemote.exe;AgentPackageMonitoring.exe;AgentPackageHeartbeat.exe;AgentPackageFileExplorer.exe;AgentPackageRunCommandInteractive.exe</ParentImage>
-					<OriginalFileName condition="contains any">AteraAgent.exe;AgentPackageNetworkDiscovery.exe;AgentPackageTaskScheduler.exe;atera_agent.exe;syncrosetup.exe;AlphaAgent.exe;AgentPackageSTRemote.exe;AgentPackageMonitoring.exe;AgentPackageHeartbeat.exe;AgentPackageFileExplorer.exe;AgentPackageRunCommandInteractive.exe</OriginalFileName>
-					<Description condition="contains">AteraAgent</Description>
-					<Product condition="contains">AteraAgent</Product>
-					<Company condition="contains any">Agent by ATERA;ATERA Networks Ltd.</Company>
+					<Image condition="is any">AteraAgent.exe;AgentPackageNetworkDiscovery.exe;AgentPackageTaskScheduler.exe;atera_agent.exe;syncrosetup.exe;AlphaAgent.exe;AgentPackageSTRemote.exe;AgentPackageMonitoring.exe;AgentPackageHeartbeat.exe;AgentPackageFileExplorer.exe;AgentPackageRunCommandInteractive.exe</Image>
+					<Image condition="contains any">\ATERA Networks\;\AteraAgent\</Image>
+					<ParentImage condition="is any">AteraAgent.exe;AgentPackageNetworkDiscovery.exe;AgentPackageTaskScheduler.exe;atera_agent.exe;syncrosetup.exe;AlphaAgent.exe;AgentPackageSTRemote.exe;AgentPackageMonitoring.exe;AgentPackageHeartbeat.exe;AgentPackageFileExplorer.exe;AgentPackageRunCommandInteractive.exe</ParentImage>
+					<ParentImage condition="contains any">\ATERA Networks\;\AteraAgent\</ParentImage>
+					<OriginalFileName condition="is any">AteraAgent.exe;AgentPackageNetworkDiscovery.exe;AgentPackageTaskScheduler.exe;atera_agent.exe;syncrosetup.exe;AlphaAgent.exe;AgentPackageSTRemote.exe;AgentPackageMonitoring.exe;AgentPackageHeartbeat.exe;AgentPackageFileExplorer.exe;AgentPackageRunCommandInteractive.exe</OriginalFileName>
+					<Description condition="is">AteraAgent</Description>
+					<Product condition="is">AteraAgent</Product>
+					<Company condition="is any">Agent by ATERA;ATERA Networks Ltd.</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Auvik use detected" groupRelation="or">
-					<Image condition="contains any">auvik.engine.exe;auvik.agent.exe;Auvik Installer.exe</Image>
-					<ParentImage condition="contains any">auvik.engine.exe;auvik.agent.exe;Auvik Installer.exe</ParentImage>
-					<OriginalFileName condition="contains any">auvik.engine.exe;auvik.agent.exe;Auvik Installer.exe</OriginalFileName>
-					<Description condition="contains">The Auvik Collector Installer</Description>
-					<Product condition="contains">Auvik Installer</Product>
-					<Company condition="contains">Auvik Networks</Company>
+					<Image condition="is any">auvik.engine.exe;auvik.agent.exe;Auvik Installer.exe</Image>
+					<ParentImage condition="is any">auvik.engine.exe;auvik.agent.exe;Auvik Installer.exe</ParentImage>
+					<OriginalFileName condition="is any">auvik.engine.exe;auvik.agent.exe;Auvik Installer.exe</OriginalFileName>
+					<Description condition="is">The Auvik Collector Installer</Description>
+					<Product condition="is">Auvik Installer</Product>
+					<Company condition="is">Auvik Networks</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential AweRay use detected" groupRelation="or">
-					<Image condition="contains any">aweray_remote;AweSun.exe</Image>
-					<ParentImage condition="contains any">aweray_remote;AweSun.exe</ParentImage>
-					<OriginalFileName condition="contains any">aweray_remote;AweSun.exe</OriginalFileName>
+					<Image condition="image">AweSun.exe</Image>
+					<Image condition="contains">aweray_remote</Image>
+					<ParentImage condition="image">AweSun.exe</ParentImage>
+					<ParentImage condition="contains">aweray_remote</ParentImage>
+					<OriginalFileName condition="is">AweSun.exe</OriginalFileName>
+					<OriginalFileName condition="contains">aweray_remote</OriginalFileName>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Barracuda use detected" groupRelation="or">
-					<Image condition="contains any">isllight.exe;mailopen.exe;shellsendto.exe;\ISL Online Cache\;\ISL Network Start\;\ISL Light Client\;ISLLightClient.exe</Image>
-					<ParentImage condition="contains any">isllight.exe;mailopen.exe;shellsendto.exe;\ISL Online Cache\;\ISL Network Start\;\ISL Light Client\;ISLLightClient.exe</ParentImage>
-					<OriginalFileName condition="contains any">isllight.exe;mailopen.exe;shellsendto.exe;ISLLightClient.exe;ISL Light Mail Open</OriginalFileName>
-					<Description condition="contains any">ISL Light Client - Remote Desktop Support;ISL Light Mail Open</Description>
-					<Product condition="contains any">ISL Light Client;ISL Light - Remote Desktop Support</Product>
-					<Company condition="contains">ISL Online Ltd.</Company>
+					<Image condition="is any">isllight.exe;mailopen.exe;shellsendto.exe;ISLLightClient.exe</Image>
+					<Image condition="contains any">\ISL Online Cache\;\ISL Network Start\;\ISL Light Client\</Image>
+					<ParentImage condition="is any">isllight.exe;mailopen.exe;shellsendto.exe;ISLLightClient.exe</ParentImage>
+					<ParentImage condition="contains any">\ISL Online Cache\;\ISL Network Start\;\ISL Light Client\</ParentImage>
+					<OriginalFileName condition="is any">isllight.exe;mailopen.exe;shellsendto.exe;ISLLightClient.exe</OriginalFileName>
+					<OriginalFileName condition="contains">ISL Light Mail Open</OriginalFileName>
+					<Description condition="is any">ISL Light Client - Remote Desktop Support;ISL Light Mail Open</Description>
+					<Product condition="is any">ISL Light Client;ISL Light - Remote Desktop Support</Product>
+					<Company condition="is">ISL Online Ltd.</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Trend Micro Endpoint Basecamp use detected" groupRelation="or">
-					<Image condition="contains any">EndpointBasecamp.exe;\Endpoint Basecamp\</Image>
-					<ParentImage condition="contains any">EndpointBasecamp.exe;\Endpoint Basecamp\</ParentImage>
-					<OriginalFileName condition="contains any">EndpointBasecamp.exe</OriginalFileName>
-					<Description condition="contains">Trend Micro Endpoint Basecamp</Description>
-					<Product condition="contains">Trend Micro Endpoint Basecamp</Product>
+					<Image condition="image">EndpointBasecamp.exe</Image>
+					<Image condition="contains">\Endpoint Basecamp\</Image>
+					<ParentImage condition="image">EndpointBasecamp.exe</ParentImage>
+					<ParentImage condition="contains">\Endpoint Basecamp\</ParentImage>
+					<OriginalFileName condition="is">EndpointBasecamp.exe</OriginalFileName>
+					<Description condition="is">Trend Micro Endpoint Basecamp</Description>
+					<Product condition="is">Trend Micro Endpoint Basecamp</Product>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential BeAnyWhere/BeInSync/N-Able Advanced Monitoring Agent/N-ABLE Remote Access Software use detected" groupRelation="or">
-					<Image condition="contains any">\BeAnywhere Support Express\;\GetSupportService\;basuptshelper.exe;basupsrvcupdate.exe;BASupApp.exe;BASupSysInf.exe;BASupAppSrvc.exe;TakeControl.exe;BASupAppElev.exe;basupsrvc.exe;BASupConHelper.exe;BASupSrvcCnfg.exe;BASupSrvcUpdater.exe;BASupSysShell.exe;winagent.exe;BASEClient.exe</Image>
-					<ParentImage condition="contains any">\BeAnywhere Support Express\;\GetSupportService\;basuptshelper.exe;basupsrvcupdate.exe;BASupApp.exe;BASupSysInf.exe;BASupAppSrvc.exe;TakeControl.exe;BASupAppElev.exe;basupsrvc.exe;BASupConHelper.exe;BASupSrvcCnfg.exe;BASupSrvcUpdater.exe;BASupSysShell.exe;winagent.exe;BASEClient.exe</ParentImage>
-					<OriginalFileName condition="contains any">basuptshelper.exe;basupsrvcupdate.exe;BASupApp.exe;BASupSysInf.exe;BASupAppSrvc.exe;TakeControl.exe;BASupAppElev.exe;basupsrvc.exe;BASupConHelper.exe;BASupSrvcCnfg.exe;BASupSrvcUpdater.exe;BASupSysShell.exe;winagent.exe;BASEClient.exe</OriginalFileName>
-					<Description condition="contains any">N-able;SolarWinds Take Control;winagent</Description>
-					<Product condition="contains any">N-able;SolarWinds Take Control;Advanced Monitoring Agent</Product>
-					<Company condition="contains any">N-able;SolarWinds Take Control;Remote Monitoring</Company>
+					<Image condition="is any">basuptshelper.exe;basupsrvcupdate.exe;BASupApp.exe;BASupSysInf.exe;BASupAppSrvc.exe;TakeControl.exe;BASupAppElev.exe;basupsrvc.exe;BASupConHelper.exe;BASupSrvcCnfg.exe;BASupSrvcUpdater.exe;BASupSysShell.exe;winagent.exe;BASEClient.exe</Image>
+					<Image condition="contains any">\BeAnywhere Support Express\;\GetSupportService\</Image>
+					<ParentImage condition="is any">basuptshelper.exe;basupsrvcupdate.exe;BASupApp.exe;BASupSysInf.exe;BASupAppSrvc.exe;TakeControl.exe;BASupAppElev.exe;basupsrvc.exe;BASupConHelper.exe;BASupSrvcCnfg.exe;BASupSrvcUpdater.exe;BASupSysShell.exe;winagent.exe;BASEClient.exe</ParentImage>
+					<ParentImage condition="contains any">\BeAnywhere Support Express\;\GetSupportService\</ParentImage>
+					<OriginalFileName condition="is any">basuptshelper.exe;basupsrvcupdate.exe;BASupApp.exe;BASupSysInf.exe;BASupAppSrvc.exe;TakeControl.exe;BASupAppElev.exe;basupsrvc.exe;BASupConHelper.exe;BASupSrvcCnfg.exe;BASupSrvcUpdater.exe;BASupSysShell.exe;winagent.exe;BASEClient.exe</OriginalFileName>
+					<Description condition="is any">N-able;SolarWinds Take Control;winagent</Description>
+					<Product condition="is any">N-able;SolarWinds Take Control;Advanced Monitoring Agent</Product>
+					<Company condition="is any">N-able;SolarWinds Take Control;Remote Monitoring</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential BeInSync use detected" groupRelation="or">
-					<Image condition="contains any">BeinSync.exe;BeInSyncServer.exe;\BeInSync\;BeInSync_Setup_.exe;BeInSync_Uninstall.EXE;BeInSyncWeb.exe;BeInSyncServer.exe;BeInSync_Toolbar_Setup.exe;beinsync-</Image>
-					<ParentImage condition="contains any">BeinSync.exe;BeInSyncServer.exe;\BeInSync\;BeInSync_Setup_.exe;BeInSync_Uninstall.EXE;BeInSyncWeb.exe;BeInSyncServer.exe;BeInSync_Toolbar_Setup.exe;beinsync-</ParentImage>
-					<OriginalFileName condition="contains any">BeinSync.exe;BeInSyncServer.exe;BeInSync_Setup_.exe;BeInSync_Uninstall.EXE;BeInSyncWeb.exe;BeInSyncServer.exe;BeInSync_Toolbar_Setup.exe;beinsync-</OriginalFileName>
-					<Description condition="contains">BeInSync</Description>
-					<Company condition="contains">BeInSync</Company>
+					<Image condition="is any">BeinSync.exe;BeInSyncServer.exe;BeInSync_Setup_.exe;BeInSync_Uninstall.EXE;BeInSyncWeb.exe;BeInSyncServer.exe;BeInSync_Toolbar_Setup.exe</Image>
+					<Image condition="contains any">\BeInSync\;beinsync-</Image>
+					<ParentImage condition="is any">BeinSync.exe;BeInSyncServer.exe;BeInSync_Setup_.exe;BeInSync_Uninstall.EXE;BeInSyncWeb.exe;BeInSyncServer.exe;BeInSync_Toolbar_Setup.exe</ParentImage>
+					<ParentImage condition="contains any">\BeInSync\;beinsync-</ParentImage>
+					<OriginalFileName condition="is any">BeinSync.exe;BeInSyncServer.exe;BeInSync_Setup_.exe;BeInSync_Uninstall.EXE;BeInSyncWeb.exe;BeInSyncServer.exe;BeInSync_Toolbar_Setup.exe</OriginalFileName>
+					<OriginalFileName condition="contains">beinsync-</OriginalFileName>
+					<Description condition="is">BeInSync</Description>
+					<Company condition="is">BeInSync</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential BeyondTrust(Bomgar) use detected" groupRelation="or">
-					<Image condition="contains any">bomgar-rep.exe;\Bomgar\;\bomgar-rep\;bomgar-rdp.exe;nsnetpush.exe;bomgar-rep-installer.exe;bomgar-rfb.exe;bomgar-acc-installer.exe;bomgar-acc.exe;bomgar-cli.exe;bomgar-scc-;bomgar-pac-;bomgar-scc.exe;bomgar-pac.exe</Image>
-					<ParentImage condition="contains any">bomgar-rep.exe;\Bomgar\;\bomgar-rep\;bomgar-rdp.exe;nsnetpush.exe;bomgar-rep-installer.exe;bomgar-rfb.exe;bomgar-acc-installer.exe;bomgar-acc.exe;bomgar-cli.exe;bomgar-scc-;bomgar-pac-;bomgar-scc.exe;bomgar-pac.exe</ParentImage>
-					<OriginalFileName condition="contains any">bomgar-rep.exe;bomgar-rdp.exe;nsnetpush.exe;bomgar-rep-installer.exe;bomgar-rfb.exe;bomgar-acc-installer.exe;bomgar-acc.exe;bomgar-cli.exe;bomgar-scc-;bomgar-pac-;bomgar-scc.exe;bomgar-pac.exe</OriginalFileName>
+					<Image condition="is any">bomgar-rep.exe;bomgar-rdp.exe;nsnetpush.exe;bomgar-rep-installer.exe;bomgar-rfb.exe;bomgar-acc-installer.exe;bomgar-acc.exe;bomgar-cli.exe;bomgar-scc.exe;bomgar-pac.exe</Image>
+					<Image condition="contains any">\Bomgar\;\bomgar-rep\;bomgar-scc-;bomgar-pac-</Image>
+					<ParentImage condition="is any">bomgar-rep.exe;bomgar-rdp.exe;nsnetpush.exe;bomgar-rep-installer.exe;bomgar-rfb.exe;bomgar-acc-installer.exe;bomgar-acc.exe;bomgar-cli.exe;bomgar-scc.exe;bomgar-pac.exe</ParentImage>
+					<ParentImage condition="contains any">\Bomgar\;\bomgar-rep\;bomgar-scc-;bomgar-pac-</ParentImage>
+					<OriginalFileName condition="is any">bomgar-rep.exe;bomgar-rdp.exe;nsnetpush.exe;bomgar-rep-installer.exe;bomgar-rfb.exe;bomgar-acc-installer.exe;bomgar-acc.exe;bomgar-cli.exe;bomgar-scc.exe;bomgar-pac.exe</OriginalFileName>
+					<OriginalFileName condition="contains">bomgar-scc-;bomgar-pac-</OriginalFileName>
 				</Rule>
-				<Rule name="Remote Admin Software - Potential Bitvise SSH Client use detected" groupRelation="or">
-					<Image condition="contains any">BvSshClient-Inst.exe;BvSsh.exe;BvEventSource.exe;BvWinFspMgr.exe;\Bitvise SSH Client\;BscActCode.exe;BvDump32.exe;BvDump64.exe;BvInputDiag.exe;BvSshCtrl.exe;BvSshUpdate.exe;MstscTitle.exe;sexec.exe;sftpc.exe;spksc.exe;stermc.exe;stnlc.exe;totermc.exe;totermw.exe</Image>
-					<ParentImage condition="contains any">BvSshClient-Inst.exe;BvSsh.exe;BvEventSource.exe;BvWinFspMgr.exe;\Bitvise SSH Client\;BscActCode.exe;BvDump32.exe;BvDump64.exe;BvInputDiag.exe;BvSshCtrl.exe;BvSshUpdate.exe;BvUpdateLauncher.exe;MstscTitle.exe;sexec.exe;sftpc.exe;spksc.exe;stermc.exe;stnlc.exe;totermc.exe;totermw.exe</ParentImage>
-					<OriginalFileName condition="contains any">BvSshClient-Inst.exe;BvSsh.exe;BvEventSource.exe;BvWinFspMgr.exe;\Bitvise SSH Client\;BscActCode.exe;BvDump32.exe;BvDump64.exe;BvInputDiag.exe;BvSshCtrl.exe;BvSshUpdate.exe;BvUpdateLauncher.exe;MstscTitle.exe;sexec.exe;sftpc.exe;spksc.exe;stermc.exe;stnlc.exe;totermc.exe;totermw.exe</OriginalFileName>
-					<Description condition="is any">Bitvise SSH Client Installer;Bitvise SSH Client - xterm terminal console client;Bitvise SSH Client - bvterm terminal console client;Bitvise Process Dump Utility;Bitvise SSH Client Title Helper for Remote Desktop;Bitvise WinFsp Driver Management Utility;Bitvise SSH Client control utility;Bitvise SSH Client Activation Code Manager</Description>
-					<Product condition="contains">Bitvise SSH Client</Product>
-				</Rule>
-				<Rule name="Remote Admin Software - Potential Bitvise SSH Server use detected" groupRelation="or">
-					<Image condition="contains any">BvSshServer-Inst.exe;\Bitvise SSH Server\;AgentForward.exe;AgentForward32.exe;BssCfg.exe;BssCfgManip.exe;BssCtrl.exe;BssCtrlLauncher.exe;BssStat.exe;BvShell.exe;BvSshServer.exe;SfsServer.exe;TelnetForward.exe;BvSshServer-;bvPwd.exe;bvRun.exe;execs.exe;toterms.exe</Image>
-					<ParentImage condition="contains any">BvSshServer-Inst.exe;\Bitvise SSH Server\;AgentForward.exe;AgentForward32.exe;BssCfg.exe;BssCfgManip.exe;BssCtrl.exe;BssCtrlLauncher.exe;BssStat.exe;BvShell.exe;BvSshServer.exe;SfsServer.exe;TelnetForward.exe;BvSshServer-;bvPwd.exe;bvRun.exe;execs.exe;toterms.exe</ParentImage>
-					<OriginalFileName condition="contains any">BvSshServer-Inst.exe;AgentForward.exe;AgentForward32.exe;BssCfg.exe;BssCfgManip.exe;BssCtrl.exe;BssCtrlLauncher.exe;BssStat.exe;BvShell.exe;BvSshServer.exe;SfsServer.exe;TelnetForward.exe;BvSshServer-;bvPwd.exe;bvRun.exe;execs.exe;toterms.exe</OriginalFileName>
-					<Description condition="is any">Bitvise SSH Server Installer;Bitvise SSH Server authentication agent forwarding subsystem;Bitvise SSH Server status utility;Bitvise Shell;Bitvise Telnet forwarder utility;Bitvise password change utility;Bitvise command-line process creation utility;Bitvise utility to redirect a command-line program's output into a uniquely named log file;Checks if your Bitvise SSH Server evaluation period has expired or is about to. If so, displays a warning message.</Description>
-					<Product condition="contains">Bitvise SSH Server</Product>
+				<Rule name="Remote Admin Software - Potential Bitvise SSH Client/Bitvise SSH Server use detected" groupRelation="or">
+					<Image condition="is any">BvSshClient-Inst.exe;BvSsh.exe;BvEventSource.exe;BvWinFspMgr.exe;BscActCode.exe;BvDump32.exe;BvDump64.exe;BvInputDiag.exe;BvSshCtrl.exe;BvSshUpdate.exe;MstscTitle.exe;sexec.exe;sftpc.exe;spksc.exe;stermc.exe;stnlc.exe;totermc.exe;totermw.exe;BvSshServer-Inst.exe;AgentForward.exe;AgentForward32.exe;BssCfg.exe;BssCfgManip.exe;BssCtrl.exe;BssCtrlLauncher.exe;BssStat.exe;BvShell.exe;BvSshServer.exe;SfsServer.exe;TelnetForward.exe;bvPwd.exe;bvRun.exe;execs.exe;toterms.exe</Image>
+					<Image condition="contains any">\Bitvise SSH Server\;\Bitvise SSH Client\;BvSshServer-</Image>
+					<ParentImage condition="is any">BvSshClient-Inst.exe;BvSsh.exe;BvEventSource.exe;BvWinFspMgr.exe;BscActCode.exe;BvDump32.exe;BvDump64.exe;BvInputDiag.exe;BvSshCtrl.exe;BvSshUpdate.exe;BvUpdateLauncher.exe;MstscTitle.exe;sexec.exe;sftpc.exe;spksc.exe;stermc.exe;stnlc.exe;totermc.exe;totermw.exe;AgentForward.exe;AgentForward32.exe;BssCfg.exe;BssCfgManip.exe;BssCtrl.exe;BssCtrlLauncher.exe;BssStat.exe;BvShell.exe;BvSshServer.exe;SfsServer.exe;TelnetForward.exe;bvPwd.exe;bvRun.exe;execs.exe;toterms.exe</ParentImage>
+					<ParentImage condition="contains any">\Bitvise SSH Server\;\Bitvise SSH Client\;BvSshServer-</ParentImage>
+					<OriginalFileName condition="is any">BvSshClient-Inst.exe;BvSsh.exe;BvEventSource.exe;BvWinFspMgr.exe;BscActCode.exe;BvDump32.exe;BvDump64.exe;BvInputDiag.exe;BvSshCtrl.exe;BvSshUpdate.exe;BvUpdateLauncher.exe;MstscTitle.exe;sexec.exe;sftpc.exe;spksc.exe;stermc.exe;stnlc.exe;totermc.exe;totermw.exe;AgentForward.exe;AgentForward32.exe;BssCfg.exe;BssCfgManip.exe;BssCtrl.exe;BssCtrlLauncher.exe;BssStat.exe;BvShell.exe;BvSshServer.exe;SfsServer.exe;TelnetForward.exe;bvPwd.exe;bvRun.exe;execs.exe;toterms.exe</OriginalFileName>
+					<OriginalFileName condition="contains any">\Bitvise SSH Server\;\Bitvise SSH Client\;BvSshServer-</OriginalFileName>
+					<Description condition="is any">Bitvise SSH Client Installer;Bitvise SSH Client - xterm terminal console client;Bitvise SSH Client - bvterm terminal console client;Bitvise Process Dump Utility;Bitvise SSH Client Title Helper for Remote Desktop;Bitvise WinFsp Driver Management Utility;Bitvise SSH Client control utility;Bitvise SSH Client Activation Code Manager;Bitvise SSH Server Installer;Bitvise SSH Server authentication agent forwarding subsystem;Bitvise SSH Server status utility;Bitvise Shell;Bitvise Telnet forwarder utility;Bitvise password change utility;Bitvise command-line process creation utility;Bitvise utility to redirect a command-line program's output into a uniquely named log file;Checks if your Bitvise SSH Server evaluation period has expired or is about to. If so, displays a warning message.</Description>
+					<Product condition="is any">Bitvise SSH Client;Bitvise SSH Server</Product>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Bluetrait use detected" groupRelation="or">
-					<Image condition="contains any">\Bluetrait Agent\;Bluetrait_MSP_Agent.exe;BluetraitUserAgent.exe</Image>
-					<ParentImage condition="contains any">\Bluetrait Agent\;Bluetrait_MSP_Agent.exe;BluetraitUserAgent.exe</ParentImage>
-					<OriginalFileName condition="contains any">Bluetrait_MSP_Agent.exe;BluetraitUserAgent.exe</OriginalFileName>
+					<Image condition="is any">Bluetrait_MSP_Agent.exe;BluetraitUserAgent.exe</Image>
+					<Image condition="contains">\Bluetrait Agent\</Image>
+					<ParentImage condition="is any">Bluetrait_MSP_Agent.exe;BluetraitUserAgent.exe</ParentImage>
+					<ParentImage condition="contains">\Bluetrait Agent\</ParentImage>
+					<OriginalFileName condition="is any">Bluetrait_MSP_Agent.exe;BluetraitUserAgent.exe</OriginalFileName>
 					<Description condition="is any">Bluetrait MSP Agent;BluetraitUserAgent</Description>
-					<Product condition="contains">Bluetrait</Product>
+					<Product condition="is">Bluetrait</Product>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential CentraStage (Now Datto) use detected" groupRelation="or">
-					<Image condition="contains any">CagService.exe;AEMAgent.exe;\AEMAgent\;CsExec.Service.exe;\CentraStage\</Image>
-					<ParentImage condition="contains any">CagService.exe;AEMAgent.exe;\AEMAgent\;CsExec.Service.exe;\CentraStage\</ParentImage>
-					<OriginalFileName condition="contains any">CagService.exe;AEMAgent.exe;CsExec.Service.exe</OriginalFileName>
+					<Image condition="is any">CagService.exe;AEMAgent.exe;CsExec.Service.exe</Image>
+					<Image condition="contains any">\AEMAgent\;\CentraStage\</Image>
+					<ParentImage condition="is any">CagService.exe;AEMAgent.exe;CsExec.Service.exe</ParentImage>
+					<ParentImage condition="contains any">\AEMAgent\;\CentraStage\</ParentImage>
+					<OriginalFileName condition="is any">CagService.exe;AEMAgent.exe;CsExec.Service.exe</OriginalFileName>
 					<Description condition="is any">CentraStage Service;RMM Agent</Description>
 					<Product condition="is any">RMM Agent</Product>
-					<Company condition="contains any">CentraStage;Datto Inc.</Company>
+					<Company condition="is any">CentraStage;Datto Inc.</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Centurion use detected" groupRelation="or">
 					<Image condition="image">ctiserv.exe</Image>
+					<Image condition="contains">CtiServ</Image>
 					<ParentImage condition="image">ctiserv.exe</ParentImage>
-					<OriginalFileName condition="is any">ctiserv.exe;CtiServ</OriginalFileName>
-					<Description condition="contains any">CtiServ;Centurion Technologies</Description>
-					<Product condition="contains any">CtiServ;Centurion Technologies</Product>
-					<Company condition="contains">Centurion Technologies</Company>
+					<ParentImage condition="contains">CtiServ</ParentImage>
+					<OriginalFileName condition="is">ctiserv.exe</OriginalFileName>
+					<OriginalFileName condition="contains">CtiServ</OriginalFileName>
+					<Description condition="is any">CtiServ;Centurion Technologies</Description>
+					<Product condition="is any">CtiServ;Centurion Technologies</Product>
+					<Company condition="is">Centurion Technologies</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Chrome Remote Desktop use detected" groupRelation="or">
-					<Image condition="contains any">\Chrome Remote Desktop\;remote_assistance_host.exe;remote_assistance_host_uiaccess.exe;remote_open_url.exe;remote_security_key.exe;remote_webauthn.exe;remoting_crashpad_handler.exe;remoting_desktop.exe;remoting_host.exe;remoting_native_messaging_host.exe;remoting_start_host.exe;remote_host.exe</Image>
-					<ParentImage condition="contains any">\Chrome Remote Desktop\;remote_assistance_host.exe;remote_assistance_host_uiaccess.exe;remote_open_url.exe;remote_security_key.exe;remote_webauthn.exe;remoting_crashpad_handler.exe;remoting_desktop.exe;remoting_host.exe;remoting_native_messaging_host.exe;remoting_start_host.exe;remote_host.exe</ParentImage>
-					<OriginalFileName condition="contains any">remote_assistance_host.exe;remote_assistance_host_uiaccess.exe;remote_open_url.exe;remote_security_key.exe;remote_webauthn.exe;remoting_crashpad_handler.exe;remoting_desktop.exe;remoting_host.exe;remoting_native_messaging_host.exe;remoting_start_host.exe;remote_host.exe</OriginalFileName>
-					<Description condition="contains">Chrome Remote Desktop</Description>
-					<Product condition="contains">Chrome Remote Desktop</Product>
+					<Image condition="is any">remote_assistance_host.exe;remote_assistance_host_uiaccess.exe;remote_open_url.exe;remote_security_key.exe;remote_webauthn.exe;remoting_crashpad_handler.exe;remoting_desktop.exe;remoting_host.exe;remoting_native_messaging_host.exe;remoting_start_host.exe;remote_host.exe</Image>
+					<Image condition="contains">\Chrome Remote Desktop\</Image>
+					<ParentImage condition="is any">remote_assistance_host.exe;remote_assistance_host_uiaccess.exe;remote_open_url.exe;remote_security_key.exe;remote_webauthn.exe;remoting_crashpad_handler.exe;remoting_desktop.exe;remoting_host.exe;remoting_native_messaging_host.exe;remoting_start_host.exe;remote_host.exe</ParentImage>
+					<ParentImage condition="contains">\Chrome Remote Desktop\</ParentImage>
+					<OriginalFileName condition="is any">remote_assistance_host.exe;remote_assistance_host_uiaccess.exe;remote_open_url.exe;remote_security_key.exe;remote_webauthn.exe;remoting_crashpad_handler.exe;remoting_desktop.exe;remoting_host.exe;remoting_native_messaging_host.exe;remoting_start_host.exe;remote_host.exe</OriginalFileName>
+					<Description condition="is">Chrome Remote Desktop</Description>
+					<Product condition="is">Chrome Remote Desktop</Product>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential CloudFlare Tunnel use detected" groupRelation="or">
-					<Image condition="contains any">cloudflared.exe;\cloudflared\</Image>
-					<ParentImage condition="contains any">cloudflared.exe;\cloudflared\</ParentImage>
+					<Image condition="image">cloudflared.exe</Image>
+					<Image condition="contains">\cloudflared\</Image>
+					<ParentImage condition="image">cloudflared.exe</ParentImage>
+					<ParentImage condition="contains">\cloudflared\</ParentImage>
 					<OriginalFileName condition="is">cloudflared.exe</OriginalFileName>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247 use detected" groupRelation="or">
-					<Image condition="contains any">\elsinore technologies\;\LTSvc\;\SAAZOD\;ScreenConnect.ClientService.exe;ScreenConnect.WindowsClient.exe;screenconnect.guestclient.exe;screenconnect.guestservice.exe;screenconnect.hostclient.exe;screenconnect.service.exe;ScreenConnect.ClientSetup.exe;ScreenConnect.Client.exe;ScreenConnect.WindowsBackstageShell.exe;ScreenConnect.WindowsFileManager.exe;LTSVC.exe;LTSvcMon.exe;LTTray.exe;LTSilent.exe;LSR.exe;labvnc.exe;connectwisechat-customer.exe;connectwisecontrol.client.exe;Remote Workforce Client.exe;connectwise;screenconnect;RemoteWorkforceClientWpf.exe;RemoteWorkforceClient.exe;saazapsc.exe;SAAZappr;SAAZWatchDog.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;GetSaazUsage.exe;SAAZDPMACTL.exe;SAAZDefaultJobExe.exe;SAAZJobDownload.exe;SAAZKill.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;SaazRemote.exe;VMWSaazClient.exe;SAAZappr.exe;SAAZapsc.exe;zSaazAccess.exe;SAAZScheduler.exe;SAAZSrvCOM.exe;SAAZSvcCtrl.exe</Image>
-					<ParentImage condition="contains any">\elsinore technologies\;\LTSvc\;\SAAZOD\;ScreenConnect.ClientService.exe;ScreenConnect.WindowsClient.exe;screenconnect.guestclient.exe;screenconnect.guestservice.exe;screenconnect.hostclient.exe;screenconnect.service.exe;ScreenConnect.ClientSetup.exe;ScreenConnect.Client.exe;ScreenConnect.WindowsBackstageShell.exe;ScreenConnect.WindowsFileManager.exe;LTSVC.exe;LTSvcMon.exe;LTTray.exe;LTSilent.exe;LSR.exe;labvnc.exe;connectwisechat-customer.exe;connectwisecontrol.client.exe;Remote Workforce Client.exe;connectwise;screenconnect;RemoteWorkforceClientWpf.exe;RemoteWorkforceClient.exe;saazapsc.exe;SAAZappr;SAAZWatchDog.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;GetSaazUsage.exe;SAAZDPMACTL.exe;SAAZDefaultJobExe.exe;SAAZJobDownload.exe;SAAZKill.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;SaazRemote.exe;VMWSaazClient.exe;SAAZappr.exe;SAAZapsc.exe;zSaazAccess.exe;SAAZScheduler.exe;SAAZSrvCOM.exe;SAAZSvcCtrl.exe</ParentImage>
-					<OriginalFileName condition="contains any">ScreenConnect.ClientService.exe;ScreenConnect.WindowsClient.exe;screenconnect.guestclient.exe;screenconnect.guestservice.exe;screenconnect.hostclient.exe;screenconnect.service.exe;ScreenConnect.ClientSetup.exe;ScreenConnect.Client.exe;ScreenConnect.WindowsBackstageShell.exe;ScreenConnect.WindowsFileManager.exe;LTSVC.exe;LTSvcMon.exe;LTTray.exe;LTSilent.exe;LSR.exe;labvnc.exe;connectwisechat-customer.exe;connectwisecontrol.client.exe;Remote Workforce Client.exe;connectwise;screenconnect;RemoteWorkforceClientWpf.exe;RemoteWorkforceClient.exe;saazapsc.exe;SAAZappr;SAAZWatchDog.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;GetSaazUsage.exe;SAAZDPMACTL.exe;SAAZDefaultJobExe.exe;SAAZJobDownload.exe;SAAZKill.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;SaazRemote.exe;VMWSaazClient.exe;SAAZappr.exe;SAAZapsc.exe;zSaazAccess.exe;SAAZScheduler.exe;SAAZSrvCOM.exe;SAAZSvcCtrl.exe</OriginalFileName>
-					<Description condition="contains any">ScreenConnect Client;ScreenConnect Guest Service;LabTech Service;LabTech Service Watchdog;LTSilent;LabTech Steps Recorder;ScreenConnect Remote Workforce Client;SAAZ RMM Agent</Description>
-					<Product condition="contains any">ScreenConnect;LabTech MSP;LabVnc;ScreenConnect Remote Workforce Client;ITSupport247</Product>
-					<Company condition="contains any">Elsinore Technologies, Inc.;LabTech Software</Company>
+					<Image condition="is any">ScreenConnect.ClientService.exe;ScreenConnect.WindowsClient.exe;screenconnect.guestclient.exe;screenconnect.guestservice.exe;screenconnect.hostclient.exe;screenconnect.service.exe;ScreenConnect.ClientSetup.exe;ScreenConnect.Client.exe;ScreenConnect.WindowsBackstageShell.exe;ScreenConnect.WindowsFileManager.exe;LTSVC.exe;LTSvcMon.exe;LTTray.exe;LTSilent.exe;LSR.exe;labvnc.exe;connectwisechat-customer.exe;connectwisecontrol.client.exe;Remote Workforce Client.exe;RemoteWorkforceClientWpf.exe;RemoteWorkforceClient.exe;saazapsc.exe;SAAZWatchDog.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;GetSaazUsage.exe;SAAZDPMACTL.exe;SAAZDefaultJobExe.exe;SAAZJobDownload.exe;SAAZKill.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;SaazRemote.exe;VMWSaazClient.exe;SAAZappr.exe;SAAZapsc.exe;zSaazAccess.exe;SAAZScheduler.exe;SAAZSrvCOM.exe;SAAZSvcCtrl.exe</Image>
+					<Image condition="contains any">\elsinore technologies\;\LTSvc\;\SAAZOD\;connectwise;screenconnect</Image>
+					<ParentImage condition="is any">ScreenConnect.ClientService.exe;ScreenConnect.WindowsClient.exe;screenconnect.guestclient.exe;screenconnect.guestservice.exe;screenconnect.hostclient.exe;screenconnect.service.exe;ScreenConnect.ClientSetup.exe;ScreenConnect.Client.exe;ScreenConnect.WindowsBackstageShell.exe;ScreenConnect.WindowsFileManager.exe;LTSVC.exe;LTSvcMon.exe;LTTray.exe;LTSilent.exe;LSR.exe;labvnc.exe;connectwisechat-customer.exe;connectwisecontrol.client.exe;Remote Workforce Client.exe;RemoteWorkforceClientWpf.exe;RemoteWorkforceClient.exe;saazapsc.exe;SAAZWatchDog.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;GetSaazUsage.exe;SAAZDPMACTL.exe;SAAZDefaultJobExe.exe;SAAZJobDownload.exe;SAAZKill.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;SaazRemote.exe;VMWSaazClient.exe;SAAZappr.exe;SAAZapsc.exe;zSaazAccess.exe;SAAZScheduler.exe;SAAZSrvCOM.exe;SAAZSvcCtrl.exe</ParentImage>
+					<ParentImage condition="contains any">\elsinore technologies\;\LTSvc\;\SAAZOD\;connectwise;screenconnect</ParentImage>
+					<OriginalFileName condition="is any">ScreenConnect.ClientService.exe;ScreenConnect.WindowsClient.exe;screenconnect.guestclient.exe;screenconnect.guestservice.exe;screenconnect.hostclient.exe;screenconnect.service.exe;ScreenConnect.ClientSetup.exe;ScreenConnect.Client.exe;ScreenConnect.WindowsBackstageShell.exe;ScreenConnect.WindowsFileManager.exe;LTSVC.exe;LTSvcMon.exe;LTTray.exe;LTSilent.exe;LSR.exe;labvnc.exe;connectwisechat-customer.exe;connectwisecontrol.client.exe;Remote Workforce Client.exe;RemoteWorkforceClientWpf.exe;RemoteWorkforceClient.exe;saazapsc.exe;SAAZWatchDog.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;GetSaazUsage.exe;SAAZDPMACTL.exe;SAAZDefaultJobExe.exe;SAAZJobDownload.exe;SAAZKill.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;SaazRemote.exe;VMWSaazClient.exe;SAAZappr.exe;SAAZapsc.exe;zSaazAccess.exe;SAAZScheduler.exe;SAAZSrvCOM.exe;SAAZSvcCtrl.exe</OriginalFileName>
+					<OriginalFileName condition="contains any">connectwise;screenconnect</OriginalFileName>
+					<Description condition="is any">ScreenConnect Client;ScreenConnect Guest Service;LabTech Service;LabTech Service Watchdog;LTSilent;LabTech Steps Recorder;ScreenConnect Remote Workforce Client;SAAZ RMM Agent</Description>
+					<Product condition="is any">ScreenConnect;LabTech MSP;LabVnc;ScreenConnect Remote Workforce Client;ITSupport247</Product>
+					<Company condition="is any">Elsinore Technologies, Inc.;LabTech Software</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential CrossLoop use detected" groupRelation="or">
-					<Image condition="contains any">\CrossLoop\;CrossLoopService.exe;CrossLoopConnect.exe;WinVNCStub.exe;CrossLoopSetup.exe;CrossLoopUpdate.exe</Image>
-					<ParentImage condition="contains any">\CrossLoop\;CrossLoopService.exe;CrossLoopConnect.exe;WinVNCStub.exe;CrossLoopSetup.exe;CrossLoopUpdate.exe</ParentImage>
-					<OriginalFileName condition="contains any">CrossLoopService.exe;CrossLoopConnect.exe;WinVNCStub.exe;CrossLoopSetup.exe;CrossLoopUpdate.exe</OriginalFileName>
+					<Image condition="is any">CrossLoopService.exe;CrossLoopConnect.exe;WinVNCStub.exe;CrossLoopSetup.exe;CrossLoopUpdate.exe</Image>
+					<Image condition="contains">\CrossLoop\</Image>
+					<ParentImage condition="is any">CrossLoopService.exe;CrossLoopConnect.exe;WinVNCStub.exe;CrossLoopSetup.exe;CrossLoopUpdate.exe</ParentImage>
+					<ParentImage condition="contains">\CrossLoop\</ParentImage>
+					<OriginalFileName condition="is any">CrossLoopService.exe;CrossLoopConnect.exe;WinVNCStub.exe;CrossLoopSetup.exe;CrossLoopUpdate.exe</OriginalFileName>
 					<Description condition="is">CrossLoop - Simple Secure Screen Sharing</Description>
 					<Company condition="is">CrossLoop, Inc.</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential CrossTec Remote Control use detected" groupRelation="or">
-					<Image condition="contains any">PCIVideo.exe;supporttool.exe;DBI.EXE;nsmexec.exe;remcmdstub.exe</Image>
-					<ParentImage condition="contains any">PCIVideo.exe;supporttool.exe;DBI.EXE;nsmexec.exe;remcmdstub.exe</ParentImage>
-					<OriginalFileName condition="contains any">PCIVideo.exe;supporttool.exe;DBI.EXE;nsmexec.exe;remcmdstub.exe</OriginalFileName>
-					<Description condition="contains any">NetSupport Manager;NetSupport dbi;NetSupport nsmexec;NetSupport Remote Command Prompt</Description>
-					<Product condition="contains">NetSupport Manager</Product>
+					<Image condition="is any">PCIVideo.exe;supporttool.exe;DBI.EXE;nsmexec.exe;remcmdstub.exe</Image>
+					<ParentImage condition="is any">PCIVideo.exe;supporttool.exe;DBI.EXE;nsmexec.exe;remcmdstub.exe</ParentImage>
+					<OriginalFileName condition="is any">PCIVideo.exe;supporttool.exe;DBI.EXE;nsmexec.exe;remcmdstub.exe</OriginalFileName>
+					<Description condition="is any">NetSupport Manager;NetSupport dbi;NetSupport nsmexec;NetSupport Remote Command Prompt</Description>
+					<Product condition="is">NetSupport Manager</Product>
 					<Company condition="is">NetSupport Ltd</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential CruzControl use detected" groupRelation="or">
@@ -261,25 +311,33 @@
 					<OriginalFileName condition="is">win_install.exe</OriginalFileName>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential DameWare/Rdpview use detected" groupRelation="or">
-					<Image condition="contains any">\dwrcs\;SolarWinds-Dameware;DameWare Mini Remote Control;dntus;dwrcs.exe;DWRCST.exe;DWMSICLN.exe;dwdrvinst64.exe;DWRCSMSI.exe;dwrcc.exe;dwmdsetup.exe;DWRCINS.exe;dwrccmd.exe;dwrcw64.exe;dwrtde.exe;dwrccnvt.exe;dwhlp.exe;dwdrvinst.exe;DameWare.LogAdjuster.exe;DWRCSPC.exe;DWRCSPX.exe;DWMacDis.exe;DNTUS26.exe;DNTUCli.exe;DWRCC.exe;DWADEA.exe;DWExporter.exe;DNTUCnvt.exe</Image>
-					<ParentImage condition="contains any">\dwrcs\;SolarWinds-Dameware;DameWare Mini Remote Control;dntus;dwrcs.exe;DWRCST.exe;DWMSICLN.exe;dwdrvinst64.exe;DWRCSMSI.exe;dwrcc.exe;dwmdsetup.exe;DWRCINS.exe;dwrccmd.exe;dwrcw64.exe;dwrtde.exe;dwrccnvt.exe;dwhlp.exe;dwdrvinst.exe;DameWare.LogAdjuster.exe;DWRCSPC.exe;DWRCSPX.exe;DWMacDis.exe;DNTUS26.exe;DNTUCli.exe;DWRCC.exe;DWADEA.exe;DWExporter.exe;DNTUCnvt.exe</ParentImage>
-					<OriginalFileName condition="contains any">SolarWinds-Dameware;DameWare Mini Remote Control;dntus;dwrcs.exe;DWRCST.exe;DWMSICLN.exe;dwdrvinst64.exe;DWRCSMSI.exe;dwrcc.exe;dwmdsetup.exe;DWRCINS.exe;dwrccmd.exe;dwrcw64.exe;dwrtde.exe;dwrccnvt.exe;dwhlp.exe;dwdrvinst.exe;DameWare.LogAdjuster.exe;DWRCSPC.exe;DWRCSPX.exe;DWMacDis.exe;DNTUS26.exe;DNTUCli.exe;DWRCC.exe;DWADEA.exe;DWExporter.exe;DNTUCnvt.exe</OriginalFileName>
-					<Description condition="contains">DameWare</Description>
-					<Product condition="contains">DameWare</Product>
-					<Company condition="contains">DameWare</Company>
+					<Image condition="is any">dwrcs.exe;DWRCST.exe;DWMSICLN.exe;dwdrvinst64.exe;DWRCSMSI.exe;dwrcc.exe;dwmdsetup.exe;DWRCINS.exe;dwrccmd.exe;dwrcw64.exe;dwrtde.exe;dwrccnvt.exe;dwhlp.exe;dwdrvinst.exe;DameWare.LogAdjuster.exe;DWRCSPC.exe;DWRCSPX.exe;DWMacDis.exe;DNTUS26.exe;DNTUCli.exe;DWRCC.exe;DWADEA.exe;DWExporter.exe;DNTUCnvt.exe</Image>
+					<Image condition="contains any">\dwrcs\;SolarWinds-Dameware;DameWare Mini Remote Control;dntus</Image>
+					<ParentImage condition="is any">dwrcs.exe;DWRCST.exe;DWMSICLN.exe;dwdrvinst64.exe;DWRCSMSI.exe;dwrcc.exe;dwmdsetup.exe;DWRCINS.exe;dwrccmd.exe;dwrcw64.exe;dwrtde.exe;dwrccnvt.exe;dwhlp.exe;dwdrvinst.exe;DameWare.LogAdjuster.exe;DWRCSPC.exe;DWRCSPX.exe;DWMacDis.exe;DNTUS26.exe;DNTUCli.exe;DWRCC.exe;DWADEA.exe;DWExporter.exe;DNTUCnvt.exe</ParentImage>
+					<ParentImage condition="contains any">\dwrcs\;SolarWinds-Dameware;DameWare Mini Remote Control;dntus</ParentImage>
+					<OriginalFileName condition="is any">dwrcs.exe;DWRCST.exe;DWMSICLN.exe;dwdrvinst64.exe;DWRCSMSI.exe;dwrcc.exe;dwmdsetup.exe;DWRCINS.exe;dwrccmd.exe;dwrcw64.exe;dwrtde.exe;dwrccnvt.exe;dwhlp.exe;dwdrvinst.exe;DameWare.LogAdjuster.exe;DWRCSPC.exe;DWRCSPX.exe;DWMacDis.exe;DNTUS26.exe;DNTUCli.exe;DWRCC.exe;DWADEA.exe;DWExporter.exe;DNTUCnvt.exe</OriginalFileName>
+					<OriginalFileName condition="contains any">SolarWinds-Dameware;DameWare Mini Remote Control;dntus</OriginalFileName>
+					<Description condition="is">DameWare</Description>
+					<Product condition="is">DameWare</Product>
+					<Company condition="is">DameWare</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential DeskShare use detected" groupRelation="or">
-					<Image condition="contains any">\Team Task Manager\;\Deskshare\;TeamTaskManager.exe;DSGuest.exe;Team Task Manager.exe;OpenFirewallPort.exe</Image>
-					<ParentImage condition="contains any">\Team Task Manager\;\Deskshare\;TeamTaskManager.exe;DSGuest.exe;Team Task Manager.exe;OpenFirewallPort.exe</ParentImage>
-					<OriginalFileName condition="contains any">TeamTaskManager.exe;DSGuest.exe;Team Task Manager.exe;OpenFirewallPort.exe</OriginalFileName>
+					<Image condition="is any">TeamTaskManager.exe;DSGuest.exe;Team Task Manager.exe;OpenFirewallPort.exe</Image>
+					<Image condition="contains any">\Team Task Manager\;\Deskshare\</Image>
+					<ParentImage condition="is any">TeamTaskManager.exe;DSGuest.exe;Team Task Manager.exe;OpenFirewallPort.exe</ParentImage>
+					<ParentImage condition="contains any">\Team Task Manager\;\Deskshare\</ParentImage>
+					<OriginalFileName condition="is any">TeamTaskManager.exe;DSGuest.exe;Team Task Manager.exe;OpenFirewallPort.exe</OriginalFileName>
 					<Description condition="contains any">Team Task Manager;OpenFirewallPort;PathReplacement;CheckUserNamePassword</Description>
 					<Product condition="is">Team Task Manager</Product>
-					<Company condition="contains">Deskshare</Company>
+					<Company condition="is">Deskshare</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential DesktopNow use detected" groupRelation="or">
-					<Image condition="contains any">\desktopnow\;desktopnow.exe;desktopnowsetup_</Image>
-					<ParentImage condition="contains any">\desktopnow\;desktopnow.exe;desktopnowsetup_</ParentImage>
-					<OriginalFileName condition="contains any">desktopnow.exe;desktopnowsetup_</OriginalFileName>
+					<Image condition="image">desktopnow.exe</Image>
+					<Image condition="contains any">\desktopnow\;desktopnowsetup_</Image>
+					<ParentImage condition="image">desktopnow.exe</ParentImage>
+					<ParentImage condition="contains any">\desktopnow\;desktopnowsetup_</ParentImage>
+					<OriginalFileName condition="is">desktopnow.exe</OriginalFileName>
+					<OriginalFileName condition="contains">desktopnowsetup_</OriginalFileName>
 					<Description condition="is">DesktopNow</Description>
 					<Product condition="is">DesktopNow</Product>
 					<Company condition="is">NCH Software</Company>
@@ -291,182 +349,238 @@
 					<Description condition="is">devtunnel</Description>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Devolutions Remote Desktop Manager use detected" groupRelation="or">
-					<Image condition="contains any">\Devolutions\;\RemoteDesktopManagerFree\;\RemoteDesktopManager\;RemoteDesktopManager.exe;Remote Desktop Manager;RemoteDesktopManager_x64.exe;RemoteDesktopManager_ARM64.exe</Image>
-					<ParentImage condition="contains any">\Devolutions\;\RemoteDesktopManagerFree\;\RemoteDesktopManager\;RemoteDesktopManager.exe;Remote Desktop Manager;RemoteDesktopManager_x64.exe;RemoteDesktopManager_ARM64.exe</ParentImage>
-					<OriginalFileName condition="contains any">RemoteDesktopManager.exe;Remote Desktop Manager;RemoteDesktopManager.dll;RemoteDesktopManager_x64.exe;RemoteDesktopManager_ARM64.exe</OriginalFileName>
+					<Image condition="is any">RemoteDesktopManager.exe;RemoteDesktopManager_x64.exe;RemoteDesktopManager_ARM64.exe</Image>
+					<Image condition="contains any">\Devolutions\;\RemoteDesktopManagerFree\;\RemoteDesktopManager\;Remote Desktop Manager</Image>
+					<ParentImage condition="is any">RemoteDesktopManager.exe;RemoteDesktopManager_x64.exe;RemoteDesktopManager_ARM64.exe</ParentImage>
+					<ParentImage condition="contains any">\Devolutions\;\RemoteDesktopManagerFree\;\RemoteDesktopManager\;Remote Desktop Manager</ParentImage>
+					<OriginalFileName condition="is any">RemoteDesktopManager.exe;RemoteDesktopManager_x64.exe;RemoteDesktopManager_ARM64.exe</OriginalFileName>
+					<OriginalFileName condition="contains any">\Devolutions\;\RemoteDesktopManagerFree\;\RemoteDesktopManager\;Remote Desktop Manager</OriginalFileName>
 					<Description condition="is">Remote Desktop Manager</Description>
 					<Product condition="is">Remote Desktop Manager</Product>
-					<Company condition="contains">Devolutions</Company>
+					<Company condition="is">Devolutions</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Distant Desktop use detected" groupRelation="or">
-					<Image condition="contains any">\Distant Desktop\;ddsystem.exe;dd.exe;distant-desktop.exe;ddserver.exe;dd_update.exe</Image>
-					<ParentImage condition="contains any">\Distant Desktop\;ddsystem.exe;dd.exe;distant-desktop.exe;ddserver.exe;dd_update.exe</ParentImage>
-					<OriginalFileName condition="contains any">ddsystem.exe;dd.exe;distant-desktop.exe;ddserver.exe;dd_update.exe</OriginalFileName>
+					<Image condition="is any">ddsystem.exe;dd.exe;distant-desktop.exe;ddserver.exe;dd_update.exe</Image>
+					<Image condition="contains">\Distant Desktop\</Image>
+					<ParentImage condition="is any">ddsystem.exe;dd.exe;distant-desktop.exe;ddserver.exe;dd_update.exe</ParentImage>
+					<ParentImage condition="contains any">\Distant Desktop\</ParentImage>
+					<OriginalFileName condition="is any">ddsystem.exe;dd.exe;distant-desktop.exe;ddserver.exe;dd_update.exe</OriginalFileName>
 					<Description condition="is any">Distant Desktop Server;Distant Desktop Software;Distant Desktop</Description>
 					<Product condition="is any">Distant Desktop Server</Product>
 					<Company condition="is">Distant Software</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Domotz use detected" groupRelation="or">
-					<Image condition="contains any">\domotz\;domotz.exe;Domotz Pro Desktop App.exe;domotz;Domotz Pro Desktop App Setup;domotz-windows;domotz_node.exe;domotz_ndt7.exe;domotz_pscp.exe;domotz_curl.exe;domotz_nmap.exe;domotz_openssl.exe;domotz_openvpn.exe;domotz_tapinstall.exe;domotz_mtr.exe;domotz_dig.exe;domotz_bash.exe</Image>
-					<ParentImage condition="contains any">\domotz\;domotz.exe;Domotz Pro Desktop App.exe;domotz;Domotz Pro Desktop App Setup;domotz-windows;domotz_node.exe;domotz_ndt7.exe;domotz_pscp.exe;domotz_curl.exe;domotz_nmap.exe;domotz_openssl.exe;domotz_openvpn.exe;domotz_tapinstall.exe;domotz_mtr.exe;domotz_dig.exe;domotz_bash.exe</ParentImage>
-					<OriginalFileName condition="contains any">domotz.exe;Domotz Pro Desktop App.exe;domotz;Domotz Pro Desktop App Setup;domotz-windows;domotz_node.exe;domotz_ndt7.exe;domotz_pscp.exe;domotz_curl.exe;domotz_nmap.exe;domotz_openssl.exe;domotz_openvpn.exe;domotz_tapinstall.exe;domotz_mtr.exe;domotz_dig.exe;domotz_bash.exe</OriginalFileName>
-					<Description condition="contains">Domotz</Description>
-					<Product condition="contains">Domotz</Product>
-					<Company condition="contains">Domotz</Company>
+					<Image condition="is any">domotz.exe;Domotz Pro Desktop App.exe;domotz_node.exe;domotz_ndt7.exe;domotz_pscp.exe;domotz_curl.exe;domotz_nmap.exe;domotz_openssl.exe;domotz_openvpn.exe;domotz_tapinstall.exe;domotz_mtr.exe;domotz_dig.exe;domotz_bash.exe</Image>
+					<Image condition="contains any">\domotz\;domotz;Domotz Pro Desktop App Setup;domotz-windows</Image>
+					<ParentImage condition="is any">domotz.exe;Domotz Pro Desktop App.exe;domotz_node.exe;domotz_ndt7.exe;domotz_pscp.exe;domotz_curl.exe;domotz_nmap.exe;domotz_openssl.exe;domotz_openvpn.exe;domotz_tapinstall.exe;domotz_mtr.exe;domotz_dig.exe;domotz_bash.exe</ParentImage>
+					<ParentImage condition="contains any">\domotz\;domotz;Domotz Pro Desktop App Setup;domotz-windows</ParentImage>
+					<OriginalFileName condition="is any">domotz.exe;Domotz Pro Desktop App.exe;domotz_node.exe;domotz_ndt7.exe;domotz_pscp.exe;domotz_curl.exe;domotz_nmap.exe;domotz_openssl.exe;domotz_openvpn.exe;domotz_tapinstall.exe;domotz_mtr.exe;domotz_dig.exe;domotz_bash.exe</OriginalFileName>
+					<OriginalFileName condition="contains any">\domotz\;domotz;Domotz Pro Desktop App Setup;domotz-windows</OriginalFileName>
+					<Description condition="is">Domotz</Description>
+					<Product condition="is">Domotz</Product>
+					<Company condition="is">Domotz</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential DragonDisk use detected" groupRelation="or">
-					<Image condition="contains any">\DragonDisk\;\Almageste\;dgsync.exe;DragonDisk.exe;dragondisk-</Image>
-					<ParentImage condition="contains any">\DragonDisk\;\Almageste\;dgsync.exe;DragonDisk.exe;dragondisk-</ParentImage>
-					<OriginalFileName condition="contains any">dgsync.exe;DragonDisk.exe;dragondisk</OriginalFileName>
-					<Description condition="contains any">DragonDisk Setup</Description>
-					<Product condition="contains any">Almageste;DragonDisk</Product>
-					<Company condition="contains">Almageste</Company>
+					<Image condition="is any">dgsync.exe;DragonDisk.exe</Image>
+					<Image condition="contains any">\DragonDisk\;\Almageste\;dragondisk-</Image>
+					<ParentImage condition="contains any">dgsync.exe;DragonDisk.exe</ParentImage>
+					<ParentImage condition="contains any">\DragonDisk\;\Almageste\;dragondisk-</ParentImage>
+					<OriginalFileName condition="is any">dgsync.exe;DragonDisk.exe</OriginalFileName>
+					<OriginalFileName condition="contains">dragondisk</OriginalFileName>
+					<Description condition="is any">DragonDisk Setup</Description>
+					<Product condition="is any">Almageste;DragonDisk</Product>
+					<Company condition="is">Almageste</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Duplicati use detected" groupRelation="or">
-					<Image condition="contains any">\Duplicati 2\;Duplicati.Server.exe;Duplicati.GUI.;Duplicati.CommandLine.;Duplicati.Library.;Duplicati.Service.exe;Duplicati.WindowsService.exe;duplicati.exe;duplicati.server.</Image>
-					<ParentImage condition="contains any">\Duplicati 2\;Duplicati.Server.exe;Duplicati.GUI.;Duplicati.CommandLine.;Duplicati.Library.;Duplicati.Service.exe;Duplicati.WindowsService.exe;duplicati.exe;duplicati.server.</ParentImage>
-					<OriginalFileName condition="contains any">Duplicati.Server.exe;Duplicati.GUI.;Duplicati.CommandLine.;Duplicati.Library.;Duplicati.Service.exe;Duplicati.WindowsService.exe;duplicati.exe;duplicati.server.</OriginalFileName>
-					<Description condition="contains any">Duplicati;HexaD</Description>
-					<Product condition="contains any">Duplicati;HexaD</Product>
-					<Company condition="contains any">Duplicati;HexaD</Company>
+					<Image condition="is any">Duplicati.Server.exe;Duplicati.Service.exe;Duplicati.WindowsService.exe;duplicati.exe</Image>
+					<Image condition="contains any">\Duplicati 2\;Duplicati.GUI.;Duplicati.CommandLine.;Duplicati.Library.;duplicati.server.</Image>
+					<ParentImage condition="is any">Duplicati.Server.exe;Duplicati.Service.exe;Duplicati.WindowsService.exe;duplicati.exe</ParentImage>
+					<ParentImage condition="contains any">\Duplicati 2\;Duplicati.GUI.;Duplicati.CommandLine.;Duplicati.Library.;duplicati.server.</ParentImage>
+					<OriginalFileName condition="is any">Duplicati.Server.exe;Duplicati.Service.exe;Duplicati.WindowsService.exe;duplicati.exe</OriginalFileName>
+					<OriginalFileName condition="contains any">Duplicati.GUI.;Duplicati.CommandLine.;Duplicati.Library.;duplicati.server.</OriginalFileName>
+					<Description condition="is any">Duplicati;HexaD</Description>
+					<Product condition="is any">Duplicati;HexaD</Product>
+					<Company condition="is any">Duplicati;HexaD</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential DW Service use detected" groupRelation="or">
-					<Image condition="contains any">\dwagent;dwagsvc.exe;dwagent.exe;dwagsvc.exe;dwaglnc.exe</Image>
-					<ParentImage condition="contains any">\dwagent;dwagsvc.exe;dwagent.exe;dwagsvc.exe;dwaglnc.exe</ParentImage>
-					<OriginalFileName condition="contains any">dwagsvc.exe;dwagent.exe;dwagsvc.exe;dwaglnc.exe</OriginalFileName>
-					<Description condition="contains">DWSNET</Description>
-					<Product condition="contains">DWSNET</Product>
-					<Company condition="contains">DWSNET</Company>
+					<Image condition="is any">dwagsvc.exe;dwagent.exe;dwagsvc.exe;dwaglnc.exe</Image>
+					<Image condition="contains">\dwagent</Image>
+					<ParentImage condition="is any">dwagsvc.exe;dwagent.exe;dwagsvc.exe;dwaglnc.exe</ParentImage>
+					<ParentImage condition="contains">\dwagent</ParentImage>
+					<OriginalFileName condition="is any">dwagsvc.exe;dwagent.exe;dwagsvc.exe;dwaglnc.exe</OriginalFileName>
+					<OriginalFileName condition="contains ">\dwagent</OriginalFileName>
+					<Description condition="is">DWSNET</Description>
+					<Product condition="is">DWSNET</Product>
+					<Company condition="is">DWSNET</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Echoware use detected" groupRelation="or">
 					<Image condition="contains any">\Echogent\;\EchoVNC\;\EchoVNC Viewer\;\echoserver\;EchoVNC;echoserver</Image>
 					<ParentImage condition="contains any">\Echogent\;\EchoVNC\;\EchoVNC Viewer\;\echoserver\;EchoVNC;echoserver</ParentImage>
 					<OriginalFileName condition="contains any">EchoVNC;echoserver</OriginalFileName>
-					<Description condition="contains any">EchoVNC;echoServer</Description>
-					<Product condition="contains">EchoVNC</Product>
-					<Company condition="contains">Echogent</Company>
+					<Description condition="is any">EchoVNC;echoServer</Description>
+					<Product condition="is">EchoVNC</Product>
+					<Company condition="is">Echogent</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential eHorus/Pandora RC (eHorus) use detected" groupRelation="or">
-					<Image condition="contains any">\ehorus_agent\;ehorus standalone.exe;ehorus_uit.exe;ehorus_cmd.exe;ehorus_display.exe;ehorus_agent.exe;ehorus_launcher.exe</Image>
-					<ParentImage condition="contains any">\ehorus_agent\;ehorus standalone.exe;ehorus_uit.exe;ehorus_cmd.exe;ehorus_display.exe;ehorus_agent.exe;ehorus_launcher.exe</ParentImage>
-					<OriginalFileName condition="contains any">ehorus standalone.exe;ehorus_uit.exe;ehorus_cmd.exe;ehorus_display.exe;ehorus_agent.exe;ehorus_launcher.exe</OriginalFileName>
-					<Description condition="contains">ehorus</Description>
-					<Product condition="contains">ehorus</Product>
-					<Company condition="contains">ehorus</Company>
+					<Image condition="is any">ehorus standalone.exe;ehorus_uit.exe;ehorus_cmd.exe;ehorus_display.exe;ehorus_agent.exe;ehorus_launcher.exe</Image>
+					<Image condition="contains">\ehorus_agent\</Image>
+					<ParentImage condition="is any">ehorus standalone.exe;ehorus_uit.exe;ehorus_cmd.exe;ehorus_display.exe;ehorus_agent.exe;ehorus_launcher.exe</ParentImage>
+					<ParentImage condition="contains">\ehorus_agent\</ParentImage>
+					<OriginalFileName condition="is any">ehorus standalone.exe;ehorus_uit.exe;ehorus_cmd.exe;ehorus_display.exe;ehorus_agent.exe;ehorus_launcher.exe</OriginalFileName>
+					<Description condition="is">ehorus</Description>
+					<Product condition="is">ehorus</Product>
+					<Company condition="is">ehorus</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Electric AI (Kaseya)/Kaseya VSA use detected" groupRelation="or">
-					<Image condition="contains any">\kaseya live connect\;\KaseyaLiveConnect\;\kaseya remote control\;KcsSetup.exe;KAgentSilent.exe;KaSetup.exe;KaUsrTsk.exe;AgentMon.exe;Kaseya.AgentEndpoint.exe;KDLLHost.exe;KLicense.exe;KaseyaEndpoint.exe;KPrtPng.exe;KaUsrTsk.exe;KaseyaTaskRunnerx64.exe;KaseyaCommandShellProxy.exe;KaseyaEndpoint.exe;KaseyaRemoteControlHost.exe;KaseyaTaskRunnerx86.exe;kGetELMg64.exe;KaUpdHlp.exe;KasAVSrv.exe;LiveConnect.exe;LogFileCleaner.exe;kaseyaliveconnect.exe;kaseya.adminendpoint.exe;kaseya remote control.exe</Image>
-					<ParentImage condition="contains any">\kaseya live connect\;\KaseyaLiveConnect\;\kaseya remote control\;KcsSetup.exe;KAgentSilent.exe;KaSetup.exe;KaUsrTsk.exe;AgentMon.exe;Kaseya.AgentEndpoint.exe;KDLLHost.exe;KLicense.exe;KaseyaEndpoint.exe;KPrtPng.exe;KaUsrTsk.exe;KaseyaTaskRunnerx64.exe;KaseyaCommandShellProxy.exe;KaseyaEndpoint.exe;KaseyaRemoteControlHost.exe;KaseyaTaskRunnerx86.exe;kGetELMg64.exe;KaUpdHlp.exe;KasAVSrv.exe;LiveConnect.exe;LogFileCleaner.exe;kaseyaliveconnect.exe;kaseya.adminendpoint.exe;kaseya remote control.exe</ParentImage>
-					<OriginalFileName condition="contains any">KcsSetup.exe;KAgentSilent.exe;KaSetup.exe;KaUsrTsk.exe;AgentMon.exe;Kaseya.AgentEndpoint.exe;KDLLHost.exe;KLicense.exe;KaseyaEndpoint.exe;KPrtPng.exe;KaUsrTsk.exe;KaseyaTaskRunnerx64.exe;KaseyaCommandShellProxy.exe;KaseyaEndpoint.exe;KaseyaRemoteControlHost.exe;KaseyaTaskRunnerx86.exe;kGetELMg64.exe;KaUpdHlp.exe;KasAVSrv.exe;LiveConnect.exe;LogFileCleaner.exe;kaseyaliveconnect.exe;kaseya.adminendpoint.exe;kaseya remote control.exe</OriginalFileName>
+					<Image condition="is any">KcsSetup.exe;KAgentSilent.exe;KaSetup.exe;KaUsrTsk.exe;AgentMon.exe;Kaseya.AgentEndpoint.exe;KDLLHost.exe;KLicense.exe;KaseyaEndpoint.exe;KPrtPng.exe;KaUsrTsk.exe;KaseyaTaskRunnerx64.exe;KaseyaCommandShellProxy.exe;KaseyaEndpoint.exe;KaseyaRemoteControlHost.exe;KaseyaTaskRunnerx86.exe;kGetELMg64.exe;KaUpdHlp.exe;KasAVSrv.exe;LiveConnect.exe;LogFileCleaner.exe;kaseyaliveconnect.exe;kaseya.adminendpoint.exe;kaseya remote control.exe</Image>
+					<Image condition="contains any">\kaseya live connect\;\KaseyaLiveConnect\;\kaseya remote control\</Image>
+					<ParentImage condition="is any">KcsSetup.exe;KAgentSilent.exe;KaSetup.exe;KaUsrTsk.exe;AgentMon.exe;Kaseya.AgentEndpoint.exe;KDLLHost.exe;KLicense.exe;KaseyaEndpoint.exe;KPrtPng.exe;KaUsrTsk.exe;KaseyaTaskRunnerx64.exe;KaseyaCommandShellProxy.exe;KaseyaEndpoint.exe;KaseyaRemoteControlHost.exe;KaseyaTaskRunnerx86.exe;kGetELMg64.exe;KaUpdHlp.exe;KasAVSrv.exe;LiveConnect.exe;LogFileCleaner.exe;kaseyaliveconnect.exe;kaseya.adminendpoint.exe;kaseya remote control.exe</ParentImage>
+					<ParentImage condition="contains any">\kaseya live connect\;\KaseyaLiveConnect\;\kaseya remote control\</ParentImage>
+					<OriginalFileName condition="is any">KcsSetup.exe;KAgentSilent.exe;KaSetup.exe;KaUsrTsk.exe;AgentMon.exe;Kaseya.AgentEndpoint.exe;KDLLHost.exe;KLicense.exe;KaseyaEndpoint.exe;KPrtPng.exe;KaUsrTsk.exe;KaseyaTaskRunnerx64.exe;KaseyaCommandShellProxy.exe;KaseyaEndpoint.exe;KaseyaRemoteControlHost.exe;KaseyaTaskRunnerx86.exe;kGetELMg64.exe;KaUpdHlp.exe;KasAVSrv.exe;LiveConnect.exe;LogFileCleaner.exe;kaseyaliveconnect.exe;kaseya.adminendpoint.exe;kaseya remote control.exe</OriginalFileName>
 					<Description condition="is any">Virtual System Administrator Agent;KDLLHost Application;Kaseya Agent Service Helper;VSA Event Log Parser</Description>
 					<Product condition="is any">Virtual System Administrator Agent;Kaseya Agent Service Helper;Virtual System Administrator</Product>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential EMCO Remote Console use detected" groupRelation="or">
-					<Image condition="contains any">\EMCO\Remote;\emco remote;remoteconsole.exe;RemoteDeployment.exe;RemoteInstallerProfessional.exe</Image>
-					<ParentImage condition="contains any">\EMCO\Remote;\emco remote;remoteconsole.exe;RemoteDeployment.exe;RemoteInstallerProfessional.exe</ParentImage>
+					<Image condition="is any">remoteconsole.exe;RemoteDeployment.exe;RemoteInstallerProfessional.exe</Image>
+					<Image condition="contains any">\EMCO\Remote;\emco remote</Image>
+					<ParentImage condition="is any">remoteconsole.exe;RemoteDeployment.exe;RemoteInstallerProfessional.exe</ParentImage>
+					<ParentImage condition="contains any">\EMCO\Remote;\emco remote</ParentImage>
 					<OriginalFileName condition="contains any">remoteconsole.exe;RemoteDeployment.exe;RemoteInstallerProfessional.exe</OriginalFileName>
-					<Description condition="contains">EMCO Remote</Description>
-					<Product condition="contains">EMCO Remote</Product>
+					<Description condition="is">EMCO Remote</Description>
+					<Product condition="is">EMCO Remote</Product>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Ericom AccessNow/Connect use detected" groupRelation="or">
-					<Image condition="contains any">\Ericom Software\;\Ericom Access Server\;\Ericom AccessNow Web Component\;accessserver.exe;AccessServer32.exe;EricomSecureGateway.exe;EricomAuthenticationServer.exe;ANFileTransfer.exe;Blaze.exe;PtLoadBalancerAgent.exe;PtTSAgent.exe;TsRemoteBrowser.exe;EricomConnectRemoteHost;ericomconnnectconfigurationtool.exe</Image>
-					<ParentImage condition="contains any">\Ericom Software\;\Ericom Access Server\;\Ericom AccessNow Web Component\;accessserver.exe;AccessServer32.exe;EricomSecureGateway.exe;EricomAuthenticationServer.exe;ANFileTransfer.exe;Blaze.exe;PtLoadBalancerAgent.exe;PtTSAgent.exe;TsRemoteBrowser.exe;EricomConnectRemoteHost;ericomconnnectconfigurationtool.exe</ParentImage>
-					<OriginalFileName condition="contains any">accessserver.exe;AccessServer32.exe;EricomSecureGateway.exe;EricomAuthenticationServer.exe;ANFileTransfer.exe;Blaze.exe;PtLoadBalancerAgent.exe;PtTSAgent.exe;TsRemoteBrowser.exe;EricomConnectRemoteHost;ericomconnnectconfigurationtool.exe</OriginalFileName>
-					<Description condition="contains">Ericom</Description>
-					<Product condition="contains">Ericom</Product>
-					<Company condition="contains">Ericom</Company>
+					<Image condition="is any">accessserver.exe;AccessServer32.exe;EricomSecureGateway.exe;EricomAuthenticationServer.exe;ANFileTransfer.exe;Blaze.exe;PtLoadBalancerAgent.exe;PtTSAgent.exe;TsRemoteBrowser.exe;ericomconnnectconfigurationtool.exe</Image>
+					<ParentImage condition="contains any">\Ericom Software\;\Ericom Access Server\;\Ericom AccessNow Web Component\;EricomConnectRemoteHos</ParentImage>
+					<ParentImage condition="is any">accessserver.exe;AccessServer32.exe;EricomSecureGateway.exe;EricomAuthenticationServer.exe;ANFileTransfer.exe;Blaze.exe;PtLoadBalancerAgent.exe;PtTSAgent.exe;TsRemoteBrowser.exe;ericomconnnectconfigurationtool.exe</ParentImage>
+					<ParentImage condition="contains any">\Ericom Software\;\Ericom Access Server\;\Ericom AccessNow Web Component\;EricomConnectRemoteHost</ParentImage>
+					<OriginalFileName condition="is any">accessserver.exe;AccessServer32.exe;EricomSecureGateway.exe;EricomAuthenticationServer.exe;ANFileTransfer.exe;Blaze.exe;PtLoadBalancerAgent.exe;PtTSAgent.exe;TsRemoteBrowser.exe;ericomconnnectconfigurationtool.exe</OriginalFileName>
+					<OriginalFileName condition="contains">EricomConnectRemoteHost</OriginalFileName>
+					<Description condition="is">Ericom</Description>
+					<Product condition="is">Ericom</Product>
+					<Company condition="is">Ericom</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential ESET Remote Administrator use detected" groupRelation="or">
-					<Image condition="contains any">\ESET Remote Administrator\;era.exe;einstaller.exe;ezhelp;eratool.exe;ERAAgent.exe;esetup.exe</Image>
-					<ParentImage condition="contains any">\ESET Remote Administrator\;era.exe;einstaller.exe;ezhelp;eratool.exe;ERAAgent.exe;esetup.exe</ParentImage>
-					<OriginalFileName condition="contains any">era.exe;einstaller.exe;ezhelp;eratool.exe;ERAAgent.exe;esetup.exe</OriginalFileName>
-					<Description condition="contains any">ESET Management Agent Module;ESET Remote Installer;ESET Remote Administrator Server</Description>
-					<Product condition="contains any">ESET Management Agent;ESET Remote Administrator</Product>
+					<Image condition="is any">era.exe;einstaller.exe;eratool.exe;ERAAgent.exe;esetup.exe</Image>
+					<Image condition="contains any">\ESET Remote Administrator\;ezhelp</Image>
+					<ParentImage condition="is any">era.exe;einstaller.exe;eratool.exe;ERAAgent.exe;esetup.exe</ParentImage>
+					<ParentImage condition="contains any">\ESET Remote Administrator\;ezhelp</ParentImage>
+					<OriginalFileName condition="is any">era.exe;einstaller.exe;eratool.exe;ERAAgent.exe;esetup.exe</OriginalFileName>
+					<OriginalFileName condition="contains any">ezhelp</OriginalFileName>
+					<Description condition="is any">ESET Management Agent Module;ESET Remote Installer;ESET Remote Administrator Server</Description>
+					<Product condition="is any">ESET Management Agent;ESET Remote Administrator</Product>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential ExtraPuTTY use detected" groupRelation="or">
-					<Image condition="contains any">\ExtraPuTTY\;ExtraPuTTY;ExtraPutty_CSharp.exe;extraputty_vbNet.exe;ExtraPuTTY_VB6_Sample.exe;PuTTYcmdSender.exe;ExtraPuTTYUninstall</Image>
-					<ParentImage condition="contains any">\ExtraPuTTY\;ExtraPuTTY;ExtraPutty_CSharp.exe;extraputty_vbNet.exe;ExtraPuTTY_VB6_Sample.exe;PuTTYcmdSender.exe;ExtraPuTTYUninstall</ParentImage>
-					<OriginalFileName condition="contains any">ExtraPuTTY;ExtraPutty_CSharp.exe;extraputty_vbNet.exe;ExtraPuTTY_VB6_Sample.exe;PuTTYcmdSender.exe;ExtraPuTTYUninstall</OriginalFileName>
-					<Description condition="contains">ExtraPuTTY</Description>
+					<Image condition="is any">ExtraPutty_CSharp.exe;extraputty_vbNet.exe;ExtraPuTTY_VB6_Sample.exe;PuTTYcmdSender.exe</Image>
+					<Image condition="contains any">\ExtraPuTTY\;ExtraPuTTY;ExtraPuTTYUninstall</Image>
+					<ParentImage condition="is any">ExtraPutty_CSharp.exe;extraputty_vbNet.exe;ExtraPuTTY_VB6_Sample.exe;PuTTYcmdSender.exe</ParentImage>
+					<ParentImage condition="contains any">\ExtraPuTTY\;ExtraPuTTY;ExtraPuTTYUninstall</ParentImage>
+					<OriginalFileName condition="is any">ExtraPutty_CSharp.exe;extraputty_vbNet.exe;ExtraPuTTY_VB6_Sample.exe;PuTTYcmdSender.exe</OriginalFileName>
+					<OriginalFileName condition="contains any">ExtraPuTTY;ExtraPuTTYUninstall</OriginalFileName>
+					<Description condition="is">ExtraPuTTY</Description>
 					<Product condition="is">ExtraPuTTY</Product>
 					<Company condition="is">ExtraPuTTY</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential ezHelp use detected" groupRelation="or">
-					<Image condition="contains any">\ezhelp\;ezHelpClientManager.exe;ezHelpManager.exe;ezhelpclient.exe;ezHelpDownloader.exe;ezHelpServer.exe</Image>
-					<ParentImage condition="contains any">\ezhelp\;ezHelpClientManager.exe;ezHelpManager.exe;ezhelpclient.exe;ezHelpDownloader.exe;ezHelpServer.exe</ParentImage>
-					<OriginalFileName condition="contains any">ezHelpClientManager.exe;ezHelpManager.exe;ezhelpclient.exe;ezHelpDownloader.exe;ezHelpServer.exe</OriginalFileName>
-					<Company condition="contains">midassoft</Company>
+					<Image condition="is any">ezHelpClientManager.exe;ezHelpManager.exe;ezhelpclient.exe;ezHelpDownloader.exe;ezHelpServer.exe</Image>
+					<Image condition="contains">\ezhelp\</Image>
+					<ParentImage condition="is any">ezHelpClientManager.exe;ezHelpManager.exe;ezhelpclient.exe;ezHelpDownloader.exe;ezHelpServer.exe</ParentImage>
+					<ParentImage condition="contains">\ezhelp\</ParentImage>
+					<OriginalFileName condition="is any">ezHelpClientManager.exe;ezHelpManager.exe;ezhelpclient.exe;ezHelpDownloader.exe;ezHelpServer.exe</OriginalFileName>
+					<OriginalFileName condition="contains">\ezhelp\</OriginalFileName>
+					<Company condition="is">midassoft</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential FastViewer use detected" groupRelation="or">
-					<Image condition="contains any">\fastviewer;FastViewer.exe;FastClient.exe;FastMaster.exe;fvwresetup.exe;FastTray.exe;FastProxy.exe;FastRemoteService.exe;FastWatchDog.exe;FastREClient.exe</Image>
-					<ParentImage condition="contains any">\fastviewer;FastViewer.exe;FastClient.exe;FastMaster.exe;fvwresetup.exe;FastTray.exe;FastProxy.exe;FastRemoteService.exe;FastWatchDog.exe;FastREClient.exe</ParentImage>
-					<OriginalFileName condition="contains any">FastViewer.exe;FastClient.exe;FastMaster.exe;fvwresetup.exe;FastTray.exe;FastProxy.exe;FastRemoteService.exe;FastWatchDog.exe;FastREClient.exe</OriginalFileName>
-					<Description condition="contains">FastViewer</Description>
-					<Product condition="contains">FastViewer</Product>
-					<Company condition="contains">Fastviewer</Company>
+					<Image condition="is any">FastViewer.exe;FastClient.exe;FastMaster.exe;fvwresetup.exe;FastTray.exe;FastProxy.exe;FastRemoteService.exe;FastWatchDog.exe;FastREClient.exe</Image>
+					<Image condition="contains">\fastviewer</Image>
+					<ParentImage condition="is any">FastViewer.exe;FastClient.exe;FastMaster.exe;fvwresetup.exe;FastTray.exe;FastProxy.exe;FastRemoteService.exe;FastWatchDog.exe;FastREClient.exe</ParentImage>
+					<ParentImage condition="contains">\fastviewer</ParentImage>
+					<OriginalFileName condition="is any">FastViewer.exe;FastClient.exe;FastMaster.exe;fvwresetup.exe;FastTray.exe;FastProxy.exe;FastRemoteService.exe;FastWatchDog.exe;FastREClient.exe</OriginalFileName>
+					<OriginalFileName condition="contains">\fastviewer</OriginalFileName>
+					<Description condition="is">FastViewer</Description>
+					<Product condition="is">FastViewer</Product>
+					<Company condition="is">Fastviewer</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Fortra use detected" groupRelation="or">
-					<Image condition="contains any">\InterMapper\;Intermapperd;Intermapper.exe</Image>
-					<ParentImage condition="contains any">\InterMapper\;Intermapperd;Intermapper.exe</ParentImage>
-					<OriginalFileName condition="contains any">Intermapperd;Intermapper.exe</OriginalFileName>
-					<Description condition="contains any">Fortra</Description>
-					<Product condition="contains any">Fortra</Product>
-					<Company condition="contains any">Fortra</Company>
+					<Image condition="image">Intermapper.exe</Image>
+					<Image condition="contains any">\InterMapper\;Intermapperd</Image>
+					<ParentImage condition="image">Intermapper.exe</ParentImage>
+					<ParentImage condition="contains any">\InterMapper\;Intermapperd</ParentImage>
+					<OriginalFileName condition="is">Intermapper.exe</OriginalFileName>
+					<OriginalFileName condition="contains">Intermapperd</OriginalFileName>
+					<Description condition="is">Fortra</Description>
+					<Product condition="is">Fortra</Product>
+					<Company condition="is">Fortra</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Free Ping Tool/Free Tools Launcher/Manage Engine Desktop Central/Manage Engine/Manage Engine RMM  Central/Site24x7/Zoho Assist use detected" groupRelation="or">
-					<Image condition="contains any">\ZohoMeeting\;\OpManagerAgent\;\desktopcentral_server\;\DesktopCentral_Agent\;\Free Ping Tool\;\ManageEngine Free Tools\;\ManageEngine\;MEFreePingTool.exe;ManageEngine_Launcher.exe;ManageEngineFreePingTool.exe;dcagentservice.exe;dcagentregister.exe;ManageEngine_Remote_Access_Plus.exe;DesktopCentral_7zip.exe;manageengine_desktopcentral_64bit.exe;OpManagerAgentUpgrade.exe;MSIHandler.exe;OpManagerAgentTrayIcon.exe;MonitoringAgent.exe;MEAgentHelper.exe;Site24x7WindowsAgentTrayIcon.exe;Site24x7PluginAgent.exe;zaservice.exe;ZMAgent.exe;ZA_Access.exe;ZohoMeeting.exe;Zohours.exe;zohotray.exe;ZohoURSService.exe;za_connect.exe;zoho-assist-desktop-installer-x64.exe;ZohoURSServiceTemp.exe;ZA_Upgrader.exe;ZA_Upgrader_Temp.exe;ZMSchedular.exe</Image>
-					<ParentImage condition="contains any">\ZohoMeeting\;\OpManagerAgent\;\desktopcentral_server\;\DesktopCentral_Agent\;\Free Ping Tool\;\ManageEngine Free Tools\;\ManageEngine\;MEFreePingTool.exe;ManageEngine_Launcher.exe;ManageEngineFreePingTool.exe;dcagentservice.exe;dcagentregister.exe;ManageEngine_Remote_Access_Plus.exe;DesktopCentral_7zip.exe;manageengine_desktopcentral_64bit.exe;OpManagerAgentUpgrade.exe;MSIHandler.exe;OpManagerAgentTrayIcon.exe;MonitoringAgent.exe;MEAgentHelper.exe;Site24x7WindowsAgentTrayIcon.exe;Site24x7PluginAgent.exe;zaservice.exe;ZMAgent.exe;ZA_Access.exe;ZohoMeeting.exe;Zohours.exe;zohotray.exe;ZohoURSService.exe;za_connect.exe;zoho-assist-desktop-installer-x64.exe;ZohoURSServiceTemp.exe;ZA_Upgrader.exe;ZA_Upgrader_Temp.exe;ZMSchedular.exe</ParentImage>
-					<OriginalFileName condition="contains any">MEFreePingTool.exe;ManageEngine_Launcher.exe;ManageEngineFreePingTool.exe;dcagentservice.exe;dcagentregister.exe;ManageEngine_Remote_Access_Plus.exe;DesktopCentral_7zip.exe;manageengine_desktopcentral_64bit.exe;OpManagerAgentUpgrade.exe;MSIHandler.exe;OpManagerAgentTrayIcon.exe;MonitoringAgent.exe;MEAgentHelper.exe;Site24x7WindowsAgentTrayIcon.exe;Site24x7PluginAgent.exe;zaservice.exe;ZMAgent.exe;ZA_Access.exe;ZohoMeeting.exe;Zohours.exe;zohotray.exe;ZohoURSService.exe;za_connect.exe;zoho-assist-desktop-installer-x64.exe;ZohoURSServiceTemp.exe;ZA_Upgrader.exe;ZA_Upgrader_Temp.exe;ZMSchedular.exe</OriginalFileName>
+					<Image condition="is any">MEFreePingTool.exe;ManageEngine_Launcher.exe;ManageEngineFreePingTool.exe;dcagentservice.exe;dcagentregister.exe;ManageEngine_Remote_Access_Plus.exe;DesktopCentral_7zip.exe;manageengine_desktopcentral_64bit.exe;OpManagerAgentUpgrade.exe;MSIHandler.exe;OpManagerAgentTrayIcon.exe;MonitoringAgent.exe;MEAgentHelper.exe;Site24x7WindowsAgentTrayIcon.exe;Site24x7PluginAgent.exe;zaservice.exe;ZMAgent.exe;ZA_Access.exe;ZohoMeeting.exe;Zohours.exe;zohotray.exe;ZohoURSService.exe;za_connect.exe;zoho-assist-desktop-installer-x64.exe;ZohoURSServiceTemp.exe;ZA_Upgrader.exe;ZA_Upgrader_Temp.exe;ZMSchedular.exe</Image>
+					<Image condition="contains any">\ZohoMeeting\;\OpManagerAgent\;\desktopcentral_server\;\DesktopCentral_Agent\;\Free Ping Tool\;\ManageEngine Free Tools\;\ManageEngine\</Image>
+					<ParentImage condition="is any">MEFreePingTool.exe;ManageEngine_Launcher.exe;ManageEngineFreePingTool.exe;dcagentservice.exe;dcagentregister.exe;ManageEngine_Remote_Access_Plus.exe;DesktopCentral_7zip.exe;manageengine_desktopcentral_64bit.exe;OpManagerAgentUpgrade.exe;MSIHandler.exe;OpManagerAgentTrayIcon.exe;MonitoringAgent.exe;MEAgentHelper.exe;Site24x7WindowsAgentTrayIcon.exe;Site24x7PluginAgent.exe;zaservice.exe;ZMAgent.exe;ZA_Access.exe;ZohoMeeting.exe;Zohours.exe;zohotray.exe;ZohoURSService.exe;za_connect.exe;zoho-assist-desktop-installer-x64.exe;ZohoURSServiceTemp.exe;ZA_Upgrader.exe;ZA_Upgrader_Temp.exe;ZMSchedular.exe</ParentImage>
+					<ParentImage condition="contains any">\ZohoMeeting\;\OpManagerAgent\;\desktopcentral_server\;\DesktopCentral_Agent\;\Free Ping Tool\;\ManageEngine Free Tools\;\ManageEngine\</ParentImage>
+					<OriginalFileName condition="is any">MEFreePingTool.exe;ManageEngine_Launcher.exe;ManageEngineFreePingTool.exe;dcagentservice.exe;dcagentregister.exe;ManageEngine_Remote_Access_Plus.exe;DesktopCentral_7zip.exe;manageengine_desktopcentral_64bit.exe;OpManagerAgentUpgrade.exe;MSIHandler.exe;OpManagerAgentTrayIcon.exe;MonitoringAgent.exe;MEAgentHelper.exe;Site24x7WindowsAgentTrayIcon.exe;Site24x7PluginAgent.exe;zaservice.exe;ZMAgent.exe;ZA_Access.exe;ZohoMeeting.exe;Zohours.exe;zohotray.exe;ZohoURSService.exe;za_connect.exe;zoho-assist-desktop-installer-x64.exe;ZohoURSServiceTemp.exe;ZA_Upgrader.exe;ZA_Upgrader_Temp.exe;ZMSchedular.exe</OriginalFileName>
 					<Description condition="is any">MEFreePingTool;A desktop version of your favorite remote support client !</Description>
-					<Product condition="contains any">Free Ping Tool;Zoho</Product>
+					<Product condition="is any">Free Ping Tool;Zoho</Product>
 					<Company condition="is any">ZOHO Corp;ManageEngine;Zoho Corporation Pvt. Ltd.;Zoho Corporation</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential FreeNX/NoMachine use detected" groupRelation="or">
-					<Image condition="contains any">\NoMachine\;\nxserver\;\nxhtd\;\NoMachine Enterprise Client\;nxserver.exe;nxservice64.exe;nxdisplay.exe;nxfsd.exe;nxservice.exe;nxdeviced32.exe;nxdeviced64.exe;nxusbd32.exe;nxusbd64.exe;nxd.exe</Image>
-					<ParentImage condition="contains any">\NoMachine\;\nxserver\;\nxhtd\;\NoMachine Enterprise Client\;nxserver.exe;nxservice64.exe;nxdisplay.exe;nxfsd.exe;nxservice.exe;nxdeviced32.exe;nxdeviced64.exe;nxusbd32.exe;nxusbd64.exe;nxd.exe</ParentImage>
-					<OriginalFileName condition="contains any">nxserver.exe;nxservice64.exe;nxdisplay.exe;nxfsd.exe;nxservice.exe;nxdeviced32.exe;nxdeviced64.exe;nxusbd32.exe;nxusbd64.exe;nxd.exe</OriginalFileName>
+					<Image condition="is any">nxserver.exe;nxservice64.exe;nxdisplay.exe;nxfsd.exe;nxservice.exe;nxdeviced32.exe;nxdeviced64.exe;nxusbd32.exe;nxusbd64.exe;nxd.exe</Image>
+					<Image condition="contains any">\NoMachine\;\nxserver\;\nxhtd\;\NoMachine Enterprise Client\</Image>
+					<ParentImage condition="is any">nxserver.exe;nxservice64.exe;nxdisplay.exe;nxfsd.exe;nxservice.exe;nxdeviced32.exe;nxdeviced64.exe;nxusbd32.exe;nxusbd64.exe;nxd.exe</ParentImage>
+					<ParentImage condition="contains any">\NoMachine\;\nxserver\;\nxhtd\;\NoMachine Enterprise Client\</ParentImage>
+					<OriginalFileName condition="is any">nxserver.exe;nxservice64.exe;nxdisplay.exe;nxfsd.exe;nxservice.exe;nxdeviced32.exe;nxdeviced64.exe;nxusbd32.exe;nxusbd64.exe;nxd.exe</OriginalFileName>
 					<Description condition="is any">NoMachine Device Server;NoMachine Setup</Description>
-					<Product condition="contains">NoMachine</Product>
+					<Product condition="is">NoMachine</Product>
 					<Company condition="is any">NoMachine;NoMachine S.a.r.l.</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential FreeRDP use detected" groupRelation="or">
-					<Image condition="contains any">freerdp-proxy.exe;sdl2-freerdp.exe;sdl3-freerdp.exe;sfreerdp-server.exe;wfreerdp.exe</Image>
-					<ParentImage condition="contains any">freerdp-proxy.exe;sdl2-freerdp.exe;sdl3-freerdp.exe;sfreerdp-server.exe;wfreerdp.exe</ParentImage>
-					<OriginalFileName condition="contains any">freerdp-proxy.exe;sdl2-freerdp.exe;sdl3-freerdp.exe;sfreerdp-server.exe;wfreerdp.exe</OriginalFileName>
+					<Image condition="is any">freerdp-proxy.exe;sdl2-freerdp.exe;sdl3-freerdp.exe;sfreerdp-server.exe;wfreerdp.exe</Image>
+					<ParentImage condition="is any">freerdp-proxy.exe;sdl2-freerdp.exe;sdl3-freerdp.exe;sfreerdp-server.exe;wfreerdp.exe</ParentImage>
+					<OriginalFileName condition="is any">freerdp-proxy.exe;sdl2-freerdp.exe;sdl3-freerdp.exe;sfreerdp-server.exe;wfreerdp.exe</OriginalFileName>
 					<Product condition="is">FreeRDP</Product>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential GatherPlace-desktop sharing use detected" groupRelation="or">
-					<Image condition="contains any">gp3.exe;gp4.exe;gp5.exe</Image>
-					<ParentImage condition="contains any">gp3.exe;gp4.exe;gp5.exe</ParentImage>
-					<OriginalFileName condition="contains any">gp3.exe;gp4.exe;gp5.exe</OriginalFileName>
+					<Image condition="is any">gp3.exe;gp4.exe;gp5.exe</Image>
+					<ParentImage condition="is any">gp3.exe;gp4.exe;gp5.exe</ParentImage>
+					<OriginalFileName condition="is any">gp3.exe;gp4.exe;gp5.exe</OriginalFileName>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential GetScreen use detected" groupRelation="or">
-					<Image condition="contains any">\Getscreen.me\;getscreen.exe</Image>
-					<ParentImage condition="contains any">\Getscreen.me\;getscreen.exe</ParentImage>
-					<OriginalFileName condition="contains any">getscreen.exe</OriginalFileName>
+					<Image condition="image">getscreen.exe</Image>
+					<Image condition="contains">\Getscreen.me\</Image>
+					<ParentImage condition="image">getscreen.exe</ParentImage>
+					<ParentImage condition="contains any">\Getscreen.me\</ParentImage>
+					<OriginalFileName condition="is">getscreen.exe</OriginalFileName>
 					<Company condition="is">Point B Ltd</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential GoTo Opener/GoToAssist/GoTo Resolve/GoToAssist Agent Desktop/GoToMyPC/Netviewer (GoToMeet)/Netviewer use detected" groupRelation="or">
-					<Image condition="contains any">\Netviewer\;\GoTo\;\GoToMyPC\;\GoToAssist Agent Desktop Console\;\GoToAssist Remote Support Expert\;\GoTo Opener\;\GoTo Machine Installer\;GoToOpener.exe;GoToOpener;GoTo Assist Opener.exe;g2ax_expert_;g2ax_installerexpert.exe;g2ax_start.exe;g2ax_comm_expert.exe;g2ax_user_expert.exe;g2ax_session_expert.exe;gotoassist.exe;g2mcomm.exe;g2mupdate.com;goto opener.exe;g2ax_comm_customer.exe;ra-technician-console.exe;ratc-crash-handler.exe;ratc-updater.exe;g2achat.exe;G2AUninstaller.exe;g2aprocessfactory.exe;g2ax_processfactory.exe;g2ax_uninstaller_customer.exe;g2ax_host.exe;g2fileh.exe;g2host.exe;g2mainh.exe;g2pre.exe;g2printh.exe;g2vistahelper.exe;g2tray.exe;g2audioh.exe;nvClient.exe;netviewer.exe;Netviewer.exe;Netviewer_Meet.exe;NV_Meet_Participant.exe;Netviewer_NetPlayer.exe</Image>
-					<ParentImage condition="contains any">\Netviewer\;\GoTo\;\GoToMyPC\;\GoToAssist Agent Desktop Console\;\GoToAssist Remote Support Expert\;\GoTo Opener\;\GoTo Machine Installer\;GoToOpener.exe;GoToOpener;GoTo Assist Opener.exe;g2ax_expert_;g2ax_installerexpert.exe;g2ax_start.exe;g2ax_comm_expert.exe;g2ax_user_expert.exe;g2ax_session_expert.exe;gotoassist.exe;g2mcomm.exe;g2mupdate.com;goto opener.exe;g2ax_comm_customer.exe;ra-technician-console.exe;ratc-crash-handler.exe;ratc-updater.exe;g2achat.exe;G2AUninstaller.exe;g2aprocessfactory.exe;g2ax_processfactory.exe;g2ax_uninstaller_customer.exe;g2ax_host.exe;g2fileh.exe;g2host.exe;g2mainh.exe;g2pre.exe;g2printh.exe;g2vistahelper.exe;g2tray.exe;g2audioh.exe;nvClient.exe;netviewer.exe;Netviewer.exe;Netviewer_Meet.exe;NV_Meet_Participant.exe;Netviewer_NetPlayer.exe</ParentImage>
-					<OriginalFileName condition="contains any">GoToOpener.exe;GoToOpener;GoTo Assist Opener.exe;g2ax_expert_;g2ax_installerexpert.exe;g2ax_start.exe;g2ax_comm_expert.exe;g2ax_user_expert.exe;g2ax_session_expert.exe;gotoassist.exe;g2mcomm.exe;g2mupdate.com;goto opener.exe;g2ax_comm_customer.exe;ra-technician-console.exe;ratc-crash-handler.exe;ratc-updater.exe;g2achat.exe;G2AUninstaller.exe;g2aprocessfactory.exe;g2ax_processfactory.exe;g2ax_uninstaller_customer.exe;g2ax_host.exe;g2fileh.exe;g2host.exe;g2mainh.exe;g2pre.exe;g2printh.exe;g2vistahelper.exe;g2tray.exe;g2audioh.exe;nvClient.exe;netviewer.exe;Netviewer.exe;Netviewer_Meet.exe;NV_Meet_Participant.exe;Netviewer_NetPlayer.exe</OriginalFileName>
+					<Image condition="is any">GoToOpener.exe;GoTo Assist Opener.exe;g2ax_installerexpert.exe;g2ax_start.exe;g2ax_comm_expert.exe;g2ax_user_expert.exe;g2ax_session_expert.exe;gotoassist.exe;g2mcomm.exe;g2mupdate.com;goto opener.exe;g2ax_comm_customer.exe;ra-technician-console.exe;ratc-crash-handler.exe;ratc-updater.exe;g2achat.exe;G2AUninstaller.exe;g2aprocessfactory.exe;g2ax_processfactory.exe;g2ax_uninstaller_customer.exe;g2ax_host.exe;g2fileh.exe;g2host.exe;g2mainh.exe;g2pre.exe;g2printh.exe;g2vistahelper.exe;g2tray.exe;g2audioh.exe;nvClient.exe;netviewer.exe;Netviewer.exe;Netviewer_Meet.exe;NV_Meet_Participant.exe;GoToOpener.exe;Netviewer_NetPlayer.exe</Image>
+					<Image condition="contains any">\Netviewer\;\GoTo\;\GoToMyPC\;\GoToAssist Agent Desktop Console\;\GoToAssist Remote Support Expert\;\GoTo Opener\;\GoTo Machine Installer\;GoToOpener;g2ax_expert_</Image>
+					<ParentImage condition="is any">GoToOpener.exe;GoTo Assist Opener.exe;g2ax_installerexpert.exe;g2ax_start.exe;g2ax_comm_expert.exe;g2ax_user_expert.exe;g2ax_session_expert.exe;gotoassist.exe;g2mcomm.exe;g2mupdate.com;goto opener.exe;g2ax_comm_customer.exe;ra-technician-console.exe;ratc-crash-handler.exe;ratc-updater.exe;g2achat.exe;G2AUninstaller.exe;g2aprocessfactory.exe;g2ax_processfactory.exe;g2ax_uninstaller_customer.exe;g2ax_host.exe;g2fileh.exe;g2host.exe;g2mainh.exe;g2pre.exe;g2printh.exe;g2vistahelper.exe;g2tray.exe;g2audioh.exe;nvClient.exe;netviewer.exe;Netviewer.exe;Netviewer_Meet.exe;NV_Meet_Participant.exe;GoToOpener.exe;Netviewer_NetPlayer.exe</ParentImage>
+					<ParentImage condition="contains any">\Netviewer\;\GoTo\;\GoToMyPC\;\GoToAssist Agent Desktop Console\;\GoToAssist Remote Support Expert\;\GoTo Opener\;\GoTo Machine Installer\;GoToOpener;g2ax_expert_</ParentImage>
+					<OriginalFileName condition="is any">GoToOpener.exe;GoTo Assist Opener.exe;g2ax_installerexpert.exe;g2ax_start.exe;g2ax_comm_expert.exe;g2ax_user_expert.exe;g2ax_session_expert.exe;gotoassist.exe;g2mcomm.exe;g2mupdate.com;goto opener.exe;g2ax_comm_customer.exe;ra-technician-console.exe;ratc-crash-handler.exe;ratc-updater.exe;g2achat.exe;G2AUninstaller.exe;g2aprocessfactory.exe;g2ax_processfactory.exe;g2ax_uninstaller_customer.exe;g2ax_host.exe;g2fileh.exe;g2host.exe;g2mainh.exe;g2pre.exe;g2printh.exe;g2vistahelper.exe;g2tray.exe;g2audioh.exe;nvClient.exe;netviewer.exe;Netviewer.exe;Netviewer_Meet.exe;NV_Meet_Participant.exe;GoToOpener.exe;Netviewer_NetPlayer.exe</OriginalFileName>
+					<OriginalFileName condition="contains any">GoToOpener;g2ax_expert_</OriginalFileName>
 					<Description condition="is any">GoToAssist;GoToAssist Agent Desktop Console</Description>
 					<Product condition="is">GoTo Opener</Product>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential GotoHTTP use detected" groupRelation="or">
-					<Image condition="contains any">GotoHTTP_x64.exe;GotoHTTP.exe;GotoHTTP</Image>
-					<ParentImage condition="contains any">GotoHTTP_x64.exe;GotoHTTP.exe;GotoHTTP</ParentImage>
-					<OriginalFileName condition="contains any">GotoHTTP_x64.exe;GotoHTTP.exe;GotoHTTP</OriginalFileName>
+					<Image condition="is any">GotoHTTP_x64.exe;GotoHTTP.exe</Image>
+					<Image condition="contains">GotoHTTP</Image>
+					<ParentImage condition="is any">GotoHTTP_x64.exe;GotoHTTP.exe</ParentImage>
+					<ParentImage condition="contains">GotoHTTP</ParentImage>
+					<OriginalFileName condition="is any">GotoHTTP_x64.exe;GotoHTTP.exe</OriginalFileName>
+					<OriginalFileName condition="contains">GotoHTTP</OriginalFileName>
 					<Description condition="is">GotoHTTP</Description>
 					<Product condition="is">GotoHTTP</Product>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Goverlan use detected" groupRelation="or">
-					<Image condition="contains any">\Goverlan Inc\;\GOVsrv\;Goverrmc.exe;govsrv;GovAgentInstallHelper.exe;GovAgentx64.exe;GovReachClient.exe;GovSrv.exe;GoverlanAgent;Goverlan.exe;gcsclienttester.exe;GovAgent.exe;GovReachGatewayServer.exe;GovReachServer.exe;GovReachServerUI.exe;GovScopeActionWorker.exe;GovSrv32b64.exe;GovSrv64b32.exe;GovTools.exe;GovUtility.exe;GoverRMS.exe;GovSrvUI.exe;GoverRMC.exe;Proxy32a64.exe;GovCmdLine.exe</Image>
-					<ParentImage condition="contains any">\Goverlan Inc\;\GOVsrv\;goverrmc.exe;govsrv;GovAgentInstallHelper.exe;GovAgentx64.exe;GovReachClient.exe;GovSrv.exe;GoverlanAgent;Goverlan.exe;gcsclienttester.exe;GovAgent.exe;GovReachGatewayServer.exe;GovReachServer.exe;GovReachServerUI.exe;GovScopeActionWorker.exe;GovSrv32b64.exe;GovSrv64b32.exe;GovTools.exe;GovUtility.exe;GoverRMS.exe;GovSrvUI.exe;GoverRMC.exe;Proxy32a64.exe;GovCmdLine.exe</ParentImage>
-					<OriginalFileName condition="contains any">goverrmc.exe;govsrv;GovAgentInstallHelper.exe;GovAgentx64.exe;GovReachClient.exe;GovSrv.exe;GoverlanAgent;Goverlan.exe;gcsclienttester.exe;GovAgent.exe;GovReachGatewayServer.exe;GovReachServer.exe;GovReachServerUI.exe;GovScopeActionWorker.exe;GovSrv32b64.exe;GovSrv64b32.exe;GovTools.exe;GovUtility.exe;GoverRMS.exe;GovSrvUI.exe;GoverRMC.exe;Proxy32a64.exe;GovCmdLine.exe</OriginalFileName>
+					<Image condition="is any">Goverrmc.exe;GovAgentInstallHelper.exe;GovAgentx64.exe;GovReachClient.exe;GovSrv.exe;GoverlanAgent;Goverlan.exe;gcsclienttester.exe;GovAgent.exe;GovReachGatewayServer.exe;GovReachServer.exe;GovReachServerUI.exe;GovScopeActionWorker.exe;GovSrv32b64.exe;GovSrv64b32.exe;GovTools.exe;GovUtility.exe;GoverRMS.exe;GovSrvUI.exe;GoverRMC.exe;Proxy32a64.exe;GovCmdLine.exe</Image>
+					<Image condition="contains any">\Goverlan Inc\;\GOVsrv\;govsrv</Image>
+					<ParentImage condition="is any">Goverrmc.exe;GovAgentInstallHelper.exe;GovAgentx64.exe;GovReachClient.exe;GovSrv.exe;GoverlanAgent;Goverlan.exe;gcsclienttester.exe;GovAgent.exe;GovReachGatewayServer.exe;GovReachServer.exe;GovReachServerUI.exe;GovScopeActionWorker.exe;GovSrv32b64.exe;GovSrv64b32.exe;GovTools.exe;GovUtility.exe;GoverRMS.exe;GovSrvUI.exe;GoverRMC.exe;Proxy32a64.exe;GovCmdLine.exe</ParentImage>
+					<ParentImage condition="contains any">\Goverlan Inc\;\GOVsrv\;govsrv</ParentImage>
+					<OriginalFileName condition="is any">Goverrmc.exe;GovAgentInstallHelper.exe;GovAgentx64.exe;GovReachClient.exe;GovSrv.exe;GoverlanAgent;Goverlan.exe;gcsclienttester.exe;GovAgent.exe;GovReachGatewayServer.exe;GovReachServer.exe;GovReachServerUI.exe;GovScopeActionWorker.exe;GovSrv32b64.exe;GovSrv64b32.exe;GovTools.exe;GovUtility.exe;GoverRMS.exe;GovSrvUI.exe;GoverRMC.exe;Proxy32a64.exe;GovCmdLine.exe</OriginalFileName>
+					<OriginalFileName condition="contains">govsrv</OriginalFileName>
 					<Description condition="is">Goverlan Agent Service</Description>
 					<Product condition="is">Goverlan</Product>
-					<Company condition="contains any">PJ Technologies, Inc.;Goverlan</Company>
+					<Company condition="is">PJ Technologies, Inc.;Goverlan</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential HelpBeam use detected" groupRelation="or">
 					<Image condition="contains">helpbeam</Image>
@@ -474,53 +588,65 @@
 					<OriginalFileName condition="contains">helpbeam</OriginalFileName>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential HelpU use detected" groupRelation="or">
-					<Image condition="contains any">\HelpU\;HelpU_Install.exe;HelpuUpdater.exe;HelpuManager.exe;KChatMonitor.exe;HelpuSendScreen.exe;HelpuShareServer.exe;HelpuImageViewer.exe;HelpuRecorder.exe;HelpuViewer.exe;HelpuShareClient.exe;HelpuSoundClient.exe;HelpuMobileViewer.exe;HelpuShareServerMAC.exe;HelpuViewerMAC.exe;HelpuRecorderV.exe</Image>
-					<ParentImage condition="contains any">\HelpU\;HelpU_Install.exe;HelpuUpdater.exe;HelpuManager.exe;KChatMonitor.exe;HelpuSendScreen.exe;HelpuShareServer.exe;HelpuImageViewer.exe;HelpuRecorder.exe;HelpuViewer.exe;HelpuShareClient.exe;HelpuSoundClient.exe;HelpuMobileViewer.exe;HelpuShareServerMAC.exe;HelpuViewerMAC.exe;HelpuRecorderV.exe</ParentImage>
-					<OriginalFileName condition="contains any">HelpU_Install.exe;HelpuUpdater.exe;HelpuManager.exe;KChatMonitor.exe;HelpuSendScreen.exe;HelpuShareServer.exe;HelpuImageViewer.exe;HelpuRecorder.exe;HelpuViewer.exe;HelpuShareClient.exe;HelpuSoundClient.exe;HelpuMobileViewer.exe;HelpuShareServerMAC.exe;HelpuViewerMAC.exe;HelpuRecorderV.exe</OriginalFileName>
+					<Image condition="is any">HelpU_Install.exe;HelpuUpdater.exe;HelpuManager.exe;KChatMonitor.exe;HelpuSendScreen.exe;HelpuShareServer.exe;HelpuImageViewer.exe;HelpuRecorder.exe;HelpuViewer.exe;HelpuShareClient.exe;HelpuSoundClient.exe;HelpuMobileViewer.exe;HelpuShareServerMAC.exe;HelpuViewerMAC.exe;HelpuRecorderV.exe</Image>
+					<Image condition="contains">\HelpU\</Image>
+					<ParentImage condition="is any">HelpU_Install.exe;HelpuUpdater.exe;HelpuManager.exe;KChatMonitor.exe;HelpuSendScreen.exe;HelpuShareServer.exe;HelpuImageViewer.exe;HelpuRecorder.exe;HelpuViewer.exe;HelpuShareClient.exe;HelpuSoundClient.exe;HelpuMobileViewer.exe;HelpuShareServerMAC.exe;HelpuViewerMAC.exe;HelpuRecorderV.exe</ParentImage>
+					<ParentImage condition="contains">\HelpU\</ParentImage>
+					<OriginalFileName condition="is any">HelpU_Install.exe;HelpuUpdater.exe;HelpuManager.exe;KChatMonitor.exe;HelpuSendScreen.exe;HelpuShareServer.exe;HelpuImageViewer.exe;HelpuRecorder.exe;HelpuViewer.exe;HelpuShareClient.exe;HelpuSoundClient.exe;HelpuMobileViewer.exe;HelpuShareServerMAC.exe;HelpuViewerMAC.exe;HelpuRecorderV.exe</OriginalFileName>
 					<Description condition="is">KChatMonitor</Description>
 					<Product condition="is any">HelpuRecorder;KChatMonitor</Product>
-					<Company condition="contains">Helpu</Company>
+					<Company condition="is">Helpu</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential HopToDesk use detected" groupRelation="or">
 					<Image condition="contains any">\HopToDesk\;HopToDesk.exe;privacyhelper.exe;RuntimeBroker_hoptodesk.exe</Image>
 					<ParentImage condition="contains any">\HopToDesk\;HopToDesk.exe;privacyhelper.exe;RuntimeBroker_hoptodesk.exe</ParentImage>
 					<OriginalFileName condition="contains any">HopToDesk.exe;privacyhelper.exe;RuntimeBroker_hoptodesk.exe</OriginalFileName>
-					<Description condition="contains">HopToDesk</Description>
-					<Product condition="contains">HopToDesk</Product>
-					<Company condition="contains">Begonia Holdings</Company>
+					<Description condition="is">HopToDesk</Description>
+					<Product condition="is">HopToDesk</Product>
+					<Company condition="is">Begonia Holdings</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential I'm InTouch use detected" groupRelation="or">
-					<Image condition="contains any">\InTouch\;iit.exe;intouch.exe;I'm InTouch Go Installer.exe;ITPub.exe</Image>
-					<ParentImage condition="contains any">\InTouch\;iit.exe;intouch.exe;I'm InTouch Go Installer.exe;ITPub.exe</ParentImage>
+					<Image condition="is any">iit.exe;intouch.exe;I'm InTouch Go Installer.exe;ITPub.exe</Image>
+					<Image condition="contains any">\InTouch\</Image>
+					<ParentImage condition="is any">iit.exe;intouch.exe;I'm InTouch Go Installer.exe;ITPub.exe</ParentImage>
+					<ParentImage condition="contains">\InTouch\</ParentImage>
 					<OriginalFileName condition="contains any">iit.exe;intouch.exe;I'm InTouch Go Installer.exe;ITPub.exe</OriginalFileName>
-					<Description condition="contains">InTouch</Description>
-					<Product condition="contains">InTouch</Product>
-					<Company condition="contains">InTouch</Company>
+					<Description condition="is">InTouch</Description>
+					<Product condition="is">InTouch</Product>
+					<Company condition="is">InTouch</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Impero Connect use detected" groupRelation="or">
-					<Image condition="contains any">\Impero Client\;\Impero Solutions Ltd\;ImperoWinlogonApplication.exe;ImperoConsoleShortcut.exe;ImperoServerBrowser.exe;ImperoUpdatePackage.exe;ImperoOfflineExam.exe;ImperoRemoteDeploy.exe;ImperoClientSVC.exe;ImperoUtilities.exe;ImperoGuardianSVC.exe;imperoclient.exe;ImperoKInit.exe;ImperoAnnotate.exe;ImperoAudioServer.exe;ImperoAudioServer-GUI.exe;ImperoCloseHandles.exe;ImperoDevConx64.exe;ImperoDevConx86.exe;ImperoDotNet2Installer.exe;ImperoServer.exe;ImperoServerSVC.exe</Image>
-					<ParentImage condition="contains any">\Impero Client\;\Impero Solutions Ltd\;ImperoWinlogonApplication.exe;ImperoConsoleShortcut.exe;ImperoServerBrowser.exe;ImperoUpdatePackage.exe;ImperoOfflineExam.exe;ImperoRemoteDeploy.exe;ImperoClientSVC.exe;ImperoUtilities.exe;ImperoGuardianSVC.exe;imperoclient.exe;ImperoKInit.exe;ImperoAnnotate.exe;ImperoAudioServer.exe;ImperoAudioServer-GUI.exe;ImperoCloseHandles.exe;ImperoDevConx64.exe;ImperoDevConx86.exe;ImperoDotNet2Installer.exe;ImperoServer.exe;ImperoServerSVC.exe</ParentImage>
-					<OriginalFileName condition="contains any">ImperoWinlogonApplication.exe;ImperoConsoleShortcut.exe;ImperoServerBrowser.exe;ImperoUpdatePackage.exe;ImperoOfflineExam.exe;ImperoRemoteDeploy.exe;ImperoClientSVC.exe;ImperoUtilities.exe;ImperoGuardianSVC.exe;imperoclient.exe;ImperoKInit.exe;ImperoAnnotate.exe;ImperoAudioServer.exe;ImperoAudioServer-GUI.exe;ImperoCloseHandles.exe;ImperoDevConx64.exe;ImperoDevConx86.exe;ImperoDotNet2Installer.exe;ImperoServer.exe;ImperoServerSVC.exe</OriginalFileName>
+					<Image condition="is any">ImperoWinlogonApplication.exe;ImperoConsoleShortcut.exe;ImperoServerBrowser.exe;ImperoUpdatePackage.exe;ImperoOfflineExam.exe;ImperoRemoteDeploy.exe;ImperoClientSVC.exe;ImperoUtilities.exe;ImperoGuardianSVC.exe;imperoclient.exe;ImperoKInit.exe;ImperoAnnotate.exe;ImperoAudioServer.exe;ImperoAudioServer-GUI.exe;ImperoCloseHandles.exe;ImperoDevConx64.exe;ImperoDevConx86.exe;ImperoDotNet2Installer.exe;ImperoServer.exe;ImperoServerSVC.exe</Image>
+					<Image condition="contains any">\Impero Client\;\Impero Solutions Ltd\</Image>
+					<ParentImage condition="is any">ImperoWinlogonApplication.exe;ImperoConsoleShortcut.exe;ImperoServerBrowser.exe;ImperoUpdatePackage.exe;ImperoOfflineExam.exe;ImperoRemoteDeploy.exe;ImperoClientSVC.exe;ImperoUtilities.exe;ImperoGuardianSVC.exe;imperoclient.exe;ImperoKInit.exe;ImperoAnnotate.exe;ImperoAudioServer.exe;ImperoAudioServer-GUI.exe;ImperoCloseHandles.exe;ImperoDevConx64.exe;ImperoDevConx86.exe;ImperoDotNet2Installer.exe;ImperoServer.exe;ImperoServerSVC.exe</ParentImage>
+					<ParentImage condition="contains any">\Impero Client\;\Impero Solutions Ltd\</ParentImage>
+					<OriginalFileName condition="is any">ImperoWinlogonApplication.exe;ImperoConsoleShortcut.exe;ImperoServerBrowser.exe;ImperoUpdatePackage.exe;ImperoOfflineExam.exe;ImperoRemoteDeploy.exe;ImperoClientSVC.exe;ImperoUtilities.exe;ImperoGuardianSVC.exe;imperoclient.exe;ImperoKInit.exe;ImperoAnnotate.exe;ImperoAudioServer.exe;ImperoAudioServer-GUI.exe;ImperoCloseHandles.exe;ImperoDevConx64.exe;ImperoDevConx86.exe;ImperoDotNet2Installer.exe;ImperoServer.exe;ImperoServerSVC.exe</OriginalFileName>
 					<Description condition="is">ImperoConsoleShortcut</Description>
 					<Company condition="is">Impero Solutions Ltd</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Instant Housecall use detected" groupRelation="or">
-					<Image condition="contains any">\Instant Housecall\;hsloader.exe;InstantHousecall.exe;ihcserver.exe;hookldr.exe;Specialist Sign-in.exe</Image>
-					<ParentImage condition="contains any">\Instant Housecall\;hsloader.exe;InstantHousecall.exe;ihcserver.exe;hookldr.exe;Specialist Sign-in.exe</ParentImage>
-					<OriginalFileName condition="contains any">hsloader.exe;InstantHousecall.exe;ihcserver.exe;hookldr.exe;Specialist Sign-in.exe</OriginalFileName>
+					<Image condition="is any">hsloader.exe;InstantHousecall.exe;ihcserver.exe;hookldr.exe;Specialist Sign-in.exe</Image>
+					<Image condition="contains">\Instant Housecall\</Image>
+					<ParentImage condition="is any">hsloader.exe;InstantHousecall.exe;ihcserver.exe;hookldr.exe;Specialist Sign-in.exe</ParentImage>
+					<ParentImage condition="contains">\Instant Housecall\</ParentImage>
+					<OriginalFileName condition="is any">hsloader.exe;InstantHousecall.exe;ihcserver.exe;hookldr.exe;Specialist Sign-in.exe</OriginalFileName>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Insync use detected" groupRelation="or">
 					<Image condition="contains any">\Insync\;Insync.exe;InsyncCreateLink.exe</Image>
+					<Image condition="contains any">\Insync\;Insync.exe;InsyncCreateLink.exe</Image>
 					<ParentImage condition="contains any">\Insync\;Insync.exe;InsyncCreateLink.exe</ParentImage>
-					<OriginalFileName condition="contains any">Insync.exe;InsyncCreateLink.exe</OriginalFileName>
-					<Description condition="contains">Insync</Description>
-					<Product condition="contains">Insync</Product>
+					<ParentImage condition="contains any">\Insync\;Insync.exe;InsyncCreateLink.exe</ParentImage>
+					<OriginalFileName condition="is any">Insync.exe;InsyncCreateLink.exe</OriginalFileName>
+					<Description condition="is">Insync</Description>
+					<Product condition="is">Insync</Product>
 					<Company condition="is">Insynchq Pte. Ltd.</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential IntelliAdmin Remote Control use detected" groupRelation="or">
-					<Image condition="contains any">\IntelliAdmin;iadmin.exe;IntelliAdmin.exe;Agent32.exe;Agent64.exe;agent_setup_5.exe;AgentBuild.exe;AgentSettings.exe;AgentSetupWizard.exe;AgentTray.exe</Image>
-					<ParentImage condition="contains any">\IntelliAdmin;iadmin.exe;IntelliAdmin.exe;Agent32.exe;Agent64.exe;agent_setup_5.exe;AgentBuild.exe;AgentSettings.exe;AgentSetupWizard.exe;AgentTray.exe</ParentImage>
-					<OriginalFileName condition="contains any">iadmin.exe;IntelliAdmin.exe;Agent32.exe;Agent64.exe;agent_setup_5.exe;AgentBuild.exe;AgentSettings.exe;AgentSetupWizard.exe;AgentTray.exe</OriginalFileName>
+					<Image condition="is any">iadmin.exe;IntelliAdmin.exe;Agent32.exe;Agent64.exe;agent_setup_5.exe;AgentBuild.exe;AgentSettings.exe;AgentSetupWizard.exe;AgentTray.exe</Image>
+					<Image condition="contains">\IntelliAdmin</Image>
+					<ParentImage condition="is any">iadmin.exe;IntelliAdmin.exe;Agent32.exe;Agent64.exe;agent_setup_5.exe;AgentBuild.exe;AgentSettings.exe;AgentSetupWizard.exe;AgentTray.exe</ParentImage>
+					<ParentImage condition="contains">\IntelliAdmin</ParentImage>
+					<OriginalFileName condition="is any">iadmin.exe;IntelliAdmin.exe;Agent32.exe;Agent64.exe;agent_setup_5.exe;AgentBuild.exe;AgentSettings.exe;AgentSetupWizard.exe;AgentTray.exe</OriginalFileName>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Iperius Remote use detected" groupRelation="or">
 					<Image condition="contains any">\IperiusRemote\;\IperiusRemoteViewer\;\IperiusRemoteBridge\;\IperiusChat\;\IperiusClipboardUtils\;iperius.exe;IperiusRemote.exe;IperiusRemoteIV.exe;IperiusRemote4.exe;IperiusRemoteService.exe;IRAutoUpdater.exe</Image>
