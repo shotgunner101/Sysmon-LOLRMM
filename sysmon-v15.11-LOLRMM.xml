@@ -28,11 +28,6 @@
 		<!--DATA: UtcTime, ProcessGuid, ProcessID, Image, FileVersion, Description, Product, Company, CommandLine, CurrentDirectory, User, LogonGuid, LogonId, TerminalSessionId, IntegrityLevel, Hashes, ParentProcessGuid, ParentProcessId, ParentImage, ParentCommandLine, OriginalFileName-->
 		<RuleGroup name="Process Creation Logging" groupRelation="or">
 			<ProcessCreate onmatch="include">
-			<Rule name="Remote Admin Software - Potential 247ithelp.com (ConnectWise) use detected" groupRelation="or">
-					<Image condition="image">Remote Workforce Client.exe</Image>
-					<ParentImage condition="image">Remote Workforce Client.exe</ParentImage>
-					<OriginalFileName condition="is">Remote Workforce Client.exe</OriginalFileName>
-				</Rule>
 				<Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
 					<Image condition="is any">rpcnet.exe;ctes.exe;ctespersitence.exe;cteshostsvc.exe;rpcld.exe</Image>
 					<ParentImage condition="is any">rpcnet.exe;ctes.exe;ctespersitence.exe;cteshostsvc.exe;rpcld.exe</ParentImage>
@@ -277,7 +272,7 @@
 					<ParentImage condition="contains">\cloudflared\</ParentImage>
 					<OriginalFileName condition="is">cloudflared.exe</OriginalFileName>
 				</Rule>
-				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247 use detected" groupRelation="or">
+				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247/247ithelp.com (ConnectWise) use detected" groupRelation="or">
 					<Image condition="is any">ScreenConnect.ClientService.exe;ScreenConnect.WindowsClient.exe;screenconnect.guestclient.exe;screenconnect.guestservice.exe;screenconnect.hostclient.exe;screenconnect.service.exe;ScreenConnect.ClientSetup.exe;ScreenConnect.Client.exe;ScreenConnect.WindowsBackstageShell.exe;ScreenConnect.WindowsFileManager.exe;LTSVC.exe;LTSvcMon.exe;LTTray.exe;LTSilent.exe;LSR.exe;labvnc.exe;connectwisechat-customer.exe;connectwisecontrol.client.exe;Remote Workforce Client.exe;RemoteWorkforceClientWpf.exe;RemoteWorkforceClient.exe;saazapsc.exe;SAAZWatchDog.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;GetSaazUsage.exe;SAAZDPMACTL.exe;SAAZDefaultJobExe.exe;SAAZJobDownload.exe;SAAZKill.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;SaazRemote.exe;VMWSaazClient.exe;SAAZappr.exe;SAAZapsc.exe;zSaazAccess.exe;SAAZScheduler.exe;SAAZSrvCOM.exe;SAAZSvcCtrl.exe</Image>
 					<Image condition="contains any">\elsinore technologies\;\LTSvc\;\SAAZOD\;connectwise;screenconnect</Image>
 					<ParentImage condition="is any">ScreenConnect.ClientService.exe;ScreenConnect.WindowsClient.exe;screenconnect.guestclient.exe;screenconnect.guestservice.exe;screenconnect.hostclient.exe;screenconnect.service.exe;ScreenConnect.ClientSetup.exe;ScreenConnect.Client.exe;ScreenConnect.WindowsBackstageShell.exe;ScreenConnect.WindowsFileManager.exe;LTSVC.exe;LTSvcMon.exe;LTTray.exe;LTSilent.exe;LSR.exe;labvnc.exe;connectwisechat-customer.exe;connectwisecontrol.client.exe;Remote Workforce Client.exe;RemoteWorkforceClientWpf.exe;RemoteWorkforceClient.exe;saazapsc.exe;SAAZWatchDog.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;GetSaazUsage.exe;SAAZDPMACTL.exe;SAAZDefaultJobExe.exe;SAAZJobDownload.exe;SAAZKill.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;SaazRemote.exe;VMWSaazClient.exe;SAAZappr.exe;SAAZapsc.exe;zSaazAccess.exe;SAAZScheduler.exe;SAAZSrvCOM.exe;SAAZSvcCtrl.exe</ParentImage>
@@ -1693,9 +1688,6 @@
 		<!--DATA: UtcTime, ProcessGuid, ProcessId, Image, TargetFilename, CreationUtcTime, PreviousCreationUtcTime-->
 		<RuleGroup name="A file was modified" groupRelation="or">
 			<FileCreateTime onmatch="include">
-							<Rule name="Remote Admin Software - Potential 247ithelp.com (ConnectWise) use detected" groupRelation="or">
-					<Image condition="image">Remote Workforce Client.exe</Image>
-				</Rule>
 				<Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
 					<Image condition="is any">rpcnet.exe;ctes.exe;ctespersitence.exe;cteshostsvc.exe;rpcld.exe</Image>
 				</Rule>
@@ -1801,7 +1793,7 @@
 					<Image condition="image">cloudflared.exe</Image>
 					<Image condition="contains">\cloudflared\</Image>
 				</Rule>
-				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247 use detected" groupRelation="or">
+				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247/247ithelp.com (ConnectWise) use detected" groupRelation="or">
 					<Image condition="is any">ScreenConnect.ClientService.exe;ScreenConnect.WindowsClient.exe;screenconnect.guestclient.exe;screenconnect.guestservice.exe;screenconnect.hostclient.exe;screenconnect.service.exe;ScreenConnect.ClientSetup.exe;ScreenConnect.Client.exe;ScreenConnect.WindowsBackstageShell.exe;ScreenConnect.WindowsFileManager.exe;LTSVC.exe;LTSvcMon.exe;LTTray.exe;LTSilent.exe;LSR.exe;labvnc.exe;connectwisechat-customer.exe;connectwisecontrol.client.exe;Remote Workforce Client.exe;RemoteWorkforceClientWpf.exe;RemoteWorkforceClient.exe;saazapsc.exe;SAAZWatchDog.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;GetSaazUsage.exe;SAAZDPMACTL.exe;SAAZDefaultJobExe.exe;SAAZJobDownload.exe;SAAZKill.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;SaazRemote.exe;VMWSaazClient.exe;SAAZappr.exe;SAAZapsc.exe;zSaazAccess.exe;SAAZScheduler.exe;SAAZSrvCOM.exe;SAAZSvcCtrl.exe</Image>
 					<Image condition="contains any">\elsinore technologies\;\LTSvc\;\SAAZOD\;connectwise;screenconnect</Image>
 				</Rule>
@@ -2400,9 +2392,6 @@
 				<!--COMMENT:	Takes a very conservative approach to network logging, limit to extremely high-signal events.-->
 				<!--TECHNICAL:	For the DestinationHostname, Sysmon uses the GetNameInfo API, which may not always have the information or may be a CDN. Using that field is best-effort only.-->
 				<!--TECHNICAL:	These exe's do not initiate their connections, and cannot be included: BITSADMIN-->
-							<Rule name="Remote Admin Software - Potential 247ithelp.com (ConnectWise) use detected" groupRelation="or">
-					<Image condition="image">Remote Workforce Client.exe</Image>
-				</Rule>
 				<Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
 					<Image condition="is any">rpcnet.exe;ctes.exe;ctespersitence.exe;cteshostsvc.exe;rpcld.exe</Image>
 				</Rule>
@@ -2508,7 +2497,7 @@
 					<Image condition="image">cloudflared.exe</Image>
 					<Image condition="contains">\cloudflared\</Image>
 				</Rule>
-				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247 use detected" groupRelation="or">
+				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247/247ithelp.com (ConnectWise) use detected" groupRelation="or">
 					<Image condition="is any">ScreenConnect.ClientService.exe;ScreenConnect.WindowsClient.exe;screenconnect.guestclient.exe;screenconnect.guestservice.exe;screenconnect.hostclient.exe;screenconnect.service.exe;ScreenConnect.ClientSetup.exe;ScreenConnect.Client.exe;ScreenConnect.WindowsBackstageShell.exe;ScreenConnect.WindowsFileManager.exe;LTSVC.exe;LTSvcMon.exe;LTTray.exe;LTSilent.exe;LSR.exe;labvnc.exe;connectwisechat-customer.exe;connectwisecontrol.client.exe;Remote Workforce Client.exe;RemoteWorkforceClientWpf.exe;RemoteWorkforceClient.exe;saazapsc.exe;SAAZWatchDog.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;GetSaazUsage.exe;SAAZDPMACTL.exe;SAAZDefaultJobExe.exe;SAAZJobDownload.exe;SAAZKill.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;SaazRemote.exe;VMWSaazClient.exe;SAAZappr.exe;SAAZapsc.exe;zSaazAccess.exe;SAAZScheduler.exe;SAAZSrvCOM.exe;SAAZSvcCtrl.exe</Image>
 					<Image condition="contains any">\elsinore technologies\;\LTSvc\;\SAAZOD\;connectwise;screenconnect</Image>
 				</Rule>
@@ -3107,9 +3096,6 @@
 		<!--DATA: UtcTime, ProcessGuid, ProcessId, Image-->
 		<RuleGroup name="group1" groupRelation="or">
 			<ProcessTerminate onmatch="include">
-							<Rule name="Remote Admin Software - Potential 247ithelp.com (ConnectWise) use detected" groupRelation="or">
-					<Image condition="image">Remote Workforce Client.exe</Image>
-				</Rule>
 				<Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
 					<Image condition="is any">rpcnet.exe;ctes.exe;ctespersitence.exe;cteshostsvc.exe;rpcld.exe</Image>
 				</Rule>
@@ -3215,7 +3201,7 @@
 					<Image condition="image">cloudflared.exe</Image>
 					<Image condition="contains">\cloudflared\</Image>
 				</Rule>
-				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247 use detected" groupRelation="or">
+				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247/247ithelp.com (ConnectWise) use detected" groupRelation="or">
 					<Image condition="is any">ScreenConnect.ClientService.exe;ScreenConnect.WindowsClient.exe;screenconnect.guestclient.exe;screenconnect.guestservice.exe;screenconnect.hostclient.exe;screenconnect.service.exe;ScreenConnect.ClientSetup.exe;ScreenConnect.Client.exe;ScreenConnect.WindowsBackstageShell.exe;ScreenConnect.WindowsFileManager.exe;LTSVC.exe;LTSvcMon.exe;LTTray.exe;LTSilent.exe;LSR.exe;labvnc.exe;connectwisechat-customer.exe;connectwisecontrol.client.exe;Remote Workforce Client.exe;RemoteWorkforceClientWpf.exe;RemoteWorkforceClient.exe;saazapsc.exe;SAAZWatchDog.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;GetSaazUsage.exe;SAAZDPMACTL.exe;SAAZDefaultJobExe.exe;SAAZJobDownload.exe;SAAZKill.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;SaazRemote.exe;VMWSaazClient.exe;SAAZappr.exe;SAAZapsc.exe;zSaazAccess.exe;SAAZScheduler.exe;SAAZSrvCOM.exe;SAAZSvcCtrl.exe</Image>
 					<Image condition="contains any">\elsinore technologies\;\LTSvc\;\SAAZOD\;connectwise;screenconnect</Image>
 				</Rule>
@@ -3823,9 +3809,6 @@
 		<!--DATA: UtcTime, ProcessGuid, ProcessId, Image, ImageLoaded, Hashes, Signed, Signature, SignatureStatus-->
 		<RuleGroup name="group1" groupRelation="or">
 			<ImageLoad onmatch="include">
-							<Rule name="Remote Admin Software - Potential 247ithelp.com (ConnectWise) use detected" groupRelation="or">
-					<Image condition="image">Remote Workforce Client.exe</Image>
-				</Rule>
 				<Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
 					<Image condition="is any">rpcnet.exe;ctes.exe;ctespersitence.exe;cteshostsvc.exe;rpcld.exe</Image>
 				</Rule>
@@ -3931,7 +3914,7 @@
 					<Image condition="image">cloudflared.exe</Image>
 					<Image condition="contains">\cloudflared\</Image>
 				</Rule>
-				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247 use detected" groupRelation="or">
+				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247/247ithelp.com (ConnectWise) use detected" groupRelation="or">
 					<Image condition="is any">ScreenConnect.ClientService.exe;ScreenConnect.WindowsClient.exe;screenconnect.guestclient.exe;screenconnect.guestservice.exe;screenconnect.hostclient.exe;screenconnect.service.exe;ScreenConnect.ClientSetup.exe;ScreenConnect.Client.exe;ScreenConnect.WindowsBackstageShell.exe;ScreenConnect.WindowsFileManager.exe;LTSVC.exe;LTSvcMon.exe;LTTray.exe;LTSilent.exe;LSR.exe;labvnc.exe;connectwisechat-customer.exe;connectwisecontrol.client.exe;Remote Workforce Client.exe;RemoteWorkforceClientWpf.exe;RemoteWorkforceClient.exe;saazapsc.exe;SAAZWatchDog.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;GetSaazUsage.exe;SAAZDPMACTL.exe;SAAZDefaultJobExe.exe;SAAZJobDownload.exe;SAAZKill.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;SaazRemote.exe;VMWSaazClient.exe;SAAZappr.exe;SAAZapsc.exe;zSaazAccess.exe;SAAZScheduler.exe;SAAZSrvCOM.exe;SAAZSvcCtrl.exe</Image>
 					<Image condition="contains any">\elsinore technologies\;\LTSvc\;\SAAZOD\;connectwise;screenconnect</Image>
 				</Rule>
@@ -4543,9 +4526,6 @@
 		<!--DATA: UtcTime, ProcessGuid, ProcessId, Image, Device-->
 		<RuleGroup name="group1" groupRelation="or">
 			<RawAccessRead onmatch="include">
-							<Rule name="Remote Admin Software - Potential 247ithelp.com (ConnectWise) use detected" groupRelation="or">
-					<Image condition="image">Remote Workforce Client.exe</Image>
-				</Rule>
 				<Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
 					<Image condition="is any">rpcnet.exe;ctes.exe;ctespersitence.exe;cteshostsvc.exe;rpcld.exe</Image>
 				</Rule>
@@ -4651,7 +4631,7 @@
 					<Image condition="image">cloudflared.exe</Image>
 					<Image condition="contains">\cloudflared\</Image>
 				</Rule>
-				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247 use detected" groupRelation="or">
+				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247/247ithelp.com (ConnectWise) use detected" groupRelation="or">
 					<Image condition="is any">ScreenConnect.ClientService.exe;ScreenConnect.WindowsClient.exe;screenconnect.guestclient.exe;screenconnect.guestservice.exe;screenconnect.hostclient.exe;screenconnect.service.exe;ScreenConnect.ClientSetup.exe;ScreenConnect.Client.exe;ScreenConnect.WindowsBackstageShell.exe;ScreenConnect.WindowsFileManager.exe;LTSVC.exe;LTSvcMon.exe;LTTray.exe;LTSilent.exe;LSR.exe;labvnc.exe;connectwisechat-customer.exe;connectwisecontrol.client.exe;Remote Workforce Client.exe;RemoteWorkforceClientWpf.exe;RemoteWorkforceClient.exe;saazapsc.exe;SAAZWatchDog.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;GetSaazUsage.exe;SAAZDPMACTL.exe;SAAZDefaultJobExe.exe;SAAZJobDownload.exe;SAAZKill.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;SaazRemote.exe;VMWSaazClient.exe;SAAZappr.exe;SAAZapsc.exe;zSaazAccess.exe;SAAZScheduler.exe;SAAZSrvCOM.exe;SAAZSvcCtrl.exe</Image>
 					<Image condition="contains any">\elsinore technologies\;\LTSvc\;\SAAZOD\;connectwise;screenconnect</Image>
 				</Rule>
@@ -5344,9 +5324,6 @@
 		<!--DATA: UtcTime, ProcessGuid, ProcessId, Image, TargetFilename, CreationUtcTime-->
 		<RuleGroup name="A file was created" groupRelation="or">
 			<FileCreate onmatch="include">
-							<Rule name="Remote Admin Software - Potential 247ithelp.com (ConnectWise) use detected" groupRelation="or">
-					<Image condition="image">Remote Workforce Client.exe</Image>
-				</Rule>
 				<Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
 					<Image condition="is any">rpcnet.exe;ctes.exe;ctespersitence.exe;cteshostsvc.exe;rpcld.exe</Image>
 				</Rule>
@@ -5452,7 +5429,7 @@
 					<Image condition="image">cloudflared.exe</Image>
 					<Image condition="contains">\cloudflared\</Image>
 				</Rule>
-				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247 use detected" groupRelation="or">
+				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247/247ithelp.com (ConnectWise) use detected" groupRelation="or">
 					<Image condition="is any">ScreenConnect.ClientService.exe;ScreenConnect.WindowsClient.exe;screenconnect.guestclient.exe;screenconnect.guestservice.exe;screenconnect.hostclient.exe;screenconnect.service.exe;ScreenConnect.ClientSetup.exe;ScreenConnect.Client.exe;ScreenConnect.WindowsBackstageShell.exe;ScreenConnect.WindowsFileManager.exe;LTSVC.exe;LTSvcMon.exe;LTTray.exe;LTSilent.exe;LSR.exe;labvnc.exe;connectwisechat-customer.exe;connectwisecontrol.client.exe;Remote Workforce Client.exe;RemoteWorkforceClientWpf.exe;RemoteWorkforceClient.exe;saazapsc.exe;SAAZWatchDog.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;GetSaazUsage.exe;SAAZDPMACTL.exe;SAAZDefaultJobExe.exe;SAAZJobDownload.exe;SAAZKill.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;SaazRemote.exe;VMWSaazClient.exe;SAAZappr.exe;SAAZapsc.exe;zSaazAccess.exe;SAAZScheduler.exe;SAAZSrvCOM.exe;SAAZSvcCtrl.exe</Image>
 					<Image condition="contains any">\elsinore technologies\;\LTSvc\;\SAAZOD\;connectwise;screenconnect</Image>
 				</Rule>
@@ -6055,9 +6032,6 @@
 		<!--CRITICAL:	Schema version 3.30 and higher use HKLM and HKEY_USERS and HKCR and CurrentControlSet instead of REGISTRY\MACHINE\ and \REGISTRY\USER\ and ControlSet001-->
 		<RuleGroup name="group1" groupRelation="or">
 			<RegistryEvent onmatch="include">
-							<Rule name="Remote Admin Software - Potential 247ithelp.com (ConnectWise) use detected" groupRelation="or">
-					<Image condition="image">Remote Workforce Client.exe</Image>
-				</Rule>
 				<Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
 					<Image condition="is any">rpcnet.exe;ctes.exe;ctespersitence.exe;cteshostsvc.exe;rpcld.exe</Image>
 				</Rule>
@@ -6163,7 +6137,7 @@
 					<Image condition="image">cloudflared.exe</Image>
 					<Image condition="contains">\cloudflared\</Image>
 				</Rule>
-				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247 use detected" groupRelation="or">
+				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247/247ithelp.com (ConnectWise) use detected" groupRelation="or">
 					<Image condition="is any">ScreenConnect.ClientService.exe;ScreenConnect.WindowsClient.exe;screenconnect.guestclient.exe;screenconnect.guestservice.exe;screenconnect.hostclient.exe;screenconnect.service.exe;ScreenConnect.ClientSetup.exe;ScreenConnect.Client.exe;ScreenConnect.WindowsBackstageShell.exe;ScreenConnect.WindowsFileManager.exe;LTSVC.exe;LTSvcMon.exe;LTTray.exe;LTSilent.exe;LSR.exe;labvnc.exe;connectwisechat-customer.exe;connectwisecontrol.client.exe;Remote Workforce Client.exe;RemoteWorkforceClientWpf.exe;RemoteWorkforceClient.exe;saazapsc.exe;SAAZWatchDog.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;GetSaazUsage.exe;SAAZDPMACTL.exe;SAAZDefaultJobExe.exe;SAAZJobDownload.exe;SAAZKill.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;SaazRemote.exe;VMWSaazClient.exe;SAAZappr.exe;SAAZapsc.exe;zSaazAccess.exe;SAAZScheduler.exe;SAAZSrvCOM.exe;SAAZSvcCtrl.exe</Image>
 					<Image condition="contains any">\elsinore technologies\;\LTSvc\;\SAAZOD\;connectwise;screenconnect</Image>
 				</Rule>
@@ -6759,9 +6733,6 @@
 		<!--DATA: UtcTime, ProcessGuid, ProcessId, Image, TargetFilename, CreationUtcTime, Hash-->
 		<RuleGroup name="A file was written to disk" groupRelation="or">
 			<FileCreateStreamHash onmatch="include">
-							<Rule name="Remote Admin Software - Potential 247ithelp.com (ConnectWise) use detected" groupRelation="or">
-					<Image condition="image">Remote Workforce Client.exe</Image>
-				</Rule>
 				<Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
 					<Image condition="is any">rpcnet.exe;ctes.exe;ctespersitence.exe;cteshostsvc.exe;rpcld.exe</Image>
 				</Rule>
@@ -6867,7 +6838,7 @@
 					<Image condition="image">cloudflared.exe</Image>
 					<Image condition="contains">\cloudflared\</Image>
 				</Rule>
-				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247 use detected" groupRelation="or">
+				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247/247ithelp.com (ConnectWise) use detected" groupRelation="or">
 					<Image condition="is any">ScreenConnect.ClientService.exe;ScreenConnect.WindowsClient.exe;screenconnect.guestclient.exe;screenconnect.guestservice.exe;screenconnect.hostclient.exe;screenconnect.service.exe;ScreenConnect.ClientSetup.exe;ScreenConnect.Client.exe;ScreenConnect.WindowsBackstageShell.exe;ScreenConnect.WindowsFileManager.exe;LTSVC.exe;LTSvcMon.exe;LTTray.exe;LTSilent.exe;LSR.exe;labvnc.exe;connectwisechat-customer.exe;connectwisecontrol.client.exe;Remote Workforce Client.exe;RemoteWorkforceClientWpf.exe;RemoteWorkforceClient.exe;saazapsc.exe;SAAZWatchDog.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;GetSaazUsage.exe;SAAZDPMACTL.exe;SAAZDefaultJobExe.exe;SAAZJobDownload.exe;SAAZKill.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;SaazRemote.exe;VMWSaazClient.exe;SAAZappr.exe;SAAZapsc.exe;zSaazAccess.exe;SAAZScheduler.exe;SAAZSrvCOM.exe;SAAZSvcCtrl.exe</Image>
 					<Image condition="contains any">\elsinore technologies\;\LTSvc\;\SAAZOD\;connectwise;screenconnect</Image>
 				</Rule>
@@ -7470,9 +7441,6 @@
 		<!--DATA: UtcTime, ProcessGuid, ProcessId, PipeName, Image-->
 		<RuleGroup name="group1" groupRelation="or">
 			<PipeEvent onmatch="include">
-							<Rule name="Remote Admin Software - Potential 247ithelp.com (ConnectWise) use detected" groupRelation="or">
-					<Image condition="image">Remote Workforce Client.exe</Image>
-				</Rule>
 				<Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
 					<Image condition="is any">rpcnet.exe;ctes.exe;ctespersitence.exe;cteshostsvc.exe;rpcld.exe</Image>
 				</Rule>
@@ -7578,7 +7546,7 @@
 					<Image condition="image">cloudflared.exe</Image>
 					<Image condition="contains">\cloudflared\</Image>
 				</Rule>
-				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247 use detected" groupRelation="or">
+				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247/247ithelp.com (ConnectWise) use detected" groupRelation="or">
 					<Image condition="is any">ScreenConnect.ClientService.exe;ScreenConnect.WindowsClient.exe;screenconnect.guestclient.exe;screenconnect.guestservice.exe;screenconnect.hostclient.exe;screenconnect.service.exe;ScreenConnect.ClientSetup.exe;ScreenConnect.Client.exe;ScreenConnect.WindowsBackstageShell.exe;ScreenConnect.WindowsFileManager.exe;LTSVC.exe;LTSvcMon.exe;LTTray.exe;LTSilent.exe;LSR.exe;labvnc.exe;connectwisechat-customer.exe;connectwisecontrol.client.exe;Remote Workforce Client.exe;RemoteWorkforceClientWpf.exe;RemoteWorkforceClient.exe;saazapsc.exe;SAAZWatchDog.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;GetSaazUsage.exe;SAAZDPMACTL.exe;SAAZDefaultJobExe.exe;SAAZJobDownload.exe;SAAZKill.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;SaazRemote.exe;VMWSaazClient.exe;SAAZappr.exe;SAAZapsc.exe;zSaazAccess.exe;SAAZScheduler.exe;SAAZSrvCOM.exe;SAAZSvcCtrl.exe</Image>
 					<Image condition="contains any">\elsinore technologies\;\LTSvc\;\SAAZOD\;connectwise;screenconnect</Image>
 				</Rule>
@@ -8211,9 +8179,6 @@
 		<!-- Rejected: *github.com, customer content, including open-source malware components -->
 		<RuleGroup groupRelation="or">
 			<DnsQuery onmatch="include">
-							<Rule name="Remote Admin Software - Potential 247ithelp.com (ConnectWise) use detected" groupRelation="or">
-					<Image condition="image">Remote Workforce Client.exe</Image>
-				</Rule>
 				<Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
 					<Image condition="is any">rpcnet.exe;ctes.exe;ctespersitence.exe;cteshostsvc.exe;rpcld.exe</Image>
 				</Rule>
@@ -8319,7 +8284,7 @@
 					<Image condition="image">cloudflared.exe</Image>
 					<Image condition="contains">\cloudflared\</Image>
 				</Rule>
-				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247 use detected" groupRelation="or">
+				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247/247ithelp.com (ConnectWise) use detected" groupRelation="or">
 					<Image condition="is any">ScreenConnect.ClientService.exe;ScreenConnect.WindowsClient.exe;screenconnect.guestclient.exe;screenconnect.guestservice.exe;screenconnect.hostclient.exe;screenconnect.service.exe;ScreenConnect.ClientSetup.exe;ScreenConnect.Client.exe;ScreenConnect.WindowsBackstageShell.exe;ScreenConnect.WindowsFileManager.exe;LTSVC.exe;LTSvcMon.exe;LTTray.exe;LTSilent.exe;LSR.exe;labvnc.exe;connectwisechat-customer.exe;connectwisecontrol.client.exe;Remote Workforce Client.exe;RemoteWorkforceClientWpf.exe;RemoteWorkforceClient.exe;saazapsc.exe;SAAZWatchDog.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;GetSaazUsage.exe;SAAZDPMACTL.exe;SAAZDefaultJobExe.exe;SAAZJobDownload.exe;SAAZKill.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;SaazRemote.exe;VMWSaazClient.exe;SAAZappr.exe;SAAZapsc.exe;zSaazAccess.exe;SAAZScheduler.exe;SAAZSrvCOM.exe;SAAZSvcCtrl.exe</Image>
 					<Image condition="contains any">\elsinore technologies\;\LTSvc\;\SAAZOD\;connectwise;screenconnect</Image>
 				</Rule>
@@ -8919,9 +8884,6 @@
 		<!--DATA: UtcTime, ProcessGuid, ProcessId, Image, TargetFilename, CreationUtcTime, PreviousCreationUtcTime-->
 		<RuleGroup name="group1" groupRelation="or">
 			<FileDeleteDetected onmatch="include">
-							<Rule name="Remote Admin Software - Potential 247ithelp.com (ConnectWise) use detected" groupRelation="or">
-					<Image condition="image">Remote Workforce Client.exe</Image>
-				</Rule>
 				<Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
 					<Image condition="is any">rpcnet.exe;ctes.exe;ctespersitence.exe;cteshostsvc.exe;rpcld.exe</Image>
 				</Rule>
@@ -9027,7 +8989,7 @@
 					<Image condition="image">cloudflared.exe</Image>
 					<Image condition="contains">\cloudflared\</Image>
 				</Rule>
-				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247 use detected" groupRelation="or">
+				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247/247ithelp.com (ConnectWise) use detected" groupRelation="or">
 					<Image condition="is any">ScreenConnect.ClientService.exe;ScreenConnect.WindowsClient.exe;screenconnect.guestclient.exe;screenconnect.guestservice.exe;screenconnect.hostclient.exe;screenconnect.service.exe;ScreenConnect.ClientSetup.exe;ScreenConnect.Client.exe;ScreenConnect.WindowsBackstageShell.exe;ScreenConnect.WindowsFileManager.exe;LTSVC.exe;LTSvcMon.exe;LTTray.exe;LTSilent.exe;LSR.exe;labvnc.exe;connectwisechat-customer.exe;connectwisecontrol.client.exe;Remote Workforce Client.exe;RemoteWorkforceClientWpf.exe;RemoteWorkforceClient.exe;saazapsc.exe;SAAZWatchDog.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;GetSaazUsage.exe;SAAZDPMACTL.exe;SAAZDefaultJobExe.exe;SAAZJobDownload.exe;SAAZKill.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;SaazRemote.exe;VMWSaazClient.exe;SAAZappr.exe;SAAZapsc.exe;zSaazAccess.exe;SAAZScheduler.exe;SAAZSrvCOM.exe;SAAZSvcCtrl.exe</Image>
 					<Image condition="contains any">\elsinore technologies\;\LTSvc\;\SAAZOD\;connectwise;screenconnect</Image>
 				</Rule>
@@ -9631,9 +9593,6 @@
 		<!--DATA: UtcTime, ProcessGuid, ProcessId, Image, TargetFilename, CreationUtcTime, PreviousCreationUtcTime-->
 		<RuleGroup name="group1" groupRelation="or">
 			<FileExecutableDetected onmatch="include">
-							<Rule name="Remote Admin Software - Potential 247ithelp.com (ConnectWise) use detected" groupRelation="or">
-					<Image condition="image">Remote Workforce Client.exe</Image>
-				</Rule>
 				<Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
 					<Image condition="is any">rpcnet.exe;ctes.exe;ctespersitence.exe;cteshostsvc.exe;rpcld.exe</Image>
 				</Rule>
@@ -9739,7 +9698,7 @@
 					<Image condition="image">cloudflared.exe</Image>
 					<Image condition="contains">\cloudflared\</Image>
 				</Rule>
-				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247 use detected" groupRelation="or">
+				<Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247/247ithelp.com (ConnectWise) use detected" groupRelation="or">
 					<Image condition="is any">ScreenConnect.ClientService.exe;ScreenConnect.WindowsClient.exe;screenconnect.guestclient.exe;screenconnect.guestservice.exe;screenconnect.hostclient.exe;screenconnect.service.exe;ScreenConnect.ClientSetup.exe;ScreenConnect.Client.exe;ScreenConnect.WindowsBackstageShell.exe;ScreenConnect.WindowsFileManager.exe;LTSVC.exe;LTSvcMon.exe;LTTray.exe;LTSilent.exe;LSR.exe;labvnc.exe;connectwisechat-customer.exe;connectwisecontrol.client.exe;Remote Workforce Client.exe;RemoteWorkforceClientWpf.exe;RemoteWorkforceClient.exe;saazapsc.exe;SAAZWatchDog.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;GetSaazUsage.exe;SAAZDPMACTL.exe;SAAZDefaultJobExe.exe;SAAZJobDownload.exe;SAAZKill.exe;SAAZRemoteSupport.exe;SAAZServerPlus.exe;SAAZSvrClient.exe;SaazRemote.exe;VMWSaazClient.exe;SAAZappr.exe;SAAZapsc.exe;zSaazAccess.exe;SAAZScheduler.exe;SAAZSrvCOM.exe;SAAZSvcCtrl.exe</Image>
 					<Image condition="contains any">\elsinore technologies\;\LTSvc\;\SAAZOD\;connectwise;screenconnect</Image>
 				</Rule>
