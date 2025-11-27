@@ -53,7 +53,7 @@
 					<Image condition="contains">AcronisCyberProtectConnectQuickAssist</Image>
 					<ParentImage condition="image">AcronisCyberProtectConnectAgent.exe</ParentImage>
 					<ParentImage condition="contains">AcronisCyberProtectConnectQuickAssist</ParentImage>
-					<OriginalFileName condition="is">AcronisCyberProtectConnectAgent.exe;AcronisCyberProtectConnectQuickAssist</OriginalFileName>
+					<OriginalFileName condition="is any">AcronisCyberProtectConnectAgent.exe;AcronisCyberProtectConnectQuickAssist</OriginalFileName>
 					<OriginalFileName condition="contains">AcronisCyberProtectConnectQuickAssist</OriginalFileName>
 					<Description condition="is">Acronis Cyber Protect Connect Quick Assist</Description>
 					<Product condition="is">Acronis Cyber Protect Connect Quick Assist</Product>
@@ -109,9 +109,9 @@
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Ammyy Admin use detected" groupRelation="or">
 					<Image condition="is any">AMMYY_Admin.exe;AA_v3.exe;AA_v2.exe;AA_v1.exe</Image>
-					<Image condition="contains">\AMMYY\;\Ammyy Admin\</Image>
+					<Image condition="contains any">\AMMYY\;\Ammyy Admin\</Image>
 					<ParentImage condition="is any">AMMYY_Admin.exe;AA_v3.exe;AA_v2.exe;AA_v1.exe</ParentImage>
-					<ParentImage condition="contains">\AMMYY\;\Ammyy Admin\</ParentImage>
+					<ParentImage condition="contains any">\AMMYY\;\Ammyy Admin\</ParentImage>
 					<OriginalFileName condition="is any">AMMYY_Admin.exe;AA_v3.exe;AA_v2.exe;AA_v1.exe</OriginalFileName>
 					<Description condition="is">Ammyy Admin</Description>
 					<Product condition="is">Ammyy Admin</Product>
@@ -149,7 +149,7 @@
 					<Company condition="is any">Anyplace Control;AQUATRA, Inc.</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential AnyViewer use detected" groupRelation="or">
-					<Image condition="is">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</Image>
+					<Image condition="is any">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</Image>
 					<Image condition="contains">\AnyViewer\</Image>
 					<ParentImage condition="is any">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe</ParentImage>
 					<ParentImage condition="contains">\AnyViewer\</ParentImage>
@@ -251,7 +251,7 @@
 					<Image condition="contains">CtiServ</Image>
 					<ParentImage condition="is any">ctiserv.exe;CtiControlCenter.exe;CTIUpdater.exe;ctsrcmd.exe;ctsrgui.exe;ctsrsvc.exe;ctsrvnc.exe</ParentImage>
 					<ParentImage condition="contains">CtiServ</ParentImage>
-					<OriginalFileName condition="is">ctiserv.exe;CtiControlCenter.exe;CTIUpdater.exe;ctsrcmd.exe;ctsrgui.exe;ctsrsvc.exe;ctsrvnc.exe</OriginalFileName>
+					<OriginalFileName condition="is any">ctiserv.exe;CtiControlCenter.exe;CTIUpdater.exe;ctsrcmd.exe;ctsrgui.exe;ctsrsvc.exe;ctsrvnc.exe</OriginalFileName>
 					<OriginalFileName condition="contains">CtiServ</OriginalFileName>
 					<Description condition="is any">CtiServ;Centurion Technologies</Description>
 					<Product condition="is any">CtiServ;Centurion Technologies</Product>
@@ -571,7 +571,7 @@
 					<OriginalFileName condition="contains">govsrv</OriginalFileName>
 					<Description condition="is">Goverlan Agent Service</Description>
 					<Product condition="is">Goverlan</Product>
-					<Company condition="is">PJ Technologies, Inc.;Goverlan</Company>
+					<Company condition="is any">PJ Technologies, Inc.;Goverlan</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential HelpBeam use detected" groupRelation="or">
 					<Image condition="contains">helpbeam</Image>
@@ -852,7 +852,7 @@
 					<OriginalFileName condition="is any">Online Backup.exe;CBBackupPlan.exe;Cloud.Backup.Scheduler.exe;Cloud.Backup.RM.Service.exe;cbb.exe;CloudRaService.exe;CloudRaSd.exe;CloudRaCmd.exe;CloudRaUtilities.exe;Remote Desktop.exe;Quick Restore.exe;Cloud.DiskImage.Flash.Launcher.exe;Cloud.DiskImage.RestoreVerificationService.exe;CloudBerry Online Backup Service.exe;Cloud.Backup.ConsoleWPF.exe</OriginalFileName>
 					<Description condition="is any">Online Backup Service;Quick Restore</Description>
 					<Product condition="is any">Online Backup Service;Quick Restore</Product>
-					<Company condition="is">CloudBerry Lab Inc.;MSP360</Company>
+					<Company condition="is any">CloudBerry Lab Inc.;MSP360</Company>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential MyGreenPC use detected" groupRelation="or">
 					<Image condition="is any">MyGreenPC;mygreenpc.exe;greenpcsvc.exe;greenpc.exe;GreenPCSetup.exe</Image>
@@ -1154,7 +1154,7 @@
 					<ParentImage condition="is any">ir_agent.exe;rapid7_agent_core.exe;rapid7_endpoint_broker.exe;honeyhashx86.exe</ParentImage>
 					<ParentImage condition="contains any">\Insight Agent\;\Rapid7\</ParentImage>
 					<OriginalFileName condition="is any">ir_agent.exe;rapid7_agent_core.exe;rapid7_endpoint_broker.exe;honeyhashx86.exe</OriginalFileName>
-					<Description condition="is">File system walker;GlavSoft LLC.</Description>
+					<Description condition="is any">File system walker;GlavSoft LLC.</Description>
 					<Product condition="is">Rapid7</Product>
 					<Company condition="is">Rapid7</Company>
 				</Rule>
@@ -1594,9 +1594,9 @@
 				</Rule>
 				<Rule name="Remote Admin Software - Potential WinSCP use detected" groupRelation="or">
 					<Image condition="image">WinSCP.exe</Image>
-					<Image condition="contains">\WinSCP\;\WinSCP-</Image>
+					<Image condition="contains any">\WinSCP\;\WinSCP-</Image>
 					<ParentImage condition="image">WinSCP.exe</ParentImage>
-					<ParentImage condition="contains">\WinSCP\;\WinSCP-</ParentImage>
+					<ParentImage condition="contains any">\WinSCP\;\WinSCP-</ParentImage>
 					<OriginalFileName condition="is">WinSCP.exe</OriginalFileName>
 					<OriginalFileName condition="contains">WinSCP</OriginalFileName>
 					<Description condition="is">WinSCP</Description>
@@ -1708,7 +1708,7 @@
 					<Image condition="is any">action1_agent.exe;action1_remote.exe</Image>
 					<Image condition="contains">\action1\</Image>
 					<TargetFilename condition="is any">action1_agent.exe;action1_remote.exe;action1_log_;action1_agent.msi;what_is_this.txt</TargetFilename>
-					<TargetFilename condition="contains">\action1\;agent_downgrade.</TargetFilename>
+					<TargetFilename condition="contains any">\action1\;agent_downgrade.</TargetFilename>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Adobe Connect use detected" groupRelation="or">
 					<Image condition="is any">Connect.exe;ConnectDetector.exe;ConnectAppSetup.exe</Image>
@@ -1736,7 +1736,7 @@
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Ammyy Admin use detected" groupRelation="or">
 					<Image condition="is any">AMMYY_Admin.exe;AA_v3.exe;AA_v2.exe;AA_v1.exe</Image>
-					<Image condition="contains">\AMMYY\;\Ammyy Admin\</Image>
+					<Image condition="contains any">\AMMYY\;\Ammyy Admin\</Image>
 					<TargetFilename condition="is any">MMYY_Admin.exe;AA_v3.exe;AA_v2.exe;AA_v1.exe;aa_nts.log;aa_nts.msg;hr3;AA_v3.log;access.log</TargetFilename>
 					<TargetFilename condition="contains any">\AMMYY\;\Ammyy Admin\</TargetFilename>
 				</Rule>
@@ -1759,7 +1759,7 @@
 					<TargetFilename condition="contains any">\Anyplace Control;\Remote Desktop Control;\10-Strike Remote Access\</TargetFilename>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential AnyViewer use detected" groupRelation="or">
-					<Image condition="is">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</Image>
+					<Image condition="is any">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</Image>
 					<Image condition="contains">\AnyViewer\</Image>
 					<TargetFilename condition="is any">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AmAnacfg.ini;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</TargetFilename>
 					<TargetFilename condition="contains any">\AnyViewer\</TargetFilename>
@@ -2681,7 +2681,7 @@
 				</Rule>
 				<Rule name="Remote Admin Software - Potential WinSCP use detected" groupRelation="or">
 					<Image condition="image">WinSCP.exe</Image>
-					<Image condition="contains">\WinSCP\;\WinSCP-</Image>
+					<Image condition="contains any">\WinSCP\;\WinSCP-</Image>
 					<TargetFilename condition="is any">\Startup\</TargetFilename>
 					<TargetFilename condition="contains any">\Startup\</TargetFilename>
 				</Rule>
@@ -2794,7 +2794,7 @@
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Ammyy Admin use detected" groupRelation="or">
 					<Image condition="is any">AMMYY_Admin.exe;AA_v3.exe;AA_v2.exe;AA_v1.exe</Image>
-					<Image condition="contains">\AMMYY\;\Ammyy Admin\</Image>
+					<Image condition="contains any">\AMMYY\;\Ammyy Admin\</Image>
 					<DestinationHostname condition="is">ammyy.com</DestinationHostname>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Any Support/LinkMeMine use detected" groupRelation="or">
@@ -2813,7 +2813,7 @@
 					<DestinationHostname condition="end with">anyplace-control.com</DestinationHostname>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential AnyViewer use detected" groupRelation="or">
-					<Image condition="is">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</Image>
+					<Image condition="is any">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</Image>
 					<Image condition="contains">\AnyViewer\</Image>
 					<DestinationHostname condition="end with">.anyviewer.com</DestinationHostname>
 					<DestinationHostname condition="end with">.aomeisoftware.com</DestinationHostname>
@@ -3654,7 +3654,7 @@
 				</Rule>
 				<Rule name="Remote Admin Software - Potential WinSCP use detected" groupRelation="or">
 					<Image condition="image">WinSCP.exe</Image>
-					<Image condition="contains">\WinSCP\;\WinSCP-</Image>
+					<Image condition="contains any">\WinSCP\;\WinSCP-</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential X2Go/pyhoca-gui use detected" groupRelation="or">
 					<Image condition="image">pyhoca-gui.exe</Image>
@@ -3738,7 +3738,7 @@
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Ammyy Admin use detected" groupRelation="or">
 					<Image condition="is any">AMMYY_Admin.exe;AA_v3.exe;AA_v2.exe;AA_v1.exe</Image>
-					<Image condition="contains">\AMMYY\;\Ammyy Admin\</Image>
+					<Image condition="contains any">\AMMYY\;\Ammyy Admin\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Any Support/LinkMeMine use detected" groupRelation="or">
 					<Image condition="is any">ManualLauncher.exe;KASSvcMgr.exe;nSSDServer.exe;KoinoSSServer.exe;KoinoFTClient.exe;nFTDClient.exe;KoinoFTServer.exe;nFTDServer.exe;KoinoHost.exe;KoinoASClient.exe;setup_krp.exe</Image>
@@ -3753,7 +3753,7 @@
 					<Image condition="contains any">\Anyplace Control;\Remote Desktop Control;\10-Strike Remote Access\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential AnyViewer use detected" groupRelation="or">
-					<Image condition="is">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</Image>
+					<Image condition="is any">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</Image>
 					<Image condition="contains">\AnyViewer\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Aspia use detected" groupRelation="or">
@@ -4354,7 +4354,7 @@
 				</Rule>
 				<Rule name="Remote Admin Software - Potential WinSCP use detected" groupRelation="or">
 					<Image condition="image">WinSCP.exe</Image>
-					<Image condition="contains">\WinSCP\;\WinSCP-</Image>
+					<Image condition="contains any">\WinSCP\;\WinSCP-</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential X2Go/pyhoca-gui use detected" groupRelation="or">
 					<Image condition="image">pyhoca-gui.exe</Image>
@@ -4444,7 +4444,7 @@
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Ammyy Admin use detected" groupRelation="or">
 					<Image condition="is any">AMMYY_Admin.exe;AA_v3.exe;AA_v2.exe;AA_v1.exe</Image>
-					<Image condition="contains">\AMMYY\;\Ammyy Admin\</Image>
+					<Image condition="contains any">\AMMYY\;\Ammyy Admin\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Any Support/LinkMeMine use detected" groupRelation="or">
 					<Image condition="is any">ManualLauncher.exe;KASSvcMgr.exe;nSSDServer.exe;KoinoSSServer.exe;KoinoFTClient.exe;nFTDClient.exe;KoinoFTServer.exe;nFTDServer.exe;KoinoHost.exe;KoinoASClient.exe;setup_krp.exe</Image>
@@ -4459,7 +4459,7 @@
 					<Image condition="contains any">\Anyplace Control;\Remote Desktop Control;\10-Strike Remote Access\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential AnyViewer use detected" groupRelation="or">
-					<Image condition="is">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</Image>
+					<Image condition="is any">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</Image>
 					<Image condition="contains">\AnyViewer\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Aspia use detected" groupRelation="or">
@@ -5060,7 +5060,7 @@
 				</Rule>
 				<Rule name="Remote Admin Software - Potential WinSCP use detected" groupRelation="or">
 					<Image condition="image">WinSCP.exe</Image>
-					<Image condition="contains">\WinSCP\;\WinSCP-</Image>
+					<Image condition="contains any">\WinSCP\;\WinSCP-</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential X2Go/pyhoca-gui use detected" groupRelation="or">
 					<Image condition="image">pyhoca-gui.exe</Image>
@@ -5154,7 +5154,7 @@
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Ammyy Admin use detected" groupRelation="or">
 					<Image condition="is any">AMMYY_Admin.exe;AA_v3.exe;AA_v2.exe;AA_v1.exe</Image>
-					<Image condition="contains">\AMMYY\;\Ammyy Admin\</Image>
+					<Image condition="contains any">\AMMYY\;\Ammyy Admin\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Any Support/LinkMeMine use detected" groupRelation="or">
 					<Image condition="is any">ManualLauncher.exe;KASSvcMgr.exe;nSSDServer.exe;KoinoSSServer.exe;KoinoFTClient.exe;nFTDClient.exe;KoinoFTServer.exe;nFTDServer.exe;KoinoHost.exe;KoinoASClient.exe;setup_krp.exe</Image>
@@ -5169,7 +5169,7 @@
 					<Image condition="contains any">\Anyplace Control;\Remote Desktop Control;\10-Strike Remote Access\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential AnyViewer use detected" groupRelation="or">
-					<Image condition="is">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</Image>
+					<Image condition="is any">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</Image>
 					<Image condition="contains">\AnyViewer\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Aspia use detected" groupRelation="or">
@@ -5770,7 +5770,7 @@
 				</Rule>
 				<Rule name="Remote Admin Software - Potential WinSCP use detected" groupRelation="or">
 					<Image condition="image">WinSCP.exe</Image>
-					<Image condition="contains">\WinSCP\;\WinSCP-</Image>
+					<Image condition="contains any">\WinSCP\;\WinSCP-</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential X2Go/pyhoca-gui use detected" groupRelation="or">
 					<Image condition="image">pyhoca-gui.exe</Image>
@@ -5945,7 +5945,7 @@
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Ammyy Admin use detected" groupRelation="or">
 					<Image condition="is any">AMMYY_Admin.exe;AA_v3.exe;AA_v2.exe;AA_v1.exe</Image>
-					<Image condition="contains">\AMMYY\;\Ammyy Admin\</Image>
+					<Image condition="contains any">\AMMYY\;\Ammyy Admin\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Any Support/LinkMeMine use detected" groupRelation="or">
 					<Image condition="is any">ManualLauncher.exe;KASSvcMgr.exe;nSSDServer.exe;KoinoSSServer.exe;KoinoFTClient.exe;nFTDClient.exe;KoinoFTServer.exe;nFTDServer.exe;KoinoHost.exe;KoinoASClient.exe;setup_krp.exe</Image>
@@ -5960,7 +5960,7 @@
 					<Image condition="contains any">\Anyplace Control;\Remote Desktop Control;\10-Strike Remote Access\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential AnyViewer use detected" groupRelation="or">
-					<Image condition="is">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</Image>
+					<Image condition="is any">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</Image>
 					<Image condition="contains">\AnyViewer\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Aspia use detected" groupRelation="or">
@@ -6561,7 +6561,7 @@
 				</Rule>
 				<Rule name="Remote Admin Software - Potential WinSCP use detected" groupRelation="or">
 					<Image condition="image">WinSCP.exe</Image>
-					<Image condition="contains">\WinSCP\;\WinSCP-</Image>
+					<Image condition="contains any">\WinSCP\;\WinSCP-</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential X2Go/pyhoca-gui use detected" groupRelation="or">
 					<Image condition="image">pyhoca-gui.exe</Image>
@@ -6646,7 +6646,7 @@
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Ammyy Admin use detected" groupRelation="or">
 					<Image condition="is any">AMMYY_Admin.exe;AA_v3.exe;AA_v2.exe;AA_v1.exe</Image>
-					<Image condition="contains">\AMMYY\;\Ammyy Admin\</Image>
+					<Image condition="contains any">\AMMYY\;\Ammyy Admin\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Any Support/LinkMeMine use detected" groupRelation="or">
 					<Image condition="is any">ManualLauncher.exe;KASSvcMgr.exe;nSSDServer.exe;KoinoSSServer.exe;KoinoFTClient.exe;nFTDClient.exe;KoinoFTServer.exe;nFTDServer.exe;KoinoHost.exe;KoinoASClient.exe;setup_krp.exe</Image>
@@ -6661,7 +6661,7 @@
 					<Image condition="contains any">\Anyplace Control;\Remote Desktop Control;\10-Strike Remote Access\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential AnyViewer use detected" groupRelation="or">
-					<Image condition="is">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</Image>
+					<Image condition="is any">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</Image>
 					<Image condition="contains">\AnyViewer\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Aspia use detected" groupRelation="or">
@@ -7262,7 +7262,7 @@
 				</Rule>
 				<Rule name="Remote Admin Software - Potential WinSCP use detected" groupRelation="or">
 					<Image condition="image">WinSCP.exe</Image>
-					<Image condition="contains">\WinSCP\;\WinSCP-</Image>
+					<Image condition="contains any">\WinSCP\;\WinSCP-</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential X2Go/pyhoca-gui use detected" groupRelation="or">
 					<Image condition="image">pyhoca-gui.exe</Image>
@@ -7340,7 +7340,7 @@
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Ammyy Admin use detected" groupRelation="or">
 					<Image condition="is any">AMMYY_Admin.exe;AA_v3.exe;AA_v2.exe;AA_v1.exe</Image>
-					<Image condition="contains">\AMMYY\;\Ammyy Admin\</Image>
+					<Image condition="contains any">\AMMYY\;\Ammyy Admin\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Any Support/LinkMeMine use detected" groupRelation="or">
 					<Image condition="is any">ManualLauncher.exe;KASSvcMgr.exe;nSSDServer.exe;KoinoSSServer.exe;KoinoFTClient.exe;nFTDClient.exe;KoinoFTServer.exe;nFTDServer.exe;KoinoHost.exe;KoinoASClient.exe;setup_krp.exe</Image>
@@ -7355,7 +7355,7 @@
 					<Image condition="contains any">\Anyplace Control;\Remote Desktop Control;\10-Strike Remote Access\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential AnyViewer use detected" groupRelation="or">
-					<Image condition="is">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</Image>
+					<Image condition="is any">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</Image>
 					<Image condition="contains">\AnyViewer\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Aspia use detected" groupRelation="or">
@@ -7956,7 +7956,7 @@
 				</Rule>
 				<Rule name="Remote Admin Software - Potential WinSCP use detected" groupRelation="or">
 					<Image condition="image">WinSCP.exe</Image>
-					<Image condition="contains">\WinSCP\;\WinSCP-</Image>
+					<Image condition="contains any">\WinSCP\;\WinSCP-</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential X2Go/pyhoca-gui use detected" groupRelation="or">
 					<Image condition="image">pyhoca-gui.exe</Image>
@@ -8041,7 +8041,7 @@
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Ammyy Admin use detected" groupRelation="or">
 					<Image condition="is any">AMMYY_Admin.exe;AA_v3.exe;AA_v2.exe;AA_v1.exe</Image>
-					<Image condition="contains">\AMMYY\;\Ammyy Admin\</Image>
+					<Image condition="contains any">\AMMYY\;\Ammyy Admin\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Any Support/LinkMeMine use detected" groupRelation="or">
 					<Image condition="is any">ManualLauncher.exe;KASSvcMgr.exe;nSSDServer.exe;KoinoSSServer.exe;KoinoFTClient.exe;nFTDClient.exe;KoinoFTServer.exe;nFTDServer.exe;KoinoHost.exe;KoinoASClient.exe;setup_krp.exe</Image>
@@ -8056,7 +8056,7 @@
 					<Image condition="contains any">\Anyplace Control;\Remote Desktop Control;\10-Strike Remote Access\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential AnyViewer use detected" groupRelation="or">
-					<Image condition="is">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</Image>
+					<Image condition="is any">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</Image>
 					<Image condition="contains">\AnyViewer\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Aspia use detected" groupRelation="or">
@@ -8657,7 +8657,7 @@
 				</Rule>
 				<Rule name="Remote Admin Software - Potential WinSCP use detected" groupRelation="or">
 					<Image condition="image">WinSCP.exe</Image>
-					<Image condition="contains">\WinSCP\;\WinSCP-</Image>
+					<Image condition="contains any">\WinSCP\;\WinSCP-</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential X2Go/pyhoca-gui use detected" groupRelation="or">
 					<Image condition="image">pyhoca-gui.exe</Image>
@@ -8786,7 +8786,7 @@
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Ammyy Admin use detected" groupRelation="or">
 					<Image condition="is any">AMMYY_Admin.exe;AA_v3.exe;AA_v2.exe;AA_v1.exe</Image>
-					<Image condition="contains">\AMMYY\;\Ammyy Admin\</Image>
+					<Image condition="contains any">\AMMYY\;\Ammyy Admin\</Image>
 					<QueryName condition="is">ammyy.com</QueryName>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Any Support/LinkMeMine use detected" groupRelation="or">
@@ -8805,7 +8805,7 @@
 					<QueryName condition="end with">anyplace-control.com</QueryName>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential AnyViewer use detected" groupRelation="or">
-					<Image condition="is">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</Image>
+					<Image condition="is any">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</Image>
 					<Image condition="contains">\AnyViewer\</Image>
 					<QueryName condition="end with">.anyviewer.com</QueryName>
 					<QueryName condition="end with">.aomeisoftware.com</QueryName>
@@ -9646,7 +9646,7 @@
 				</Rule>
 				<Rule name="Remote Admin Software - Potential WinSCP use detected" groupRelation="or">
 					<Image condition="image">WinSCP.exe</Image>
-					<Image condition="contains">\WinSCP\;\WinSCP-</Image>
+					<Image condition="contains any">\WinSCP\;\WinSCP-</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential X2Go/pyhoca-gui use detected" groupRelation="or">
 					<Image condition="image">pyhoca-gui.exe</Image>
@@ -9731,7 +9731,7 @@
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Ammyy Admin use detected" groupRelation="or">
 					<Image condition="is any">AMMYY_Admin.exe;AA_v3.exe;AA_v2.exe;AA_v1.exe</Image>
-					<Image condition="contains">\AMMYY\;\Ammyy Admin\</Image>
+					<Image condition="contains any">\AMMYY\;\Ammyy Admin\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Any Support/LinkMeMine use detected" groupRelation="or">
 					<Image condition="is any">ManualLauncher.exe;KASSvcMgr.exe;nSSDServer.exe;KoinoSSServer.exe;KoinoFTClient.exe;nFTDClient.exe;KoinoFTServer.exe;nFTDServer.exe;KoinoHost.exe;KoinoASClient.exe;setup_krp.exe</Image>
@@ -9746,7 +9746,7 @@
 					<Image condition="contains any">\Anyplace Control;\Remote Desktop Control;\10-Strike Remote Access\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential AnyViewer use detected" groupRelation="or">
-					<Image condition="is">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</Image>
+					<Image condition="is any">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</Image>
 					<Image condition="contains">\AnyViewer\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Aspia use detected" groupRelation="or">
@@ -10347,7 +10347,7 @@
 				</Rule>
 				<Rule name="Remote Admin Software - Potential WinSCP use detected" groupRelation="or">
 					<Image condition="image">WinSCP.exe</Image>
-					<Image condition="contains">\WinSCP\;\WinSCP-</Image>
+					<Image condition="contains any">\WinSCP\;\WinSCP-</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential X2Go/pyhoca-gui use detected" groupRelation="or">
 					<Image condition="image">pyhoca-gui.exe</Image>
@@ -10433,7 +10433,7 @@
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Ammyy Admin use detected" groupRelation="or">
 					<Image condition="is any">AMMYY_Admin.exe;AA_v3.exe;AA_v2.exe;AA_v1.exe</Image>
-					<Image condition="contains">\AMMYY\;\Ammyy Admin\</Image>
+					<Image condition="contains any">\AMMYY\;\Ammyy Admin\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Any Support/LinkMeMine use detected" groupRelation="or">
 					<Image condition="is any">ManualLauncher.exe;KASSvcMgr.exe;nSSDServer.exe;KoinoSSServer.exe;KoinoFTClient.exe;nFTDClient.exe;KoinoFTServer.exe;nFTDServer.exe;KoinoHost.exe;KoinoASClient.exe;setup_krp.exe</Image>
@@ -10448,7 +10448,7 @@
 					<Image condition="contains any">\Anyplace Control;\Remote Desktop Control;\10-Strike Remote Access\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential AnyViewer use detected" groupRelation="or">
-					<Image condition="is">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</Image>
+					<Image condition="is any">RCClient.exe;AVCore.exe;RCService.exe;ScreanCap.exe;RCClinetLanuch.exe;AnyViewerLanuch.exe;amanhlp.exe;hookldr.exe</Image>
 					<Image condition="contains">\AnyViewer\</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential Aspia use detected" groupRelation="or">
@@ -11049,7 +11049,7 @@
 				</Rule>
 				<Rule name="Remote Admin Software - Potential WinSCP use detected" groupRelation="or">
 					<Image condition="image">WinSCP.exe</Image>
-					<Image condition="contains">\WinSCP\;\WinSCP-</Image>
+					<Image condition="contains any">\WinSCP\;\WinSCP-</Image>
 				</Rule>
 				<Rule name="Remote Admin Software - Potential X2Go/pyhoca-gui use detected" groupRelation="or">
 					<Image condition="image">pyhoca-gui.exe</Image>
