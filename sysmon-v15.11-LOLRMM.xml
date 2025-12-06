@@ -47,11 +47,9 @@
           <Company condition="is">IDrive Inc</Company>
         </Rule>
         <Rule name="Remote Admin Software - Potential Acronis Cyber Protect (Remotix) use detected" groupRelation="or">
-          <Image condition="image">AcronisCyberProtectConnectAgent.exe</Image>
-          <Image condition="contains">AcronisCyberProtectConnectQuickAssist</Image>
-          <ParentImage condition="image">AcronisCyberProtectConnectAgent.exe</ParentImage>
-          <ParentImage condition="contains">AcronisCyberProtectConnectQuickAssist</ParentImage>
-          <OriginalFileName condition="is any">AcronisCyberProtectConnectAgent.exe;AcronisCyberProtectConnectQuickAssist</OriginalFileName>
+          <Image condition="contains any">\AcronisCyberProtectConnectAgent.exe;\AcronisCyberProtectConnectAgentService.exe;\Acronis Cyber Protect Connect.exe;\AcronisCyberProtectConnectQuickAssist;\remotix agent\;\acronis cyber protect connect agent\;\acpc_install_log\;\Acronis Cyber Protect Connect\;\remotixagent.exe;\RXAgentService.exe;\Remotix QC\</Image>
+          <ParentImage condition="contains any">\AcronisCyberProtectConnectAgent.exe;\AcronisCyberProtectConnectAgentService.exe;\Acronis Cyber Protect Connect.exe;\AcronisCyberProtectConnectQuickAssist;\remotix agent\;\acronis cyber protect connect agent\;\acpc_install_log\;\Acronis Cyber Protect Connect\;\remotixagent.exe;\RXAgentService.exe;\Remotix QC\</ParentImage>
+          <OriginalFileName condition="is any">AcronisCyberProtectConnectAgent.exe;AcronisCyberProtectConnectAgentService.exe;Acronis Cyber Protect Connect.exe;remotixagent.exe;RXAgentService.exe</OriginalFileName>
           <OriginalFileName condition="contains">AcronisCyberProtectConnectQuickAssist</OriginalFileName>
           <Description condition="is">Acronis Cyber Protect Connect Quick Assist</Description>
           <Product condition="is">Acronis Cyber Protect Connect Quick Assist</Product>
@@ -93,11 +91,9 @@
           <Product condition="is any">AliWangWang;AliTask 应用程序</Product>
         </Rule>
         <Rule name="Remote Admin Software - Potential Alpemix use detected" groupRelation="or">
-          <Image condition="image">AlpemixService.exe</Image>
-          <Image condition="contains any">\AlpemixSrvc\;\Alpemix\</Image>
-          <ParentImage condition="image">AlpemixService.exe</ParentImage>
-          <ParentImage condition="contains any">\AlpemixSrvc\;\Alpemix\</ParentImage>
-          <OriginalFileName condition="is">AlpemixService.exe</OriginalFileName>
+          <Image condition="contains any">\AlpemixService.exe;\Alpemix.exe;\Alpemix.bin;\AlpemixSrvc\;\Alpemix\</Image>
+          <ParentImage condition="contains any">\AlpemixService.exe;\Alpemix.exe;\Alpemix.bin;\AlpemixSrvc\;\Alpemix\</ParentImage>
+          <OriginalFileName condition="is any">AlpemixService.exe;Alpemix.exe;Alpemix.bin</OriginalFileName>
           <OriginalFileName condition="contains any">AlpemixSrvc;Alpemix</OriginalFileName>
           <Description condition="is">Alpemix</Description>
           <Product condition="is">Alpemix</Product>
@@ -112,8 +108,8 @@
           <Company condition="is">Ammyy LLC</Company>
         </Rule>
         <Rule name="Remote Admin Software - Potential Any Support/LinkMeMine use detected" groupRelation="or">
-          <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport</Image>
-          <ParentImage condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport</ParentImage>
+          <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport;\LMMAgent.exe;\nSSDClient.exe;\LMMLgiMgr.exe</Image>
+          <ParentImage condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport;\LMMAgent.exe;\nSSDClient.exe;\LMMLgiMgr.exe</ParentImage>
           <OriginalFileName condition="is any">ManualLauncher.exe;KASSvcMgr.exe;nSSDServer.exe;KoinoSSServer.exe;KoinoFTClient.exe;nFTDClient.exe;KoinoFTServer.exe;nFTDServer.exe;KoinoHost.exe;KoinoASClient.exe;setup_krp.exe</OriginalFileName>
           <OriginalFileName condition="contains any">AnySupport</OriginalFileName>
           <Description condition="is any">AnySupport;ManualLauncher for AnySupport Host;Koino Service Application;KoinoSSServer;nFTDClient App;nFTDServer App;KoinoHost</Description>
@@ -1515,9 +1511,8 @@
           <TargetFilename condition="contains any">\RemotePCUIU.exe;\RemotePC.exe;\RPDUILaunch.exe;\RemotePCLauncher.exe;\RemotePCService.exe;\RemotePCPerformance.exe;\remotepchost.exe;\rpcsuite.exe;\RPCFTViewer.exe;\RPCFTHost.exe;\RPCProxyLatency.exe;\RPCCoreViewer.exe;\RemotePCDesktop.exe;\RPCGAE.exe;\RPCUtility.exe;\RPCDownloader.exe;\RPCPrintUninstall.exe;\ViewerHostKeyPopup.exe;\RPCPrinterSetup.exe;\RPCPrinterSetup_old.exe;\RPCFirewall.exe;\InstallRPCPrinterDriver.exe;\RPCPrintServer.exe;\RPCPrintServer_P.exe;\RemotePCBlackScreenApp.exe;\RemotePC1.exe;\RPCFireWallRule.exe;\RPCPrinterDownloader.exe;\RPCViewerHostKeyPopup.exe;\RPCClipboard.exe;\RemotePCShortcut.exe;\RemotePC.lnk;\RPCDownloaderLogFile.txt;\RPCPreUninstall.log;\RPCAppLauncherLogFile.txt;\RPCCertificate.log;\RemotePCUI.lnk;\Uninstall RemotePC.lnk;\RemotePC\;Idrive.File-Transfer;idrive.RemotePCAgent</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Acronis Cyber Protect (Remotix) use detected" groupRelation="or">
-          <Image condition="is">AcronisCyberProtectConnectAgent.exe</Image>
-          <Image condition="contains">AcronisCyberProtectConnectQuickAssist</Image>
-          <TargetFilename condition="contains any">\AcronisCyberProtectConnectAgent.exe;AcronisCyberProtectConnectQuickAssist</TargetFilename>
+          <Image condition="contains any">\AcronisCyberProtectConnectAgent.exe;\AcronisCyberProtectConnectAgentService.exe;\Acronis Cyber Protect Connect.exe;\AcronisCyberProtectConnectQuickAssist;\remotix agent\;\acronis cyber protect connect agent\;\acpc_install_log\;\Acronis Cyber Protect Connect\;\remotixagent.exe;\RXAgentService.exe;\Remotix QC\</Image>
+          <TargetFilename condition="contains any">\AcronisCyberProtectConnectAgent.exe;\AcronisCyberProtectConnectAgentService.exe;\AcronisCyberProtectConnectQuickAssist;\remotix agent\;\acronis cyber protect connect agent\;\acpc_install_log\;\logs\agentui.log;\acronis cyber protect connect agent.lnk;\uninstall acronis cyber protect connect agent.lnk;\logs\agentservice.log;\logs\agentservicemanager.log;\Acronis Cyber Protect Connect\;\Acronis Cyber Protect Connect.exe;\Acronis Cyber Protect Connect.lnk;\Uninstall Acronis Cyber Protect Connect.lnk;\remotixagent.exe;\RXAgentService.exe;\Remotix QC\;AcronisCyberProtectConnectQuickAssist.log</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Action1 use detected" groupRelation="or">
           <Image condition="contains any">\action1_agent.exe;\action1_remote.exe;\action1_connector.exe;\action1_update.exe</Image>
@@ -1539,17 +1534,16 @@
           <TargetFilename condition="contains any">\alitask.exe;\AliIM_taobao.exe;\AliIM.exe;\Fixaliww.exe;\AliFileCheck.exe;\wwlog.log;\AliWangWang\;AliUpdater</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Alpemix use detected" groupRelation="or">
-          <Image condition="image">AlpemixService.exe</Image>
-          <Image condition="contains any">\AlpemixSrvc\;\Alpemix\</Image>
-          <TargetFilename condition="contains any">\AlpemixService.exe;\AlpemixSrvc.ini;\Alpemix.ini;\IM.ini;\AlpemixSrvc\;\Alpemix\</TargetFilename>
+          <Image condition="contains any">\AlpemixService.exe;\Alpemix.exe;\Alpemix.bin;\AlpemixSrvc\;\Alpemix\</Image>
+          <TargetFilename condition="contains any">\AlpemixService.exe;\AlpemixSrvc.ini;\Alpemix.ini;\IM.ini;\AlpemixSrvc\;\Alpemix\;\Alpemix.exe;\Alpemix.bin</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Ammyy Admin use detected" groupRelation="or">
           <Image condition="contains any">\AMMYY_Admin.exe;\AA_v3.exe;\AA_v2.exe;\AA_v1.exe;\AMMYY\;\Ammyy Admin\</Image>
           <TargetFilename condition="contains any">\AMMYY_Admin.exe;\AA_v3.exe;\AA_v2.exe;\AA_v1.exe;\aa_nts.log;\aa_nts.msg;\hr3;\AA_v3.log;\access.log;\AMMYY\;\Ammyy Admin\</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Any Support/LinkMeMine use detected" groupRelation="or">
-          <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport</Image>
-          <TargetFilename condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\KoinoFTClientDLL.dll;\KoinoFTServerDLL.dll;\setup_krp.exe;\KoinoAVC.dll;\KASSvcMgr.zip;\KoinoASClient.zip;\KoinoAVC.zip;\KoinoFTClient.zip;\KoinoFTServer.zip;\KoinoFTServerDLL.zip;\AnySupport\;\Koino\;AnySupport</TargetFilename>
+          <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport;\LMMAgent.exe;\nSSDClient.exe;\LMMLgiMgr.exe</Image>
+          <TargetFilename condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\KoinoFTClientDLL.dll;\KoinoFTServerDLL.dll;\setup_krp.exe;\KoinoAVC.dll;\KASSvcMgr.zip;\KoinoASClient.zip;\KoinoAVC.zip;\KoinoFTClient.zip;\KoinoFTServer.zip;\KoinoFTServerDLL.zip;\AnySupport\;\Koino\;AnySupport;\LMMAgent.exe;\nSSDClient.exe;\LMMLgiMgr.exe</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential AnyDesk use detected" groupRelation="or">
           <Image condition="image">AnyDesk.exe</Image>
@@ -2397,8 +2391,7 @@
           <DestinationHostname condition="end with">.idrive.com</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential Acronis Cyber Protect (Remotix) use detected" groupRelation="or">
-          <Image condition="is">AcronisCyberProtectConnectAgent.exe</Image>
-          <Image condition="contains">AcronisCyberProtectConnectQuickAssist</Image>
+          <Image condition="contains any">\AcronisCyberProtectConnectAgent.exe;\AcronisCyberProtectConnectAgentService.exe;\Acronis Cyber Protect Connect.exe;\AcronisCyberProtectConnectQuickAssist;\remotix agent\;\acronis cyber protect connect agent\;\acpc_install_log\;\Acronis Cyber Protect Connect\;\remotixagent.exe;\RXAgentService.exe;\Remotix QC\</Image>
           <DestinationHostname condition="end with">cloud.acronis.com</DestinationHostname>
           <DestinationHostname condition="end with">gw.remotix.com</DestinationHostname>
           <DestinationHostname condition="end with">connect.acronis.com</DestinationHostname>
@@ -2407,7 +2400,9 @@
           <Image condition="contains any">\action1_agent.exe;\action1_remote.exe;\action1_connector.exe;\action1_update.exe</Image>
           <Image condition="contains">\action1\</Image>
           <DestinationHostname condition="end with">.action1.com</DestinationHostname>
-          <DestinationHostname condition="end with">a1-backend-packages.s3.amazonaws.com</DestinationHostname>
+          <DestinationHostname condition="is">a1-backend-packages.s3.amazonaws.com</DestinationHostname>
+		  <DestinationHostname condition="is">us-cdn.action1.com</DestinationHostname>
+		  <DestinationHostname condition="is">us-cdn-action1-com.b-cdn.net</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential Adobe Connect use detected" groupRelation="or">
           <Image condition="contains any">\Connect.exe;\ConnectDetector.exe;\ConnectAppSetup.exe;\Adobe\Connect\;ConnectAppSetup;ConnectShellSetup</Image>
@@ -2424,10 +2419,11 @@
           <Image condition="contains any">\alitask.exe;\AliIM_taobao.exe;\AliIM.exe;\Fixaliww.exe;\AliFileCheck.exe</Image>
           <Image condition="contains">\AliWangWang\</Image>
           <DestinationHostname condition="end with">wangwang.taobao.com</DestinationHostname>
+		  <DestinationHostname condition="end with">aliww.taobao.com</DestinationHostname>
+		  <DestinationHostname condition="end with">rdpww.taobao.com</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential Alpemix use detected" groupRelation="or">
-          <Image condition="image">AlpemixService.exe</Image>
-          <Image condition="contains any">\AlpemixSrvc\;\Alpemix\</Image>
+          <Image condition="contains any">\AlpemixService.exe;\Alpemix.exe;\Alpemix.bin;\AlpemixSrvc\;\Alpemix\</Image>
           <DestinationHostname condition="end with">.alpemix.com</DestinationHostname>
           <DestinationHostname condition="end with">.teknopars.com</DestinationHostname>
         </Rule>
@@ -2436,23 +2432,30 @@
           <DestinationHostname condition="end with">.ammyy.com</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential Any Support/LinkMeMine use detected" groupRelation="or">
-          <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport</Image>
+          <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport;\LMMAgent.exe;\nSSDClient.exe;\LMMLgiMgr.exe</Image>
           <DestinationHostname condition="end with">.anysupport.net</DestinationHostname>
+		  <DestinationHostname condition="end with">.anysupport.jp</DestinationHostname>
+		  <DestinationHostname condition="end with">.any-support.jp</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential AnyDesk use detected" groupRelation="or">
           <Image condition="image">AnyDesk.exe</Image>
           <Image condition="contains">\AnyDesk\</Image>
           <DestinationHostname condition="end with">.anydesk.com</DestinationHostname>
+		  <DestinationHostname condition="end with">.anydesk.net</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential Anyplace Control/10 Strike Remote Access use detected" groupRelation="or">
           <Image condition="contains any">\apc_host.exe;\apc_admin.exe;\APC_HostConfig.exe;\10strike_host.exe;\hcs.exe;\Anyplace Control;\Remote Desktop Control;\10-Strike Remote Access\</Image>
           <DestinationHostname condition="end with">anyplace-control.com</DestinationHostname>
+		  <DestinationHostname condition="end with">anyplace-gateway.info</DestinationHostname>
+		  <DestinationHostname condition="end with">remote-desktop-control.com</DestinationHostname>
+		  <DestinationHostname condition="end with">remote-control-pc.com</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential AnyViewer use detected" groupRelation="or">
           <Image condition="contains any">\RCClient.exe;\AVCore.exe;\RCService.exe;\ScreanCap.exe;\RCClinetLanuch.exe;\AnyViewerLanuch.exe;\amanhlp.exe</Image>
           <Image condition="contains">\AnyViewer\</Image>
           <DestinationHostname condition="end with">.anyviewer.com</DestinationHostname>
           <DestinationHostname condition="end with">.aomeisoftware.com</DestinationHostname>
+		  <DestinationHostname condition="end with">.anyviewer.cn</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential Aspia use detected" groupRelation="or">
           <Image condition="contains any">\aspia_client.exe;\aspia_console.exe;\aspia_desktop_agent.exe;\aspia_host.exe;\aspia_host_config.exe;\aspia_host_service.exe;\aspia_host_session.exe;\aspia_relay.exe;\r4wscreen_agent.exe;\r4wscreen_host.exe;\r4wscreen_hostservice.exe;\aspia_file_transfer_agent.exe</Image>
@@ -3271,8 +3274,7 @@
           <Image condition="contains any">\RemotePCUIU.exe;\RemotePC.exe;\RPDUILaunch.exe;\RemotePCLauncher.exe;\RemotePCService.exe;\RemotePCPerformance.exe;\remotepchost.exe;\rpcsuite.exe;\RPCFTViewer.exe;\RPCFTHost.exe;\RPCProxyLatency.exe;\RPCCoreViewer.exe;\RemotePCDesktop.exe;\RPCGAE.exe;\RPCUtility.exe;\RPCDownloader.exe;\RPCPrintUninstall.exe;\ViewerHostKeyPopup.exe;\RPCPrinterSetup.exe;\RPCPrinterSetup_old.exe;\RPCFirewall.exe;\InstallRPCPrinterDriver.exe;\RPCPrintServer.exe;\RPCPrintServer_P.exe;\RemotePCBlackScreenApp.exe;\RemotePC1.exe;\RPCFireWallRule.exe;\RPCPrinterDownloader.exe;\RPCViewerHostKeyPopup.exe;\RPCClipboard.exe;\RemotePCShortcut.exe;\RemotePC\;Idrive.File-Transfer;idrive.RemotePCAgent</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Acronis Cyber Protect (Remotix) use detected" groupRelation="or">
-          <Image condition="is">AcronisCyberProtectConnectAgent.exe</Image>
-          <Image condition="contains">AcronisCyberProtectConnectQuickAssist</Image>
+          <Image condition="contains any">\AcronisCyberProtectConnectAgent.exe;\AcronisCyberProtectConnectAgentService.exe;\Acronis Cyber Protect Connect.exe;\AcronisCyberProtectConnectQuickAssist;\remotix agent\;\acronis cyber protect connect agent\;\acpc_install_log\;\Acronis Cyber Protect Connect\;\remotixagent.exe;\RXAgentService.exe;\Remotix QC\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Action1 use detected" groupRelation="or">
           <Image condition="contains any">\action1_agent.exe;\action1_remote.exe;\action1_connector.exe;\action1_update.exe</Image>
@@ -3290,14 +3292,13 @@
           <Image condition="contains">\AliWangWang\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Alpemix use detected" groupRelation="or">
-          <Image condition="image">AlpemixService.exe</Image>
-          <Image condition="contains any">\AlpemixSrvc\;\Alpemix\</Image>
+          <Image condition="contains any">\AlpemixService.exe;\Alpemix.exe;\Alpemix.bin;\AlpemixSrvc\;\Alpemix\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Ammyy Admin use detected" groupRelation="or">
           <Image condition="contains any">\AMMYY_Admin.exe;\AA_v3.exe;\AA_v2.exe;\AA_v1.exe;\AMMYY\;\Ammyy Admin\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Any Support/LinkMeMine use detected" groupRelation="or">
-          <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport</Image>
+          <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport;\LMMAgent.exe;\nSSDClient.exe;\LMMLgiMgr.exe</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential AnyDesk use detected" groupRelation="or">
           <Image condition="image">AnyDesk.exe</Image>
@@ -3870,8 +3871,7 @@
           <ImageLoaded condition="contains any">\RemotePCUIU.exe;\RemotePC.exe;\RPDUILaunch.exe;\RemotePCLauncher.exe;\RemotePCService.exe;\RemotePCPerformance.exe;\remotepchost.exe;\rpcsuite.exe;\RPCFTViewer.exe;\RPCFTHost.exe;\RPCProxyLatency.exe;\RPCCoreViewer.exe;\RemotePCDesktop.exe;\RPCGAE.exe;\RPCUtility.exe;\RPCDownloader.exe;\RPCPrintUninstall.exe;\ViewerHostKeyPopup.exe;\RPCPrinterSetup.exe;\RPCPrinterSetup_old.exe;\RPCFirewall.exe;\InstallRPCPrinterDriver.exe;\RPCPrintServer.exe;\RPCPrintServer_P.exe;\RemotePCBlackScreenApp.exe;\RemotePC1.exe;\RPCFireWallRule.exe;\RPCPrinterDownloader.exe;\RPCViewerHostKeyPopup.exe;\RPCClipboard.exe;\RemotePCShortcut.exe;\RemotePC\;Idrive.File-Transfer;idrive.RemotePCAgent</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Acronis Cyber Protect (Remotix) use detected" groupRelation="or">
-          <ImageLoaded condition="is">AcronisCyberProtectConnectAgent.exe</ImageLoaded>
-          <ImageLoaded condition="contains">AcronisCyberProtectConnectQuickAssist</ImageLoaded>
+          <ImageLoaded condition="contains any">\AcronisCyberProtectConnectAgent.exe;\AcronisCyberProtectConnectAgentService.exe;\Acronis Cyber Protect Connect.exe;\AcronisCyberProtectConnectQuickAssist;\remotix agent\;\acronis cyber protect connect agent\;\acpc_install_log\;\Acronis Cyber Protect Connect\;\remotixagent.exe;\RXAgentService.exe;\Remotix QC\</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Action1 use detected" groupRelation="or">
           <ImageLoaded condition="contains any">\action1_agent.exe;\action1_remote.exe;\action1_connector.exe;\action1_update.exe</ImageLoaded>
@@ -3889,14 +3889,13 @@
           <ImageLoaded condition="contains">\AliWangWang\</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Alpemix use detected" groupRelation="or">
-          <ImageLoaded condition="image">AlpemixService.exe</ImageLoaded>
-          <ImageLoaded condition="contains any">\AlpemixSrvc\;\Alpemix\</ImageLoaded>
+          <ImageLoaded condition="contains any">\AlpemixService.exe;\Alpemix.exe;\Alpemix.bin;\AlpemixSrvc\;\Alpemix\</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Ammyy Admin use detected" groupRelation="or">
           <ImageLoaded condition="contains any">\AMMYY_Admin.exe;\AA_v3.exe;\AA_v2.exe;\AA_v1.exe;\AMMYY\;\Ammyy Admin\</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Any Support/LinkMeMine use detected" groupRelation="or">
-          <ImageLoaded condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport</ImageLoaded>
+          <ImageLoaded condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport;\LMMAgent.exe;\nSSDClient.exe;\LMMLgiMgr.exe</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential AnyDesk use detected" groupRelation="or">
           <ImageLoaded condition="image">AnyDesk.exe</ImageLoaded>
@@ -4471,8 +4470,7 @@
           <Image condition="contains any">\RemotePCUIU.exe;\RemotePC.exe;\RPDUILaunch.exe;\RemotePCLauncher.exe;\RemotePCService.exe;\RemotePCPerformance.exe;\remotepchost.exe;\rpcsuite.exe;\RPCFTViewer.exe;\RPCFTHost.exe;\RPCProxyLatency.exe;\RPCCoreViewer.exe;\RemotePCDesktop.exe;\RPCGAE.exe;\RPCUtility.exe;\RPCDownloader.exe;\RPCPrintUninstall.exe;\ViewerHostKeyPopup.exe;\RPCPrinterSetup.exe;\RPCPrinterSetup_old.exe;\RPCFirewall.exe;\InstallRPCPrinterDriver.exe;\RPCPrintServer.exe;\RPCPrintServer_P.exe;\RemotePCBlackScreenApp.exe;\RemotePC1.exe;\RPCFireWallRule.exe;\RPCPrinterDownloader.exe;\RPCViewerHostKeyPopup.exe;\RPCClipboard.exe;\RemotePCShortcut.exe;\RemotePC\;Idrive.File-Transfer;idrive.RemotePCAgent</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Acronis Cyber Protect (Remotix) use detected" groupRelation="or">
-          <Image condition="is">AcronisCyberProtectConnectAgent.exe</Image>
-          <Image condition="contains">AcronisCyberProtectConnectQuickAssist</Image>
+          <Image condition="contains any">\AcronisCyberProtectConnectAgent.exe;\AcronisCyberProtectConnectAgentService.exe;\Acronis Cyber Protect Connect.exe;\AcronisCyberProtectConnectQuickAssist;\remotix agent\;\acronis cyber protect connect agent\;\acpc_install_log\;\Acronis Cyber Protect Connect\;\remotixagent.exe;\RXAgentService.exe;\Remotix QC\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Action1 use detected" groupRelation="or">
           <Image condition="contains any">\action1_agent.exe;\action1_remote.exe;\action1_connector.exe;\action1_update.exe</Image>
@@ -4490,14 +4488,13 @@
           <Image condition="contains">\AliWangWang\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Alpemix use detected" groupRelation="or">
-          <Image condition="image">AlpemixService.exe</Image>
-          <Image condition="contains any">\AlpemixSrvc\;\Alpemix\</Image>
+          <Image condition="contains any">\AlpemixService.exe;\Alpemix.exe;\Alpemix.bin;\AlpemixSrvc\;\Alpemix\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Ammyy Admin use detected" groupRelation="or">
           <Image condition="contains any">\AMMYY_Admin.exe;\AA_v3.exe;\AA_v2.exe;\AA_v1.exe;\AMMYY\;\Ammyy Admin\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Any Support/LinkMeMine use detected" groupRelation="or">
-          <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport</Image>
+          <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport;\LMMAgent.exe;\nSSDClient.exe;\LMMLgiMgr.exe</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential AnyDesk use detected" groupRelation="or">
           <Image condition="image">AnyDesk.exe</Image>
@@ -5084,8 +5081,7 @@
           <Image condition="contains any">\RemotePCUIU.exe;\RemotePC.exe;\RPDUILaunch.exe;\RemotePCLauncher.exe;\RemotePCService.exe;\RemotePCPerformance.exe;\remotepchost.exe;\rpcsuite.exe;\RPCFTViewer.exe;\RPCFTHost.exe;\RPCProxyLatency.exe;\RPCCoreViewer.exe;\RemotePCDesktop.exe;\RPCGAE.exe;\RPCUtility.exe;\RPCDownloader.exe;\RPCPrintUninstall.exe;\ViewerHostKeyPopup.exe;\RPCPrinterSetup.exe;\RPCPrinterSetup_old.exe;\RPCFirewall.exe;\InstallRPCPrinterDriver.exe;\RPCPrintServer.exe;\RPCPrintServer_P.exe;\RemotePCBlackScreenApp.exe;\RemotePC1.exe;\RPCFireWallRule.exe;\RPCPrinterDownloader.exe;\RPCViewerHostKeyPopup.exe;\RPCClipboard.exe;\RemotePCShortcut.exe;\RemotePC\;Idrive.File-Transfer;idrive.RemotePCAgent</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Acronis Cyber Protect (Remotix) use detected" groupRelation="or">
-          <Image condition="is">AcronisCyberProtectConnectAgent.exe</Image>
-          <Image condition="contains">AcronisCyberProtectConnectQuickAssist</Image>
+          <Image condition="contains any">\AcronisCyberProtectConnectAgent.exe;\AcronisCyberProtectConnectAgentService.exe;\Acronis Cyber Protect Connect.exe;\AcronisCyberProtectConnectQuickAssist;\remotix agent\;\acronis cyber protect connect agent\;\acpc_install_log\;\Acronis Cyber Protect Connect\;\remotixagent.exe;\RXAgentService.exe;\Remotix QC\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Action1 use detected" groupRelation="or">
           <Image condition="contains any">\action1_agent.exe;\action1_remote.exe;\action1_connector.exe;\action1_update.exe</Image>
@@ -5103,14 +5099,13 @@
           <Image condition="contains">\AliWangWang\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Alpemix use detected" groupRelation="or">
-          <Image condition="image">AlpemixService.exe</Image>
-          <Image condition="contains any">\AlpemixSrvc\;\Alpemix\</Image>
+          <Image condition="contains any">\AlpemixService.exe;\Alpemix.exe;\Alpemix.bin;\AlpemixSrvc\;\Alpemix\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Ammyy Admin use detected" groupRelation="or">
           <Image condition="contains any">\AMMYY_Admin.exe;\AA_v3.exe;\AA_v2.exe;\AA_v1.exe;\AMMYY\;\Ammyy Admin\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Any Support/LinkMeMine use detected" groupRelation="or">
-          <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport</Image>
+          <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport;\LMMAgent.exe;\nSSDClient.exe;\LMMLgiMgr.exe</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential AnyDesk use detected" groupRelation="or">
           <Image condition="image">AnyDesk.exe</Image>
@@ -5783,9 +5778,8 @@
           <TargetFilename condition="contains any">\RemotePCUIU.exe;\RemotePC.exe;\RPDUILaunch.exe;\RemotePCLauncher.exe;\RemotePCService.exe;\RemotePCPerformance.exe;\remotepchost.exe;\rpcsuite.exe;\RPCFTViewer.exe;\RPCFTHost.exe;\RPCProxyLatency.exe;\RPCCoreViewer.exe;\RemotePCDesktop.exe;\RPCGAE.exe;\RPCUtility.exe;\RPCDownloader.exe;\RPCPrintUninstall.exe;\ViewerHostKeyPopup.exe;\RPCPrinterSetup.exe;\RPCPrinterSetup_old.exe;\RPCFirewall.exe;\InstallRPCPrinterDriver.exe;\RPCPrintServer.exe;\RPCPrintServer_P.exe;\RemotePCBlackScreenApp.exe;\RemotePC1.exe;\RPCFireWallRule.exe;\RPCPrinterDownloader.exe;\RPCViewerHostKeyPopup.exe;\RPCClipboard.exe;\RemotePCShortcut.exe;\RemotePC.lnk;\RPCDownloaderLogFile.txt;\RPCPreUninstall.log;\RPCAppLauncherLogFile.txt;\RPCCertificate.log;\RemotePCUI.lnk;\Uninstall RemotePC.lnk;\RemotePC\;Idrive.File-Transfer;idrive.RemotePCAgent</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Acronis Cyber Protect (Remotix) use detected" groupRelation="or">
-          <Image condition="is">AcronisCyberProtectConnectAgent.exe</Image>
-          <Image condition="contains">AcronisCyberProtectConnectQuickAssist</Image>
-          <TargetFilename condition="contains any">\AcronisCyberProtectConnectAgent.exe;AcronisCyberProtectConnectQuickAssist</TargetFilename>
+          <Image condition="contains any">\AcronisCyberProtectConnectAgent.exe;\AcronisCyberProtectConnectAgentService.exe;\Acronis Cyber Protect Connect.exe;\AcronisCyberProtectConnectQuickAssist;\remotix agent\;\acronis cyber protect connect agent\;\acpc_install_log\;\Acronis Cyber Protect Connect\;\remotixagent.exe;\RXAgentService.exe;\Remotix QC\</Image>
+          <TargetFilename condition="contains any">\AcronisCyberProtectConnectAgent.exe;\AcronisCyberProtectConnectAgentService.exe;\AcronisCyberProtectConnectQuickAssist;\remotix agent\;\acronis cyber protect connect agent\;\acpc_install_log\;\logs\agentui.log;\acronis cyber protect connect agent.lnk;\uninstall acronis cyber protect connect agent.lnk;\logs\agentservice.log;\logs\agentservicemanager.log;\Acronis Cyber Protect Connect\;\Acronis Cyber Protect Connect.exe;\Acronis Cyber Protect Connect.lnk;\Uninstall Acronis Cyber Protect Connect.lnk;\remotixagent.exe;\RXAgentService.exe;\Remotix QC\;AcronisCyberProtectConnectQuickAssist.log</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Action1 use detected" groupRelation="or">
           <Image condition="contains any">\action1_agent.exe;\action1_remote.exe;\action1_connector.exe;\action1_update.exe</Image>
@@ -5807,17 +5801,16 @@
           <TargetFilename condition="contains any">\alitask.exe;\AliIM_taobao.exe;\AliIM.exe;\Fixaliww.exe;\AliFileCheck.exe;\wwlog.log;\AliWangWang\;AliUpdater</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Alpemix use detected" groupRelation="or">
-          <Image condition="image">AlpemixService.exe</Image>
-          <Image condition="contains any">\AlpemixSrvc\;\Alpemix\</Image>
-          <TargetFilename condition="contains any">\AlpemixService.exe;\AlpemixSrvc.ini;\Alpemix.ini;\IM.ini;\AlpemixSrvc\;\Alpemix\</TargetFilename>
+          <Image condition="contains any">\AlpemixService.exe;\Alpemix.exe;\Alpemix.bin;\AlpemixSrvc\;\Alpemix\</Image>
+          <TargetFilename condition="contains any">\AlpemixService.exe;\AlpemixSrvc.ini;\Alpemix.ini;\IM.ini;\AlpemixSrvc\;\Alpemix\;\Alpemix.exe;\Alpemix.bin</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Ammyy Admin use detected" groupRelation="or">
           <Image condition="contains any">\AMMYY_Admin.exe;\AA_v3.exe;\AA_v2.exe;\AA_v1.exe;\AMMYY\;\Ammyy Admin\</Image>
           <TargetFilename condition="contains any">\AMMYY_Admin.exe;\AA_v3.exe;\AA_v2.exe;\AA_v1.exe;\aa_nts.log;\aa_nts.msg;\hr3;\AA_v3.log;\access.log;\AMMYY\;\Ammyy Admin\</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Any Support/LinkMeMine use detected" groupRelation="or">
-          <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport</Image>
-          <TargetFilename condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\KoinoFTClientDLL.dll;\KoinoFTServerDLL.dll;\setup_krp.exe;\KoinoAVC.dll;\KASSvcMgr.zip;\KoinoASClient.zip;\KoinoAVC.zip;\KoinoFTClient.zip;\KoinoFTServer.zip;\KoinoFTServerDLL.zip;\AnySupport\;\Koino\;AnySupport</TargetFilename>
+          <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport;\LMMAgent.exe;\nSSDClient.exe;\LMMLgiMgr.exe</Image>
+          <TargetFilename condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\KoinoFTClientDLL.dll;\KoinoFTServerDLL.dll;\setup_krp.exe;\KoinoAVC.dll;\KASSvcMgr.zip;\KoinoASClient.zip;\KoinoAVC.zip;\KoinoFTClient.zip;\KoinoFTServer.zip;\KoinoFTServerDLL.zip;\AnySupport\;\Koino\;AnySupport;\LMMAgent.exe;\nSSDClient.exe;\LMMLgiMgr.exe</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential AnyDesk use detected" groupRelation="or">
           <Image condition="image">AnyDesk.exe</Image>
@@ -6666,8 +6659,7 @@
           <Image condition="contains any">\RemotePCUIU.exe;\RemotePC.exe;\RPDUILaunch.exe;\RemotePCLauncher.exe;\RemotePCService.exe;\RemotePCPerformance.exe;\remotepchost.exe;\rpcsuite.exe;\RPCFTViewer.exe;\RPCFTHost.exe;\RPCProxyLatency.exe;\RPCCoreViewer.exe;\RemotePCDesktop.exe;\RPCGAE.exe;\RPCUtility.exe;\RPCDownloader.exe;\RPCPrintUninstall.exe;\ViewerHostKeyPopup.exe;\RPCPrinterSetup.exe;\RPCPrinterSetup_old.exe;\RPCFirewall.exe;\InstallRPCPrinterDriver.exe;\RPCPrintServer.exe;\RPCPrintServer_P.exe;\RemotePCBlackScreenApp.exe;\RemotePC1.exe;\RPCFireWallRule.exe;\RPCPrinterDownloader.exe;\RPCViewerHostKeyPopup.exe;\RPCClipboard.exe;\RemotePCShortcut.exe;\RemotePC\;Idrive.File-Transfer;idrive.RemotePCAgent</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Acronis Cyber Protect (Remotix) use detected" groupRelation="or">
-          <Image condition="is">AcronisCyberProtectConnectAgent.exe</Image>
-          <Image condition="contains">AcronisCyberProtectConnectQuickAssist</Image>
+          <Image condition="contains any">\AcronisCyberProtectConnectAgent.exe;\AcronisCyberProtectConnectAgentService.exe;\Acronis Cyber Protect Connect.exe;\AcronisCyberProtectConnectQuickAssist;\remotix agent\;\acronis cyber protect connect agent\;\acpc_install_log\;\Acronis Cyber Protect Connect\;\remotixagent.exe;\RXAgentService.exe;\Remotix QC\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Action1 use detected" groupRelation="or">
           <Image condition="contains any">\action1_agent.exe;\action1_remote.exe;\action1_connector.exe;\action1_update.exe</Image>
@@ -6685,14 +6677,13 @@
           <Image condition="contains">\AliWangWang\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Alpemix use detected" groupRelation="or">
-          <Image condition="image">AlpemixService.exe</Image>
-          <Image condition="contains any">\AlpemixSrvc\;\Alpemix\</Image>
+          <Image condition="contains any">\AlpemixService.exe;\Alpemix.exe;\Alpemix.bin;\AlpemixSrvc\;\Alpemix\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Ammyy Admin use detected" groupRelation="or">
           <Image condition="contains any">\AMMYY_Admin.exe;\AA_v3.exe;\AA_v2.exe;\AA_v1.exe;\AMMYY\;\Ammyy Admin\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Any Support/LinkMeMine use detected" groupRelation="or">
-          <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport</Image>
+          <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport;\LMMAgent.exe;\nSSDClient.exe;\LMMLgiMgr.exe</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential AnyDesk use detected" groupRelation="or">
           <Image condition="image">AnyDesk.exe</Image>
@@ -7269,9 +7260,8 @@
           <TargetFilename condition="contains any">\RemotePCUIU.exe;\RemotePC.exe;\RPDUILaunch.exe;\RemotePCLauncher.exe;\RemotePCService.exe;\RemotePCPerformance.exe;\remotepchost.exe;\rpcsuite.exe;\RPCFTViewer.exe;\RPCFTHost.exe;\RPCProxyLatency.exe;\RPCCoreViewer.exe;\RemotePCDesktop.exe;\RPCGAE.exe;\RPCUtility.exe;\RPCDownloader.exe;\RPCPrintUninstall.exe;\ViewerHostKeyPopup.exe;\RPCPrinterSetup.exe;\RPCPrinterSetup_old.exe;\RPCFirewall.exe;\InstallRPCPrinterDriver.exe;\RPCPrintServer.exe;\RPCPrintServer_P.exe;\RemotePCBlackScreenApp.exe;\RemotePC1.exe;\RPCFireWallRule.exe;\RPCPrinterDownloader.exe;\RPCViewerHostKeyPopup.exe;\RPCClipboard.exe;\RemotePCShortcut.exe;\RemotePC.lnk;\RPCDownloaderLogFile.txt;\RPCPreUninstall.log;\RPCAppLauncherLogFile.txt;\RPCCertificate.log;\RemotePCUI.lnk;\Uninstall RemotePC.lnk;\RemotePC\;Idrive.File-Transfer;idrive.RemotePCAgent</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Acronis Cyber Protect (Remotix) use detected" groupRelation="or">
-          <Image condition="is">AcronisCyberProtectConnectAgent.exe</Image>
-          <Image condition="contains">AcronisCyberProtectConnectQuickAssist</Image>
-          <TargetFilename condition="contains any">\AcronisCyberProtectConnectAgent.exe;AcronisCyberProtectConnectQuickAssist</TargetFilename>
+          <Image condition="contains any">\AcronisCyberProtectConnectAgent.exe;\AcronisCyberProtectConnectAgentService.exe;\Acronis Cyber Protect Connect.exe;\AcronisCyberProtectConnectQuickAssist;\remotix agent\;\acronis cyber protect connect agent\;\acpc_install_log\;\Acronis Cyber Protect Connect\;\remotixagent.exe;\RXAgentService.exe;\Remotix QC\</Image>
+          <TargetFilename condition="contains any">\AcronisCyberProtectConnectAgent.exe;\AcronisCyberProtectConnectAgentService.exe;\AcronisCyberProtectConnectQuickAssist;\remotix agent\;\acronis cyber protect connect agent\;\acpc_install_log\;\logs\agentui.log;\acronis cyber protect connect agent.lnk;\uninstall acronis cyber protect connect agent.lnk;\logs\agentservice.log;\logs\agentservicemanager.log;\Acronis Cyber Protect Connect\;\Acronis Cyber Protect Connect.exe;\Acronis Cyber Protect Connect.lnk;\Uninstall Acronis Cyber Protect Connect.lnk;\remotixagent.exe;\RXAgentService.exe;\Remotix QC\;AcronisCyberProtectConnectQuickAssist.log</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Action1 use detected" groupRelation="or">
           <Image condition="contains any">\action1_agent.exe;\action1_remote.exe;\action1_connector.exe;\action1_update.exe</Image>
@@ -7293,17 +7283,16 @@
           <TargetFilename condition="contains any">\alitask.exe;\AliIM_taobao.exe;\AliIM.exe;\Fixaliww.exe;\AliFileCheck.exe;\wwlog.log;\AliWangWang\;AliUpdater</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Alpemix use detected" groupRelation="or">
-          <Image condition="image">AlpemixService.exe</Image>
-          <Image condition="contains any">\AlpemixSrvc\;\Alpemix\</Image>
-          <TargetFilename condition="contains any">\AlpemixService.exe;\AlpemixSrvc.ini;\Alpemix.ini;\IM.ini;\AlpemixSrvc\;\Alpemix\</TargetFilename>
+          <Image condition="contains any">\AlpemixService.exe;\Alpemix.exe;\Alpemix.bin;\AlpemixSrvc\;\Alpemix\</Image>
+          <TargetFilename condition="contains any">\AlpemixService.exe;\AlpemixSrvc.ini;\Alpemix.ini;\IM.ini;\AlpemixSrvc\;\Alpemix\;\Alpemix.exe;\Alpemix.bin</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Ammyy Admin use detected" groupRelation="or">
           <Image condition="contains any">\AMMYY_Admin.exe;\AA_v3.exe;\AA_v2.exe;\AA_v1.exe;\AMMYY\;\Ammyy Admin\</Image>
           <TargetFilename condition="contains any">\AMMYY_Admin.exe;\AA_v3.exe;\AA_v2.exe;\AA_v1.exe;\aa_nts.log;\aa_nts.msg;\hr3;\AA_v3.log;\access.log;\AMMYY\;\Ammyy Admin\</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Any Support/LinkMeMine use detected" groupRelation="or">
-          <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport</Image>
-          <TargetFilename condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\KoinoFTClientDLL.dll;\KoinoFTServerDLL.dll;\setup_krp.exe;\KoinoAVC.dll;\KASSvcMgr.zip;\KoinoASClient.zip;\KoinoAVC.zip;\KoinoFTClient.zip;\KoinoFTServer.zip;\KoinoFTServerDLL.zip;\AnySupport\;\Koino\;AnySupport</TargetFilename>
+          <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport;\LMMAgent.exe;\nSSDClient.exe;\LMMLgiMgr.exe</Image>
+          <TargetFilename condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\KoinoFTClientDLL.dll;\KoinoFTServerDLL.dll;\setup_krp.exe;\KoinoAVC.dll;\KASSvcMgr.zip;\KoinoASClient.zip;\KoinoAVC.zip;\KoinoFTClient.zip;\KoinoFTServer.zip;\KoinoFTServerDLL.zip;\AnySupport\;\Koino\;AnySupport;\LMMAgent.exe;\nSSDClient.exe;\LMMLgiMgr.exe</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential AnyDesk use detected" groupRelation="or">
           <Image condition="image">AnyDesk.exe</Image>
@@ -8147,13 +8136,13 @@
         <Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
           <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe</Image>
           <Image condition="contains">\CTES\</Image>
+		  <PipeName condition="contains">\ctes_lst_</PipeName>
         </Rule>
         <Rule name="Remote Admin Software - Potential Access Remote PC/RemotePC use detected" groupRelation="or">
           <Image condition="contains any">\RemotePCUIU.exe;\RemotePC.exe;\RPDUILaunch.exe;\RemotePCLauncher.exe;\RemotePCService.exe;\RemotePCPerformance.exe;\remotepchost.exe;\rpcsuite.exe;\RPCFTViewer.exe;\RPCFTHost.exe;\RPCProxyLatency.exe;\RPCCoreViewer.exe;\RemotePCDesktop.exe;\RPCGAE.exe;\RPCUtility.exe;\RPCDownloader.exe;\RPCPrintUninstall.exe;\ViewerHostKeyPopup.exe;\RPCPrinterSetup.exe;\RPCPrinterSetup_old.exe;\RPCFirewall.exe;\InstallRPCPrinterDriver.exe;\RPCPrintServer.exe;\RPCPrintServer_P.exe;\RemotePCBlackScreenApp.exe;\RemotePC1.exe;\RPCFireWallRule.exe;\RPCPrinterDownloader.exe;\RPCViewerHostKeyPopup.exe;\RPCClipboard.exe;\RemotePCShortcut.exe;\RemotePC\;Idrive.File-Transfer;idrive.RemotePCAgent</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Acronis Cyber Protect (Remotix) use detected" groupRelation="or">
-          <Image condition="is">AcronisCyberProtectConnectAgent.exe</Image>
-          <Image condition="contains">AcronisCyberProtectConnectQuickAssist</Image>
+          <Image condition="contains any">\AcronisCyberProtectConnectAgent.exe;\AcronisCyberProtectConnectAgentService.exe;\Acronis Cyber Protect Connect.exe;\AcronisCyberProtectConnectQuickAssist;\remotix agent\;\acronis cyber protect connect agent\;\acpc_install_log\;\Acronis Cyber Protect Connect\;\remotixagent.exe;\RXAgentService.exe;\Remotix QC\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Action1 use detected" groupRelation="or">
           <Image condition="contains any">\action1_agent.exe;\action1_remote.exe;\action1_connector.exe;\action1_update.exe</Image>
@@ -8169,20 +8158,24 @@
         <Rule name="Remote Admin Software - Potential AliWangWang-remote-control use detected" groupRelation="or">
           <Image condition="contains any">\alitask.exe;\AliIM_taobao.exe;\AliIM.exe;\Fixaliww.exe;\AliFileCheck.exe</Image>
           <Image condition="contains">\AliWangWang\</Image>
+		  <PipeName condition="contains">\AliWWRPC</PipeName>
+		  <PipeName condition="contains">\AliWangWangIPCPipe</PipeName>
+		  <PipeName condition="contains">\WWScreenShare</PipeName>
+		  <PipeName condition="contains">\WWHeartbeat</PipeName>
         </Rule>
         <Rule name="Remote Admin Software - Potential Alpemix use detected" groupRelation="or">
-          <Image condition="image">AlpemixService.exe</Image>
-          <Image condition="contains any">\AlpemixSrvc\;\Alpemix\</Image>
+          <Image condition="contains any">\AlpemixService.exe;\Alpemix.exe;\Alpemix.bin;\AlpemixSrvc\;\Alpemix\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Ammyy Admin use detected" groupRelation="or">
           <Image condition="contains any">\AMMYY_Admin.exe;\AA_v3.exe;\AA_v2.exe;\AA_v1.exe;\AMMYY\;\Ammyy Admin\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Any Support/LinkMeMine use detected" groupRelation="or">
-          <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport</Image>
+          <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport;\LMMAgent.exe;\nSSDClient.exe;\LMMLgiMgr.exe</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential AnyDesk use detected" groupRelation="or">
           <Image condition="image">AnyDesk.exe</Image>
           <Image condition="contains">\AnyDesk\</Image>
+		  <PipeName condition="contains">\adprinterpipe</PipeName>
         </Rule>
         <Rule name="Remote Admin Software - Potential Anyplace Control/10 Strike Remote Access use detected" groupRelation="or">
           <Image condition="contains any">\apc_host.exe;\apc_admin.exe;\APC_HostConfig.exe;\10strike_host.exe;\hcs.exe;\Anyplace Control;\Remote Desktop Control;\10-Strike Remote Access\</Image>
@@ -8792,8 +8785,7 @@
           <QueryName condition="end with">.idrive.com</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential Acronis Cyber Protect (Remotix) use detected" groupRelation="or">
-          <Image condition="is">AcronisCyberProtectConnectAgent.exe</Image>
-          <Image condition="contains">AcronisCyberProtectConnectQuickAssist</Image>
+          <Image condition="contains any">\AcronisCyberProtectConnectAgent.exe;\AcronisCyberProtectConnectAgentService.exe;\Acronis Cyber Protect Connect.exe;\AcronisCyberProtectConnectQuickAssist;\remotix agent\;\acronis cyber protect connect agent\;\acpc_install_log\;\Acronis Cyber Protect Connect\;\remotixagent.exe;\RXAgentService.exe;\Remotix QC\</Image>
           <QueryName condition="end with">cloud.acronis.com</QueryName>
           <QueryName condition="end with">gw.remotix.com</QueryName>
           <QueryName condition="end with">connect.acronis.com</QueryName>
@@ -8802,7 +8794,9 @@
           <Image condition="contains any">\action1_agent.exe;\action1_remote.exe;\action1_connector.exe;\action1_update.exe</Image>
           <Image condition="contains">\action1\</Image>
           <QueryName condition="end with">.action1.com</QueryName>
-          <QueryName condition="end with">a1-backend-packages.s3.amazonaws.com</QueryName>
+          <QueryName condition="is">a1-backend-packages.s3.amazonaws.com</QueryName>
+		  <QueryName condition="is">us-cdn-action1-com.b-cdn.net</QueryName>
+		  <QueryName condition="is">us-cdn.action1.com</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential Adobe Connect use detected" groupRelation="or">
           <Image condition="contains any">\Connect.exe;\ConnectDetector.exe;\ConnectAppSetup.exe;\Adobe\Connect\;ConnectAppSetup;ConnectShellSetup</Image>
@@ -8819,10 +8813,11 @@
           <Image condition="contains any">\alitask.exe;\AliIM_taobao.exe;\AliIM.exe;\Fixaliww.exe;\AliFileCheck.exe</Image>
           <Image condition="contains">\AliWangWang\</Image>
           <QueryName condition="end with">wangwang.taobao.com</QueryName>
+		  <QueryName condition="end with">aliww.taobao.com</QueryName>
+		  <QueryName condition="end with">rdpww.taobao.com</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential Alpemix use detected" groupRelation="or">
-          <Image condition="image">AlpemixService.exe</Image>
-          <Image condition="contains any">\AlpemixSrvc\;\Alpemix\</Image>
+          <Image condition="contains any">\AlpemixService.exe;\Alpemix.exe;\Alpemix.bin;\AlpemixSrvc\;\Alpemix\</Image>
           <QueryName condition="end with">.alpemix.com</QueryName>
           <QueryName condition="end with">.teknopars.com</QueryName>
         </Rule>
@@ -8831,23 +8826,30 @@
           <QueryName condition="end with">.ammyy.com</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential Any Support/LinkMeMine use detected" groupRelation="or">
-          <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport</Image>
+          <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport;\LMMAgent.exe;\nSSDClient.exe;\LMMLgiMgr.exe</Image>
           <QueryName condition="end with">.anysupport.net</QueryName>
+		  <QueryName condition="end with">.anysupport.jp</QueryName>
+		  <QueryName condition="end with">.any-support.jp</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential AnyDesk use detected" groupRelation="or">
           <Image condition="image">AnyDesk.exe</Image>
           <Image condition="contains">\AnyDesk\</Image>
           <QueryName condition="end with">.anydesk.com</QueryName>
+		  <QueryName condition="end with">.anydesk.net</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential Anyplace Control/10 Strike Remote Access use detected" groupRelation="or">
           <Image condition="contains any">\apc_host.exe;\apc_admin.exe;\APC_HostConfig.exe;\10strike_host.exe;\hcs.exe;\Anyplace Control;\Remote Desktop Control;\10-Strike Remote Access\</Image>
           <QueryName condition="end with">anyplace-control.com</QueryName>
+		  <QueryName condition="end with">anyplace-gateway.info</QueryName>
+		  <QueryName condition="end with">remote-control-pc.com</QueryName>
+		  <QueryName condition="end with">remote-desktop-control.com</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential AnyViewer use detected" groupRelation="or">
           <Image condition="contains any">\RCClient.exe;\AVCore.exe;\RCService.exe;\ScreanCap.exe;\RCClinetLanuch.exe;\AnyViewerLanuch.exe;\amanhlp.exe</Image>
           <Image condition="contains">\AnyViewer\</Image>
           <QueryName condition="end with">.anyviewer.com</QueryName>
           <QueryName condition="end with">.aomeisoftware.com</QueryName>
+		  <QueryName condition="end with">.anyviewer.cn</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential Aspia use detected" groupRelation="or">
           <Image condition="contains any">\aspia_client.exe;\aspia_console.exe;\aspia_desktop_agent.exe;\aspia_host.exe;\aspia_host_config.exe;\aspia_host_service.exe;\aspia_host_session.exe;\aspia_relay.exe;\r4wscreen_agent.exe;\r4wscreen_host.exe;\r4wscreen_hostservice.exe;\aspia_file_transfer_agent.exe</Image>
@@ -9670,9 +9672,8 @@
           <TargetFilename condition="contains any">\RemotePCUIU.exe;\RemotePC.exe;\RPDUILaunch.exe;\RemotePCLauncher.exe;\RemotePCService.exe;\RemotePCPerformance.exe;\remotepchost.exe;\rpcsuite.exe;\RPCFTViewer.exe;\RPCFTHost.exe;\RPCProxyLatency.exe;\RPCCoreViewer.exe;\RemotePCDesktop.exe;\RPCGAE.exe;\RPCUtility.exe;\RPCDownloader.exe;\RPCPrintUninstall.exe;\ViewerHostKeyPopup.exe;\RPCPrinterSetup.exe;\RPCPrinterSetup_old.exe;\RPCFirewall.exe;\InstallRPCPrinterDriver.exe;\RPCPrintServer.exe;\RPCPrintServer_P.exe;\RemotePCBlackScreenApp.exe;\RemotePC1.exe;\RPCFireWallRule.exe;\RPCPrinterDownloader.exe;\RPCViewerHostKeyPopup.exe;\RPCClipboard.exe;\RemotePCShortcut.exe;\RemotePC.lnk;\RPCDownloaderLogFile.txt;\RPCPreUninstall.log;\RPCAppLauncherLogFile.txt;\RPCCertificate.log;\RemotePCUI.lnk;\Uninstall RemotePC.lnk;\RemotePC\;Idrive.File-Transfer;idrive.RemotePCAgent</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Acronis Cyber Protect (Remotix) use detected" groupRelation="or">
-          <Image condition="is">AcronisCyberProtectConnectAgent.exe</Image>
-          <Image condition="contains">AcronisCyberProtectConnectQuickAssist</Image>
-          <TargetFilename condition="contains any">\AcronisCyberProtectConnectAgent.exe;AcronisCyberProtectConnectQuickAssist</TargetFilename>
+          <Image condition="contains any">\AcronisCyberProtectConnectAgent.exe;\AcronisCyberProtectConnectAgentService.exe;\Acronis Cyber Protect Connect.exe;\AcronisCyberProtectConnectQuickAssist;\remotix agent\;\acronis cyber protect connect agent\;\acpc_install_log\;\Acronis Cyber Protect Connect\;\remotixagent.exe;\RXAgentService.exe;\Remotix QC\</Image>
+          <TargetFilename condition="contains any">\AcronisCyberProtectConnectAgent.exe;\AcronisCyberProtectConnectAgentService.exe;\AcronisCyberProtectConnectQuickAssist;\remotix agent\;\acronis cyber protect connect agent\;\acpc_install_log\;\logs\agentui.log;\acronis cyber protect connect agent.lnk;\uninstall acronis cyber protect connect agent.lnk;\logs\agentservice.log;\logs\agentservicemanager.log;\Acronis Cyber Protect Connect\;\Acronis Cyber Protect Connect.exe;\Acronis Cyber Protect Connect.lnk;\Uninstall Acronis Cyber Protect Connect.lnk;\remotixagent.exe;\RXAgentService.exe;\Remotix QC\;AcronisCyberProtectConnectQuickAssist.log</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Action1 use detected" groupRelation="or">
           <Image condition="contains any">\action1_agent.exe;\action1_remote.exe;\action1_connector.exe;\action1_update.exe</Image>
@@ -9694,17 +9695,16 @@
           <TargetFilename condition="contains any">\alitask.exe;\AliIM_taobao.exe;\AliIM.exe;\Fixaliww.exe;\AliFileCheck.exe;\wwlog.log;\AliWangWang\;AliUpdater</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Alpemix use detected" groupRelation="or">
-          <Image condition="image">AlpemixService.exe</Image>
-          <Image condition="contains any">\AlpemixSrvc\;\Alpemix\</Image>
-          <TargetFilename condition="contains any">\AlpemixService.exe;\AlpemixSrvc.ini;\Alpemix.ini;\IM.ini;\AlpemixSrvc\;\Alpemix\</TargetFilename>
+          <Image condition="contains any">\AlpemixService.exe;\Alpemix.exe;\Alpemix.bin;\AlpemixSrvc\;\Alpemix\</Image>
+          <TargetFilename condition="contains any">\AlpemixService.exe;\AlpemixSrvc.ini;\Alpemix.ini;\IM.ini;\AlpemixSrvc\;\Alpemix\;\Alpemix.exe;\Alpemix.bin</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Ammyy Admin use detected" groupRelation="or">
           <Image condition="contains any">\AMMYY_Admin.exe;\AA_v3.exe;\AA_v2.exe;\AA_v1.exe;\AMMYY\;\Ammyy Admin\</Image>
           <TargetFilename condition="contains any">\AMMYY_Admin.exe;\AA_v3.exe;\AA_v2.exe;\AA_v1.exe;\aa_nts.log;\aa_nts.msg;\hr3;\AA_v3.log;\access.log;\AMMYY\;\Ammyy Admin\</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Any Support/LinkMeMine use detected" groupRelation="or">
-          <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport</Image>
-          <TargetFilename condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\KoinoFTClientDLL.dll;\KoinoFTServerDLL.dll;\setup_krp.exe;\KoinoAVC.dll;\KASSvcMgr.zip;\KoinoASClient.zip;\KoinoAVC.zip;\KoinoFTClient.zip;\KoinoFTServer.zip;\KoinoFTServerDLL.zip;\AnySupport\;\Koino\;AnySupport</TargetFilename>
+          <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport;\LMMAgent.exe;\nSSDClient.exe;\LMMLgiMgr.exe</Image>
+          <TargetFilename condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\KoinoFTClientDLL.dll;\KoinoFTServerDLL.dll;\setup_krp.exe;\KoinoAVC.dll;\KASSvcMgr.zip;\KoinoASClient.zip;\KoinoAVC.zip;\KoinoFTClient.zip;\KoinoFTServer.zip;\KoinoFTServerDLL.zip;\AnySupport\;\Koino\;AnySupport;\LMMAgent.exe;\nSSDClient.exe;\LMMLgiMgr.exe</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential AnyDesk use detected" groupRelation="or">
           <Image condition="image">AnyDesk.exe</Image>
@@ -10556,9 +10556,8 @@
           <TargetFilename condition="contains any">\RemotePCUIU.exe;\RemotePC.exe;\RPDUILaunch.exe;\RemotePCLauncher.exe;\RemotePCService.exe;\RemotePCPerformance.exe;\remotepchost.exe;\rpcsuite.exe;\RPCFTViewer.exe;\RPCFTHost.exe;\RPCProxyLatency.exe;\RPCCoreViewer.exe;\RemotePCDesktop.exe;\RPCGAE.exe;\RPCUtility.exe;\RPCDownloader.exe;\RPCPrintUninstall.exe;\ViewerHostKeyPopup.exe;\RPCPrinterSetup.exe;\RPCPrinterSetup_old.exe;\RPCFirewall.exe;\InstallRPCPrinterDriver.exe;\RPCPrintServer.exe;\RPCPrintServer_P.exe;\RemotePCBlackScreenApp.exe;\RemotePC1.exe;\RPCFireWallRule.exe;\RPCPrinterDownloader.exe;\RPCViewerHostKeyPopup.exe;\RPCClipboard.exe;\RemotePCShortcut.exe;\RemotePC.lnk;\RPCDownloaderLogFile.txt;\RPCPreUninstall.log;\RPCAppLauncherLogFile.txt;\RPCCertificate.log;\RemotePCUI.lnk;\Uninstall RemotePC.lnk;\RemotePC\;Idrive.File-Transfer;idrive.RemotePCAgent</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Acronis Cyber Protect (Remotix) use detected" groupRelation="or">
-          <Image condition="is">AcronisCyberProtectConnectAgent.exe</Image>
-          <Image condition="contains">AcronisCyberProtectConnectQuickAssist</Image>
-          <TargetFilename condition="contains any">\AcronisCyberProtectConnectAgent.exe;AcronisCyberProtectConnectQuickAssist</TargetFilename>
+          <Image condition="contains any">\AcronisCyberProtectConnectAgent.exe;\AcronisCyberProtectConnectAgentService.exe;\Acronis Cyber Protect Connect.exe;\AcronisCyberProtectConnectQuickAssist;\remotix agent\;\acronis cyber protect connect agent\;\acpc_install_log\;\Acronis Cyber Protect Connect\;\remotixagent.exe;\RXAgentService.exe;\Remotix QC\</Image>
+          <TargetFilename condition="contains any">\AcronisCyberProtectConnectAgent.exe;\AcronisCyberProtectConnectAgentService.exe;\AcronisCyberProtectConnectQuickAssist;\remotix agent\;\acronis cyber protect connect agent\;\acpc_install_log\;\logs\agentui.log;\acronis cyber protect connect agent.lnk;\uninstall acronis cyber protect connect agent.lnk;\logs\agentservice.log;\logs\agentservicemanager.log;\Acronis Cyber Protect Connect\;\Acronis Cyber Protect Connect.exe;\Acronis Cyber Protect Connect.lnk;\Uninstall Acronis Cyber Protect Connect.lnk;\remotixagent.exe;\RXAgentService.exe;\Remotix QC\;AcronisCyberProtectConnectQuickAssist.log</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Action1 use detected" groupRelation="or">
           <Image condition="contains any">\action1_agent.exe;\action1_remote.exe;\action1_connector.exe;\action1_update.exe</Image>
@@ -10580,17 +10579,16 @@
           <TargetFilename condition="contains any">\alitask.exe;\AliIM_taobao.exe;\AliIM.exe;\Fixaliww.exe;\AliFileCheck.exe;\wwlog.log;\AliWangWang\;AliUpdater</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Alpemix use detected" groupRelation="or">
-          <Image condition="image">AlpemixService.exe</Image>
-          <Image condition="contains any">\AlpemixSrvc\;\Alpemix\</Image>
-          <TargetFilename condition="contains any">\AlpemixService.exe;\AlpemixSrvc.ini;\Alpemix.ini;\IM.ini;\AlpemixSrvc\;\Alpemix\</TargetFilename>
+          <Image condition="contains any">\AlpemixService.exe;\Alpemix.exe;\Alpemix.bin;\AlpemixSrvc\;\Alpemix\</Image>
+          <TargetFilename condition="contains any">\AlpemixService.exe;\AlpemixSrvc.ini;\Alpemix.ini;\IM.ini;\AlpemixSrvc\;\Alpemix\;\Alpemix.exe;\Alpemix.bin</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Ammyy Admin use detected" groupRelation="or">
           <Image condition="contains any">\AMMYY_Admin.exe;\AA_v3.exe;\AA_v2.exe;\AA_v1.exe;\AMMYY\;\Ammyy Admin\</Image>
           <TargetFilename condition="contains any">\AMMYY_Admin.exe;\AA_v3.exe;\AA_v2.exe;\AA_v1.exe;\aa_nts.log;\aa_nts.msg;\hr3;\AA_v3.log;\access.log;\AMMYY\;\Ammyy Admin\</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Any Support/LinkMeMine use detected" groupRelation="or">
-          <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport</Image>
-          <TargetFilename condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\KoinoFTClientDLL.dll;\KoinoFTServerDLL.dll;\setup_krp.exe;\KoinoAVC.dll;\KASSvcMgr.zip;\KoinoASClient.zip;\KoinoAVC.zip;\KoinoFTClient.zip;\KoinoFTServer.zip;\KoinoFTServerDLL.zip;\AnySupport\;\Koino\;AnySupport</TargetFilename>
+          <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport;\LMMAgent.exe;\nSSDClient.exe;\LMMLgiMgr.exe</Image>
+          <TargetFilename condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\KoinoFTClientDLL.dll;\KoinoFTServerDLL.dll;\setup_krp.exe;\KoinoAVC.dll;\KASSvcMgr.zip;\KoinoASClient.zip;\KoinoAVC.zip;\KoinoFTClient.zip;\KoinoFTServer.zip;\KoinoFTServerDLL.zip;\AnySupport\;\Koino\;AnySupport;\LMMAgent.exe;\nSSDClient.exe;\LMMLgiMgr.exe</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential AnyDesk use detected" groupRelation="or">
           <Image condition="image">AnyDesk.exe</Image>
