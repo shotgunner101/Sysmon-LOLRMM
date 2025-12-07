@@ -231,9 +231,9 @@
           <Company condition="is any">CentraStage;Datto Inc.</Company>
         </Rule>
         <Rule name="Remote Admin Software - Potential Centurion use detected" groupRelation="or">
-          <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe</Image>
+          <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe;\Centurion Technologies\</Image>
           <Image condition="contains">CtiServ</Image>
-          <ParentImage condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe</ParentImage>
+          <ParentImage condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe;\Centurion Technologies\</ParentImage>
           <ParentImage condition="contains">CtiServ</ParentImage>
           <OriginalFileName condition="is any">ctiserv.exe;CtiControlCenter.exe;CTIUpdater.exe;ctsrcmd.exe;ctsrgui.exe;ctsrsvc.exe;ctsrvnc.exe</OriginalFileName>
           <OriginalFileName condition="contains">CtiServ</OriginalFileName>
@@ -309,8 +309,8 @@
           <Company condition="is">NCH Software</Company>
         </Rule>
         <Rule name="Remote Admin Software - Potential Dev Tunnels (aka Visual Studio Dev Tunnel) use detected" groupRelation="or">
-          <Image condition="image">devtunnel.exe</Image>
-          <ParentImage condition="image">devtunnel.exe</ParentImage>
+          <Image condition="contains any">\devtunnel.exe;\devtunnel\;\DevTunnels\</Image>
+          <ParentImage condition="contains any">\devtunnel.exe;\devtunnel\;\DevTunnels\</ParentImage>
           <OriginalFileName condition="is any">devtunnel.exe;devtunnel.dll</OriginalFileName>
           <Description condition="is">devtunnel</Description>
         </Rule>
@@ -1605,9 +1605,9 @@
           <TargetFilename condition="contains any">\CagService.exe;\AEMAgent.exe;\CsExec.Service.exe;\agent browser.lnk;\agent monitor.lnk;\uninstall agent.lnk;\windowsagent.dll;\scvncctrl.dllcagerrors.dat;\AEMAgent\;\CentraStage\</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Centurion use detected" groupRelation="or">
-          <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe</Image>
+          <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe;\Centurion Technologies\</Image>
           <Image condition="contains">CtiServ</Image>
-          <TargetFilename condition="contains any">\ctiserv.exe;\Centurion Technologies Updater.msi;\ctsrcpv.dll;\ctsrddrv_wlh_x64.sys;\ctsrddrv_wlh_x86.sys;\ctsrddrv_wnet_x64.sys;\ctsrddrv_wxp_x86.sys;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe</TargetFilename>
+          <TargetFilename condition="contains any">\ctiserv.exe;\Centurion Technologies Updater.msi;\ctsrcpv.dll;\ctsrddrv_wlh_x64.sys;\ctsrddrv_wlh_x86.sys;\ctsrddrv_wnet_x64.sys;\ctsrddrv_wxp_x86.sys;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe;\Centurion Technologies\</TargetFilename>
           <TargetFilename condition="contains">CtiServ</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Chrome Remote Desktop/SSH Extension use detected" groupRelation="or">
@@ -1649,7 +1649,7 @@
           <TargetFilename condition="contains any">\desktopnow.exe;\DesktopNow.lnk;\DesktopNow.BAK;\desktopnow.js;\desktopnow\;desktopnowsetup_</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Dev Tunnels (aka Visual Studio Dev Tunnel) use detected" groupRelation="or">
-          <Image condition="image">devtunnel.exe</Image>
+          <Image condition="contains any">\devtunnel.exe;\devtunnel\;\DevTunnels\</Image>
           <TargetFilename condition="contains any">\devtunnel.exe;\Microsoft.DevTunnels.Connections.dll;\Microsoft.DevTunnels.Contracts.dll;\Microsoft.DevTunnels.Contracts.dll;\Microsoft.DevTunnels.Ssh.Tcp.dll;\Microsoft.DevTunnels.Ssh.dll;\devtunnel.dll</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Devolutions Remote Desktop Manager use detected" groupRelation="or">
@@ -2461,6 +2461,7 @@
           <Image condition="contains any">\aspia_client.exe;\aspia_console.exe;\aspia_desktop_agent.exe;\aspia_host.exe;\aspia_host_config.exe;\aspia_host_service.exe;\aspia_host_session.exe;\aspia_relay.exe;\r4wscreen_agent.exe;\r4wscreen_host.exe;\r4wscreen_hostservice.exe;\aspia_file_transfer_agent.exe</Image>
           <Image condition="contains">\Aspia\</Image>
           <DestinationHostname condition="end with">.aspia.net</DestinationHostname>
+		  <DestinationHostname condition="end with">.aspia.org</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential Atera use detected" groupRelation="or">
           <Image condition="contains any">\AteraAgent.exe;\AgentPackageNetworkDiscovery.exe;\AgentPackageTaskScheduler.exe;\atera_agent.exe;\syncrosetup.exe;\AlphaAgent.exe;\AgentPackageSTRemote.exe;\AgentPackageMonitoring.exe;\AgentPackageHeartbeat.exe;\AgentPackageFileExplorer.exe;\AgentPackageRunCommandInteractive.exe;\AgentPackageADRemote.exe;\AgentPackageAgentInformation.exe;\AgentPackageInternalPoller.exe;\AgentPackageMarketplace.exe;\AgentPackageOsUpdates.exe;\AgentPackageProgramManagement.exe;\AgentPackageRuntimeInstaller.exe;\AgentPackageSystemTools.exe;\AgentPackageTicketing.exe;\AgentPackageUpgradeAgent.exe;\ATERA Networks\;\AteraAgent\;\AgentPackageADRemote\;\AgentPackageAgentInformation\;\AgentPackageOsUpdates\;\AgentPackageProgramManagement\;\AgentPackageRuntimeInstaller\;\AgentPackageUpgradeAgent\</Image>
@@ -2479,7 +2480,9 @@
         <Rule name="Remote Admin Software - Potential Trend Micro Endpoint Basecamp use detected" groupRelation="or">
           <Image condition="image">EndpointBasecamp.exe</Image>
           <Image condition="contains">\Endpoint Basecamp\</Image>
-          <DestinationHostname condition="is">basecamp.com</DestinationHostname>
+          <DestinationHostname condition="end with">.basecamp.com</DestinationHostname>
+		  <DestinationHostname condition="end with">.xbc.trendmicro.com</DestinationHostname>
+		  <DestinationHostname condition="end with">supportconnectorpacks.manage.trendmicro.com</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential BeAnyWhere/BeInSync/N-Able Advanced Monitoring Agent/N-ABLE Remote Access Software use detected" groupRelation="or">
           <Image condition="contains any">\basuptshelper.exe;\basupsrvcupdate.exe;\BASupApp.exe;\BASupSysInf.exe;\BASupAppSrvc.exe;\TakeControl.exe;\BASupAppElev.exe;\basupsrvc.exe;\BASupConHelper.exe;\BASupSrvcCnfg.exe;\BASupSrvcUpdater.exe;\BASupSysShell.exe;\winagent.exe;\BASEClient.exe;\BASupClpHlp.exe;\BASupClpPrg.exe;\BASupSysShell64.exe;\BASupUnElev.exe;\BAVideoChat.exe;\TCRmtShellAgent.exe;\TCDirectChat.exe;\TCLauncherHelper.exe;\TCRmtAudioHelper.exe;\BeinSync.exe;\BeInSyncServer.exe;\BeInSync_Setup_.exe;\BeInSync_Uninstall.EXE;\BeInSyncWeb.exe;\BeInSync_Toolbar_Setup.exe;\BeAnywhere Support Express\;\GetSupportService\;\BeInSync\;beinsync-</Image>
@@ -2495,11 +2498,12 @@
           <DestinationHostname condition="end with">.systemmonitor.co.uk</DestinationHostname>
           <DestinationHostname condition="end with">.system-monitor.com</DestinationHostname>
           <DestinationHostname condition="end with">.cloudbackup.management</DestinationHostname>
-          <DestinationHostname condition="is">systemmonitor.us.cdn.cloudflare.net</DestinationHostname>
+          <DestinationHostname condition="end with">.systemmonitor.us.cdn.cloudflare.net</DestinationHostname>
+		  <DestinationHostname condition="end with">.systemmonitor.eu.com.cdn.cloudflare.net</DestinationHostname>
           <DestinationHostname condition="end with">.remote.management</DestinationHostname>
           <DestinationHostname condition="end with">.swi-tc.com</DestinationHostname>
-          <DestinationHostname condition="end with">systemmonitor.us</DestinationHostname>
-          <DestinationHostname condition="end with">systemmonitor.us</DestinationHostname>
+		  <DestinationHostname condition="end with">.swi-rc.com</DestinationHostname>
+		  <DestinationHostname condition="end with">.iaso.com</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential BeyondTrust(Bomgar) use detected" groupRelation="or">
           <Image condition="contains any">\bomgar-rep.exe;\bomgar-rdp.exe;\nsnetpush.exe;\bomgar-rep-installer.exe;\bomgar-rfb.exe;\bomgar-acc-installer.exe;\bomgar-acc.exe;\bomgar-cli.exe;\bomgar-scc.exe;\bomgar-pac.exe;\Bomgar\;\bomgar-rep\;bomgar-scc-;bomgar-pac-</Image>
@@ -2508,6 +2512,7 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential Bitvise SSH Client/Bitvise SSH Server use detected" groupRelation="or">
           <Image condition="contains any">\BvSshClient-Inst.exe;\BvSsh.exe;\BvEventSource.exe;\BvWinFspMgr.exe;\BscActCode.exe;\BvDump32.exe;\BvDump64.exe;\BvInputDiag.exe;\BvSshCtrl.exe;\BvSshUpdate.exe;\MstscTitle.exe;\sexec.exe;\sftpc.exe;\spksc.exe;\stermc.exe;\stnlc.exe;\totermc.exe;\totermw.exe;\BvSshServer-Inst.exe;\AgentForward.exe;\AgentForward32.exe;\BssCfg.exe;\BssCfgManip.exe;\BssCtrl.exe;\BssCtrlLauncher.exe;\BssStat.exe;\BvShell.exe;\BvSshServer.exe;\SfsServer.exe;\TelnetForward.exe;\bvPwd.exe;\bvRun.exe;\execs.exe;\toterms.exe;\bvtermc.exe;\Bitvise SSH Server\;\Bitvise SSH Client\;BvSshServer-</Image>
+		  <DestinationHostname condition="end with">.bitvise.com</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential Bluetrait use detected" groupRelation="or">
           <Image condition="contains any">\Bluetrait_MSP_Agent.exe;\BluetraitUserAgent.exe</Image>
@@ -2516,11 +2521,11 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential CentraStage (Now Datto) use detected" groupRelation="or">
           <Image condition="contains any">\CagService.exe;\AEMAgent.exe;\CsExec.Service.exe;\AEMAgent\;\CentraStage\</Image>
-          <DestinationHostname condition="end with">.rmm.datto.com</DestinationHostname>
+          <DestinationHostname condition="end with">.datto.com</DestinationHostname>
           <DestinationHostname condition="end with">.centrastage.net</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential Centurion use detected" groupRelation="or">
-          <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe</Image>
+          <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe;\Centurion Technologies\</Image>
           <Image condition="contains">CtiServ</Image>
           <DestinationHostname condition="end with">.centuriontech.com</DestinationHostname>
         </Rule>
@@ -2536,6 +2541,9 @@
         <Rule name="Remote Admin Software - Potential CloudFlare Tunnel use detected" groupRelation="or">
           <Image condition="image">cloudflared.exe</Image>
           <Image condition="contains">\cloudflared\</Image>
+		  <DestinationHostname condition="end with">.argotunnel.com</DestinationHostname>
+		  <DestinationHostname condition="is">cftunnel.com</DestinationHostname>
+		  <DestinationHostname condition="end with">.cftunnel.com</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247/247ithelp.com (ConnectWise) use detected" groupRelation="or">
           <Image condition="contains any">\ScreenConnect.ClientService.exe;\ScreenConnect.WindowsClient.exe;\screenconnect.guestclient.exe;\screenconnect.guestservice.exe;\screenconnect.hostclient.exe;\screenconnect.service.exe;\ScreenConnect.ClientSetup.exe;\ScreenConnect.Client.exe;\ScreenConnect.WindowsBackstageShell.exe;\ScreenConnect.WindowsFileManager.exe;\LTSVC.exe;\LTSvcMon.exe;\LTTray.exe;\LTSilent.exe;\LSR.exe;\labvnc.exe;\connectwisechat-customer.exe;\connectwisecontrol.client.exe;\Remote Workforce Client.exe;\RemoteWorkforceClientWpf.exe;\RemoteWorkforceClient.exe;\saazapsc.exe;\SAAZWatchDog.exe;\SAAZRemoteSupport.exe;\SAAZServerPlus.exe;\SAAZSvrClient.exe;\GetSaazUsage.exe;\SAAZDPMACTL.exe;\SAAZDefaultJobExe.exe;\SAAZJobDownload.exe;\SAAZKill.exe;\SaazRemote.exe;\VMWSaazClient.exe;\SAAZappr.exe;\SAAZapsc.exe;\zSaazAccess.exe;\SAAZScheduler.exe;\SAAZSrvCOM.exe;\SAAZSvcCtrl.exe;\elsinore technologies\;\LTSvc\;\SAAZOD\;connectwise;screenconnect</Image>
@@ -2544,7 +2552,6 @@
           <DestinationHostname condition="end with">.screenconnect.com</DestinationHostname>
           <DestinationHostname condition="end with">.connectwise.com</DestinationHostname>
           <DestinationHostname condition="end with">.itsupport247.net</DestinationHostname>
-          <DestinationHostname condition="end with">.247ithelp.com</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential CrossLoop use detected" groupRelation="or">
           <Image condition="contains any">\CrossLoopService.exe;\CrossLoopConnect.exe;\WinVNCStub.exe;\CrossLoopSetup.exe;\CrossLoopUpdate.exe</Image>
@@ -2554,6 +2561,7 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential CruzControl use detected" groupRelation="or">
           <Image condition="image">win_install.exe</Image>
+		  <DestinationHostname condition="end with">.doradosoftware.com</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential DameWare/Rdpview use detected" groupRelation="or">
           <Image condition="contains any">\dwrcs.exe;\DWRCST.exe;\DWMSICLN.exe;\dwdrvinst64.exe;\DWRCSMSI.exe;\dwrcc.exe;\dwmdsetup.exe;\DWRCINS.exe;\dwrccmd.exe;\dwrcw64.exe;\dwrtde.exe;\dwrccnvt.exe;\dwhlp.exe;\dwdrvinst.exe;\DameWare.LogAdjuster.exe;\DWRCSPC.exe;\DWRCSPX.exe;\DWMacDis.exe;\DNTUS26.exe;\DNTUCli.exe;\DWRCC.exe;\DWADEA.exe;\DWExporter.exe;\DNTUCnvt.exe;\DRS_St.exe;\DNTU.exe;\SWregInst.exe;\SolarWinds.Orion.MaintDateCheck.exe;\dwrcs\;SolarWinds-Dameware;DameWare Mini Remote Control;\DameWare Remote Support\;dntus</Image>
@@ -2562,14 +2570,17 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential DeskShare use detected" groupRelation="or">
           <Image condition="contains any">\TeamTaskManager.exe;\DSGuest.exe;\Team Task Manager.exe;\OpenFirewallPort.exe;\Team Task Manager\;\Deskshare\</Image>
+		  <DestinationHostname condition="end with">.deskshare.com</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential DesktopNow use detected" groupRelation="or">
           <Image condition="image">desktopnow.exe</Image>
           <Image condition="contains any">\desktopnow\;desktopnowsetup_</Image>
-          <DestinationHostname condition="end with">.nchuser.com</DestinationHostname>
+		  <DestinationHostname condition="end with">.users.nchuser.com</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential Dev Tunnels (aka Visual Studio Dev Tunnel) use detected" groupRelation="or">
-          <Image condition="image">devtunnel.exe</Image>
+          <Image condition="contains any">\devtunnel.exe;\devtunnel\;\DevTunnels\</Image>
+		  <DestinationHostname condition="end with">.devtunnels.ms</DestinationHostname>
+          <DestinationHostname condition="end with">tunnels.api.visualstudio.com</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential Devolutions Remote Desktop Manager use detected" groupRelation="or">
           <Image condition="contains any">\RemoteDesktopManager.exe;\RemoteDesktopManager_x64.exe;\RemoteDesktopManager_ARM64.exe;\Devolutions\;\RemoteDesktopManagerFree\;\RemoteDesktopManager\;Remote Desktop Manager</Image>
@@ -2584,12 +2595,18 @@
           <Image condition="contains any">\domotz.exe;\Domotz Pro Desktop App.exe;\domotz_node.exe;\domotz_ndt7.exe;\domotz_pscp.exe;\domotz_curl.exe;\domotz_nmap.exe;\domotz_openssl.exe;\domotz_openvpn.exe;\domotz_tapinstall.exe;\domotz_mtr.exe;\domotz_dig.exe;\domotz_bash.exe;\domotz\;domotz;Domotz Pro Desktop App Setup;domotz-windows</Image>
           <DestinationHostname condition="end with">.domotz.co</DestinationHostname>
           <DestinationHostname condition="end with">.domotz.com</DestinationHostname>
+		  <DestinationHostname condition="end with">.domotz.org</DestinationHostname>
+		  <DestinationHostname condition="end with">.orchestration.wl-pro.com</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential DragonDisk use detected" groupRelation="or">
           <Image condition="contains any">\dgsync.exe;\DragonDisk.exe;\DragonDisk\;\Almageste\;dragondisk-</Image>
+		  <DestinationHostname condition="end with">rs2.connectria.com</DestinationHostname>
+		  <DestinationHostname condition="end with">.dragondisk.com</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential Duplicati use detected" groupRelation="or">
           <Image condition="contains any">\Duplicati.Server.exe;\Duplicati.Service.exe;\Duplicati.WindowsService.exe;\duplicati.exe;\Duplicati.CommandLine.BackendTester.exe;\Duplicati.CommandLine.BackendTool.exe;\Duplicati.CommandLine.ConfigurationImporter.exe;\Duplicati.CommandLine.RecoveryTool.exe;\Duplicati.CommandLine.exe;\Duplicati.GUI.TrayIcon.exe;\Duplicati.Library.AutoUpdater.exe;\DuplicatiIcon.exe;\Duplicati 2\;Duplicati.GUI.;Duplicati.CommandLine.;Duplicati.Library.;duplicati.server.</Image>
+		  <DestinationHostname condition="end with">.duplicati.com</DestinationHostname>
+		  <DestinationHostname condition="end with">duplicati-oauth-handler.appspot.com</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential DW Service use detected" groupRelation="or">
           <Image condition="contains any">\dwagsvc.exe;\dwagent.exe;\dwagsvc.exe;\dwaglnc.exe</Image>
@@ -2598,11 +2615,15 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential Echoware use detected" groupRelation="or">
           <Image condition="contains any">\Echogent\;\EchoVNC\;\EchoVNC Viewer\;\echoserver\;EchoVNC;echoserver</Image>
+		  <DestinationHostname condition="end with">echovnc.com</DestinationHostname>
+		  <DestinationHostname condition="end with">echoserver.com</DestinationHostname>
+		  <DestinationHostname condition="end with">echogent.com</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential eHorus/Pandora RC (eHorus) use detected" groupRelation="or">
           <Image condition="contains any">\ehorus standalone.exe;\ehorus_uit.exe;\ehorus_cmd.exe;\ehorus_display.exe;\ehorus_agent.exe;\ehorus_launcher.exe</Image>
           <Image condition="contains">\ehorus_agent\</Image>
           <DestinationHostname condition="end with">.ehorus.com</DestinationHostname>
+		  <DestinationHostname condition="end with">.pandorafms.com</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential Electric AI (Kaseya)/Kaseya VSA use detected" groupRelation="or">
           <Image condition="contains any">\KcsSetup.exe;\KAgentSilent.exe;\KaSetup.exe;\KaUsrTsk.exe;\AgentMon.exe;\Kaseya.AgentEndpoint.exe;\KDLLHost.exe;\KLicense.exe;\KaseyaEndpoint.exe;\KPrtPng.exe;\KaseyaTaskRunnerx64.exe;\KaseyaCommandShellProxy.exe;\KaseyaRemoteControlHost.exe;\KaseyaTaskRunnerx86.exe;\kGetELMg64.exe;\KaUpdHlp.exe;\KasAVSrv.exe;\LiveConnect.exe;\LogFileCleaner.exe;\kaseyaliveconnect.exe;\kaseya.adminendpoint.exe;\kaseya remote control.exe;\kaseya live connect\;\KaseyaLiveConnect\;\kaseya remote control\;\Kaseya\</Image>
@@ -2803,7 +2824,8 @@
         <Rule name="Remote Admin Software - Potential Level use detected" groupRelation="or">
           <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\osqueryi.exe;\Level\;level-windows</Image>
           <DestinationHostname condition="end with">.level.io</DestinationHostname>
-          <DestinationHostname condition="end with">.downloads.io</DestinationHostname>
+          <DestinationHostname condition="end with">prd-level-downloads.b-cdn.net</DestinationHostname>
+		  <DestinationHostname condition="end with">prd-level-downloads.b-cdn.net</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential Lite Manager use detected" groupRelation="or">
           <Image condition="contains any">\LMNoIpServer.exe;\ROMFUSClient.exe;\ROMServer.exe;\ROMViewer.exe;\LiteManager Pro – Viewer\;\LiteManager\;\LiteManager NoIpServer\;\LiteManager - Viewer\;\LiteManager Pro - Server\;\LiteManagerFree - Server\;\LiteManagerFree - Viewer\</Image>
@@ -3345,7 +3367,7 @@
           <Image condition="contains any">\CagService.exe;\AEMAgent.exe;\CsExec.Service.exe;\AEMAgent\;\CentraStage\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Centurion use detected" groupRelation="or">
-          <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe</Image>
+          <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe;\Centurion Technologies\</Image>
           <Image condition="contains">CtiServ</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Chrome Remote Desktop use detected" groupRelation="or">
@@ -3377,7 +3399,7 @@
           <Image condition="contains any">\desktopnow\;desktopnowsetup_</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Dev Tunnels (aka Visual Studio Dev Tunnel) use detected" groupRelation="or">
-          <Image condition="image">devtunnel.exe</Image>
+          <Image condition="contains any">\devtunnel.exe;\devtunnel\;\DevTunnels\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Devolutions Remote Desktop Manager use detected" groupRelation="or">
           <Image condition="contains any">\RemoteDesktopManager.exe;\RemoteDesktopManager_x64.exe;\RemoteDesktopManager_ARM64.exe;\Devolutions\;\RemoteDesktopManagerFree\;\RemoteDesktopManager\;Remote Desktop Manager</Image>
@@ -3942,7 +3964,7 @@
           <ImageLoaded condition="contains any">\CagService.exe;\AEMAgent.exe;\CsExec.Service.exe;\AEMAgent\;\CentraStage\</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Centurion use detected" groupRelation="or">
-          <ImageLoaded condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe</ImageLoaded>
+          <ImageLoaded condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe;\Centurion Technologies\</ImageLoaded>
           <ImageLoaded condition="contains">CtiServ</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Chrome Remote Desktop use detected" groupRelation="or">
@@ -3974,7 +3996,7 @@
           <ImageLoaded condition="contains any">\desktopnow\;desktopnowsetup_</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Dev Tunnels (aka Visual Studio Dev Tunnel) use detected" groupRelation="or">
-          <ImageLoaded condition="image">devtunnel.exe</ImageLoaded>
+          <ImageLoaded condition="contains any">\devtunnel.exe;\devtunnel\;\DevTunnels\</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Devolutions Remote Desktop Manager use detected" groupRelation="or">
           <ImageLoaded condition="contains any">\RemoteDesktopManager.exe;\RemoteDesktopManager_x64.exe;\RemoteDesktopManager_ARM64.exe;\Devolutions\;\RemoteDesktopManagerFree\;\RemoteDesktopManager\;Remote Desktop Manager</ImageLoaded>
@@ -4541,7 +4563,7 @@
           <Image condition="contains any">\CagService.exe;\AEMAgent.exe;\CsExec.Service.exe;\AEMAgent\;\CentraStage\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Centurion use detected" groupRelation="or">
-          <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe</Image>
+          <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe;\Centurion Technologies\</Image>
           <Image condition="contains">CtiServ</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Chrome Remote Desktop use detected" groupRelation="or">
@@ -4573,7 +4595,7 @@
           <Image condition="contains any">\desktopnow\;desktopnowsetup_</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Dev Tunnels (aka Visual Studio Dev Tunnel) use detected" groupRelation="or">
-          <Image condition="image">devtunnel.exe</Image>
+          <Image condition="contains any">\devtunnel.exe;\devtunnel\;\DevTunnels\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Devolutions Remote Desktop Manager use detected" groupRelation="or">
           <Image condition="contains any">\RemoteDesktopManager.exe;\RemoteDesktopManager_x64.exe;\RemoteDesktopManager_ARM64.exe;\Devolutions\;\RemoteDesktopManagerFree\;\RemoteDesktopManager\;Remote Desktop Manager</Image>
@@ -5152,7 +5174,7 @@
           <Image condition="contains any">\CagService.exe;\AEMAgent.exe;\CsExec.Service.exe;\AEMAgent\;\CentraStage\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Centurion use detected" groupRelation="or">
-          <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe</Image>
+          <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe;\Centurion Technologies\</Image>
           <Image condition="contains">CtiServ</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Chrome Remote Desktop use detected" groupRelation="or">
@@ -5184,7 +5206,7 @@
           <Image condition="contains any">\desktopnow\;desktopnowsetup_</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Dev Tunnels (aka Visual Studio Dev Tunnel) use detected" groupRelation="or">
-          <Image condition="image">devtunnel.exe</Image>
+          <Image condition="contains any">\devtunnel.exe;\devtunnel\;\DevTunnels\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Devolutions Remote Desktop Manager use detected" groupRelation="or">
           <Image condition="contains any">\RemoteDesktopManager.exe;\RemoteDesktopManager_x64.exe;\RemoteDesktopManager_ARM64.exe;\Devolutions\;\RemoteDesktopManagerFree\;\RemoteDesktopManager\;Remote Desktop Manager</Image>
@@ -5872,9 +5894,9 @@
           <TargetFilename condition="contains any">\CagService.exe;\AEMAgent.exe;\CsExec.Service.exe;\agent browser.lnk;\agent monitor.lnk;\uninstall agent.lnk;\windowsagent.dll;\scvncctrl.dllcagerrors.dat;\AEMAgent\;\CentraStage\</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Centurion use detected" groupRelation="or">
-          <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe</Image>
+          <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe;\Centurion Technologies\</Image>
           <Image condition="contains">CtiServ</Image>
-          <TargetFilename condition="contains any">\ctiserv.exe;\Centurion Technologies Updater.msi;\ctsrcpv.dll;\ctsrddrv_wlh_x64.sys;\ctsrddrv_wlh_x86.sys;\ctsrddrv_wnet_x64.sys;\ctsrddrv_wxp_x86.sys;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe</TargetFilename>
+          <TargetFilename condition="contains any">\ctiserv.exe;\Centurion Technologies Updater.msi;\ctsrcpv.dll;\ctsrddrv_wlh_x64.sys;\ctsrddrv_wlh_x86.sys;\ctsrddrv_wnet_x64.sys;\ctsrddrv_wxp_x86.sys;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe;\Centurion Technologies\</TargetFilename>
           <TargetFilename condition="contains">CtiServ</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Chrome Remote Desktop/SSH Extension use detected" groupRelation="or">
@@ -5916,7 +5938,7 @@
           <TargetFilename condition="contains any">\desktopnow.exe;\DesktopNow.lnk;\DesktopNow.BAK;\desktopnow.js;\desktopnow\;desktopnowsetup_</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Dev Tunnels (aka Visual Studio Dev Tunnel) use detected" groupRelation="or">
-          <Image condition="image">devtunnel.exe</Image>
+          <Image condition="contains any">\devtunnel.exe;\devtunnel\;\DevTunnels\</Image>
           <TargetFilename condition="contains any">\devtunnel.exe;\Microsoft.DevTunnels.Connections.dll;\Microsoft.DevTunnels.Contracts.dll;\Microsoft.DevTunnels.Contracts.dll;\Microsoft.DevTunnels.Ssh.Tcp.dll;\Microsoft.DevTunnels.Ssh.dll;\devtunnel.dll</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Devolutions Remote Desktop Manager use detected" groupRelation="or">
@@ -6730,7 +6752,7 @@
           <Image condition="contains any">\CagService.exe;\AEMAgent.exe;\CsExec.Service.exe;\AEMAgent\;\CentraStage\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Centurion use detected" groupRelation="or">
-          <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe</Image>
+          <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe;\Centurion Technologies\</Image>
           <Image condition="contains">CtiServ</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Chrome Remote Desktop use detected" groupRelation="or">
@@ -6762,7 +6784,7 @@
           <Image condition="contains any">\desktopnow\;desktopnowsetup_</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Dev Tunnels (aka Visual Studio Dev Tunnel) use detected" groupRelation="or">
-          <Image condition="image">devtunnel.exe</Image>
+          <Image condition="contains any">\devtunnel.exe;\devtunnel\;\DevTunnels\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Devolutions Remote Desktop Manager use detected" groupRelation="or">
           <Image condition="contains any">\RemoteDesktopManager.exe;\RemoteDesktopManager_x64.exe;\RemoteDesktopManager_ARM64.exe;\Devolutions\;\RemoteDesktopManagerFree\;\RemoteDesktopManager\;Remote Desktop Manager</Image>
@@ -7354,9 +7376,9 @@
           <TargetFilename condition="contains any">\CagService.exe;\AEMAgent.exe;\CsExec.Service.exe;\agent browser.lnk;\agent monitor.lnk;\uninstall agent.lnk;\windowsagent.dll;\scvncctrl.dllcagerrors.dat;\AEMAgent\;\CentraStage\</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Centurion use detected" groupRelation="or">
-          <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe</Image>
+          <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe;\Centurion Technologies\</Image>
           <Image condition="contains">CtiServ</Image>
-          <TargetFilename condition="contains any">\ctiserv.exe;\Centurion Technologies Updater.msi;\ctsrcpv.dll;\ctsrddrv_wlh_x64.sys;\ctsrddrv_wlh_x86.sys;\ctsrddrv_wnet_x64.sys;\ctsrddrv_wxp_x86.sys;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe</TargetFilename>
+          <TargetFilename condition="contains any">\ctiserv.exe;\Centurion Technologies Updater.msi;\ctsrcpv.dll;\ctsrddrv_wlh_x64.sys;\ctsrddrv_wlh_x86.sys;\ctsrddrv_wnet_x64.sys;\ctsrddrv_wxp_x86.sys;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe;\Centurion Technologies\</TargetFilename>
           <TargetFilename condition="contains">CtiServ</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Chrome Remote Desktop/SSH Extension use detected" groupRelation="or">
@@ -7398,7 +7420,7 @@
           <TargetFilename condition="contains any">\desktopnow.exe;\DesktopNow.lnk;\DesktopNow.BAK;\desktopnow.js;\desktopnow\;desktopnowsetup_</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Dev Tunnels (aka Visual Studio Dev Tunnel) use detected" groupRelation="or">
-          <Image condition="image">devtunnel.exe</Image>
+          <Image condition="contains any">\devtunnel.exe;\devtunnel\;\DevTunnels\</Image>
           <TargetFilename condition="contains any">\devtunnel.exe;\Microsoft.DevTunnels.Connections.dll;\Microsoft.DevTunnels.Contracts.dll;\Microsoft.DevTunnels.Contracts.dll;\Microsoft.DevTunnels.Ssh.Tcp.dll;\Microsoft.DevTunnels.Ssh.dll;\devtunnel.dll</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Devolutions Remote Desktop Manager use detected" groupRelation="or">
@@ -8187,6 +8209,8 @@
         <Rule name="Remote Admin Software - Potential Aspia use detected" groupRelation="or">
           <Image condition="contains any">\aspia_client.exe;\aspia_console.exe;\aspia_desktop_agent.exe;\aspia_host.exe;\aspia_host_config.exe;\aspia_host_service.exe;\aspia_host_session.exe;\aspia_relay.exe;\r4wscreen_agent.exe;\r4wscreen_host.exe;\r4wscreen_hostservice.exe;\aspia_file_transfer_agent.exe</Image>
           <Image condition="contains">\Aspia\</Image>
+		  <PipeName condition="contains">\4d6b3ac760bc37eb732fa66b0c5ba7231</PipeName>
+		  <PipeName condition="contains">\aspia.</PipeName>
         </Rule>
         <Rule name="Remote Admin Software - Potential Atera use detected" groupRelation="or">
           <Image condition="contains any">\AteraAgent.exe;\AgentPackageNetworkDiscovery.exe;\AgentPackageTaskScheduler.exe;\atera_agent.exe;\syncrosetup.exe;\AlphaAgent.exe;\AgentPackageSTRemote.exe;\AgentPackageMonitoring.exe;\AgentPackageHeartbeat.exe;\AgentPackageFileExplorer.exe;\AgentPackageRunCommandInteractive.exe;\AgentPackageADRemote.exe;\AgentPackageAgentInformation.exe;\AgentPackageInternalPoller.exe;\AgentPackageMarketplace.exe;\AgentPackageOsUpdates.exe;\AgentPackageProgramManagement.exe;\AgentPackageRuntimeInstaller.exe;\AgentPackageSystemTools.exe;\AgentPackageTicketing.exe;\AgentPackageUpgradeAgent.exe;\ATERA Networks\;\AteraAgent\;\AgentPackageADRemote\;\AgentPackageAgentInformation\;\AgentPackageOsUpdates\;\AgentPackageProgramManagement\;\AgentPackageRuntimeInstaller\;\AgentPackageUpgradeAgent\</Image>
@@ -8218,12 +8242,15 @@
           <Image condition="contains any">\CagService.exe;\AEMAgent.exe;\CsExec.Service.exe;\AEMAgent\;\CentraStage\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Centurion use detected" groupRelation="or">
-          <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe</Image>
+          <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe;\Centurion Technologies\</Image>
           <Image condition="contains">CtiServ</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Chrome Remote Desktop use detected" groupRelation="or">
           <Image condition="contains any">\remote_assistance_host.exe;\remote_assistance_host_uiaccess.exe;\remote_open_url.exe;\remote_security_key.exe;\remote_webauthn.exe;\remoting_crashpad_handler.exe;\remoting_desktop.exe;\remoting_host.exe;\remoting_native_messaging_host.exe;\remoting_start_host.exe;\remote_host.exe</Image>
           <Image condition="contains">\Chrome Remote Desktop\</Image>
+		  <PipeName condition="contains">\chrome.nativeMessaging.in.</PipeName>
+		  <PipeName condition="contains">\chrome.nativeMessaging.out.</PipeName>
+		  
         </Rule>
         <Rule name="Remote Admin Software - Potential CloudFlare Tunnel use detected" groupRelation="or">
           <Image condition="image">cloudflared.exe</Image>
@@ -8250,7 +8277,7 @@
           <Image condition="contains any">\desktopnow\;desktopnowsetup_</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Dev Tunnels (aka Visual Studio Dev Tunnel) use detected" groupRelation="or">
-          <Image condition="image">devtunnel.exe</Image>
+          <Image condition="contains any">\devtunnel.exe;\devtunnel\;\DevTunnels\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Devolutions Remote Desktop Manager use detected" groupRelation="or">
           <Image condition="contains any">\RemoteDesktopManager.exe;\RemoteDesktopManager_x64.exe;\RemoteDesktopManager_ARM64.exe;\Devolutions\;\RemoteDesktopManagerFree\;\RemoteDesktopManager\;Remote Desktop Manager</Image>
@@ -8855,6 +8882,7 @@
           <Image condition="contains any">\aspia_client.exe;\aspia_console.exe;\aspia_desktop_agent.exe;\aspia_host.exe;\aspia_host_config.exe;\aspia_host_service.exe;\aspia_host_session.exe;\aspia_relay.exe;\r4wscreen_agent.exe;\r4wscreen_host.exe;\r4wscreen_hostservice.exe;\aspia_file_transfer_agent.exe</Image>
           <Image condition="contains">\Aspia\</Image>
           <QueryName condition="end with">.aspia.net</QueryName>
+		  <QueryName condition="end with">.aspia.org</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential Atera use detected" groupRelation="or">
           <Image condition="contains any">\AteraAgent.exe;\AgentPackageNetworkDiscovery.exe;\AgentPackageTaskScheduler.exe;\atera_agent.exe;\syncrosetup.exe;\AlphaAgent.exe;\AgentPackageSTRemote.exe;\AgentPackageMonitoring.exe;\AgentPackageHeartbeat.exe;\AgentPackageFileExplorer.exe;\AgentPackageRunCommandInteractive.exe;\AgentPackageADRemote.exe;\AgentPackageAgentInformation.exe;\AgentPackageInternalPoller.exe;\AgentPackageMarketplace.exe;\AgentPackageOsUpdates.exe;\AgentPackageProgramManagement.exe;\AgentPackageRuntimeInstaller.exe;\AgentPackageSystemTools.exe;\AgentPackageTicketing.exe;\AgentPackageUpgradeAgent.exe;\ATERA Networks\;\AteraAgent\;\AgentPackageADRemote\;\AgentPackageAgentInformation\;\AgentPackageOsUpdates\;\AgentPackageProgramManagement\;\AgentPackageRuntimeInstaller\;\AgentPackageUpgradeAgent\</Image>
@@ -8873,7 +8901,9 @@
         <Rule name="Remote Admin Software - Potential Trend Micro Endpoint Basecamp use detected" groupRelation="or">
           <Image condition="image">EndpointBasecamp.exe</Image>
           <Image condition="contains">\Endpoint Basecamp\</Image>
-          <QueryName condition="is">basecamp.com</QueryName>
+          <QueryName condition="end with">.basecamp.com</QueryName>
+		  <QueryName condition="end with">.xbc.trendmicro.com</QueryName>
+		  <QueryName condition="end with">supportconnectorpacks.manage.trendmicro.com</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential BeAnyWhere/BeInSync/N-Able Advanced Monitoring Agent/N-ABLE Remote Access Software use detected" groupRelation="or">
           <Image condition="contains any">\basuptshelper.exe;\basupsrvcupdate.exe;\BASupApp.exe;\BASupSysInf.exe;\BASupAppSrvc.exe;\TakeControl.exe;\BASupAppElev.exe;\basupsrvc.exe;\BASupConHelper.exe;\BASupSrvcCnfg.exe;\BASupSrvcUpdater.exe;\BASupSysShell.exe;\winagent.exe;\BASEClient.exe;\BASupClpHlp.exe;\BASupClpPrg.exe;\BASupSysShell64.exe;\BASupUnElev.exe;\BAVideoChat.exe;\TCRmtShellAgent.exe;\TCDirectChat.exe;\TCLauncherHelper.exe;\TCRmtAudioHelper.exe;\BeinSync.exe;\BeInSyncServer.exe;\BeInSync_Setup_.exe;\BeInSync_Uninstall.EXE;\BeInSyncWeb.exe;\BeInSync_Toolbar_Setup.exe;\BeAnywhere Support Express\;\GetSupportService\;\BeInSync\;beinsync-</Image>
@@ -8889,11 +8919,12 @@
           <QueryName condition="end with">.systemmonitor.co.uk</QueryName>
           <QueryName condition="end with">.system-monitor.com</QueryName>
           <QueryName condition="end with">.cloudbackup.management</QueryName>
-          <QueryName condition="is">systemmonitor.us.cdn.cloudflare.net</QueryName>
+          <QueryName condition="end with">.systemmonitor.us.cdn.cloudflare.net</QueryName>
+		  <QueryName condition="end with">.systemmonitor.eu.com.cdn.cloudflare.net</QueryName>
           <QueryName condition="end with">.remote.management</QueryName>
           <QueryName condition="end with">.swi-tc.com</QueryName>
-          <QueryName condition="end with">systemmonitor.us</QueryName>
-          <QueryName condition="end with">systemmonitor.us</QueryName>
+		  <QueryName condition="end with">.swi-rc.com</QueryName>
+		  <QueryName condition="end with">.iaso.com</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential BeyondTrust(Bomgar) use detected" groupRelation="or">
           <Image condition="contains any">\bomgar-rep.exe;\bomgar-rdp.exe;\nsnetpush.exe;\bomgar-rep-installer.exe;\bomgar-rfb.exe;\bomgar-acc-installer.exe;\bomgar-acc.exe;\bomgar-cli.exe;\bomgar-scc.exe;\bomgar-pac.exe;\Bomgar\;\bomgar-rep\;bomgar-scc-;bomgar-pac-</Image>
@@ -8902,6 +8933,7 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential Bitvise SSH Client/Bitvise SSH Server use detected" groupRelation="or">
           <Image condition="contains any">\BvSshClient-Inst.exe;\BvSsh.exe;\BvEventSource.exe;\BvWinFspMgr.exe;\BscActCode.exe;\BvDump32.exe;\BvDump64.exe;\BvInputDiag.exe;\BvSshCtrl.exe;\BvSshUpdate.exe;\MstscTitle.exe;\sexec.exe;\sftpc.exe;\spksc.exe;\stermc.exe;\stnlc.exe;\totermc.exe;\totermw.exe;\BvSshServer-Inst.exe;\AgentForward.exe;\AgentForward32.exe;\BssCfg.exe;\BssCfgManip.exe;\BssCtrl.exe;\BssCtrlLauncher.exe;\BssStat.exe;\BvShell.exe;\BvSshServer.exe;\SfsServer.exe;\TelnetForward.exe;\bvPwd.exe;\bvRun.exe;\execs.exe;\toterms.exe;\bvtermc.exe;\Bitvise SSH Server\;\Bitvise SSH Client\;BvSshServer-</Image>
+		  <QueryName condition="end with">.bitvise.com</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential Bluetrait use detected" groupRelation="or">
           <Image condition="contains any">\Bluetrait_MSP_Agent.exe;\BluetraitUserAgent.exe</Image>
@@ -8910,11 +8942,12 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential CentraStage (Now Datto) use detected" groupRelation="or">
           <Image condition="contains any">\CagService.exe;\AEMAgent.exe;\CsExec.Service.exe;\AEMAgent\;\CentraStage\</Image>
-          <QueryName condition="end with">.rmm.datto.com</QueryName>
+          <QueryName condition="end with">.datto.com</QueryName>
           <QueryName condition="end with">.centrastage.net</QueryName>
+		  <QueryName condition="end with">.cpt-concord.centrastage.net.s3.amazonaws.com</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential Centurion use detected" groupRelation="or">
-          <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe</Image>
+          <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe;\Centurion Technologies\</Image>
           <Image condition="contains">CtiServ</Image>
           <QueryName condition="end with">.centuriontech.com</QueryName>
         </Rule>
@@ -8930,6 +8963,9 @@
         <Rule name="Remote Admin Software - Potential CloudFlare Tunnel use detected" groupRelation="or">
           <Image condition="image">cloudflared.exe</Image>
           <Image condition="contains">\cloudflared\</Image>
+		  <QueryName condition="end with">.argotunnel.com</QueryName>
+		  <QueryName condition="is">cftunnel.com</QueryName>
+		  <QueryName condition="end with">.cftunnel.com</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247/247ithelp.com (ConnectWise) use detected" groupRelation="or">
           <Image condition="contains any">\ScreenConnect.ClientService.exe;\ScreenConnect.WindowsClient.exe;\screenconnect.guestclient.exe;\screenconnect.guestservice.exe;\screenconnect.hostclient.exe;\screenconnect.service.exe;\ScreenConnect.ClientSetup.exe;\ScreenConnect.Client.exe;\ScreenConnect.WindowsBackstageShell.exe;\ScreenConnect.WindowsFileManager.exe;\LTSVC.exe;\LTSvcMon.exe;\LTTray.exe;\LTSilent.exe;\LSR.exe;\labvnc.exe;\connectwisechat-customer.exe;\connectwisecontrol.client.exe;\Remote Workforce Client.exe;\RemoteWorkforceClientWpf.exe;\RemoteWorkforceClient.exe;\saazapsc.exe;\SAAZWatchDog.exe;\SAAZRemoteSupport.exe;\SAAZServerPlus.exe;\SAAZSvrClient.exe;\GetSaazUsage.exe;\SAAZDPMACTL.exe;\SAAZDefaultJobExe.exe;\SAAZJobDownload.exe;\SAAZKill.exe;\SaazRemote.exe;\VMWSaazClient.exe;\SAAZappr.exe;\SAAZapsc.exe;\zSaazAccess.exe;\SAAZScheduler.exe;\SAAZSrvCOM.exe;\SAAZSvcCtrl.exe;\elsinore technologies\;\LTSvc\;\SAAZOD\;connectwise;screenconnect</Image>
@@ -8938,7 +8974,6 @@
           <QueryName condition="end with">.screenconnect.com</QueryName>
           <QueryName condition="end with">.connectwise.com</QueryName>
           <QueryName condition="end with">.itsupport247.net</QueryName>
-          <QueryName condition="end with">.247ithelp.com</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential CrossLoop use detected" groupRelation="or">
           <Image condition="contains any">\CrossLoopService.exe;\CrossLoopConnect.exe;\WinVNCStub.exe;\CrossLoopSetup.exe;\CrossLoopUpdate.exe</Image>
@@ -8948,6 +8983,7 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential CruzControl use detected" groupRelation="or">
           <Image condition="image">win_install.exe</Image>
+		  <QueryName condition="end with">.doradosoftware.com</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential DameWare/Rdpview use detected" groupRelation="or">
           <Image condition="contains any">\dwrcs.exe;\DWRCST.exe;\DWMSICLN.exe;\dwdrvinst64.exe;\DWRCSMSI.exe;\dwrcc.exe;\dwmdsetup.exe;\DWRCINS.exe;\dwrccmd.exe;\dwrcw64.exe;\dwrtde.exe;\dwrccnvt.exe;\dwhlp.exe;\dwdrvinst.exe;\DameWare.LogAdjuster.exe;\DWRCSPC.exe;\DWRCSPX.exe;\DWMacDis.exe;\DNTUS26.exe;\DNTUCli.exe;\DWRCC.exe;\DWADEA.exe;\DWExporter.exe;\DNTUCnvt.exe;\DRS_St.exe;\DNTU.exe;\SWregInst.exe;\SolarWinds.Orion.MaintDateCheck.exe;\dwrcs\;SolarWinds-Dameware;DameWare Mini Remote Control;\DameWare Remote Support\;dntus</Image>
@@ -8956,17 +8992,22 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential DeskShare use detected" groupRelation="or">
           <Image condition="contains any">\TeamTaskManager.exe;\DSGuest.exe;\Team Task Manager.exe;\OpenFirewallPort.exe;\Team Task Manager\;\Deskshare\</Image>
+		  <QueryName condition="end with">.deskshare.com</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential DesktopNow use detected" groupRelation="or">
           <Image condition="image">desktopnow.exe</Image>
           <Image condition="contains any">\desktopnow\;desktopnowsetup_</Image>
-          <QueryName condition="end with">.nchuser.com</QueryName>
+		  <QueryName condition="end with">.users.nchuser.com</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential Dev Tunnels (aka Visual Studio Dev Tunnel) use detected" groupRelation="or">
-          <Image condition="image">devtunnel.exe</Image>
+          <Image condition="contains any">\devtunnel.exe;\devtunnel\;\DevTunnels\</Image>
+		  <QueryName condition="end with">.devtunnels.ms</QueryName>
+		  <QueryName condition="end with">.tunnels.api.visualstudio.com</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential Devolutions Remote Desktop Manager use detected" groupRelation="or">
           <Image condition="contains any">\RemoteDesktopManager.exe;\RemoteDesktopManager_x64.exe;\RemoteDesktopManager_ARM64.exe;\Devolutions\;\RemoteDesktopManagerFree\;\RemoteDesktopManager\;Remote Desktop Manager</Image>
+		  <QueryName condition="end with">.devolutions.net</QueryName>
+		  <QueryName condition="end with">.devolutions.com</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential Distant Desktop use detected" groupRelation="or">
           <Image condition="contains any">\ddsystem.exe;\dd.exe;\distant-desktop.exe;\ddserver.exe;\dd_update.exe</Image>
@@ -8978,12 +9019,18 @@
           <Image condition="contains any">\domotz.exe;\Domotz Pro Desktop App.exe;\domotz_node.exe;\domotz_ndt7.exe;\domotz_pscp.exe;\domotz_curl.exe;\domotz_nmap.exe;\domotz_openssl.exe;\domotz_openvpn.exe;\domotz_tapinstall.exe;\domotz_mtr.exe;\domotz_dig.exe;\domotz_bash.exe;\domotz\;domotz;Domotz Pro Desktop App Setup;domotz-windows</Image>
           <QueryName condition="end with">.domotz.co</QueryName>
           <QueryName condition="end with">.domotz.com</QueryName>
+		  <QueryName condition="end with">.domotz.org</QueryName>
+		  <QueryName condition="end with">.orchestration.wl-pro.com</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential DragonDisk use detected" groupRelation="or">
           <Image condition="contains any">\dgsync.exe;\DragonDisk.exe;\DragonDisk\;\Almageste\;dragondisk-</Image>
+		  <QueryName condition="end with">rs2.connectria.com</QueryName>
+		  <QueryName condition="end with">.dragondisk.com</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential Duplicati use detected" groupRelation="or">
           <Image condition="contains any">\Duplicati.Server.exe;\Duplicati.Service.exe;\Duplicati.WindowsService.exe;\duplicati.exe;\Duplicati.CommandLine.BackendTester.exe;\Duplicati.CommandLine.BackendTool.exe;\Duplicati.CommandLine.ConfigurationImporter.exe;\Duplicati.CommandLine.RecoveryTool.exe;\Duplicati.CommandLine.exe;\Duplicati.GUI.TrayIcon.exe;\Duplicati.Library.AutoUpdater.exe;\DuplicatiIcon.exe;\Duplicati 2\;Duplicati.GUI.;Duplicati.CommandLine.;Duplicati.Library.;duplicati.server.</Image>
+		  <QueryName condition="end with">.duplicati.com</QueryName>
+		  <QueryName condition="end with">duplicati-oauth-handler.appspot.com</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential DW Service use detected" groupRelation="or">
           <Image condition="contains any">\dwagsvc.exe;\dwagent.exe;\dwagsvc.exe;\dwaglnc.exe</Image>
@@ -8992,11 +9039,15 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential Echoware use detected" groupRelation="or">
           <Image condition="contains any">\Echogent\;\EchoVNC\;\EchoVNC Viewer\;\echoserver\;EchoVNC;echoserver</Image>
+		  <QueryName condition="end with">echogent.com</QueryName>
+		  <QueryName condition="end with">echovnc.com</QueryName>
+		  <QueryName condition="end with">echoserver.com</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential eHorus/Pandora RC (eHorus) use detected" groupRelation="or">
           <Image condition="contains any">\ehorus standalone.exe;\ehorus_uit.exe;\ehorus_cmd.exe;\ehorus_display.exe;\ehorus_agent.exe;\ehorus_launcher.exe</Image>
           <Image condition="contains">\ehorus_agent\</Image>
           <QueryName condition="end with">.ehorus.com</QueryName>
+		  <QueryName condition="end with">.pandorafms.com</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential Electric AI (Kaseya)/Kaseya VSA use detected" groupRelation="or">
           <Image condition="contains any">\KcsSetup.exe;\KAgentSilent.exe;\KaSetup.exe;\KaUsrTsk.exe;\AgentMon.exe;\Kaseya.AgentEndpoint.exe;\KDLLHost.exe;\KLicense.exe;\KaseyaEndpoint.exe;\KPrtPng.exe;\KaseyaTaskRunnerx64.exe;\KaseyaCommandShellProxy.exe;\KaseyaRemoteControlHost.exe;\KaseyaTaskRunnerx86.exe;\kGetELMg64.exe;\KaUpdHlp.exe;\KasAVSrv.exe;\LiveConnect.exe;\LogFileCleaner.exe;\kaseyaliveconnect.exe;\kaseya.adminendpoint.exe;\kaseya remote control.exe;\kaseya live connect\;\KaseyaLiveConnect\;\kaseya remote control\;\Kaseya\</Image>
@@ -9197,7 +9248,8 @@
         <Rule name="Remote Admin Software - Potential Level use detected" groupRelation="or">
           <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\osqueryi.exe;\Level\;level-windows</Image>
           <QueryName condition="end with">.level.io</QueryName>
-          <QueryName condition="end with">.downloads.io</QueryName>
+		  <QueryName condition="end with">.prd-level-online.b-cdn.net</QueryName>
+		  <QueryName condition="end with">.prd-level-downloads.b-cdn.net</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential Lite Manager use detected" groupRelation="or">
           <Image condition="contains any">\LMNoIpServer.exe;\ROMFUSClient.exe;\ROMServer.exe;\ROMViewer.exe;\LiteManager Pro – Viewer\;\LiteManager\;\LiteManager NoIpServer\;\LiteManager - Viewer\;\LiteManager Pro - Server\;\LiteManagerFree - Server\;\LiteManagerFree - Viewer\</Image>
@@ -9766,9 +9818,9 @@
           <TargetFilename condition="contains any">\CagService.exe;\AEMAgent.exe;\CsExec.Service.exe;\agent browser.lnk;\agent monitor.lnk;\uninstall agent.lnk;\windowsagent.dll;\scvncctrl.dllcagerrors.dat;\AEMAgent\;\CentraStage\</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Centurion use detected" groupRelation="or">
-          <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe</Image>
+          <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe;\Centurion Technologies\</Image>
           <Image condition="contains">CtiServ</Image>
-          <TargetFilename condition="contains any">\ctiserv.exe;\Centurion Technologies Updater.msi;\ctsrcpv.dll;\ctsrddrv_wlh_x64.sys;\ctsrddrv_wlh_x86.sys;\ctsrddrv_wnet_x64.sys;\ctsrddrv_wxp_x86.sys;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe</TargetFilename>
+          <TargetFilename condition="contains any">\ctiserv.exe;\Centurion Technologies Updater.msi;\ctsrcpv.dll;\ctsrddrv_wlh_x64.sys;\ctsrddrv_wlh_x86.sys;\ctsrddrv_wnet_x64.sys;\ctsrddrv_wxp_x86.sys;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe;\Centurion Technologies\</TargetFilename>
           <TargetFilename condition="contains">CtiServ</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Chrome Remote Desktop/SSH Extension use detected" groupRelation="or">
@@ -9810,7 +9862,7 @@
           <TargetFilename condition="contains any">\desktopnow.exe;\DesktopNow.lnk;\DesktopNow.BAK;\desktopnow.js;\desktopnow\;desktopnowsetup_</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Dev Tunnels (aka Visual Studio Dev Tunnel) use detected" groupRelation="or">
-          <Image condition="image">devtunnel.exe</Image>
+          <Image condition="contains any">\devtunnel.exe;\devtunnel\;\DevTunnels\</Image>
           <TargetFilename condition="contains any">\devtunnel.exe;\Microsoft.DevTunnels.Connections.dll;\Microsoft.DevTunnels.Contracts.dll;\Microsoft.DevTunnels.Contracts.dll;\Microsoft.DevTunnels.Ssh.Tcp.dll;\Microsoft.DevTunnels.Ssh.dll;\devtunnel.dll</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Devolutions Remote Desktop Manager use detected" groupRelation="or">
@@ -10650,9 +10702,9 @@
           <TargetFilename condition="contains any">\CagService.exe;\AEMAgent.exe;\CsExec.Service.exe;\agent browser.lnk;\agent monitor.lnk;\uninstall agent.lnk;\windowsagent.dll;\scvncctrl.dllcagerrors.dat;\AEMAgent\;\CentraStage\</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Centurion use detected" groupRelation="or">
-          <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe</Image>
+          <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe;\Centurion Technologies\</Image>
           <Image condition="contains">CtiServ</Image>
-          <TargetFilename condition="contains any">\ctiserv.exe;\Centurion Technologies Updater.msi;\ctsrcpv.dll;\ctsrddrv_wlh_x64.sys;\ctsrddrv_wlh_x86.sys;\ctsrddrv_wnet_x64.sys;\ctsrddrv_wxp_x86.sys;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe</TargetFilename>
+          <TargetFilename condition="contains any">\ctiserv.exe;\Centurion Technologies Updater.msi;\ctsrcpv.dll;\ctsrddrv_wlh_x64.sys;\ctsrddrv_wlh_x86.sys;\ctsrddrv_wnet_x64.sys;\ctsrddrv_wxp_x86.sys;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe;\Centurion Technologies\</TargetFilename>
           <TargetFilename condition="contains">CtiServ</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Chrome Remote Desktop/SSH Extension use detected" groupRelation="or">
@@ -10694,7 +10746,7 @@
           <TargetFilename condition="contains any">\desktopnow.exe;\DesktopNow.lnk;\DesktopNow.BAK;\desktopnow.js;\desktopnow\;desktopnowsetup_</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Dev Tunnels (aka Visual Studio Dev Tunnel) use detected" groupRelation="or">
-          <Image condition="image">devtunnel.exe</Image>
+          <Image condition="contains any">\devtunnel.exe;\devtunnel\;\DevTunnels\</Image>
           <TargetFilename condition="contains any">\devtunnel.exe;\Microsoft.DevTunnels.Connections.dll;\Microsoft.DevTunnels.Contracts.dll;\Microsoft.DevTunnels.Contracts.dll;\Microsoft.DevTunnels.Ssh.Tcp.dll;\Microsoft.DevTunnels.Ssh.dll;\devtunnel.dll</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Devolutions Remote Desktop Manager use detected" groupRelation="or">
