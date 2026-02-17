@@ -29,9 +29,9 @@
     <RuleGroup name="Process Creation Logging" groupRelation="or">
       <ProcessCreate onmatch="include">
         <Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
-          <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe</Image>
+          <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe;\CtHWiPrvService.exe;\AbtSvcHost_.exe;\CtRarSvc.exe;\wctguard.exe;\wctsys.exe</Image>
           <Image condition="contains">\CTES\</Image>
-          <ParentImage condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe</ParentImage>
+          <ParentImage condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe;\CtHWiPrvService.exe;\AbtSvcHost_.exe;\CtRarSvc.exe;\wctguard.exe;\wctsys.exe</ParentImage>
           <ParentImage condition="contains">\CTES\</ParentImage>
           <OriginalFileName condition="is any">rpcnet.exe;ctes.exe;ctespersitence.exe;cteshostsvc.exe;rpcld.exe;CtesCommand.exe</OriginalFileName>
           <Description condition="is any">CTES Manager;CtesHostSvc;rpcld.exe;rpcnet</Description>
@@ -675,9 +675,9 @@
           <Company condition="is any">Traveling Software, Inc.;Syspectr</Company>
         </Rule>
         <Rule name="Remote Admin Software - Potential Level use detected" groupRelation="or">
-          <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\osqueryi.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</Image>
-          <ParentImage condition="contains any">\level-windows-amd64.exe;\level.exe;\osqueryi.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</ParentImage>
-          <OriginalFileName condition="is any">level-windows-amd64.exe;level.exe;osqueryi.exe</OriginalFileName>
+          <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</Image>
+          <ParentImage condition="contains any">\level-windows-amd64.exe;\level.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</ParentImage>
+          <OriginalFileName condition="is any">level-windows-amd64.exe;level.exe</OriginalFileName>
         </Rule>
         <Rule name="Remote Admin Software - Potential Lite Manager use detected" groupRelation="or">
           <Image condition="contains any">\LMNoIpServer.exe;\ROMFUSClient.exe;\ROMServer.exe;\ROMViewer.exe;\LiteManager Pro – Viewer\;\LiteManager\;\LiteManager NoIpServer\;\LiteManager - Viewer\;\LiteManager Pro - Server\;\LiteManagerFree - Server\;\LiteManagerFree - Viewer\</Image>
@@ -1494,9 +1494,9 @@
     <RuleGroup name="A file was modified" groupRelation="or">
       <FileCreateTime onmatch="include">
         <Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
-          <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe</Image>
+          <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe;\CtHWiPrvService.exe;\AbtSvcHost_.exe;\CtRarSvc.exe;\wctguard.exe;\wctsys.exe</Image>
           <Image condition="contains">\CTES\</Image>
-          <TargetFilename condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe;\ctes.log;\svc.log;\AbtFC.dll;\AbtCrypt.dll;\AbsoluteCert.cer</TargetFilename>
+          <TargetFilename condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe;\ctes.log;\svc.log;\AbtFC.dll;\AbtCrypt.dll;\AbsoluteCert.cer;\CtHWiPrvService.exe;\AbtSvcHost_.exe;\CtRarSvc.exe;\wctguard.exe;\wctsys.exe;\AbtCrypt.dll;\AbtFC.dll;\rpcnetp.dll;\wceprv.dll;\identprv.dll</TargetFilename>
           <TargetFilename condition="contains">\CTES\</TargetFilename>
           <TargetFilename condition="contains all">Absolute;;Agent;.msi</TargetFilename>
         </Rule>
@@ -1850,8 +1850,8 @@
           <TargetFilename condition="contains any">\laplink.exe;\laplinkeverywhere.exe;\llrcservice.exe;\serverproxyservice.exe;\OOSysAgent.exe;\tsircusr.exe;\OOLiveUpdate.exe;\OOSysAgent.exe.config;\OOSysAssemblyLoader.dll;\OOSysBaseModule.dll;\OOSysBaseModule.dll.config;\OOSysBootstrapper.dll;\OOSysBootstrapper.XmlSerializers.dll;\OOSysBranding.dll;\OOSysEngine.dll;\OOSysEngine.dll.config;\OOSysEngine.XmlSerializers.dll;\OOSysEngineBase.dll;\OOSysSharedTools.dll;\OOSysUtils.dll;\OOSysUtils.dll.config;\SyspectrIcon.exe;\OOSysLog;\OOAdViewer.exe;\OOLiveUpdateWorker.exe;\_OOLiveUpdate.log;\ Syspectr.log;\Syspectr\;\OO Software\;laplink-everywhere-setup;oo-syspectr;\ServerProxy.exe;\Laplink\;\Laplink Everywhere\;\LLServerMain2.exe;\LLUpdateCheck.exe;\LLEventLog.exe;\Laplink Security Center.exe;\ILLSecurity.exe;\Laplink Gold\;\Llsched.exe</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Level use detected" groupRelation="or">
-          <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\osqueryi.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</Image>
-          <TargetFilename condition="contains any">\level-windows-amd64.exe;\level-windows;\level.exe;\osqueryi.exe;\level.log;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</TargetFilename>
+          <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</Image>
+          <TargetFilename condition="contains any">\level-windows-amd64.exe;\level-windows;\level.exe;\level.log;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Lite Manager use detected" groupRelation="or">
           <Image condition="contains any">\LMNoIpServer.exe;\ROMFUSClient.exe;\ROMServer.exe;\ROMViewer.exe;\LiteManager Pro – Viewer\;\LiteManager\;\LiteManager NoIpServer\;\LiteManager - Viewer\;\LiteManager Pro - Server\;\LiteManagerFree - Server\;\LiteManagerFree - Viewer\</Image>
@@ -2365,7 +2365,7 @@
     <RuleGroup name="" groupRelation="or">
       <NetworkConnect onmatch="include">
         <Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
-          <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe</Image>
+          <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe;\CtHWiPrvService.exe;\AbtSvcHost_.exe;\CtRarSvc.exe;\wctguard.exe;\wctsys.exe</Image>
           <Image condition="contains">\CTES\</Image>
           <DestinationHostname condition="end with">.namequery.com</DestinationHostname>
           <DestinationHostname condition="end with">.absolute.com</DestinationHostname>
@@ -2857,7 +2857,7 @@
 		  <DestinationHostname condition="end with">.oo-software.com</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential Level use detected" groupRelation="or">
-          <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\osqueryi.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</Image>
+          <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</Image>
           <DestinationHostname condition="end with">.level.io</DestinationHostname>
           <DestinationHostname condition="end with">prd-level-online.b-cdn.net</DestinationHostname>
 		  <DestinationHostname condition="end with">prd-level-downloads.b-cdn.net</DestinationHostname>
@@ -3353,7 +3353,7 @@
         </Rule>
 		<Rule name="Remote Admin Software - Potential Veyon use detected" groupRelation="or">
           <Image condition="contains any">\Veyon\;\veyon-wcli.exe;\veyon-worker.exe;\veyon-server.exe;\veyon-service.exe;\veyon-master.exe;\veyon-configurator.exe</Image>
-		  <DestinationHostname condition="is">.veyon.io</DestinationHostname>
+		  <DestinationHostname condition="end with">.veyon.io</DestinationHostname>
         </Rule>
         <Rule name="Remote Admin Software - Potential WebRDP use detected" groupRelation="or">
           <Image condition="image">webrdp.exe</Image>
@@ -3429,7 +3429,7 @@
     <RuleGroup name="group1" groupRelation="or">
       <ProcessTerminate onmatch="include">
         <Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
-          <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe</Image>
+          <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe;\CtHWiPrvService.exe;\AbtSvcHost_.exe;\CtRarSvc.exe;\wctguard.exe;\wctsys.exe</Image>
           <Image condition="contains">\CTES\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Access Remote PC/RemotePC use detected" groupRelation="or">
@@ -3684,7 +3684,7 @@
           <Image condition="contains any">\laplink.exe;\laplinkeverywhere.exe;\llrcservice.exe;\serverproxyservice.exe;\OOSysAgent.exe;\tsircusr.exe;\OOLiveUpdate.exe;\SyspectrIcon.exe;\OOAdViewer.exe;\OOLiveUpdateWorker.exe;\Syspectr\;\OO Software\;laplink-everywhere-setup;oo-syspectr;\ServerProxy.exe;\Laplink\;\Laplink Everywhere\;\LLServerMain2.exe;\LLUpdateCheck.exe;\LLEventLog.exe;\Laplink Security Center.exe;\ILLSecurity.exe;\Laplink Gold\;\Llsched.exe</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Level use detected" groupRelation="or">
-          <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\osqueryi.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</Image>
+          <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Lite Manager use detected" groupRelation="or">
           <Image condition="contains any">\LMNoIpServer.exe;\ROMFUSClient.exe;\ROMServer.exe;\ROMViewer.exe;\LiteManager Pro – Viewer\;\LiteManager\;\LiteManager NoIpServer\;\LiteManager - Viewer\;\LiteManager Pro - Server\;\LiteManagerFree - Server\;\LiteManagerFree - Viewer\</Image>
@@ -4022,7 +4022,7 @@
     <RuleGroup name="group 1" groupRelation="or">
       <DriverLoad onmatch="include">
 	    <Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
-          <ImageLoaded condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe</ImageLoaded>
+          <ImageLoaded condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe;\CtHWiPrvService.exe;\AbtSvcHost_.exe;\CtRarSvc.exe;\wctguard.exe;\wctsys.exe</ImageLoaded>
           <ImageLoaded condition="contains">\CTES\</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Access Remote PC/RemotePC use detected" groupRelation="or">
@@ -4084,10 +4084,10 @@
           <ImageLoaded condition="contains">\Endpoint Basecamp\</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential BeAnyWhere/BeInSync/N-Able Advanced Monitoring Agent/N-ABLE Remote Access Software use detected" groupRelation="or">
-          <ImageLoaded condition="contains any">\basuptshelper.exe;\basupsrvcupdate.exe;\BASupApp.exe;\BASupSysInf.exe;\BASupAppSrvc.exe;\TakeControl.exe;\BASupAppElev.exe;\basupsrvc.exe;\BASupConHelper.exe;\BASupSrvcCnfg.exe;\BASupSrvcUpdater.exe;\BASupSysShell.exe;\winagent.exe;\BASEClient.exe;\BASupClpHlp.exe;\BASupClpPrg.exe;\BASupSysShell64.exe;\BASupUnElev.exe;\BAVideoChat.exe;\TCRmtShellAgent.exe;\TCDirectChat.exe;\TCLauncherHelper.exe;\TCRmtAudioHelper.exe;\BeinSync.exe;\BeInSyncServer.exe;\BeInSync_Setup_.exe;\BeInSync_Uninstall.EXE;\BeInSyncWeb.exe;\BeInSync_Toolbar_Setup.exe;\BeAnywhere Support Express\;\GetSupportService\;\BeInSync\;beinsync-</ImageLoaded>
+          <ImageLoaded condition="contains any">\basuptshelper.exe;\basupsrvcupdate.exe;\BASupApp.exe;\BASupSysInf.exe;\BASupAppSrvc.exe;\TakeControl.exe;\BASupAppElev.exe;\basupsrvc.exe;\BASupConHelper.exe;\BASupSrvcCnfg.exe;\BASupSrvcUpdater.exe;\BASupSysShell.exe;\winagent.exe;\BASEClient.exe;\BASupClpHlp.exe;\BASupClpPrg.exe;\BASupSysShell64.exe;\BASupUnElev.exe;\BAVideoChat.exe;\TCRmtShellAgent.exe;\TCDirectChat.exe;\TCLauncherHelper.exe;\TCRmtAudioHelper.exe;\BeinSync.exe;\BeInSyncServer.exe;\BeInSync_Setup_.exe;\BeInSync_Uninstall.EXE;\BeInSyncWeb.exe;\BeInSync_Toolbar_Setup.exe;\BeAnywhere Support Express\;\GetSupportService\;\BeInSync\;beinsync-;\BASupAppES.dll;\BAWHook.dll;\BASupAppIT.dll;\BASupSrvcEvnt.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential BeyondTrust(Bomgar) use detected" groupRelation="or">
-          <ImageLoaded condition="contains any">\bomgar-rep.exe;\bomgar-rdp.exe;\nsnetpush.exe;\bomgar-rep-installer.exe;\bomgar-rfb.exe;\bomgar-acc-installer.exe;\bomgar-acc.exe;\bomgar-cli.exe;\bomgar-scc.exe;\bomgar-pac.exe;\Bomgar\;\bomgar-rep\;bomgar-scc-;bomgar-pac-</ImageLoaded>
+          <ImageLoaded condition="contains any">\bomgar-rep.exe;\bomgar-rdp.exe;\nsnetpush.exe;\bomgar-rep-installer.exe;\bomgar-rfb.exe;\bomgar-acc-installer.exe;\bomgar-acc.exe;\bomgar-cli.exe;\bomgar-scc.exe;\bomgar-pac.exe;\Bomgar\;\bomgar-rep\;bomgar-scc-;bomgar-pac-;\cbhook-x64.dll;\cbhook-x86.dll;\sas.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Bitvise SSH Client/Bitvise SSH Server use detected" groupRelation="or">
           <ImageLoaded condition="contains any">\BvSshClient-Inst.exe;\BvSsh.exe;\BvEventSource.exe;\BvWinFspMgr.exe;\BscActCode.exe;\BvDump32.exe;\BvDump64.exe;\BvInputDiag.exe;\BvSshCtrl.exe;\BvSshUpdate.exe;\MstscTitle.exe;\sexec.exe;\sftpc.exe;\spksc.exe;\stermc.exe;\stnlc.exe;\totermc.exe;\totermw.exe;\BvSshServer-Inst.exe;\AgentForward.exe;\AgentForward32.exe;\BssCfg.exe;\BssCfgManip.exe;\BssCtrl.exe;\BssCtrlLauncher.exe;\BssStat.exe;\BvShell.exe;\BvSshServer.exe;\SfsServer.exe;\TelnetForward.exe;\bvPwd.exe;\bvRun.exe;\execs.exe;\toterms.exe;\bvtermc.exe;\Bitvise SSH Server\;\Bitvise SSH Client\;BvSshServer-;\BvWinFsp.sys</ImageLoaded>
@@ -4278,7 +4278,7 @@
           <ImageLoaded condition="contains any">\laplink.exe;\laplinkeverywhere.exe;\llrcservice.exe;\serverproxyservice.exe;\OOSysAgent.exe;\tsircusr.exe;\OOLiveUpdate.exe;\SyspectrIcon.exe;\OOAdViewer.exe;\OOLiveUpdateWorker.exe;\Syspectr\;\OO Software\;laplink-everywhere-setup;oo-syspectr;\ServerProxy.exe;\Laplink\;\Laplink Everywhere\;\LLServerMain2.exe;\LLUpdateCheck.exe;\LLEventLog.exe;\Laplink Security Center.exe;\ILLSecurity.exe;\Laplink Gold\;\Llsched.exe;\llusbflt.sys;\laplinkcable.sys</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Level use detected" groupRelation="or">
-          <ImageLoaded condition="contains any">\level-windows-amd64.exe;\level.exe;\osqueryi.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</ImageLoaded>
+          <ImageLoaded condition="contains any">\level-windows-amd64.exe;\level.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Lite Manager use detected" groupRelation="or">
           <ImageLoaded condition="contains any">\LMNoIpServer.exe;\ROMFUSClient.exe;\ROMServer.exe;\ROMViewer.exe;\LiteManager Pro – Viewer\;\LiteManager\;\LiteManager NoIpServer\;\LiteManager - Viewer\;\LiteManager Pro - Server\;\LiteManagerFree - Server\;\LiteManagerFree - Viewer\</ImageLoaded>
@@ -4618,8 +4618,9 @@
     <RuleGroup name="group1" groupRelation="or">
       <ImageLoad onmatch="include">
         <Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
-          <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe</Image>
+          <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe;\CtHWiPrvService.exe;\AbtSvcHost_.exe;\CtRarSvc.exe;\wctguard.exe;\wctsys.exe</Image>
           <Image condition="contains">\CTES\</Image>
+		  <ImageLoaded condition="contains any">\AbtCrypt.dll;\AbtFC.dll;\rpcnetp.dll;\wceprv.dll;\identprv.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Access Remote PC/RemotePC use detected" groupRelation="or">
           <Image condition="contains any">\RemotePCUIU.exe;\RemotePC.exe;\RPDUILaunch.exe;\RemotePCLauncher.exe;\RemotePCService.exe;\RemotePCPerformance.exe;\remotepchost.exe;\rpcsuite.exe;\RPCFTViewer.exe;\RPCFTHost.exe;\RPCProxyLatency.exe;\RPCCoreViewer.exe;\RemotePCDesktop.exe;\RPCGAE.exe;\RPCUtility.exe;\RPCDownloader.exe;\RPCPrintUninstall.exe;\ViewerHostKeyPopup.exe;\RPCPrinterSetup.exe;\RPCPrinterSetup_old.exe;\RPCFirewall.exe;\InstallRPCPrinterDriver.exe;\RPCPrintServer.exe;\RPCPrintServer_P.exe;\RemotePCBlackScreenApp.exe;\RemotePC1.exe;\RPCFireWallRule.exe;\RPCPrinterDownloader.exe;\RPCViewerHostKeyPopup.exe;\RPCClipboard.exe;\RemotePCShortcut.exe;\RemotePC\;Idrive.File-Transfer;idrive.RemotePCAgent</Image>
@@ -4641,12 +4642,14 @@
         <Rule name="Remote Admin Software - Potential AliWangWang-remote-control use detected" groupRelation="or">
           <Image condition="contains any">\alitask.exe;\AliIM_taobao.exe;\AliIM.exe;\Fixaliww.exe;\AliFileCheck.exe</Image>
           <Image condition="contains">\AliWangWang\</Image>
+		  <ImageLoaded condition="contains any">\npwangwang.dll;\npAliSSOLogin.dll;\AliIMX_64.dll;\AliIMSSOLogin.dll;\AliAuthSDK.dll;\AliOfflinePkgLoader.dll;\AliOfflinePkg.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Alpemix use detected" groupRelation="or">
           <Image condition="contains any">\AlpemixService.exe;\Alpemix.exe;\Alpemix.bin;\AlpemixSrvc\;\Alpemix\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Ammyy Admin use detected" groupRelation="or">
           <Image condition="contains any">\AMMYY_Admin.exe;\AA_v3.exe;\AA_v2.exe;\AA_v1.exe;\AMMYY\;\Ammyy Admin\</Image>
+		  <ImageLoaded condition="contains">aa_nts.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Any Support/LinkMeMine use detected" groupRelation="or">
           <Image condition="contains any">\ManualLauncher.exe;\KASSvcMgr.exe;\nSSDServer.exe;\KoinoSSServer.exe;\KoinoFTClient.exe;\nFTDClient.exe;\KoinoFTServer.exe;\nFTDServer.exe;\KoinoHost.exe;\KoinoASClient.exe;\setup_krp.exe;\AnySupport\;\Koino\;AnySupport;\LMMAgent.exe;\nSSDClient.exe;\LMMLgiMgr.exe</Image>
@@ -4654,6 +4657,7 @@
         <Rule name="Remote Admin Software - Potential AnyDesk use detected" groupRelation="or">
           <Image condition="image">AnyDesk.exe</Image>
           <Image condition="contains">\AnyDesk\</Image>
+		  <ImageLoaded condition="contains">\AnyDeskPrintDriverRenderFilter.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Anyplace Control/10 Strike Remote Access use detected" groupRelation="or">
           <Image condition="contains any">\apc_host.exe;\apc_admin.exe;\APC_HostConfig.exe;\10strike_host.exe;\hcs.exe;\Anyplace Control;\Remote Desktop Control;\10-Strike Remote Access\</Image>
@@ -4665,15 +4669,18 @@
         <Rule name="Remote Admin Software - Potential Aspia use detected" groupRelation="or">
           <Image condition="contains any">\aspia_client.exe;\aspia_console.exe;\aspia_desktop_agent.exe;\aspia_host.exe;\aspia_host_config.exe;\aspia_host_service.exe;\aspia_host_session.exe;\aspia_relay.exe;\r4wscreen_agent.exe;\r4wscreen_host.exe;\r4wscreen_hostservice.exe;\aspia_file_transfer_agent.exe</Image>
           <Image condition="contains">\Aspia\</Image>
+		  <ImageLoaded condition="contains">\aspia_host_core.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Atera use detected" groupRelation="or">
           <Image condition="contains any">\AteraAgent.exe;\AgentPackageNetworkDiscovery.exe;\AgentPackageTaskScheduler.exe;\atera_agent.exe;\syncrosetup.exe;\AlphaAgent.exe;\AgentPackageSTRemote.exe;\AgentPackageMonitoring.exe;\AgentPackageHeartbeat.exe;\AgentPackageFileExplorer.exe;\AgentPackageRunCommandInteractive.exe;\AgentPackageADRemote.exe;\AgentPackageAgentInformation.exe;\AgentPackageInternalPoller.exe;\AgentPackageMarketplace.exe;\AgentPackageOsUpdates.exe;\AgentPackageProgramManagement.exe;\AgentPackageRuntimeInstaller.exe;\AgentPackageSystemTools.exe;\AgentPackageTicketing.exe;\AgentPackageUpgradeAgent.exe;\ATERA Networks\;\AteraAgent\;\AgentPackageADRemote\;\AgentPackageAgentInformation\;\AgentPackageOsUpdates\;\AgentPackageProgramManagement\;\AgentPackageRuntimeInstaller\;\AgentPackageUpgradeAgent\</Image>
+		  <ImageLoaded condition="contains any">\Atera.AgentPackage.Common.dll;\Atera.AgentPackages.CommonLib.dll;\Atera.AgentPackages.ModelsV3.dll;\Atera.Utils.dll;\Atera.AgentCommunication.Models.dll;\Atera.AgentPackages.Security.dll;\Atera.AgentPackages.Exceptions.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Auvik use detected" groupRelation="or">
           <Image condition="contains any">\auvik.engine.exe;\auvik.agent.exe;\Auvik Installer.exe</Image>
         </Rule>
 		<Rule name="Remote Admin Software - Potential baramundi Management Suite use detected" groupRelation="or">
           <Image condition="contains any">\baramundi\;\bsag\;\bma\;\bma.exe;\ManagementAgent_setup.exe;ManagementAgent.aiui;\bCRScanner.exe;\BDPCmd.exe;\BDSRun.exe;\BFCRX.exe;\BMACmd.exe;\BMSTrayNotifier.exe;\bSessionHelper.exe;\bShutdown.exe;\bwumgr.exe;\clinvent.exe;\RemoteControlServer.exe;\ShutdownJobController.exe;\bCMScanner.exe</Image>
+		  <ImageLoaded condition="contains any">\baracmn.dll;\baramundiAutoLogOnProvider.dll;\bMACore.dll;\bMACoreCompat.dll;\BMADiskImaging.dll;\BMSTrayNotifierDLL.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Trend Micro Endpoint Basecamp use detected" groupRelation="or">
           <Image condition="image">EndpointBasecamp.exe</Image>
@@ -4694,6 +4701,7 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential CentraStage (Now Datto) use detected" groupRelation="or">
           <Image condition="contains any">\CagService.exe;\AEMAgent.exe;\CsExec.Service.exe;\AEMAgent\;\CentraStage\</Image>
+		  <ImageLoaded condition="contains">\WindowsAgent.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Centurion use detected" groupRelation="or">
           <Image condition="contains any">\ctiserv.exe;\CtiControlCenter.exe;\CTIUpdater.exe;\ctsrcmd.exe;\ctsrgui.exe;\ctsrsvc.exe;\ctsrvnc.exe;\Centurion Technologies\</Image>
@@ -4702,6 +4710,7 @@
         <Rule name="Remote Admin Software - Potential Chrome Remote Desktop/SSH Extension use detected" groupRelation="or">
           <Image condition="contains any">\remote_assistance_host.exe;\remote_assistance_host_uiaccess.exe;\remote_open_url.exe;\remote_security_key.exe;\remote_webauthn.exe;\remoting_crashpad_handler.exe;\remoting_desktop.exe;\remoting_host.exe;\remoting_native_messaging_host.exe;\remoting_start_host.exe;\remote_host.exe</Image>
           <Image condition="contains">\Chrome Remote Desktop\</Image>
+		  <ImageLoaded condition="contains">\remoting_core.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential CloudFlare Tunnel use detected" groupRelation="or">
           <Image condition="image">cloudflared.exe</Image>
@@ -4709,6 +4718,7 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential ConnectWise/ScreenConnect/Labtech/ITSupport247/247ithelp.com (ConnectWise) use detected" groupRelation="or">
           <Image condition="contains any">\ScreenConnect.ClientService.exe;\ScreenConnect.WindowsClient.exe;\screenconnect.guestclient.exe;\screenconnect.guestservice.exe;\screenconnect.hostclient.exe;\screenconnect.service.exe;\ScreenConnect.ClientSetup.exe;\ScreenConnect.Client.exe;\ScreenConnect.WindowsBackstageShell.exe;\ScreenConnect.WindowsFileManager.exe;\LTSVC.exe;\LTSvcMon.exe;\LTTray.exe;\LTSilent.exe;\LSR.exe;\labvnc.exe;\connectwisechat-customer.exe;\connectwisecontrol.client.exe;\Remote Workforce Client.exe;\RemoteWorkforceClientWpf.exe;\RemoteWorkforceClient.exe;\saazapsc.exe;\SAAZWatchDog.exe;\SAAZRemoteSupport.exe;\SAAZServerPlus.exe;\SAAZSvrClient.exe;\GetSaazUsage.exe;\SAAZDPMACTL.exe;\SAAZDefaultJobExe.exe;\SAAZJobDownload.exe;\SAAZKill.exe;\SaazRemote.exe;\VMWSaazClient.exe;\SAAZappr.exe;\SAAZapsc.exe;\zSaazAccess.exe;\SAAZScheduler.exe;\SAAZSrvCOM.exe;\SAAZSvcCtrl.exe;\elsinore technologies\;\LTSvc\;\SAAZOD\;connectwise;screenconnect</Image>
+		  <ImageLoaded condition="contains">\ScreenConnect.WindowsAuthenticationPackage.dll;\ScreenConnect.WindowsCredentialProvider.dll;\ScreenConnect.Core.dll;\ScreenConnect.Windows.dll;\ScreenConnect.ClientService.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential CrossLoop use detected" groupRelation="or">
           <Image condition="contains any">\CrossLoopService.exe;\CrossLoopConnect.exe;\WinVNCStub.exe;\CrossLoopSetup.exe;\CrossLoopUpdate.exe</Image>
@@ -4719,6 +4729,7 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential DameWare/Rdpview use detected" groupRelation="or">
           <Image condition="contains any">\dwrcs.exe;\DWRCST.exe;\DWMSICLN.exe;\dwdrvinst64.exe;\DWRCSMSI.exe;\dwrcc.exe;\dwmdsetup.exe;\DWRCINS.exe;\dwrccmd.exe;\dwrcw64.exe;\dwrtde.exe;\dwrccnvt.exe;\dwhlp.exe;\dwdrvinst.exe;\DameWare.LogAdjuster.exe;\DWRCSPC.exe;\DWRCSPX.exe;\DWMacDis.exe;\DNTUS26.exe;\DNTUCli.exe;\DWRCC.exe;\DWADEA.exe;\DWExporter.exe;\DNTUCnvt.exe;\DRS_St.exe;\DNTU.exe;\SWregInst.exe;\SolarWinds.Orion.MaintDateCheck.exe;\dwrcs\;SolarWinds-Dameware;DameWare Mini Remote Control;\DameWare Remote Support\;dntus</Image>
+		  <ImageLoaded condition="contains any">\DWRCSh.dll;\DWRCChat.dll;\DWRCK.dll;\DWRCRSS.dll;\DWRCSE.dll;\DWRCSET.dll;\DWSGRWRP.dll;\SolarWinds.Logging.dll;\SolarWinds.Orion.Common.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential DeskShare use detected" groupRelation="or">
           <Image condition="contains any">\TeamTaskManager.exe;\DSGuest.exe;\Team Task Manager.exe;\OpenFirewallPort.exe;\Team Task Manager\;\Deskshare\</Image>
@@ -4729,9 +4740,11 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential Dev Tunnels (aka Visual Studio Dev Tunnel) use detected" groupRelation="or">
           <Image condition="contains any">\devtunnel.exe;\devtunnel\;\DevTunnels\</Image>
+		  <ImageLoaded condition="contains any">\Microsoft.DevTunnels.Ssh.dll;\Microsoft.DevTunnels.Ssh.Tcp.dll;\Microsoft.DevTunnels.Contracts.dll;\Microsoft.DevTunnels.Management.dll;\Microsoft.DevTunnels.Connections.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Devolutions Remote Desktop Manager use detected" groupRelation="or">
           <Image condition="contains any">\RemoteDesktopManager.exe;\RemoteDesktopManager_x64.exe;\RemoteDesktopManager_ARM64.exe;\Devolutions\;\RemoteDesktopManagerFree\;\RemoteDesktopManager\;Remote Desktop Manager</Image>
+		  <ImageLoaded condition="contains any">\Devolutions.Utils.dll;\Devolutions.Windows.Utils.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Distant Desktop use detected" groupRelation="or">
           <Image condition="contains any">\ddsystem.exe;\dd.exe;\distant-desktop.exe;\ddserver.exe;\dd_update.exe</Image>
@@ -4745,10 +4758,12 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential Duplicati use detected" groupRelation="or">
           <Image condition="contains any">\Duplicati.Server.exe;\Duplicati.Service.exe;\Duplicati.WindowsService.exe;\duplicati.exe;\Duplicati.CommandLine.BackendTester.exe;\Duplicati.CommandLine.BackendTool.exe;\Duplicati.CommandLine.ConfigurationImporter.exe;\Duplicati.CommandLine.RecoveryTool.exe;\Duplicati.CommandLine.exe;\Duplicati.GUI.TrayIcon.exe;\Duplicati.Library.AutoUpdater.exe;\DuplicatiIcon.exe;\Duplicati 2\;Duplicati.GUI.;Duplicati.CommandLine.;Duplicati.Library.;duplicati.server.</Image>
+		  <ImageLoaded condition="contains any">\Duplicati.GUI.TrayIcon.dll;\Duplicati.GUI.TrayIcon.Implementation.dll;\Duplicati.Library.Interface.dll;\Duplicati.Library.Main.dll;\Duplicati.Library.Utility.dll;\Duplicati.Library.Common.dll;\Duplicati.Library.Logging.dll;\Duplicati.Library.Localization.dll;\Duplicati.Library.DynamicLoader.dll;\Duplicati.Library.Encryption.dll;\Duplicati.Library.Compression.dll;\Duplicati.Library.Crashlog.dll;\Duplicati.Library.UsageReporter.dll;\Duplicati.License.dll;\Duplicati.WebserverCore.dll;\Duplicati.Library.RestAPI.dll;\Duplicati.Server.Implementation.dll;\Duplicati.Server.Serialization.dll;\Duplicati.Library.RemoteControl.dll;\Duplicati.CommandLine.Implementation.dll;\Duplicati.Library.AutoUpdater.dll;...\Duplicati.Library.Backend.AliyunOSS.dll;\Duplicati.Library.Backend.AzureBlob.dll;\Duplicati.Library.Backend.Backblaze.dll;\Duplicati.Library.Backend.Box.dll;\Duplicati.Library.Backend.CloudFiles.dll;\Duplicati.Library.Backend.Dropbox.dll;\Duplicati.Library.Backend.FTP.dll;\Duplicati.Library.Backend.File.dll;\Duplicati.Library.Backend.GoogleServices.dll;\Duplicati.Library.Backend.Idrivee2.dll;\Duplicati.Library.Backend.Jottacloud.dll;\Duplicati.Library.Backend.Mega.dll;\Duplicati.Library.Backend.OneDrive.dll;\Duplicati.Library.Backend.OpenStack.dll;\Duplicati.Library.Backend.Rclone.dll;\Duplicati.Library.Backend.S3.dll;\Duplicati.Library.Backend.SSHv2.dll;\Duplicati.Library.Backend.SharePoint.dll;\Duplicati.Library.Backend.Sia.dll;\Duplicati.Library.Backend.Storj.dll;\Duplicati.Library.Backend.TahoeLAFS.dll;\Duplicati.Library.Backend.TencentCOS.dll;\Duplicati.Library.Backend.WEBDAV.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential DW Service use detected" groupRelation="or">
           <Image condition="contains any">\dwagsvc.exe;\dwagent.exe;\dwagsvc.exe;\dwaglnc.exe</Image>
           <Image condition="contains">\dwagent</Image>
+		  <ImageLoaded condition="contains any">\dwaggdi.dll;\dwaglib.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Echoware use detected" groupRelation="or">
           <Image condition="contains any">\Echogent\;\EchoVNC\;\EchoVNC Viewer\;\echoserver\;EchoVNC;echoserver</Image>
@@ -4759,18 +4774,21 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential Electric AI (Kaseya)/Kaseya VSA use detected" groupRelation="or">
           <Image condition="contains any">\KcsSetup.exe;\KAgentSilent.exe;\KaSetup.exe;\KaUsrTsk.exe;\AgentMon.exe;\Kaseya.AgentEndpoint.exe;\KDLLHost.exe;\KLicense.exe;\KaseyaEndpoint.exe;\KPrtPng.exe;\KaseyaTaskRunnerx64.exe;\KaseyaCommandShellProxy.exe;\KaseyaRemoteControlHost.exe;\KaseyaTaskRunnerx86.exe;\kGetELMg64.exe;\KaUpdHlp.exe;\KasAVSrv.exe;\LiveConnect.exe;\LogFileCleaner.exe;\kaseyaliveconnect.exe;\kaseya.adminendpoint.exe;\kaseya remote control.exe;\kaseya live connect\;\KaseyaLiveConnect\;\kaseya remote control\;\Kaseya\</Image>
+		  <ImageLoaded condition="contains any">\keventlog.dll;\logparser.dll;\kagentext.dll;\kdllhost.exe;\kawmi.dll;\kaseyasp.dll;\libkacm.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential EMCO Remote Console use detected" groupRelation="or">
           <Image condition="contains any">\remoteconsole.exe;\RemoteDeployment.exe;\RemoteInstallerProfessional.exe;\EMCO\Remote;\emco remote;\RemoteService.exe;\RemoteInstallerProfessionalServiceSetup.exe;\Remote Installer Professional\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Ericom AccessNow/Connect use detected" groupRelation="or">
           <Image condition="contains any">\accessserver.exe;\AccessServer32.exe;\EricomSecureGateway.exe;\EricomAuthenticationServer.exe;\ANFileTransfer.exe;\Blaze.exe;\PtLoadBalancerAgent.exe;\PtTSAgent.exe;\TsRemoteBrowser.exe;\ericomconnnectconfigurationtool.exe;\Ericom Software\;\Ericom Access Server\;\Ericom AccessNow Web Component\;EricomConnectRemoteHost</Image>
+		  <ImageLoaded condition="contains any">\AccessServerAccelerator32.dll;\AuthenticationServerContracts.dll;\EricomAuthenticationService.dll;\LiteAuthenticationContracts.dll;\EriCommon.dll;\EricomBlaze.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential ESET Remote Administrator use detected" groupRelation="or">
           <Image condition="contains any">\era.exe;\einstaller.exe;\eratool.exe;\ERAAgent.exe;\esetup.exe;\ESET Remote Administrator\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential ExtraPuTTY use detected" groupRelation="or">
           <Image condition="contains any">\ExtraPutty_CSharp.exe;\extraputty_vbNet.exe;\ExtraPuTTY_VB6_Sample.exe;\PuTTYcmdSender.exe;\ExtraPuTTY\;ExtraPuTTY;ExtraPuTTYUninstall</Image>
+		  <ImageLoaded condition="contains">\ExtraPuTTY.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential ezHelp use detected" groupRelation="or">
           <Image condition="contains any">\ezHelpClientManager.exe;\ezHelpManager.exe;\ezhelpclient.exe;\ezHelpDownloader.exe;\ezHelpServer.exe;\ezHelpServerLauncher.exe;\ezhelp;\RemoteUtil.exe;\ezhelpChatAgent.exe;\ezHelpViewer.exe;\ezhelp\;\ezRemote\;\ezRemoteServer.exe;\ezRemoteServerLauncher.exe;\ezRemoteServerUpdater.exe;\ezRemoteServerSetup.exe;\ezRemoteViewerLauncher.exe;\ezRemoteViewerUpdater.exe;\ezRemoteViewerSetup.exe;\ezRemoteViewer.exe;\ezChat\;\ezChatAgent.exe;\ezChatUpdater.exe;\ezChatAgentSetup.exe;\ezhelpsetup.exe</Image>
@@ -4787,12 +4805,15 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential FreeNX/NoMachine use detected" groupRelation="or">
           <Image condition="contains any">\nxserver.exe;\nxservice64.exe;\nxdisplay.exe;\nxfsd.exe;\nxservice.exe;\nxdeviced32.exe;\nxdeviced64.exe;\nxusbd32.exe;\nxusbd64.exe;\nxd.exe;\nxservice32.exe;\NoMachine\;\nxserver\;\nxhtd\;\NoMachine Enterprise Client\;\nxlsa\</Image>
+		  <ImageLoaded condition="contains any">\nxlsa.dll;\libnxlp64.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential FreeRDP use detected" groupRelation="or">
           <Image condition="contains any">\freerdp-proxy.exe;\sdl2-freerdp.exe;\sdl3-freerdp.exe;\sfreerdp-server.exe;\wfreerdp.exe</Image>
+		  <ImageLoaded condition="contains any">\libfreerdp3.dll;\libfreerdp-client3.dll;\libfreerdp-server3.dll;\libfreerdp-server-proxy3.dll;\libwfreerdp-client3.dll;\wfreerdp.dll;\libwfreerdp-server3.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential GatherPlace-desktop sharing use detected" groupRelation="or">
           <Image condition="contains any">\gp3.exe;\gp4.exe;\gp5.exe;\GatherWorks\;\OmniView;\gp5\;\gp4\;\gp3\</Image>
+		  <ImageLoaded condition="contains any">\omniview.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential GetScreen use detected" groupRelation="or">
           <Image condition="image">getscreen.exe</Image>
@@ -4810,6 +4831,7 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential Goverlan use detected" groupRelation="or">
           <Image condition="contains any">\Goverrmc.exe;\GovAgentInstallHelper.exe;\GovAgentx64.exe;\GovReachClient.exe;\GovSrv.exe;\GoverlanAgent;\Goverlan.exe;\gcsclienttester.exe;\GovAgent.exe;\GovReachGatewayServer.exe;\GovReachServer.exe;\GovReachServerUI.exe;\GovScopeActionWorker.exe;\GovSrv32b64.exe;\GovSrv64b32.exe;\GovTools.exe;\GovUtility.exe;\GoverRMS.exe;\GovSrvUI.exe;\GoverRMC.exe;\Proxy32a64.exe;\GovCmdLine.exe;\Goverlan Inc\;\GOVsrv\;govsrv;\GoverlanAgent\</Image>
+		  <ImageLoaded condition="contains any">\GovWinEventLog.dll;\GovWinEventLog64.DLL;\GovBase.dll;\GovBaseUI.dll;\GovCentralClient.dll;\Govcmn.dll;\GovLicensingManagerUI.dll;\GovRMCHook.dll;\GovRMHook.dll;\GovRMHook64.dll;\GovServiceDesk.dll;\GovTalkClt.dll;\GovUIExt.dll;\GovUIrtai.dll;\GovUIsai.dll;\GovUIsdesk.dll;\GovVisualTheme.dll;\GovWmiUI.dll;\GlobalPolicyProviderManager.dll;\GovSSHViewer.dll;\GovVncViewer.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential HelpBeam use detected" groupRelation="or">
           <Image condition="contains">helpbeam</Image>
@@ -4817,22 +4839,27 @@
         <Rule name="Remote Admin Software - Potential HelpU use detected" groupRelation="or">
           <Image condition="contains any">\HelpU_Install.exe;\HelpuUpdater.exe;\HelpuManager.exe;\KChatMonitor.exe;\HelpuSendScreen.exe;\HelpuShareServer.exe;\HelpuImageViewer.exe;\HelpuRecorder.exe;\HelpuViewer.exe;\HelpuShareClient.exe;\HelpuSoundClient.exe;\HelpuMobileViewer.exe;\HelpuShareServerMAC.exe;\HelpuViewerMAC.exe;\HelpuRecorderV.exe;\helpuhostsvr.exe;\helpuchat.exe;\helpurecvscreen.exe;\HelpULauncher.exe;\helpulauncherd.exe;\HelpuServer.exe</Image>
           <Image condition="contains">\HelpU\</Image>
+		  <ImageLoaded condition="contains any">\HelpuHook.dll;\HelpuFTClient.dll;\HelpuFTServer.dll;\HostLib1.dll;\Helpuch.dll;\HelpuAudioChat.dll;\HelpUX.ocx</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential HopToDesk use detected" groupRelation="or">
           <Image condition="contains any">\HopToDesk\;\HopToDesk.exe;\privacyhelper.exe;\RuntimeBroker_hoptodesk.exe</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential I'm InTouch use detected" groupRelation="or">
           <Image condition="contains any">\iit.exe;\intouch.exe;\I'm InTouch Go Installer.exe;\ITPub.exe;\InTouch\;\InTouchDemos\;\ArchestrA\;\Rdesktop.exe;\OEREMOTE.EXE;\01Updt.exe;\01 Com\;01filesys.exe;\iit_log.exe;\I'm InTouch\;\InTouch Applications\;\Nativeintouch.exe;\ITSelectAndLaunch.exe;\InTouchConsole.exe;\InTouchHelper.exe;\ITHistoryFileSvc.exe;\InTouchAccessAnywhereService.exe;\InTouchWeb.Host.exe</Image>
+		  <ImageLoaded condition="contains any">\ItCommonUI.dll;\itargs.dll;\intconf.dll;\ArchestrA.IntouchInterop.dll;\ArchestrA.Visualization.IntouchDataProvider.dll;\ArchestrA.Visualization.MxDataProvider.dll;\ArchestrA.Visualization.GPI.GPICalculator.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Impero Connect use detected" groupRelation="or">
           <Image condition="contains any">\ImperoWinlogonApplication.exe;\ImperoConsoleShortcut.exe;\ImperoServerBrowser.exe;\ImperoUpdatePackage.exe;\ImperoOfflineExam.exe;\ImperoRemoteDeploy.exe;\ImperoClientSVC.exe;\ImperoUtilities.exe;\ImperoGuardianSVC.exe;\imperoclient.exe;\ImperoKInit.exe;\ImperoAnnotate.exe;\ImperoAudioServer.exe;\ImperoAudioServer-GUI.exe;\ImperoCloseHandles.exe;\ImperoDevConx64.exe;\ImperoDevConx86.exe;\ImperoDotNet2Installer.exe;\ImperoServer.exe;\ImperoServerSVC.exe;\Impero Client\;\Impero Solutions Ltd\;\Impero\;\EducationPro\;\ImperoAutoUpdate.exe;\ImperoUpdatePackage.exe;\ImperoUpdatePackageNew.exe</Image>
+		  <ImageLoaded condition="contains any">\ImperoControlLibrary.dll;\NRControlViewer.dll;\ImperoCredentialProvider_32.dll;\ImperoCredentialProvider_64.dll;Interop.NRControlViewerLib.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Instant Housecall use detected" groupRelation="or">
           <Image condition="contains any">\hsloader.exe;\InstantHousecall.exe;\ihcserver.exe;\Specialist Sign-in.exe</Image>
           <Image condition="contains">\Instant Housecall\</Image>
+		  <ImageLoaded condition="contains any">\instanthousecall.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Insync use detected" groupRelation="or">
           <Image condition="contains any">\Insync.exe;\InsyncCreateLink.exe;\Insync-cef.exe;\Insync\;\inSyncAgent.exe;\inSyncCPHwnet64.exe;\inSyncUSyncer.exe;\inSyncUpgrade.exe;\inSyncDataplane.exe;\Druva\;\inSync4\</Image>
+		  <ImageLoaded condition="contains any">\InsyncShellExtensions64.dll;\InsyncShellExtensions.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential IntelliAdmin Remote Control use detected" groupRelation="or">
           <Image condition="contains any">\iadmin.exe;\IntelliAdmin.exe;\Agent32.exe;\Agent64.exe;\agent_setup_5.exe;\AgentBuild.exe;\AgentSettings.exe;\AgentSetupWizard.exe;\AgentTray.exe;\AgentUninstall.exe</Image>
@@ -4846,18 +4873,22 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential Itarian/Comodo RMM use detected" groupRelation="or">
           <Image condition="contains any">\ITSMAgent.exe;\RViewer.exe;\ItsmRsp.exe;\RAccess.exe;\RmmService.exe;\ITarianRemoteAccessSetup.exe;\RDesktop.exe;\ComodoRemoteControl.exe;\ITSMService.exe;\RHost.exe;\itarian.exe;\RemoteControlSetup.exe;\CViewer.exe;\RControl.exe;\ITarian\;\COMODO\Endpoint Manager\;\Comodo ITSM\</Image>
+		  <ImageLoaded condition="contains any">\RCore.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Ivanti Remote Control/Landesk use detected" groupRelation="or">
           <Image condition="contains any">\IvantiRemoteControl.exe;\AddNetWareSC.exe;\ArcUI.exe;\AgentlessRC.exe;\ArcUser.exe;\ARViewer.exe;\issuser.exe;\ircproxy.exe;\isscntr.exe;\issproxy.exe;\issftran64helper.exe;\landeskagentbootstrap.exe;\LANDeskPortalManager.exe;\ldinv32.exe;\ldsensors.exe;\softmon.exe;\tmcsvc.exe;\rcgui.exe;\rchelper.exe;\rckvm.exe;\RCUser.exe;\ldReboot.exe;\ldinv32o.exe;\ldiscn32.exe;\lddiscover.exe;\ldsecsvc.exe;\LDUrlMonInject64.exe;\LTAClientEnforcer.exe;\sdmsvc.exe;\LDAPWhoAmI.exe;\LDCMD32.EXE;\LDCSTM32.EXE;\LDEVTVWR.EXE;\ldiscnupdate.exe;\Loader64.exe;\lddetectsystem.exe;\LDWFMgr.exe;\lddevcon.exe;\ldpgp.exe;\RCViewer\;\LDWM\;\ldlogon\;\LANDesk\;\LDClient\</Image>
+		  <ImageLoaded condition="contains any">\remotecontrol.dll;\RemoteControlLogging.dll;\issview.dll;\issinfo.dll;\isshook.dll;\issrboot.dll;\isschat.dll;\issclip.dll;\isscert.dll;\isssec.dll;\isstnmp.dll;\isstnmp64.dll;\issftcon.dll;\issftcon64.dll;\issftran.dll;\issftran64.dll;\chsitnmp64.dll;\chsitran64.dll;\deuttyctrl.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Jump Cloud/Jump Desktop use detected" groupRelation="or">
           <Image condition="contains any">\JumpCloud Remote Assist.exe;\jumpcloud-assist-service.exe;\JumpCloudRemoteAssistInstaller.exe;\desktop-change-listener.exe;\JumpClient.exe;\JumpDesktop.exe;\jumpservice.exe;\jumpconnect.exe;\jumpupdater.exe;\JumpDesktopUpdater.exe;\Uninstall JumpCloud Remote Assist.exe;\Phase Five Systems\;\JumpCloud Remote Assist\;\JumpCloud\;\Jump Desktop</Image>
+		  <ImageLoaded condition="contains any">\JumpCommon.dll;\JumpNetwork.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Kabuto/Syncro/RepairTech/Servably use detected" groupRelation="or">
           <Image condition="contains any">\kabuto_updater.exe;\Kabuto_old.exe;\Syncro.Installer.exe;\Syncro.Overmind.Service.exe;\Kabuto.Installer.exe;\Syncro\;\RepairTech\;\kabuto\;Kabuto.Agent.;Kabuto.App.;Kabuto.Live.;Kabuto.Service.;Kabuto.Tools.;Kabuto.Uninstaller.;Kabuto.WindowsInput.;Syncro.App.;Syncro.Live.;Syncro.Service.;Syncro.Tools.;Syncro.Uninstaller.;SyncroLive.Agent.;SyncroLive.Service.;SyncroLive.WindowsInput.</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential KHelpDesk use detected" groupRelation="or">
           <Image condition="contains any">\KHelpDesk.exe;\KHelpDeskClip.exe;\KHelpDesk\;\KHelpDesk_Service.exe;\SetupKHelpDesk.exe;\mkmHelpDesk.exe</Image>
+		  <ImageLoaded condition="contains any">\khelpdeskres.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential KickIdler use detected" groupRelation="or">
           <Image condition="image">viewer.exe</Image>
@@ -4871,9 +4902,10 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential Laplink Everywhere/Laplink Gold/Syspectr use detected" groupRelation="or">
           <Image condition="contains any">\laplink.exe;\laplinkeverywhere.exe;\llrcservice.exe;\serverproxyservice.exe;\OOSysAgent.exe;\tsircusr.exe;\OOLiveUpdate.exe;\SyspectrIcon.exe;\OOAdViewer.exe;\OOLiveUpdateWorker.exe;\Syspectr\;\OO Software\;laplink-everywhere-setup;oo-syspectr;\ServerProxy.exe;\Laplink\;\Laplink Everywhere\;\LLServerMain2.exe;\LLUpdateCheck.exe;\LLEventLog.exe;\Laplink Security Center.exe;\ILLSecurity.exe;\Laplink Gold\;\Llsched.exe</Image>
+		  <ImageLoaded condition="contains any">\LLEventLogps.dll;\LLFileTransfer.dll;\LLHelp.dll;\LLHttpClient.dll;\LLMapi.dll;\LLReg.dll;\LLServerMain2ps.dll;\LLSmtpClient.dll;\LLTrack.dll;\OOSysAssemblyLoader.dll;\OOSysBaseModule.dll;\OOSysBootstrapper.dll;\OOSysBootstrapper.XmlSerializers.dll;\OOSysBranding.dll;\OOSysEngine.dll;\OOSysEngine.XmlSerializers.dll;\OOSysEngineBase.dll;\OOSysSharedTools.dll;\OOSysUtils.dll;\OOSysSupport.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Level use detected" groupRelation="or">
-          <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\osqueryi.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</Image>
+          <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Lite Manager use detected" groupRelation="or">
           <Image condition="contains any">\LMNoIpServer.exe;\ROMFUSClient.exe;\ROMServer.exe;\ROMViewer.exe;\LiteManager Pro – Viewer\;\LiteManager\;\LiteManager NoIpServer\;\LiteManager - Viewer\;\LiteManager Pro - Server\;\LiteManagerFree - Server\;\LiteManagerFree - Viewer\</Image>
@@ -4891,6 +4923,7 @@
         <Rule name="Remote Admin Software - Potential Windows RDP use detected" groupRelation="or">
           <Image condition="contains any">\mstsc.exe;\termsrv.exe;\rdpclip.exe</Image>
           <Image condition="contains">Microsoft Remote Desktop</Image>
+		  <ImageLoaded condition="contains any">\mstscax.dll;\termsrv.dll;\rdpcorets.dll;\Tsharedd.dll;\Rdpudd.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential BeamYourScreen/Mikogo use detected" groupRelation="or">
           <Image condition="contains any">\mikogo.exe;\mikogo-starter.exe;\mikogo-service.exe;\mikogolauncher.exe;\Mikogo-Screen-Service.exe;\Mikogo-Host.exe;\M4-Capture.exe;\M4-Service.exe;\B-Capture.exe;\B-Service.exe;\Mikogo-video.exe;\beamyourscreen.exe;\BYS_Setup.exe;\beamyourscreen-host.exe;\mikogo_setup.exe;\BeamYourScreen;\Mikogo</Image>
@@ -4903,12 +4936,15 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential Mouse Without Borders use detected" groupRelation="or">
           <Image condition="contains any">\MouseWithoutBordersHelper.exe;\MouseWithoutBorders.exe;\MouseWithoutBordersSvc.exe;\Mouse without Borders\;\Mouse without Borders - SAW\;\MouseWithoutBorders\;PowerToys.MouseWithoutBordersService.exe</Image>
+		  <ImageLoaded condition="contains any">\PowerToys.MouseWithoutBorders.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential mRemoteNG use detected" groupRelation="or">
           <Image condition="contains any">\mRemoteNG.exe;\mremoteng-portable.exe;\mremoteng\;\mremoteng-portable\</Image>
+		  <ImageLoaded condition="contains any">\mRemoteNG.resources.DLL</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential MSP360 use detected" groupRelation="or">
           <Image condition="contains any">\Online Backup.exe;\CBBackupPlan.exe;\Cloud.Backup.Scheduler.exe;\Cloud.Backup.RM.Service.exe;\cbb.exe;\CloudRaService.exe;\CloudRaSd.exe;\CloudRaCmd.exe;\CloudRaUtilities.exe;\Remote Desktop.exe;\Quick Restore.exe;\Cloud.DiskImage.Flash.Launcher.exe;\Cloud.DiskImage.RestoreVerificationService.exe;\CloudBerry Online Backup Service.exe;\Cloud.Backup.ConsoleWPF.exe;\Quick Restore\;\MSP360\;\CloudBerry Online Backup\;\CloudBerry Backup\;\CloudBerry Backup Server Edition\;\Online Backup\;\CloudBerry Remote Assistant\;\Remote Desktop\</Image>
+		  <ImageLoaded condition="contains any">\mRemoteNG.resources.DLL</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential MyGreenPC use detected" groupRelation="or">
           <Image condition="contains any">\MyGreenPC;\mygreenpc.exe;\greenpcsvc.exe;\greenpc.exe;\GreenPCSetup.exe;\mygreenpc\;MyGreenPC</Image>
@@ -4918,18 +4954,22 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential Naverisk/Splashtop/Splashtop Beta/Splashtop Remote use detected" groupRelation="or">
           <Image condition="contains any">\RMM_Client.exe;\strwinclt.exe;\SRUpdateAPI.exe;\SRUpdate.exe;\strwinchat.exe;\strwincmpt.exe;\strwinfile.exe;\SSU_Clean.exe;\SRWebview.exe;\SRServer.exe;\SplashtopSOS.exe;\SRManager.exe;\sragent.exe;\srservice.exe;\SRAuto.exe;\clientoobe.exe;\SRMsg.exe;\SRFeatureSOS.exe;\SRFeatureSOSNOUIA.exe;\SRFeatureSOSUIA.exe;\SRManagerSOS.exe;\strwinsession.exe;\ClientUtil.exe;\PreVerCheck.exe;\PinShortCut.exe;\spupnp.exe;\SRAppBS.exe;\SRDetect.exe;\SRFeature.exe;\SRFLauncher.exe;\SRSelfSignCertUtil.exe;\SRSendLog.exe;\SRSOOBE.exe;\SRUACCheck.exe;\SRUpdateInstall.exe;\SRUtility.exe;\SRChat.exe;\STCSSU.exe;\STCActivate.exe;\STCAgent.exe;\STCHelper.exe;\STCSE.exe;\SRFeatureFF.exe;\SRServerFF.exe;\SRServiceFF.exe;\SRSOOBEFF.exe;\SRUpdateFF.exe;\SRUpdateInstallFF.exe;\SSUService.exe;\SRUnPackFile.exe;\SRMergeFile.exe;\BdEpSDK.exe;\BdEpSDK_x86.exe;\SRUsb.exe;\Splashtop Remote\;\Splashtop\;\Client for RMM\;AgentSetup-;Splashtop_for_RMM_Win_;Splashtop_Streamer_Windows</Image>
+		  <ImageLoaded condition="contains any">\hotkeyproc.dll;\SSUClient.dll;\SSUAPI.dll;\SRDxgiCaptor.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential NetLock RMM use detected" groupRelation="or">
           <Image condition="contains any">\NetLock_RMM_Agent_Installer.exe;\NetLock_RMM_User_UAC.exe;\NetLock_RMM_User_Process.exe;\NetLock RMM\;\0x101 Cyber Security\;NetLock_RMM_Agent</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Netop/Netop Remote Control (aka Impero Connect) use detected" groupRelation="or">
           <Image condition="contains any">\nhostsvc.exe;\nhstw32.exe;\nldrw32.exe;\rmserverconsolemediator.exe;\ngstw32.exe;\Netop Ondemand.exe;\ImperoInit.exe;\ImperoClientSVC.exe;\nowutil.exe;\nupdate.exe;\nutil32b.exe;\Disaero.exe;\nShell.exe;\showgst.exe;\showhost.exe;\vitawrap.exe;\classmanager.exe;\moview.exe;\nastw32.exe;\nldrsw32.exe;\nstdw32.exe;\PacknDeploy.exe;\ntchw32.exe;\ImperoWinlogonApplication.exe;\ImperoConsoleShortcut.exe;\ImperoServerBrowser.exe;\ImperoUpdatePackage.exe;\ImperoOfflineExam.exe;\ImperoRemoteDeploy.exe;\ImperoUtilities.exe;\ImperoGuardianSVC.exe;\imperoclient.exe;\ImperoKInit.exe;\ImperoAnnotate.exe;\ImperoAudioServer-GUI.exe;\ImperoCloseHandles.exe;\ImperoDevConx64.exe;\ImperoDevConx86.exe;\ImperoDotNet2Installer.exe;\ImperoServer.exe;\ImperoServerSVC.exe;\ImperoDotnetInstaller\;\Impero Client\;\Impero Solutions Ltd\;\Netop School\;\Netop\;\Danware Data\;\NetOp Packn Deploy\;\Netop Remote Control\;\NetOpPortable\;Connect.Backdrop.cloud</Image>
+		  <ImageLoaded condition="contains any">\dtlnt.dll;\DwImageLib.Dll;\DwInputHook.DLL;\dwregion.dll;\dwutil.dll;\dwwinfct.dll;\lnggst32.dll;\nfmnt.dll;\nhostntd.dll;\NHOSTNTR.DLL;\npidl.dll;\dwutilfw.dll;\dwUtilSC.dll;\iamt-inventory.dll;\nrp.dll;\RMServer.Snapins.dll;\RMServerXP.dll;\nupdate.dll;\nddhgstn.dll;\ImperoControlLibrary.dll;\ImperoCommon.dll;\ImperoInventory.dll;\ImperoSoftwareLicencing.dll;\ImperoV3BHO.dll;\ImperoInj32.dll;\ImperoInj64.dll;\ExamControl.dll;\ExamData.dll;\ExamDll.dll;\ClientExam.dll;\ImperoInventory.XmlSerializers.dll;\ExamDll.XmlSerializers.dll;\AxInterop.NRControlViewerLib.dll;\AxInterop.PBRecordingLib.dll;\NRControlViewerLib.dll;\NRBridgeUpdater.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential NetSupport Manager/CrossTec Remote Control use detected" groupRelation="or">
           <Image condition="contains any">\pcictlui.exe;\pcicfgui.exe;\client32.exe;\NSConnSvrUI.exe;\pcinssui.exe;\winst64.exe;\nsmexec.exe;\remcmdstub.exe;\pcicfgui_client.exe;\IsMetro.exe;\NSToast.exe;\NSClient32UI.exe;\nspowershell.exe;\NSClientTB.exe;\supporttool.exe;\PCILIC.EXE;\PCIGWCfg.exe;\nsmadmin.exe;\nsdevcon64.exe;\NSSilence.exe;\pcivideovi.exe;\pcinsscd.exe;\StudentUI.exe;\pciscrui.exe;\PCISA.EXE;\pcirisvrhelper.exe;\pcideply.exe;\pcirisvr.exe;\clientRestarter.exe;\PCIVideo.exe;\DBI.EXE;\pciconn.exe;\NSL\;\NetSupport\;\NetSupport Manager\</Image>
+		  <ImageLoaded condition="contains any">\PCICL32.DLL;\pcicapi.dll;\PCICHEK.DLL;\TCCTL32.DLL;\HTCTL32.DLL;\gdihook5.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Neturo use detected" groupRelation="or">
           <Image condition="contains any">\ntrNTService.exe;\neturo.exe;\neturo_setup.exe;\Neturo7.exe;\nSSDServer.exe;\nFTDServer.exe;\LGU+\;\Neturo\;Neturo</Image>
+		  <ImageLoaded condition="contains any">\LibNeturo1.dll;\LibNeturo2.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential ngrok use detected" groupRelation="or">
           <Image condition="image">ngrok.exe</Image>
@@ -4940,15 +4980,18 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential NordLocker use detected" groupRelation="or">
           <Image condition="contains any">\NordLockerSetup_x64.exe;\NordUpdaterSetup.exe;\NordUpdateService.exe;\NordLocker.exe;\NordLockerApp.exe;\NordUpdaterServiceLauncher.exe;\deldirrpa.exe;\NordLocker\;\NordUpdater\</Image>
+		  <ImageLoaded condition="contains any">\Nord.Common.dll;\UpdaterWindowsService.dll;\Nord.Logging.Abstractions.dll;\Nord.Logging.dll;\NordSecurity.Communication.Ipc.Annotations.dll;\NordSecurity.Communication.Ipc.Core.dll;\NordSecurity.Communication.UpdateService.dll;\NordSecurity.Grpc.NamedPipes.dll;\NordSecurity.Liberation.Configuration.dll;\NordSecurity.Liberation.OS.dll;\NordSecurity.SecureData.dll;\NordLocker.Encryption.dll;\NordLocker.FileBrowser.dll;\NordLocker.Analytics.dll;\NordLocker.dll;\NordLocker.resources.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential NoteOn-desktop sharing use detected" groupRelation="or">
           <Image condition="contains any">\NateOn.exe;\NateOnMain.exe;\NSMSetup.exe;\NATEON70_INSTALL.exe;\NateOnRunUser.exe;\NateOnUpgrader.exe;\NVC.exe;\NSM_uninst.exe;\NATEON70.exe;\NATEON2.exe;\NATEON3.exe;\NATEONSETUP\;\SK Communications\;\NATEON\</Image>
+		  <ImageLoaded condition="contains any">\NateonDownloadManager.ocx;\NateMessengerApiActiveX.dll;\NateOnResDLL_KOR.dll;\libNateSkin.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential NTR Remote use detected" groupRelation="or">
           <Image condition="contains any">\ntrelevated.exe;\NTRsupport.exe;\installablerc.exe;\ntrcloud.exe;\NTRsupportPro_EN.exe;\NTRglobal.exe;\NTR global\;\NTR Cloud\;\ntr\;\NTRsupport Installable RC\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential OCS inventory use detected" groupRelation="or">
           <Image condition="contains any">\OCSInventory.exe;\OcsService.exe;\OcsSnmp.exe;\OcsSystray.exe;\OcsSetup.exe;\OcsNotifyUser.exe;\OCS Inventory Agent\;\OCS-NG-Windows-Agent-Setup.exe;\OCS-Windows-Agent-Setup-x64.exe</Image>
+		  <ImageLoaded condition="contains any">\OCSInventory Front.dll;\OcsWmi.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Onionshare use detected" groupRelation="or">
           <Image condition="contains any">\onionshare-cli.exe;\onionshare.exe;\OnionShare\;\onionshare-gui.exe</Image>
@@ -4961,6 +5004,7 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential Parallels Access use detected" groupRelation="or">
           <Image condition="contains any">\TSClient.exe;\prl_deskctl_agent.exe;\prl_pm_service.exe;\ParallelsClient.exe;\APPServerClient.exe;\TUXCredProv.exe;\TuxWinClientService.exe;\2XClientScan.exe;\2xKOff.exe;\RDPServerShell.exe;\RASEdgeBrowser.exe;\AppServerClientCLI.exe;\2XKickOff.exe;\RDPServe.exe;\WTSClient.exe;\RASClient_Basic-x64.exe;\2XFontsInstall.exe;\Parallels\;\ParallelsClient\;parallelsaccess-</Image>
+		  <ImageLoaded condition="contains any">\2xapplist.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Parsec use detected" groupRelation="or">
           <Image condition="contains any">\parsecd.exe;\pservice.exe;\parsec.exe;\Parsec\;parsec-windows;\parsec-vud.exe;\parsec-vdd.exe</Image>
@@ -4968,9 +5012,11 @@
         <Rule name="Remote Admin Software - Potential Symantec pcAnywhere use detected" groupRelation="or">
           <Image condition="contains any">\awhost32.exe;\awrem32.exe;\pcaquickconnect.exe;\Winaw32.exe;\MachKey.exe;\CERTCONS.EXE;\pca_run.exe;\AWHPROBE.EXE;\STOPHOST.EXE;\SLAUNCH.exe;\awshim.exe;\pcamgt.exe;\awras32.exe;\AwInvite.exe;\awFileMgr.exe</Image>
           <Image condition="contains">\pcAnywhere\</Image>
+		  <ImageLoaded condition="contains any">\PCANotify.dll;\aw32capi.dll;\aw32nb.dll;\aw32prn.dll;\aw32ser.dll;\aw32spx.dll;\aw32tcp.dll;\awcfgmgr.dll;\awcm32.dll;\awconn32.dll;\awcp.dll;\awds32.dll;\awdsp32.dll;\awses32.dll;\awses32resources.dll;\awhlogon.dll;\awhpilot.dll;\awrpilot.dll;\awhseq.dll;\awgui32.dll;\awchat.dll;\awterm32.dll;\awtime32.dll;\awplay32.dll;\awplay32resources.dll;\awxfer.dll;\awxferui.dll;\awwiz32.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Webex Pcnow use detected" groupRelation="or">
           <Image condition="contains any">\mwcliun.exe;\pcnmgr.exe;\webexpcnow.exe;\atcliun.exe;\atinst.exe;\atscmgr.exe;\atStart.exe</Image>
+		  <ImageLoaded condition="contains any">\aasetup.dll;\atgpcdec.dll;\atgpcext.dll;\ieatgpc.dll;\ataactrl.dll;\atmccli.dll;\atgpcexe.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Pcvisit use detected" groupRelation="or">
           <Image condition="contains any">\pcvisit.exe;\pcvisit_client.exe;\pcvisit-easysupport.exe;\pcvisit_service_client.exe;\pcvisit_basicsupport_gast.exe;\pcvisit_basicsupport_gastgeber.exe;\caloa_app.exe;\pcvisit_Supporter-Modul_Setup_SJ.exe;\pcvisitSupportJournal.exe;\pcvisit_Remote-Host_Setup.exe;\pcvdisplayserver.exe;\pcvisit_km_starter.exe;\pcvisit_Kunden-Modul.exe;\pcvisit Support\;\pcvisit software ag\;\pcvisit basicsupport plus\;\pcvisit remote-host\;\pcvisit RemoteHost\;\pcvisit SupportJournal\</Image>
@@ -4983,6 +5029,7 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential Pocket Cloud (Wyse)/Pocket Controller/Pocket Controller (Soti Xsight) use detected" groupRelation="or">
           <Image condition="contains any">\PocketCloudService.exe;\PocketController.exe;\wysebrowser.exe;\XSightService.exe;\WyseBrowser.exe;\VNCInstallHelper.exe;\pocketcontroller_bb.exe;\WyseRemoteAccess.exe;\PocketCloudDesktopApp.exe;\XSightAgent.exe;\Soti.MobiControl.TunnelService.Host.exe;\Soti.XSight.Agent.Service.exe;\Soti.XSight.Hosting.Console.exe;\Soti.XSight.Hosting.Service.exe;\Soti.XSight.LocationService.Hosting.Windows.exe;\Soti.XSight.Reports.WebView2Host.exe;\SotiXSightAdmin.exe;\XSightSabha.exe;\pocket controller-pro for blackberry\;\Pocket Controller-Pro\;\soti\;\pocket controller for android\;\Wyse\;\PocketCloud Windows Companion\;\PocketCloud\;pocketcloud_windows_companion;Soti.XSight.;SOTIXSight;XSight.Service.;Soti.Api.;Soti.Assist.;Soti.Comm.;Soti.Cryptography.;Soti.DependencyInjection.;Soti.Diagnostics.;Soti.ExpressionFilters.;Soti.Identity.;Soti.Insight.;Soti.MobiControl.;Soti.RemoteControl.;Soti.Sabha.;Soti.SotiAssist.;Soti.Utilities.</Image>
+		  <ImageLoaded condition="contains any">\VideoBoostHelper.dll;\WyseVideoBoostFilter.dll;\PocketCloudMFHelper.dll;\PocketCloudStreamingCore.dll;\PocketCloudStreamingFilter.dll;\ServerNetworkInterface.dll;\PocketCloudHelper.dll;\WebServer.dll;\WyseWebServerLib.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential PSEXEC/PSEXEC (Clone) use detected" groupRelation="or">
           <Image condition="contains any">\psexec.exe;\psexecsvc.exe;\paexec.exe;\csexec.exe;\remcom.exe;\remcomsvc.exe;\xcmd.exe;\xcmdsvc.exe;PAExec-;PsExec;PAExec</Image>
@@ -4990,19 +5037,23 @@
         <Rule name="Remote Admin Software - Potential Pulseway use detected" groupRelation="or">
           <Image condition="contains any">\PCMonitorManager.exe;\PCMonitorSrv.exe;\pwyrc-clip.exe;\pcmonusertask.exe;\pcmupdate.exe;\pcmontask.exe</Image>
           <Image condition="contains">\Pulseway\</Image>
+		  <ImageLoaded condition="contains any">\pulsewaycredentialprovider.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential PuTTY use detected" groupRelation="or">
           <Image condition="contains any">\putty.exe;\kitty.exe;\pageant.exe;\plink.exe;\pscp.exe;\psftp.exe;\puttygen.exe;\puttycm.exe;\puttytray.exe;\PuTTYPortable\;\putty\;\KiTTY\;\PuTTYCM\;\PuTTYTray\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential QQ IM-remote assistance use detected" groupRelation="or">
           <Image condition="contains any">\qq.exe;\QQProtect.exe;\qqpcmgr.exe;\Tencentdl.exe;\txupd.exe;\QPNotify.exe;\QQApp.exe;\QQSafeUD.exe;\QQScLauncher.exe;\QPerfHelper.exe;\QQExternal.exe;\QQPcmgrDownload.exe;\QQUrlMgr.exe;\TXPlatform.exe;\QQUninst.exe;\Tencent\QQ\;\QQProtect\</Image>
+		  <ImageLoaded condition="contains any">\QMGCShellExt64.dll;\npQQPhoneManagerExt.dll;\QQIEHelper01.dll;\npSSOAxCtrlForPTLogin.dll;\npQMExtensionsMozilla.dll;\QQFileFlt.dll;\QQPCDetector.dll;QQProtectEngine.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Quest KACE Agent (formerly Dell KACE) use detected" groupRelation="or">
           <Image condition="contains any">\konea.exe;\ampagent.exe;\ampkickstart.exe;\amptools.exe;\kcopy.exe;\kdeploy.exe;\kinventory.exe;\klaunch.exe;\klaunchsvc.exe;\kswmetersvc.exe;\kuseralert.exe;\runkbot.exe;\kusrinit64.exe;\k1gpoagentprovision.exe;\kmediamanagerwin.exe;\kontainerupdater.exe;\kontainerinfo.exe;\avicreate.exe;\kontainer.exe;\kontainercreator.exe;\KSchedulerSvc.exe;\KPlugins.exe;\KMenu.exe;\KacePatch.exe;\AMPWatchDog.exe;\AMPTools.exe;\kwol.exe;\kstatus.exe;\klog.exe</Image>
           <Image condition="contains">\kace\</Image>
+		  <ImageLoaded condition="contains any">\kacecredentialprovider.dll;\kacecredentialprovider64.dll;\plugindesktopalerts.dll;\kwinimpl64.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential RAdmin use detected" groupRelation="or">
           <Image condition="contains any">\Radmin.exe;\rserver3.exe;\FamItrfc.Exe;\FamItrf2.Exe;\RvControlSvc.exe;\RvFwHelper.exe;\RvGuiStarter.exe;\RvRvpnGui.exe;\rsl.exe;\Fam64Helper.exe;\rsetup64.exe;\rsetup.exe;\Radmin;\rserver;\Radmin Viewer 3\;\Radmin VPN\;\Radmin Server 3\</Image>
+		  <ImageLoaded condition="contains any">\R_sui.dll;\ChatLPCx.dll;\rchatx.dll;\rschatx.dll;\raudiox.dll;\rsaudiox.dll;\vcintcx.dll;\vcintsx.dll;\RCursor.dll;\mirrorv3.dll;\WinLpcDl.dll;\WinLpcDl2.dll;\nts64helper.dll;\RvDownloader.dll;\RvEnetConnect.dll;\RvTCPConnect.dll;\RvTRSConnect.dll;\RvROLClient.dll;\RvRolUpdater.dll;\RvUESClient.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Rapid7 use detected" groupRelation="or">
           <Image condition="contains any">\ir_agent.exe;\rapid7_agent_core.exe;\rapid7_endpoint_broker.exe;\honeyhashx86.exe;\Insight Agent\;\Rapid7\;\rapid7_events_monitor.exe;\rapid7_sysmon_installer.exe;\rapid7_velociraptor.exe</Image>
@@ -5018,9 +5069,11 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential rdpwrap use detected" groupRelation="or">
           <Image condition="contains any">\RDPWInst.exe;\RDPCheck.exe;\RDPConf.exe;\RDP Wrapper\;\rdpwrap\;\rdpwrap-mingw-package\;\RDPWrap-</Image>
+		  <ImageLoaded condition="contains any">\rdpwrap.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential RealVNC use detected" groupRelation="or">
           <Image condition="contains any">\rvncconnect.exe;\rvncannotator.exe;\rvncfopshelper.exe;\rvnclicensewiz.exe;\rvncpasswd.exe;\rvncserver.exe;\rvncagent.exe;\rvncserverui.exe;\rport.exe;\vncserverui.exe;\vncserver.exe;\vncagent.exe;\vnclicensewiz.exe;\vnclicense.exe;\vncfopshelper.exe;\vncpasswd.exe;\vncguihelper.exe;\VNC Server\;\RealVNC\;\RealVNC Connect\;\Printer Driver\printerinst.exe</Image>
+		  <ImageLoaded condition="contains any">\desktop_dupl.dll;\VNCpm.dll;\VNCui.dll;\wm_hooks.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Remcos use detected" groupRelation="or">
           <Image condition="contains">remcos;\rmclient.exe;\remcos.exe;\Remcos\</Image>
@@ -5037,19 +5090,23 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential Remote Manipulator System use detected" groupRelation="or">
           <Image condition="contains any">\rfusclient.exe;\rutserv.exe;\rutview.exe;\InternetIdAdmin.exe;\InternetIdService.exe;\Remote Utilities - Viewer\;\Remote Utilities - Server\;\Remote Utilities - Host\;\Remote Manipulator System - Host\;\Remote Utilities Agent\;\Remote Manipulator System - Server\;\Remote Manipulator System - Viewer\</Image>
+		  <ImageLoaded condition="contains any">\unidrv_rupd.dll;\unires_vpd.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential RemoteCall/RemoteView use detected" groupRelation="or">
           <Image condition="contains any">\rcengmgru.exe;\rcmgrsvc.exe;\rxstartsupport.exe;\rcstartsupport.exe;\raautoup.exe;\agentu.exe;\remotesupportplayeru.exe;\RXPostEvent.exe;\rsvpnsvrU.exe;\RXEngMgr.exe;\RXScreenEngine.exe;\RXSeMgr.exe;\RXUIMgr.exe;\rsapplauncher.exe;\rvagtray.exe;\rcsemgru_2k.exe;\rvwatcher.exe;\rftpdaemonu.exe;\rcdrwmgr.exe;\RVirtualDriverUtility_x64.exe;\rcsemgruex.exe;\RVMigrate.exe;\rcuimgruex.exe;\rcsemgru.exe;\rcuimgru.exe;\rvMonitor.exe;\remoteview.exe;\rv.exe;\rvagent.exe;\rvblackscr.exe;\rcengmgruex.exe;\rsapphostu.exe;\RvUrlFilter.exe;\ChkRen.exe;\rsautoup.exe;\RVMonLock.exe;\RFTPDaemon.exe;\RIntelCo.exe;\RSUPPORT\;\RemoteView 5.0\</Image>
+		  <ImageLoaded condition="contains any">\rc45.dll;\rspxauth.dll;\rspxscan.dll;\rszip.dll;\rcdndu.dll;\rsprinter.dll;\rcproclu.dll;\RCSysInfo.dll;\RCLogLib.dll;\rc50api.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential RemotePass use detected" groupRelation="or">
           <Image condition="contains any">\remotepass-access.exe;\rpaccess.exe;\rpwhostscr.exe</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential RES Automation Manager use detected" groupRelation="or">
           <Image condition="contains any">\wisshell.exe;\WisShell_2.0.exe;\WisShell_4.0.exe;\wisshell64.exe;\agent_updater.exe;\deployer.exe;\WisExch.exe;\wisgate.exe;\pwrmlmp.exe;\WMC.exe;\wmc_deployer.exe;\wmc_updater.exe;\wmcsvc.exe;\wisstub_2.0_x64.exe;\wisstub_2.0_x86.exe;\wisstub_4.0_x64.exe;\wisstub_4.0_x86.exe;\Automation Manager\Agent\;\Automation Manager\WMC\;\RES Software\</Image>
+		  <ImageLoaded condition="contains any">\grantdesktop.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Rocket Remote Desktop use detected" groupRelation="or">
           <Image condition="contains any">\RDConsole.exe;\RocketRemoteDesktop_Setup.exe;\RDConsoleElevated.exe</Image>
           <Image condition="contains">\Rocket Remote Desktop</Image>
+		  <ImageLoaded condition="contains any">\RDConsole.resources.dll;\PlugInVNC.resources.dll;\PlugInSSHTelnet.resources.dll;\PlugInBitwarden.resources.dll;\PlugIn1Password.resources.dll;\PlugInCyberArk.resources.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Royal Apps use detected" groupRelation="or">
           <Image condition="contains any">\RoyalTS.exe;\RoyalTS.Setup.exe;\RoyalTS_PuTTY.exe;\RoyalTS_Chromium_WP.exe;\rtscli.exe;\royalserver.exe;\RoyalTS.dll;\Royal TS;RoyalApps.Ansi.;RoyalApps.Community.;RoyalApps.Core.;RoyalApps.Extensions.;RoyalCommon.Server.;RoyalDocument.SecurityInterface.;RoyalServer.ManagementEndpoint.;RoyalServer.Messaging.;RoyalServer.Modules.;RoyalApps.Setup.;code4ward.RoyalTS.;RoyalTS.Setup.</Image>
@@ -5062,18 +5119,22 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential ScreenMeet use detected" groupRelation="or">
           <Image condition="contains any">\ScreenMeetSupport.exe;\ScreenMeet.Support.exe;\ScreenMeet.API.resources.exe;\ScreenMeet.Common.resources.exe;\ScreenMeet.Support.resources.exe;\Screenmeet\;\ScreenMeet Support\;\Projector Inc\</Image>
+		  <ImageLoaded condition="contains any">\de-DE.screenmeet.common.resources.dll;\es-ES.screenmeet.common.resources.dll;\it-IT.screenmeet.common.resources.dll;\de-DE.screenmeet.common.resources.dll;\fr-FR.screenmeet.common.resources.dll;\it-IT.screenmeet.common.resources.dll;\ko-KR.screenmeet.common.resources.dll;\ja-JP.screenmeet.common.resources.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential SecureCRT use detected" groupRelation="or">
           <Image condition="contains any">\SecureCRT.EXE;\VSH.EXE;\VCP.EXE;\SecureCRTPortable.exe;\VanDyke Software\;\SecureCRT\;\VanDyke Clients\;\VanDyke\;\Van Dyke Technologies\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Seetrol use detected" groupRelation="or">
           <Image condition="contains any">\SeetrolCenter.exe;\SeetrolClient.exe;\SeetrolMyService.exe;\seetrolremote.exe;\seetrolsetting.exe;\STUpdate.exe;\CenterRun.exe;\Seetrol_Clt.exe</Image>
+		  <ImageLoaded condition="contains any">\sthooks.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Senso.cloud use detected" groupRelation="or">
           <Image condition="contains any">\SensoClient.exe;\SensoService.exe;\aadg.exe;\SensoState.exe;\SensoLaunch.exe;\SensoUpdate.exe;\Senso.Cloud.Client.exe;\Senso.Client.Updater.exe;\Senso.Cloud.Launcher.exe;\Senso.Cloud.WindowsService.exe;\Renato Software\;\senso.cloud\;\Renato\;\Senso.Cloud.Client\</Image>
+		  <ImageLoaded condition="contains any">\SensoState.dll;\sensoH32.dll;\sensoH64.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential ServerEye use detected" groupRelation="or">
           <Image condition="contains any">\ServiceProxyLocalSys.exe;\ServerEye.Snmp.Discover.exe;\ServerEye.Start32Bit.exe;\ServerEye.Toolkit.Updater.exe;\ServerEye.Toolkit.exe;\ServerEye.SmartUpdates.UpdateSplash.exe;\ServerEye.RemoteManagement.exe;\ServerEye.RemoteInstall.Service.exe;\ServerEye.RemoteInstall.Installer.exe;\ServerEye.ProxyConfig.CLI.exe;\ServerEye.Powershell.Console.exe;\ServerEyeSetup.exe;\ServerEye.exe;\ServerEye.Notifier.exe;\Server-Eye\</Image>
+		  <ImageLoaded condition="contains any">\SensoState.dll;\sensoH32.dll;\sensoH64.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential ShowMyPC use detected" groupRelation="or">
           <Image condition="contains any">\SMPCSetup.exe;\showmypc.exe;\smpcvc.exe;\smvnview.exe;\smwg.exe;\spcplink.exe;\smpcview.exe;\smpcinstaller.exe;\-ShowMyPC;\ShowMyPC\</Image>
@@ -5086,9 +5147,11 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential SmartCode Web VNC use detected" groupRelation="or">
           <Image condition="contains any">\VNCManager.exe;\scuvncpwr.exe;\scremcmd.exe;\DeploymentMsiLauncher.exe;\SmartCode Solutions\;\SmartCode VNC Manager\;\VNC Manager (Enterprise Edition)\</Image>
+		  <ImageLoaded condition="contains any">\scvncctrl.dll;\scvncctrl64.dll;\SmartCode.Interop.ViewerX.dll;\SmartCode.Interop.ViewerX.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential SmartFTP use detected" groupRelation="or">
           <Image condition="contains any">\SmartFTP.exe;\AddToQueue.exe;\SmartFTPService.exe;\aesctr.exe;\SmartFTP.exe.mui;\SmartFTPService.exe.mui;\Icon_SmartFTP.exe;\SmartFTP Client\;\SmartFTP\</Image>
+		  <ImageLoaded condition="contains any">\sfFavorites.dll;\sfFavoritesShellExtension.dll;\sfFTPLib.dll;\sfFTPShellExtension.dll;\sfTransferQueue.dll;\sfShellTools.dll;\sfPidlStorage.dll;\SmartFTPPS.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential SmarTTY use detected" groupRelation="or">
           <Image condition="contains any">\SmarTTY.exe;\PortableSmartty\;\Sysprogs\;\SmarTTY\</Image>
@@ -5098,6 +5161,7 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential Sophos-Remote Management System use detected" groupRelation="or">
           <Image condition="contains any">\clientmrinit.exe;\mgntsvc.exe;\routernt.exe;\SophosSetup.exe;\sophos\remote management system\;\rms\</Image>
+		  <ImageLoaded condition="contains any">\SAUConfigDLL.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Sorillus use detected" groupRelation="or">
           <Image condition="contains any">Sorillus Launcher.exe</Image>
@@ -5105,6 +5169,7 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential SpyAnywhere use detected" groupRelation="or">
           <Image condition="contains any">\Setup (password=spytech).exe;\sysdiag.exe;\tmh.exe;\NoStealth.exe;\loc.exe;\rds.exe;\rservice.exe;\sview.exe;\Setup(password=spytech).exe;\spyagent15\;\sysconfig\;\ksysconfig\;\keystrokespy\;\sysdiag\;password=spytech;\Spytech Software\;\sneconfig\;\Keystroke Spy\</Image>
+		  <ImageLoaded condition="contains any">:\Windows\imglib.dll;:\Windows\System32\sinvfct.dll;:\Windows\SysWOW64\sinvfct.dll;:\Windows\kimg.dll;:\Windows\kdriver32.dll;\ksysconfig\clfct.dll;\ksysconfig\KDriver32.dll;\ksysconfig\jimglib.dll;\ksysconfig\uninstall.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential SunLogin/AweRay use detected" groupRelation="or">
           <Image condition="contains any">\OrayRemoteShell.exe;\OrayRemoteService.exe;\sunlogin.exe;\AweSun.exe;\AweSunRemote.exe;\awesun_guard.exe;\AweSunHost.exe;\AweSunHost\;\awesun_guard\;\AweSun\;\AweSunRemote\;\SunloginRemote\;\Oray\;AweSunRemote_;AweSunHost_;\SunLogin\;\OrayClient\;\OrayUSBMon\;\OrayDPMS\;\OrayIddDriver\;\SunloginClient\</Image>
@@ -5124,42 +5189,53 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential Synergy use detected" groupRelation="or">
           <Image condition="contains any">\Synergy.exe;\synergy-core.exe;\synergy-daemon.exe;\synergy-diagnostics.exe;\synergy-legacy.exe;\synergy-tray.exe;\synergy-service.exe;\syntool.exe;\Synergy\</Image>
+		  <ImageLoaded condition="contains any">\synwinhk.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential SysAid use detected" groupRelation="or">
           <Image condition="contains any">\SysAidServer.exe;\SysAidServer64.exe;\SysAidAgent.exe;\SysAidDesktopImageCaptureUtility.exe;\SysAidSessionUtilities.exe;\SysAidSM.exe;\SysAidRCC.exe;\SysAidWorker.exe;\SysAidServer\;\SysAid\</Image>
+		  <ImageLoaded condition="contains any">\RemoteControlInterface.dll;\SysAidUnmangedUtilities.dll;\SysAidUnlckRstPasswd;\SysAidToastNotificationsEngineUtilities.dll;\SALog4cplus.dll;\SAInfrastructure.dll;\SAEmbeddedServicesInstallationUtility.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Tailscale use detected" groupRelation="or">
           <Image condition="contains any">\tailscaled.exe;\tailscale-ipn.exe;\tailscale.exe;\Tailscale\;tailscale-</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Tanium/Tanium Deploy use detected" groupRelation="or">
           <Image condition="contains any">\TaniumClient.exe;\TaniumCX.exe;\TaniumExecWrapper.exe;\TaniumFileInfo.exe;\TPowerShell.exe;\TaniumClientBootstrap.exe;\Tanium Client\;\Tanium\</Image>
+		  <ImageLoaded condition="contains any">\TaniumClientExtensions.dll;\TaniumDEC.dll;\TaniumDiscover.dll;\TaniumExtras.dll;\TaniumIndex.dll;\TaniumSoftwareManager.dll;\TaniumConfig.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential TeamViewer use detected" groupRelation="or">
           <Image condition="contains any">\TeamViewer_Desktop.exe;\TeamViewer_Service.exe;\TeamViewer_Setup_x64.exe;\TeamViewer_.exe;\TeamViewer.exe;\TeamViewer_Note.exe;\tv_w32.exe;\tv_x64.exe;\TeamViewer_Host_Setup.exe;\teamviewerqs.exe;\tvconnector.exe;\TeamViewer Corporate\;\TVExtractTemp\;\TeamViewer\;teamviewerhost</Image>
+		  <ImageLoaded condition="contains any">\tv_w32.dll;\tv_x64.dll;\TeamViewer_StaticRes.dll;\TeamViewer_Resource_en.dll;\TeamViewer_Resource_de.dll;\TeamViewer_Resource_fr.dll;\TeamViewer_Resource_zhCN.dll;\TeamViewerMeetingAddIn.dll;\TeamViewerMeetingAddinShim.dll;\TeamViewerMeetingAddinShim64.dll;\TeamViewerMeetingAddIn.dll;\TeamViewer_XPSDriverFilter.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential TeleDesktop use detected" groupRelation="or">
           <Image condition="contains any">\ptdskclient.exe;\pstlaunch.exe;\ptdskhost.exe;\ptdsksrv.exe;\TeleDesktop\;\PotomacSoft\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential TigerVNC/TightVNC/Remote Ripple use detected" groupRelation="or">
           <Image condition="contains any">\winvnc4.exe;\vncconfig.exe;\tvnserver.exe;\tvnviewer.exe;\hookldr.exe;\TigerVNC server\;tigervnc-;TightVNC;TightVNCViewerPortable;\GlavSoft\;\Remote Ripple\;\RemoteRipple.exe</Image>
+		  <ImageLoaded condition="contains any">\screenhooks64.dll;\screenhooks32.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential ToDesk use detected" groupRelation="or">
           <Image condition="contains any">\ToDesk.exe;\ToDesk_Lite.exe;\ToDesk_Service.exe;\ToDesk_Setup.exe;\ToDesk_Update.exe;\ToDeskCrashReport.exe;\ToDesk_Host.exe;\ToDesk_Host_Service.exe;\ToDesk_Client.exe;\ToDesk_SOS.exe;\ToDesk\;\ToDesk_Lite\;\ToDesk Agent\;\ToDesk Enterprise\;\ToDesk_Client\;\ToDesk_SOS\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Total Software Deployment/Total Network Inventory use detected" groupRelation="or">
           <Image condition="contains any">\tniwinagent.exe;\Tsdservice.exe;\tni-setup.exe;\tni.exe;\tsd-setup.exe;\tsd.exe;\tniping.exe;\Total Software Deployment\;\Total Network Inventory\;\tsd_remote\</Image>
+		  <ImageLoaded condition="contains any">\ScannerLib.dll;\PingerLib.dll;\ADLib.dll;\itllib.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential TurboMeeting use detected" groupRelation="or">
           <Image condition="contains any">\PCStarter.exe;\TurboMeeting.exe;\TurboMeetingStarter.exe;\PCStarterXP.exe;\TMLauncher.exe;\TMDownloader.exe;\TMDownload.exe;\TMInstaller.exe;\TMUninstaller.exe;\TMService.exe;\TMRemover.exe;\TMWhiteBoard.exe;\PCRecordPlayer.exe;\PCRecordPlayerCore.exe;\PCPrinterInstaller.exe;\turbo_meeting.exe;\TurboMeetingDemo.exe;\MXmeetingStarter.exe;\TurboMeeting\;\tm_starter_dir\;\MXmeeting\</Image>
+		  <ImageLoaded condition="contains any">\turbomeeting.dll;\tmresource.dll</ImageLoaded>
+		  <ImageLoaded condition="contains all">\hookdll\tm;.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Ultra VNC/PCHelpWare use detected" groupRelation="or">
           <Image condition="contains any">\UVNC_Launch.exe;\winvnc.exe;\vncviewer.exe;\uvnckeyboardhelper.exe;\uvnc_settings.exe;\winvncsc.exe;\uvnc bvba\;\UltraVNC\;\PcHelpWare\;UltraVNC_;\1CHATDLL.dll;\PcHelpware.exe;\SCHook.dll;\vncdrv2.dll;\vncdrv2.sys;\PcHelpWare_viewer.exe;\phw_repeater.exe;\temp_phw\</Image>
+		  <ImageLoaded condition="contains any">\vnchooks.dll;\schook.dll;\SecureVNCPlugin64.dsm;\SecureVNCPlugin.dsm;\1CHATDLL.dll;\1SCVDLL.dll;\vncdrv2.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential UltraViewer use detected" groupRelation="or">
           <Image condition="contains any">\UltraViewer_Service.exe;\UltraViewer_Desktop.exe;\ultraviewer.exe;\UVUninstallHelper.exe;\uv_x64.exe;\UltraViewer\;UltraViewer_setup</Image>
+		  <ImageLoaded condition="contains any">\UltraViewer\uvh.dll;\UltraViewer\uvc.dll</ImageLoaded>
         </Rule>
 		<Rule name="Remote Admin Software - Potential Veyon use detected" groupRelation="or">
           <Image condition="contains any">\Veyon\;\veyon-wcli.exe;\veyon-worker.exe;\veyon-server.exe;\veyon-service.exe;\veyon-master.exe;\veyon-configurator.exe</Image>
+		  <ImageLoaded condition="contains any">\plugins\authkeys.dll;\plugins\builtin-ultravnc-server.dll;\plugins\builtindirectory.dll;\plugins\external-vnc-server.dll;\plugins\remoteaccess.dll;\veyon-core.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential WebRDP use detected" groupRelation="or">
           <Image condition="image">webrdp.exe</Image>
@@ -5170,6 +5246,7 @@
         <Rule name="Remote Admin Software - Potential WinSCP use detected" groupRelation="or">
           <Image condition="image">WinSCP.exe</Image>
           <Image condition="contains any">\WinSCP\;\WinSCP-</Image>
+		  <ImageLoaded condition="contains any">\winscpnet.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential X2Go/pyhoca-gui use detected" groupRelation="or">
           <Image condition="image">pyhoca-gui.exe</Image>
@@ -5184,14 +5261,19 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential NetSarang/Xshell use detected" groupRelation="or">
           <Image condition="contains any">\Xshell.exe;\Xtransport.exe;\XshellCore.exe;\Xftp.exe;\Xagent.exe;\RealCmdModule.exe;\XmanagerRDP.exe;\nsregister.exe;\Xshell;\NetSarang\;Xshell-</Image>
+		  <ImageLoaded condition="contains any">\XshellLib.dll;\nslicense.dll;\nsprofile2.dll;\nsresource.dll;\nssecurity.dll;\nsutil2.dll;\nsssh3.dll;\nssock2.dll;\nsactivate.dll;\NsActivate_libFNP.dll</ImageLoaded>
+		  <ImageLoaded condition="contains all">\Xshell;.dll</ImageLoaded>
+		  <ImageLoaded condition="contains all">\Xtransport;.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Yandex.Disk use detected" groupRelation="or">
           <Image condition="contains any">\YandexDisk2.exe;\YandexDiskScreenshotEditor.exe;\YandexNotes.exe;\TelemostSetup.exe;\YandexTelemost.exe;\YandexDiskSetup.exe;\YandexTelemostStub.exe;\YandexDisk2\;\Yandex.Disk.2\;\Yandex\;\YandexDisk-;YandexDisk3Installer</Image>
           <Image condition="contains all">YandexDisk;Setup;.exe</Image>
+		  <ImageLoaded condition="contains any">\YandexDisk3ShellExt.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential Zabbix Agent use detected" groupRelation="or">
           <Image condition="contains any">\zabbix_agent2.exe;\zabbix_get.exe;\zabbix_sender.exe;\zabbix_agentd.exe</Image>
           <Image condition="contains">\Zabbix Agent</Image>
+		  <ImageLoaded condition="contains any">\zabbix_sender.dll</ImageLoaded>
         </Rule>
         <Rule name="Remote Admin Software - Potential ZeroTier use detected" groupRelation="or">
           <Image condition="contains any">\zero-powershell.exe;\zerotier_desktop_ui.exe;\zerotier-one_x64.exe;\zerotier-one_x86.exe;\zerotier-cli.exe;\ZeroTier One.exe;\ZeroTierIcon.exe</Image>
@@ -5200,6 +5282,7 @@
         <Rule name="Remote Admin Software - Potential ZOC use detected" groupRelation="or">
           <Image condition="contains any">\zoc.exe;\zoc-ssh-add.exe;\zoc-ssh-keygen.exe;\Program Files\ZOC;\ZOC Specials\;\zoc_nnn.exe;\EmTec\</Image>
           <Image condition="contains all">zoc;.exe</Image>
+		  <ImageLoaded condition="contains any">\emu3270.dll;\emu5250.dll;\emuansi.dll;\emuqnx.dll;\emutty.dll;\emuvt.dll;\emuwyse.dll;\zocdll.dll</ImageLoaded>
         </Rule>
       </ImageLoad>
     </RuleGroup>
@@ -5225,7 +5308,7 @@
     <RuleGroup name="group1" groupRelation="or">
       <RawAccessRead onmatch="include">
         <Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
-          <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe</Image>
+          <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe;\CtHWiPrvService.exe;\AbtSvcHost_.exe;\CtRarSvc.exe;\wctguard.exe;\wctsys.exe</Image>
           <Image condition="contains">\CTES\</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Access Remote PC/RemotePC use detected" groupRelation="or">
@@ -5480,7 +5563,7 @@
           <Image condition="contains any">\laplink.exe;\laplinkeverywhere.exe;\llrcservice.exe;\serverproxyservice.exe;\OOSysAgent.exe;\tsircusr.exe;\OOLiveUpdate.exe;\SyspectrIcon.exe;\OOAdViewer.exe;\OOLiveUpdateWorker.exe;\Syspectr\;\OO Software\;laplink-everywhere-setup;oo-syspectr;\ServerProxy.exe;\Laplink\;\Laplink Everywhere\;\LLServerMain2.exe;\LLUpdateCheck.exe;\LLEventLog.exe;\Laplink Security Center.exe;\ILLSecurity.exe;\Laplink Gold\;\Llsched.exe</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Level use detected" groupRelation="or">
-          <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\osqueryi.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</Image>
+          <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Lite Manager use detected" groupRelation="or">
           <Image condition="contains any">\LMNoIpServer.exe;\ROMFUSClient.exe;\ROMServer.exe;\ROMViewer.exe;\LiteManager Pro – Viewer\;\LiteManager\;\LiteManager NoIpServer\;\LiteManager - Viewer\;\LiteManager Pro - Server\;\LiteManagerFree - Server\;\LiteManagerFree - Viewer\</Image>
@@ -5914,9 +5997,9 @@
     <RuleGroup name="A file was created" groupRelation="or">
       <FileCreate onmatch="include">
         <Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
-          <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe</Image>
+          <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe;\CtHWiPrvService.exe;\AbtSvcHost_.exe;\CtRarSvc.exe;\wctguard.exe;\wctsys.exe</Image>
           <Image condition="contains">\CTES\</Image>
-          <TargetFilename condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe;\ctes.log;\svc.log;\AbtFC.dll;\AbtCrypt.dll;\AbsoluteCert.cer</TargetFilename>
+          <TargetFilename condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe;\ctes.log;\svc.log;\AbtFC.dll;\AbtCrypt.dll;\AbsoluteCert.cer;\CtHWiPrvService.exe;\AbtSvcHost_.exe;\CtRarSvc.exe;\wctguard.exe;\wctsys.exe;\AbtCrypt.dll;\AbtFC.dll;\rpcnetp.dll;\wceprv.dll;\identprv.dll</TargetFilename>
           <TargetFilename condition="contains">\CTES\</TargetFilename>
           <TargetFilename condition="contains all">Absolute;;Agent;.msi</TargetFilename>
         </Rule>
@@ -6270,8 +6353,8 @@
           <TargetFilename condition="contains any">\laplink.exe;\laplinkeverywhere.exe;\llrcservice.exe;\serverproxyservice.exe;\OOSysAgent.exe;\tsircusr.exe;\OOLiveUpdate.exe;\OOSysAgent.exe.config;\OOSysAssemblyLoader.dll;\OOSysBaseModule.dll;\OOSysBaseModule.dll.config;\OOSysBootstrapper.dll;\OOSysBootstrapper.XmlSerializers.dll;\OOSysBranding.dll;\OOSysEngine.dll;\OOSysEngine.dll.config;\OOSysEngine.XmlSerializers.dll;\OOSysEngineBase.dll;\OOSysSharedTools.dll;\OOSysUtils.dll;\OOSysUtils.dll.config;\SyspectrIcon.exe;\OOSysLog;\OOAdViewer.exe;\OOLiveUpdateWorker.exe;\_OOLiveUpdate.log;\ Syspectr.log;\Syspectr\;\OO Software\;laplink-everywhere-setup;oo-syspectr;\ServerProxy.exe;\Laplink\;\Laplink Everywhere\;\LLServerMain2.exe;\LLUpdateCheck.exe;\LLEventLog.exe;\Laplink Security Center.exe;\ILLSecurity.exe;\Laplink Gold\;\Llsched.exe</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Level use detected" groupRelation="or">
-          <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\osqueryi.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</Image>
-          <TargetFilename condition="contains any">\level-windows-amd64.exe;\level-windows;\level.exe;\osqueryi.exe;\level.log;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</TargetFilename>
+          <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</Image>
+          <TargetFilename condition="contains any">\level-windows-amd64.exe;\level-windows;\level.exe;\level.log;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Lite Manager use detected" groupRelation="or">
           <Image condition="contains any">\LMNoIpServer.exe;\ROMFUSClient.exe;\ROMServer.exe;\ROMViewer.exe;\LiteManager Pro – Viewer\;\LiteManager\;\LiteManager NoIpServer\;\LiteManager - Viewer\;\LiteManager Pro - Server\;\LiteManagerFree - Server\;\LiteManagerFree - Viewer\</Image>
@@ -6792,7 +6875,7 @@
     <RuleGroup name="group1" groupRelation="or">
       <RegistryEvent onmatch="include">
         <Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
-          <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe</Image>
+          <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe;\CtHWiPrvService.exe;\AbtSvcHost_.exe;\CtRarSvc.exe;\wctguard.exe;\wctsys.exe</Image>
           <Image condition="contains">\CTES\</Image>
 		  <TargetObject condition="contains any">\\services\CscService;\services\Ctes Manager;\services\CtesHostSvc;\services\rpchdp;\services\rpcnet</TargetObject>
         </Rule>
@@ -6838,7 +6921,7 @@
         <Rule name="Remote Admin Software - Potential AnyDesk use detected" groupRelation="or">
           <Image condition="image">AnyDesk.exe</Image>
           <Image condition="contains">\AnyDesk\</Image>
-		  <TargetObject condition="contains any">\Software\Classes\AnyDesk\;\Software\Classes\.anydesk\;\Services\AnyDesk;\Uninstall\AnyDesk;\Clients\Media\AnyDesk;\Print\Printers\AnyDesk Printer;\DRIVERS\DriverDatabase\DeviceIds\USBPRINT\AnyDesk;\DRIVERS\DriverDatabase\DeviceIds\WSDPRINT\AnyDesk</TargetObject>
+		  <TargetObject condition="contains any">\Software\Classes\AnyDesk\;\Software\Classes\.anydesk\;\Services\AnyDesk;\Uninstall\AnyDesk;\Clients\Media\AnyDesk;\Print\Printers\AnyDesk Printer;\DRIVERS\DriverDatabase\DeviceIds\USBPRINT\AnyDesk;\DRIVERS\DriverDatabase\DeviceIds\WSDPRINT\AnyDesk;\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.anydesk;\AnyDesk;\MICROSOFT\WINDOWS NT\CURRENTVERSION\IMAGE FILE EXECUTION OPTIONS\ANYDESK.EXE</TargetObject>
         </Rule>
         <Rule name="Remote Admin Software - Potential Anyplace Control/10 Strike Remote Access use detected" groupRelation="or">
           <Image condition="contains any">\apc_host.exe;\apc_admin.exe;\APC_HostConfig.exe;\10strike_host.exe;\hcs.exe;\Anyplace Control;\Remote Desktop Control;\10-Strike Remote Access\</Image>
@@ -7110,7 +7193,7 @@
 		  <TargetObject condition="contains all">\Software\;Syspectr</TargetObject>
         </Rule>
         <Rule name="Remote Admin Software - Potential Level use detected" groupRelation="or">
-          <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\osqueryi.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</Image>
+          <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</Image>
 		  <TargetObject condition="contains any">\SOFTWARE\Level;\SOFTWARE\WOW6432NODE\Level;\Services\EventLog\Application\Level</TargetObject>
         </Rule>
         <Rule name="Remote Admin Software - Potential Lite Manager use detected" groupRelation="or">
@@ -7531,9 +7614,9 @@
     <RuleGroup name="A file was written to disk" groupRelation="or">
       <FileCreateStreamHash onmatch="include">
         <Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
-          <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe</Image>
+          <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe;\CtHWiPrvService.exe;\AbtSvcHost_.exe;\CtRarSvc.exe;\wctguard.exe;\wctsys.exe</Image>
           <Image condition="contains">\CTES\</Image>
-          <TargetFilename condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe;\ctes.log;\svc.log;\AbtFC.dll;\AbtCrypt.dll;\AbsoluteCert.cer</TargetFilename>
+          <TargetFilename condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe;\ctes.log;\svc.log;\AbtFC.dll;\AbtCrypt.dll;\AbsoluteCert.cer;\CtHWiPrvService.exe;\AbtSvcHost_.exe;\CtRarSvc.exe;\wctguard.exe;\wctsys.exe;\AbtCrypt.dll;\AbtFC.dll;\rpcnetp.dll;\wceprv.dll;\identprv.dll</TargetFilename>
           <TargetFilename condition="contains">\CTES\</TargetFilename>
           <TargetFilename condition="contains all">Absolute;;Agent;.msi</TargetFilename>
         </Rule>
@@ -7887,8 +7970,8 @@
           <TargetFilename condition="contains any">\laplink.exe;\laplinkeverywhere.exe;\llrcservice.exe;\serverproxyservice.exe;\OOSysAgent.exe;\tsircusr.exe;\OOLiveUpdate.exe;\OOSysAgent.exe.config;\OOSysAssemblyLoader.dll;\OOSysBaseModule.dll;\OOSysBaseModule.dll.config;\OOSysBootstrapper.dll;\OOSysBootstrapper.XmlSerializers.dll;\OOSysBranding.dll;\OOSysEngine.dll;\OOSysEngine.dll.config;\OOSysEngine.XmlSerializers.dll;\OOSysEngineBase.dll;\OOSysSharedTools.dll;\OOSysUtils.dll;\OOSysUtils.dll.config;\SyspectrIcon.exe;\OOSysLog;\OOAdViewer.exe;\OOLiveUpdateWorker.exe;\_OOLiveUpdate.log;\ Syspectr.log;\Syspectr\;\OO Software\;laplink-everywhere-setup;oo-syspectr;\ServerProxy.exe;\Laplink\;\Laplink Everywhere\;\LLServerMain2.exe;\LLUpdateCheck.exe;\LLEventLog.exe;\Laplink Security Center.exe;\ILLSecurity.exe;\Laplink Gold\;\Llsched.exe</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Level use detected" groupRelation="or">
-          <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\osqueryi.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</Image>
-          <TargetFilename condition="contains any">\level-windows-amd64.exe;\level-windows;\level.exe;\osqueryi.exe;\level.log;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</TargetFilename>
+          <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</Image>
+          <TargetFilename condition="contains any">\level-windows-amd64.exe;\level-windows;\level.exe;\level.log;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Lite Manager use detected" groupRelation="or">
           <Image condition="contains any">\LMNoIpServer.exe;\ROMFUSClient.exe;\ROMServer.exe;\ROMViewer.exe;\LiteManager Pro – Viewer\;\LiteManager\;\LiteManager NoIpServer\;\LiteManager - Viewer\;\LiteManager Pro - Server\;\LiteManagerFree - Server\;\LiteManagerFree - Viewer\</Image>
@@ -8408,7 +8491,7 @@
     <RuleGroup name="group1" groupRelation="or">
       <PipeEvent onmatch="include">
         <Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
-          <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe</Image>
+          <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe;\CtHWiPrvService.exe;\AbtSvcHost_.exe;\CtRarSvc.exe;\wctguard.exe;\wctsys.exe</Image>
           <Image condition="contains">\CTES\</Image>
 		  <PipeName condition="contains">\ctes_lst_</PipeName>
         </Rule>
@@ -8479,6 +8562,13 @@
         </Rule>
         <Rule name="Remote Admin Software - Potential BeAnyWhere/BeInSync/N-Able Advanced Monitoring Agent/N-ABLE Remote Access Software use detected" groupRelation="or">
           <Image condition="contains any">\basuptshelper.exe;\basupsrvcupdate.exe;\BASupApp.exe;\BASupSysInf.exe;\BASupAppSrvc.exe;\TakeControl.exe;\BASupAppElev.exe;\basupsrvc.exe;\BASupConHelper.exe;\BASupSrvcCnfg.exe;\BASupSrvcUpdater.exe;\BASupSysShell.exe;\winagent.exe;\BASEClient.exe;\BASupClpHlp.exe;\BASupClpPrg.exe;\BASupSysShell64.exe;\BASupUnElev.exe;\BAVideoChat.exe;\TCRmtShellAgent.exe;\TCDirectChat.exe;\TCLauncherHelper.exe;\TCRmtAudioHelper.exe;\BeinSync.exe;\BeInSyncServer.exe;\BeInSync_Setup_.exe;\BeInSync_Uninstall.EXE;\BeInSyncWeb.exe;\BeInSync_Toolbar_Setup.exe;\BeAnywhere Support Express\;\GetSupportService\;\BeInSync\;beinsync-</Image>
+		  <PipeName condition="contains">\TCRmtShellAgentModule_</PipeName>
+		  <PipeName condition="contains">\TCRegEditHelper_</PipeName>
+		  <PipeName condition="contains">\TCDirectChat_</PipeName>
+		  <PipeName condition="contains">\TCLauncherHelperModule_</PipeName>
+		  <PipeName condition="contains">\TCRmtAudioHelperModule_</PipeName>
+		  <PipeName condition="contains">\MSPAnywhereAgnt_</PipeName>
+		  <PipeName condition="contains">\MSPAnywhereViewer_</PipeName>
         </Rule>
         <Rule name="Remote Admin Software - Potential BeyondTrust(Bomgar) use detected" groupRelation="or">
           <Image condition="contains any">\bomgar-rep.exe;\bomgar-rdp.exe;\nsnetpush.exe;\bomgar-rep-installer.exe;\bomgar-rfb.exe;\bomgar-acc-installer.exe;\bomgar-acc.exe;\bomgar-cli.exe;\bomgar-scc.exe;\bomgar-pac.exe;\Bomgar\;\bomgar-rep\;bomgar-scc-;bomgar-pac-</Image>
@@ -8679,7 +8769,7 @@
           <Image condition="contains any">\laplink.exe;\laplinkeverywhere.exe;\llrcservice.exe;\serverproxyservice.exe;\OOSysAgent.exe;\tsircusr.exe;\OOLiveUpdate.exe;\SyspectrIcon.exe;\OOAdViewer.exe;\OOLiveUpdateWorker.exe;\Syspectr\;\OO Software\;laplink-everywhere-setup;oo-syspectr;\ServerProxy.exe;\Laplink\;\Laplink Everywhere\;\LLServerMain2.exe;\LLUpdateCheck.exe;\LLEventLog.exe;\Laplink Security Center.exe;\ILLSecurity.exe;\Laplink Gold\;\Llsched.exe</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Level use detected" groupRelation="or">
-          <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\osqueryi.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</Image>
+          <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</Image>
         </Rule>
         <Rule name="Remote Admin Software - Potential Lite Manager use detected" groupRelation="or">
           <Image condition="contains any">\LMNoIpServer.exe;\ROMFUSClient.exe;\ROMServer.exe;\ROMViewer.exe;\LiteManager Pro – Viewer\;\LiteManager\;\LiteManager NoIpServer\;\LiteManager - Viewer\;\LiteManager Pro - Server\;\LiteManagerFree - Server\;\LiteManagerFree - Viewer\</Image>
@@ -9067,7 +9157,7 @@
     <RuleGroup groupRelation="or">
       <DnsQuery onmatch="include">
         <Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
-          <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe</Image>
+          <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe;\CtHWiPrvService.exe;\AbtSvcHost_.exe;\CtRarSvc.exe;\wctguard.exe;\wctsys.exe</Image>
           <Image condition="contains">\CTES\</Image>
           <QueryName condition="end with">.namequery.com</QueryName>
           <QueryName condition="end with">.absolute.com</QueryName>
@@ -9563,7 +9653,7 @@
 		  <QueryName condition="end with">.oo-software.com</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential Level use detected" groupRelation="or">
-          <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\osqueryi.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</Image>
+          <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</Image>
           <QueryName condition="end with">.level.io</QueryName>
 		  <QueryName condition="end with">prd-level-online.b-cdn.net</QueryName>
 		  <QueryName condition="end with">prd-level-downloads.b-cdn.net</QueryName>
@@ -10060,7 +10150,7 @@
         </Rule>
 		<Rule name="Remote Admin Software - Potential Veyon use detected" groupRelation="or">
           <Image condition="contains any">\Veyon\;\veyon-wcli.exe;\veyon-worker.exe;\veyon-server.exe;\veyon-service.exe;\veyon-master.exe;\veyon-configurator.exe</Image>
-		  <QueryName condition="is">.veyon.io</QueryName>
+		  <QueryName condition="end with">.veyon.io</QueryName>
         </Rule>
         <Rule name="Remote Admin Software - Potential WebRDP use detected" groupRelation="or">
           <Image condition="image">webrdp.exe</Image>
@@ -10135,9 +10225,9 @@
     <RuleGroup name="group1" groupRelation="or">
       <FileDeleteDetected onmatch="include">
         <Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
-          <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe</Image>
+          <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe;\CtHWiPrvService.exe;\AbtSvcHost_.exe;\CtRarSvc.exe;\wctguard.exe;\wctsys.exe</Image>
           <Image condition="contains">\CTES\</Image>
-          <TargetFilename condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe;\ctes.log;\svc.log;\AbtFC.dll;\AbtCrypt.dll;\AbsoluteCert.cer</TargetFilename>
+          <TargetFilename condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe;\ctes.log;\svc.log;\AbtFC.dll;\AbtCrypt.dll;\AbsoluteCert.cer;\CtHWiPrvService.exe;\AbtSvcHost_.exe;\CtRarSvc.exe;\wctguard.exe;\wctsys.exe;\AbtCrypt.dll;\AbtFC.dll;\rpcnetp.dll;\wceprv.dll;\identprv.dll</TargetFilename>
           <TargetFilename condition="contains">\CTES\</TargetFilename>
           <TargetFilename condition="contains all">Absolute;;Agent;.msi</TargetFilename>
         </Rule>
@@ -10491,8 +10581,8 @@
           <TargetFilename condition="contains any">\laplink.exe;\laplinkeverywhere.exe;\llrcservice.exe;\serverproxyservice.exe;\OOSysAgent.exe;\tsircusr.exe;\OOLiveUpdate.exe;\OOSysAgent.exe.config;\OOSysAssemblyLoader.dll;\OOSysBaseModule.dll;\OOSysBaseModule.dll.config;\OOSysBootstrapper.dll;\OOSysBootstrapper.XmlSerializers.dll;\OOSysBranding.dll;\OOSysEngine.dll;\OOSysEngine.dll.config;\OOSysEngine.XmlSerializers.dll;\OOSysEngineBase.dll;\OOSysSharedTools.dll;\OOSysUtils.dll;\OOSysUtils.dll.config;\SyspectrIcon.exe;\OOSysLog;\OOAdViewer.exe;\OOLiveUpdateWorker.exe;\_OOLiveUpdate.log;\ Syspectr.log;\Syspectr\;\OO Software\;laplink-everywhere-setup;oo-syspectr;\ServerProxy.exe;\Laplink\;\Laplink Everywhere\;\LLServerMain2.exe;\LLUpdateCheck.exe;\LLEventLog.exe;\Laplink Security Center.exe;\ILLSecurity.exe;\Laplink Gold\;\Llsched.exe</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Level use detected" groupRelation="or">
-          <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\osqueryi.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</Image>
-          <TargetFilename condition="contains any">\level-windows-amd64.exe;\level-windows;\level.exe;\osqueryi.exe;\level.log;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</TargetFilename>
+          <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</Image>
+          <TargetFilename condition="contains any">\level-windows-amd64.exe;\level-windows;\level.exe;\level.log;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Lite Manager use detected" groupRelation="or">
           <Image condition="contains any">\LMNoIpServer.exe;\ROMFUSClient.exe;\ROMServer.exe;\ROMViewer.exe;\LiteManager Pro – Viewer\;\LiteManager\;\LiteManager NoIpServer\;\LiteManager - Viewer\;\LiteManager Pro - Server\;\LiteManagerFree - Server\;\LiteManagerFree - Viewer\</Image>
@@ -11011,9 +11101,9 @@
     <RuleGroup name="group1" groupRelation="or">
       <FileExecutableDetected onmatch="include">
         <Rule name="Remote Admin Software - Potential Absolute (Computrace) use detected" groupRelation="or">
-          <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe</Image>
+          <Image condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe;\CtHWiPrvService.exe;\AbtSvcHost_.exe;\CtRarSvc.exe;\wctguard.exe;\wctsys.exe</Image>
           <Image condition="contains">\CTES\</Image>
-          <TargetFilename condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe;\ctes.log;\svc.log;\AbtFC.dll;\AbtCrypt.dll;\AbsoluteCert.cer</TargetFilename>
+          <TargetFilename condition="contains any">\rpcnet.exe;\ctes.exe;\ctespersitence.exe;\cteshostsvc.exe;\rpcld.exe;\CtesCommand.exe;\ctes.log;\svc.log;\AbtFC.dll;\AbtCrypt.dll;\AbsoluteCert.cer;\CtHWiPrvService.exe;\AbtSvcHost_.exe;\CtRarSvc.exe;\wctguard.exe;\wctsys.exe;\AbtCrypt.dll;\AbtFC.dll;\rpcnetp.dll;\wceprv.dll;\identprv.dll</TargetFilename>
           <TargetFilename condition="contains">\CTES\</TargetFilename>
           <TargetFilename condition="contains all">Absolute;;Agent;.msi</TargetFilename>
         </Rule>
@@ -11367,8 +11457,8 @@
           <TargetFilename condition="contains any">\laplink.exe;\laplinkeverywhere.exe;\llrcservice.exe;\serverproxyservice.exe;\OOSysAgent.exe;\tsircusr.exe;\OOLiveUpdate.exe;\OOSysAgent.exe.config;\OOSysAssemblyLoader.dll;\OOSysBaseModule.dll;\OOSysBaseModule.dll.config;\OOSysBootstrapper.dll;\OOSysBootstrapper.XmlSerializers.dll;\OOSysBranding.dll;\OOSysEngine.dll;\OOSysEngine.dll.config;\OOSysEngine.XmlSerializers.dll;\OOSysEngineBase.dll;\OOSysSharedTools.dll;\OOSysUtils.dll;\OOSysUtils.dll.config;\SyspectrIcon.exe;\OOSysLog;\OOAdViewer.exe;\OOLiveUpdateWorker.exe;\_OOLiveUpdate.log;\ Syspectr.log;\Syspectr\;\OO Software\;laplink-everywhere-setup;oo-syspectr;\ServerProxy.exe;\Laplink\;\Laplink Everywhere\;\LLServerMain2.exe;\LLUpdateCheck.exe;\LLEventLog.exe;\Laplink Security Center.exe;\ILLSecurity.exe;\Laplink Gold\;\Llsched.exe</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Level use detected" groupRelation="or">
-          <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\osqueryi.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</Image>
-          <TargetFilename condition="contains any">\level-windows-amd64.exe;\level-windows;\level.exe;\osqueryi.exe;\level.log;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</TargetFilename>
+          <Image condition="contains any">\level-windows-amd64.exe;\level.exe;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</Image>
+          <TargetFilename condition="contains any">\level-windows-amd64.exe;\level-windows;\level.exe;\level.log;\Level\;level-windows;\level-windows-amd32.exe;\level-remote-control-ffmpeg.exe</TargetFilename>
         </Rule>
         <Rule name="Remote Admin Software - Potential Lite Manager use detected" groupRelation="or">
           <Image condition="contains any">\LMNoIpServer.exe;\ROMFUSClient.exe;\ROMServer.exe;\ROMViewer.exe;\LiteManager Pro – Viewer\;\LiteManager\;\LiteManager NoIpServer\;\LiteManager - Viewer\;\LiteManager Pro - Server\;\LiteManagerFree - Server\;\LiteManagerFree - Viewer\</Image>
